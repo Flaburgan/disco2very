@@ -31,21 +31,16 @@ export default function PlayedItemList(props: PlayedItemListProps) {
               {...provided.droppableProps}
               className={styles.list}
             >
-              <div className={styles.timelineContainer}>
-                <div className={styles.timeline}></div>
-              </div>
-              <div className={styles.items}>
-                {items.map((item, index) => (
-                  <ItemCard
-                    draggable={badlyPlacedIndex !== null}
-                    flippedId={flippedId}
-                    index={index}
-                    item={item}
-                    key={item.id}
-                    setFlippedId={setFlippedId}
-                  />
-                ))}
-              </div>
+              {items.map((item, index) => (
+                <ItemCard
+                  draggable={badlyPlacedIndex !== null}
+                  flippedId={flippedId}
+                  index={index}
+                  item={item}
+                  key={item.id}
+                  setFlippedId={setFlippedId}
+                />
+              ))}
               {provided.placeholder}
             </div>
           )}

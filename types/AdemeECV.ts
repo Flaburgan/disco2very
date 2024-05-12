@@ -20,7 +20,10 @@ export interface AdemeECV {
 
 export interface AdemeCategory {
   id: number;
-  name: string;
+  name: {
+    en: string;
+    fr: string;
+  };
   emoji: string;
   slug: string;
   color: string;

@@ -53,7 +53,7 @@
     {
       "id": 6,
       "name": {
-        "en": "",
+        "en": "Home Appliance",
         "fr": "Électroménager"
       },
       "emoji": "🛁",
@@ -63,7 +63,7 @@
     {
       "id": 7,
       "name": {
-        "en": "",
+        "en": "Furniture",
         "fr": "Mobilier"
       },
       "emoji": "🪑",
@@ -73,7 +73,7 @@
     {
       "id": 8,
       "name": {
-        "en": "",
+        "en": "Heating",
         "fr": "Chauffage"
       },
       "emoji": "🏠",
@@ -83,7 +83,7 @@
     {
       "id": 9,
       "name": {
-        "en": "",
+        "en": "Fruits and Vegetables",
         "fr": "Fruits et légumes"
       },
       "emoji": "🍅",
@@ -93,7 +93,7 @@
     {
       "id": 10,
       "name": {
-        "en": "",
+        "en": "Digital Use",
         "fr": "Usage numérique"
       },
       "emoji": "✉️",

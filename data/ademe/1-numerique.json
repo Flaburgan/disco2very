@@ -99,7 +99,7 @@
     {
       "name": {
         "en": "Screen 21.5 inches",
-        "fr":  "Écran 21.5 pouces"
+        "fr": "Écran 21.5 pouces"
       },
       "slug": "ecran215pouces",
       "ecv": 236.4005793417607,
@@ -131,7 +131,7 @@
     {
       "name": {
         "en": "Screen 24 inches",
-        "fr":  "Écran 24 pouces"
+        "fr": "Écran 24 pouces"
       },
       "slug": "ecran24pouces",
       "ecv": 263.2705793417607,
@@ -162,8 +162,8 @@
     },
     {
       "name": {
-        "en": "",
-        "fr":  "Tablette (détachable)"
+        "en": "Tablet with keyboard",
+        "fr": "Tablette (détachable)"
       },
       "slug": "tablettedetachable",
       "ecv": 86.28999022039561,
@@ -194,8 +194,8 @@
     },
     {
       "name": {
-        "en": "",
-        "fr":  "Tablette (classique)"
+        "en": "Tablet",
+        "fr": "Tablette (classique)"
       },
       "slug": "tabletteclassique",
       "ecv": 69.5837761232212,
@@ -226,8 +226,8 @@
     },
     {
       "name": {
-        "en": "",
-        "fr":  "Tablette (mini)"
+        "en": "Mini tablet",
+        "fr": "Tablette (mini)"
       },
       "slug": "tablettemini",
       "ecv": 47.70156560714469,
@@ -258,8 +258,8 @@
     },
     {
       "name": {
-        "en": "",
-        "fr":  "Chaine hifi"
+        "en": "Hi-fi stereo",
+        "fr": "Chaine hifi"
       },
       "slug": "chainehifi",
       "ecv": 136.28218772408428,
@@ -290,8 +290,8 @@
     },
     {
       "name": {
-        "en": "",
-        "fr":  "Liseuse"
+        "en": "E-reader",
+        "fr": "Liseuse"
       },
       "slug": "liseuse",
       "ecv": 36.695156875991344,
@@ -322,8 +322,8 @@
     },
     {
       "name": {
-        "en": "",
-        "fr":  "Télévision "
+        "en": "Television",
+        "fr": "Télévision "
       },
       "slug": "television",
       "ecv": 425.15349609789376,
@@ -354,8 +354,8 @@
     },
     {
       "name": {
-        "en": "",
-        "fr":  "Ordinateur portable"
+        "en": "Laptop",
+        "fr": "Ordinateur portable"
       },
       "slug": "ordinateurportable",
       "ecv": 177.98764585279912,
@@ -386,8 +386,8 @@
     },
     {
       "name": {
-        "en": "",
-        "fr":  "Montre connectée"
+        "en": "Smartwatch",
+        "fr": "Montre connectée"
       },
       "slug": "montreconnectee",
       "ecv": 9.858212649590849,
@@ -418,8 +418,8 @@
     },
     {
       "name": {
-        "en": "",
-        "fr":  "Cadre photo digital"
+        "en": "Digital photo frame",
+        "fr": "Cadre photo digital"
       },
       "slug": "cadrephotodigital",
       "ecv": 39.15117683893988,
@@ -450,8 +450,8 @@
     },
     {
       "name": {
-        "en": "",
-        "fr":  "Home cinéma"
+        "en": "Home cinema",
+        "fr": "Home cinéma"
       },
       "slug": "homecinema",
       "ecv": 153.563823982641,
@@ -482,8 +482,8 @@
     },
     {
       "name": {
-        "en": "",
-        "fr":  "Barre de son"
+        "en": "Home speaker",
+        "fr": "Barre de son"
       },
       "slug": "barredeson",
       "ecv": 45.45222930043316,
@@ -514,8 +514,8 @@
     },
     {
       "name": {
-        "en": "",
-        "fr":  "Modem Fibre"
+        "en": "Fiber Modem",
+        "fr": "Modem Fibre"
       },
       "slug": "modemfibre",
       "ecv": 142.59172740390866,
@@ -546,8 +546,8 @@
     },
     {
       "name": {
-        "en": "",
-        "fr":  "Enceinte bluetooth"
+        "en": "Bluetooth speaker",
+        "fr": "Enceinte bluetooth"
       },
       "slug": "enceintebluetooth",
       "ecv": 9.515179528037962,
@@ -578,8 +578,8 @@
     },
     {
       "name": {
-        "en": "",
-        "fr":  "Console de salon"
+        "en": "Games console",
+        "fr": "Console de salon"
       },
       "slug": "consoledesalon",
       "ecv": 101.62688532134777,
@@ -610,8 +610,8 @@
     },
     {
       "name": {
-        "en": "",
-        "fr":  "Console portable"
+        "en": "Handheld game console",
+        "fr": "Console portable"
       },
       "slug": "consoleportable",
       "ecv": 30.884070899056205,
@@ -642,8 +642,8 @@
     },
     {
       "name": {
-        "en": "",
-        "fr":  "Appareil photo réflexe"
+        "en": "Reflex digital camera",
+        "fr": "Appareil photo réflexe"
       },
       "slug": "appareilphotoreflex",
       "ecv": 28.109783588679548,
@@ -674,8 +674,8 @@
     },
     {
       "name": {
-        "en": "",
-        "fr":  "Appareil photo compact"
+        "en": "Compact digital camera",
+        "fr": "Appareil photo compact"
       },
       "slug": "appareilphotocompact",
       "ecv": 22.341835057281678,
@@ -706,8 +706,8 @@
     },
     {
       "name": {
-        "en": "",
-        "fr":  "Imprimante Jet d'encre"
+        "en": "Inkjet printer",
+        "fr": "Imprimante Jet d'encre"
       },
       "slug": "imprimantejetdencre",
       "ecv": 108.1411327150618,

@@ -2,7 +2,7 @@
   "data": [
     {
       "name": {
-        "en": "",
+        "en": "Jeans",
         "fr": "Jean"
       },
       "slug": "jeans",
@@ -34,7 +34,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Polo shirt",
         "fr": "Polo"
       },
       "slug": "polo",
@@ -66,7 +66,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Cotton t-shirt",
         "fr": "T-shirt en coton"
       },
       "slug": "tshirtencoton",
@@ -98,7 +98,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Polyester t-shirt",
         "fr": "T-shirt en polyester"
       },
       "slug": "tshirtenpolyester",
@@ -130,7 +130,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Cotton hoodie",
         "fr": "Sweat en coton"
       },
       "slug": "sweatencoton",
@@ -162,7 +162,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Cotton shirt",
         "fr": "Chemise en coton"
       },
       "slug": "chemiseencoton",
@@ -194,7 +194,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Viscose shirt",
         "fr": "Chemise en viscose"
       },
       "slug": "chemiseenviscose",
@@ -226,7 +226,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Leather shoes",
         "fr": "Paire de chaussures en cuir"
       },
       "slug": "chaussuresencuir",
@@ -258,7 +258,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Fabric shoes",
         "fr": "Paire de chaussures en tissu"
       },
       "slug": "chaussuresentissu",
@@ -290,7 +290,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Sport shoes",
         "fr": "Paire de chaussures de sport"
       },
       "slug": "chaussuresdesport",
@@ -322,7 +322,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Cotton dress",
         "fr": "Robe en coton"
       },
       "slug": "robeencoton",
@@ -354,7 +354,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Polyester dress",
         "fr": "Robe en polyester"
       },
       "slug": "robeenpolyester",
@@ -386,7 +386,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Viscose dress",
         "fr": "Robe en viscose"
       },
       "slug": "robeenviscose",
@@ -418,7 +418,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Wool pullover",
         "fr": "Pull en laine"
       },
       "slug": "pullenlaine",
@@ -450,7 +450,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Acrylic pullover",
         "fr": "Pull en acrylique"
       },
       "slug": "pullenacrylique",
@@ -482,7 +482,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Recycled cotton pullover",
         "fr": "Pull en coton recyclé"
       },
       "slug": "pullencotonrecycle",
@@ -514,7 +514,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Coat",
         "fr": "Manteau"
       },
       "slug": "manteau",
@@ -546,7 +546,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Waterproof jacket",
         "fr": "Veste imperméable"
       },
       "slug": "vesteimpermeable",
@@ -578,7 +578,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Imitation leather jacket",
         "fr": "Veste simili-cuir"
       },
       "slug": "vestesimilicuir",

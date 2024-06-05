@@ -2,7 +2,7 @@
   "data": [
     {
       "name": {
-        "en": "",
+        "en": "Kettle",
         "fr": "Bouilloire"
       },
       "slug": "bouilloire",
@@ -34,7 +34,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Pods coffee maker",
         "fr": "Cafetière (dosette)"
       },
       "slug": "cafetieredosette",
@@ -66,7 +66,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Filters coffee maker",
         "fr": "Cafetière (filtre)"
       },
       "slug": "cafetierefiltre",
@@ -98,7 +98,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Expresso coffee maker",
         "fr": "Cafetière (expresso)"
       },
       "slug": "cafetiereexpresso",
@@ -130,7 +130,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Electrical oven",
         "fr": "Four électrique"
       },
       "slug": "fourelectrique",
@@ -162,7 +162,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Dishwasher",
         "fr": "Lave-vaisselle"
       },
       "slug": "lavevaisselle",
@@ -194,7 +194,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Washing machine",
         "fr": "Lave-linge"
       },
       "slug": "lavelinge",
@@ -226,7 +226,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Fridge",
         "fr": "Réfrigérateur"
       },
       "slug": "refrigirateur",
@@ -258,7 +258,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Vacuum cleaner",
         "fr": "Aspirateur"
       },
       "slug": "aspirateur",
@@ -285,7 +285,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Air conditioner",
         "fr": "Climatiseur"
       },
       "slug": "climatiseur",

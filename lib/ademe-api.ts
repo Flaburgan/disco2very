@@ -108,7 +108,9 @@ function loadDigital(locale: Locale): Item[] {
         id: element.slug,
         categoryId: 1,
         label: element.name[locale],
-        description: "Achat et usage pendant " + element.usage.defaultyears + " ans.",
+        description: locale === "fr" ?
+          "Achat et usage pendant " + element.usage.defaultyears + " ans." :
+          "Purchase and usage for " + element.usage.defaultyears + " years.",
         explanation: "",
         image: "📱 💻 🖥️",
         source: element

@@ -2,7 +2,7 @@
   "data": [
     {
       "name": {
-        "en": "",
+        "en": "Strawberry",
         "fr": "Fraise"
       },
       "slug": "fraise",
@@ -29,7 +29,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Apple",
         "fr": "Pomme"
       },
       "slug": "pomme",
@@ -56,7 +56,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Orange",
         "fr": "Orange"
       },
       "slug": "orange",
@@ -83,7 +83,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Lemon",
         "fr": "Citron"
       },
       "slug": "citron",
@@ -110,7 +110,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Garlic",
         "fr": "Ail"
       },
       "slug": "ail",
@@ -137,7 +137,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Artichoke",
         "fr": "Artichaut"
       },
       "slug": "artichaut",
@@ -164,7 +164,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Asparagus",
         "fr": "Asperge"
       },
       "slug": "asperge",
@@ -191,7 +191,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Beetroot",
         "fr": "Betterave"
       },
       "slug": "betterave",
@@ -218,7 +218,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Chard",
         "fr": "Blette"
       },
       "slug": "blette",
@@ -245,7 +245,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Carrot",
         "fr": "Carotte"
       },
       "slug": "carotte",
@@ -272,7 +272,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Celery",
         "fr": "Céleri"
       },
       "slug": "celeri",
@@ -299,7 +299,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Mushroom (raw morel)",
         "fr": "Champignon (morille crue)"
       },
       "slug": "champignonmorille",
@@ -326,7 +326,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Cabbage",
         "fr": "Chou"
       },
       "slug": "chou",
@@ -353,7 +353,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Brussels sprout",
         "fr": "Chou de Bruxelles"
       },
       "slug": "choudebruxelles",
@@ -380,7 +380,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Cauliflower",
         "fr": "Chou-fleur"
       },
       "slug": "choufleur",
@@ -407,7 +407,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Cucumber",
         "fr": "Concombre"
       },
       "slug": "concombre",
@@ -434,7 +434,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Squash",
         "fr": "Courge"
       },
       "slug": "courge",
@@ -461,7 +461,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Zucchini",
         "fr": "Courgette"
       },
       "slug": "courgette",
@@ -488,7 +488,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Watercress",
         "fr": "Cresson"
       },
       "slug": "cresson",
@@ -515,7 +515,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Shallot",
         "fr": "Échalote"
       },
       "slug": "echalote",
@@ -542,7 +542,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Endive",
         "fr": "Endive"
       },
       "slug": "endive",
@@ -569,7 +569,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Spinach",
         "fr": "Épinard"
       },
       "slug": "epinard",
@@ -596,7 +596,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Mango",
         "fr": "Mangue"
       },
       "slug": "mangue",
@@ -623,7 +623,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Fennel",
         "fr": "Fenouil"
       },
       "slug": "fenouil",
@@ -650,7 +650,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Green bean",
         "fr": "Haricot vert"
       },
       "slug": "haricotvert",
@@ -677,7 +677,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Lettuce",
         "fr": "Laitue"
       },
       "slug": "laitue",
@@ -704,7 +704,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Lamb's lettuce",
         "fr": "Mâche"
       },
       "slug": "mache",
@@ -731,7 +731,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Turnip",
         "fr": "Navet"
       },
       "slug": "navet",
@@ -758,7 +758,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Corn",
         "fr": "Maïs"
       },
       "slug": "mais",
@@ -785,7 +785,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Onion",
         "fr": "Oignon"
       },
       "slug": "oignon",
@@ -812,7 +812,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Parsnip",
         "fr": "Panais"
       },
       "slug": "panais",
@@ -839,7 +839,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Pea",
         "fr": "Petit pois"
       },
       "slug": "petitpois",
@@ -862,7 +862,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Leek",
         "fr": "Poireau"
       },
       "slug": "poireau",
@@ -889,7 +889,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Bell pepper",
         "fr": "Poivron"
       },
       "slug": "poivron",
@@ -916,7 +916,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Pumpkin",
         "fr": "Potiron"
       },
       "slug": "potiron",
@@ -943,7 +943,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Radish",
         "fr": "Radis"
       },
       "slug": "radis",
@@ -970,7 +970,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Salsify",
         "fr": "Salsifis"
       },
       "slug": "salsifis",
@@ -997,7 +997,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Jerusalem artichoke",
         "fr": "Topinambour"
       },
       "slug": "topinambour",
@@ -1024,7 +1024,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Blackcurrant",
         "fr": "Cassis"
       },
       "slug": "cassis",
@@ -1051,7 +1051,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Chestnut",
         "fr": "Châtaigne"
       },
       "slug": "chataigne",
@@ -1078,7 +1078,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Clementine",
         "fr": "Clémentine"
       },
       "slug": "clementine",
@@ -1105,7 +1105,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Grapefruit",
         "fr": "Pamplemousse"
       },
       "slug": "pamplemousse",
@@ -1132,7 +1132,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Quince",
         "fr": "Coing"
       },
       "slug": "coing",
@@ -1159,7 +1159,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Fig",
         "fr": "Figue"
       },
       "slug": "figue",
@@ -1186,7 +1186,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Currant",
         "fr": "Groseille"
       },
       "slug": "groseille",
@@ -1213,7 +1213,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Kiwi",
         "fr": "Kiwi"
       },
       "slug": "kiwi",
@@ -1244,7 +1244,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Mandarin",
         "fr": "Mandarine"
       },
       "slug": "mandarine",
@@ -1271,7 +1271,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Melon",
         "fr": "Melon"
       },
       "slug": "melon",
@@ -1298,7 +1298,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Blackberry",
         "fr": "Mûre"
       },
       "slug": "mure",
@@ -1325,7 +1325,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Nectarine",
         "fr": "Nectarine"
       },
       "slug": "nectarine",
@@ -1352,7 +1352,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Blueberry",
         "fr": "Myrtille"
       },
       "slug": "myrtille",
@@ -1379,7 +1379,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Hazelnut",
         "fr": "Noisette"
       },
       "slug": "noisette",
@@ -1406,7 +1406,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Nut",
         "fr": "Noix"
       },
       "slug": "noix",
@@ -1437,7 +1437,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Plum",
         "fr": "Prune"
       },
       "slug": "prune",
@@ -1464,7 +1464,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Greengage",
         "fr": "Reine Claude"
       },
       "slug": "reineclaude",
@@ -1491,7 +1491,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Rhubarb",
         "fr": "Rhubarbe"
       },
       "slug": "rhubarbe",
@@ -1518,7 +1518,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Peach",
         "fr": "Pêche"
       },
       "slug": "peche",
@@ -1545,7 +1545,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Cherry",
         "fr": "Cerise"
       },
       "slug": "cerise",
@@ -1576,7 +1576,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Apricot",
         "fr": "Abricot"
       },
       "slug": "abricot",
@@ -1607,7 +1607,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Raspberry",
         "fr": "Framboise"
       },
       "slug": "framboise",
@@ -1634,7 +1634,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Pear",
         "fr": "Poire"
       },
       "slug": "poire",
@@ -1661,7 +1661,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Grape",
         "fr": "Raisin"
       },
       "slug": "raisin",
@@ -1688,7 +1688,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Eggplant",
         "fr": "Aubergine"
       },
       "slug": "aubergine",
@@ -1715,7 +1715,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Broccoli",
         "fr": "Brocoli"
       },
       "slug": "brocoli",
@@ -1742,7 +1742,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Tomato",
         "fr": "Tomate"
       },
       "slug": "tomate",
@@ -1769,7 +1769,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Pineapple",
         "fr": "Ananas"
       },
       "slug": "ananas",
@@ -1796,7 +1796,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Banana",
         "fr": "Banane"
       },
       "slug": "banane",
@@ -1823,7 +1823,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Avocado",
         "fr": "Avocat"
       },
       "slug": "avocat",
@@ -1850,7 +1850,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Starfruit",
         "fr": "Carambole"
       },
       "slug": "carambole",
@@ -1877,7 +1877,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Date",
         "fr": "Datte"
       },
       "slug": "datte",
@@ -1904,7 +1904,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Passion fruit",
         "fr": "Fruit de la passion"
       },
       "slug": "fruitdelapassion",
@@ -1931,7 +1931,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Pomegranate",
         "fr": "Grenade"
       },
       "slug": "grenade",
@@ -1958,7 +1958,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Persimmon",
         "fr": "Kaki"
       },
       "slug": "kaki",
@@ -1985,7 +1985,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Coconut",
         "fr": "Noix de coco"
       },
       "slug": "noixdecoco",
@@ -2016,7 +2016,7 @@
     },
     {
       "name": {
-        "en": "",
+        "en": "Watermelon",
         "fr": "Pastèque"
       },
       "slug": "pasteque",

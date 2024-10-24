@@ -1,17 +1,8 @@
 
 import { Item } from "../types/item";
 import ademeCategories from "../data/ademe/0-categories.json";
-import numerique from "../data/ademe/1-numerique.json";
-import repas from "../data/ademe/2-repas.json";
-import boisson from "../data/ademe/3-boisson.json";
-import transport from "../data/ademe/4-transport.json";
-import habillement from "../data/ademe/5-habillement.json";
-import electromenager from "../data/ademe/6-electromenager.json";
-import mobilier from "../data/ademe/7-mobilier.json";
-import chauffage from "../data/ademe/8-chauffage.json";
-import vegetablesAndFruits from "../data/ademe/9-fruitsetlegumes.json";
 import footprintDetailCategories from "../data/ademe/footprintDetailCategories.json";
-import { AdemeCategory, FootprintDetails } from "../types/AdemeECV";
+import { AdemeCategory, AdemeECV, FootprintDetails } from "../types/AdemeECV";
 import { Locale } from "../types/i18n";
 //import usageNumerique from "../data/ademe/10-usagenumerique.json";
 
@@ -112,21 +103,27 @@ export function loadCategory(id: number, locale: Locale): Item[] {
 
 const digitalItems: Item[] = [];
 function loadDigital(locale: Locale): Item[] {
+  console.log("toto")
   if (digitalItems.length === 0) {
-    numerique.data.forEach(element => {
-      const item: Item = {
-        id: element.slug,
-        categoryId: 1,
-        label: element.name[locale],
-        description: locale === "fr" ?
-          "Achat et usage pendant " + element.usage.defaultyears + " ans." :
-          "Purchase and usage for " + element.usage.defaultyears + " years.",
-        explanation: "",
-        image: "📱 💻 🖥️",
-        source: element
-      }
-      digitalItems.push(item);
-    });
+    import(`../data/ademe/${locale}/1-numerique.json`).then(numerique => {
+      console.log(numerique)
+      numerique.data.forEach((element: AdemeECV) => {
+
+        console.log(element)
+        const item: Item = {
+          id: element.slug,
+          categoryId: 1,
+          label: element.name,
+          description: locale === "fr" ?
+            "Achat et usage pendant " + element.usage?.defaultyears + " ans." :
+            "Purchase and usage for " + element.usage?.defaultyears + " years.",
+          explanation: "",
+          image: "📱 💻 🖥️",
+          source: element
+        }
+        digitalItems.push(item);
+      })}
+    );
   }
   return digitalItems;
 }
@@ -134,18 +131,20 @@ function loadDigital(locale: Locale): Item[] {
 const mealItems: Item[] = [];
 function loadMeals(locale: Locale): Item[] {
   if (mealItems.length === 0) {
-    repas.data.forEach(element => {
-      const item: Item = {
-        id: element.slug,
-        categoryId: 2,
-        label: element.name[locale],
-        description: "",
-        explanation: "",
-        image: "🐟 🍽 🥩",
-        source: element
-      }
-      mealItems.push(item);
-    });
+    import(`../data/ademe/${locale}/2-repas.json`).then(repas => 
+      repas.data.forEach((element: AdemeECV) => {
+        const item: Item = {
+          id: element.slug,
+          categoryId: 2,
+          label: element.name,
+          description: "",
+          explanation: "",
+          image: "🐟 🍽 🥩",
+          source: element
+        }
+        mealItems.push(item);
+      })
+    );
   }
   return mealItems;
 }
@@ -153,18 +152,20 @@ function loadMeals(locale: Locale): Item[] {
 const drinkItems: Item[] = [];
 function loadDrinks(locale: Locale): Item[] {
   if (drinkItems.length === 0) {
-    boisson.data.forEach(element => {
-      const item: Item = {
-        id: element.slug,
-        categoryId: 3,
-        label: element.name[locale] + " (1L)",
-        description: "",
-        explanation: "",
-        image: "🍺 🍹 🥛",
-        source: element
-      }
-      drinkItems.push(item);
-    });
+    import(`../data/ademe/${locale}/3-boisson.json`).then(boisson => 
+      boisson.data.forEach((element: AdemeECV) => {
+        const item: Item = {
+          id: element.slug,
+          categoryId: 3,
+          label: element.name + " (1L)",
+          description: "",
+          explanation: "",
+          image: "🍺 🍹 🥛",
+          source: element
+        }
+        drinkItems.push(item);
+      })
+    );
   }
   return drinkItems;
 }
@@ -172,18 +173,20 @@ function loadDrinks(locale: Locale): Item[] {
 const transportItems: Item[] = [];
 function loadTransports(locale: Locale): Item[] {
   if (transportItems.length === 0) {
-    transport.data.forEach(element => {
-      const item: Item = {
-        id: element.slug,
-        categoryId: 4,
-        label: element.name[locale],
-        description: "",
-        explanation: "",
-        image: "🚗 🚄 ✈️",
-        source: element
-      }
-      transportItems.push(item);
-    });
+    import(`../data/ademe/${locale}/4-transport.json`).then(transport => 
+      transport.data.forEach((element: AdemeECV) => {
+        const item: Item = {
+          id: element.slug,
+          categoryId: 4,
+          label: element.name,
+          description: "",
+          explanation: "",
+          image: "🚗 🚄 ✈️",
+          source: element
+        }
+        transportItems.push(item);
+      })
+    );
   }
   return transportItems;
 }
@@ -191,18 +194,20 @@ function loadTransports(locale: Locale): Item[] {
 const clotheItems: Item[] = [];
 function loadClothes(locale: Locale): Item[] {
   if (clotheItems.length === 0) {
-    habillement.data.forEach(element => {
-      const item: Item = {
-        id: element.slug,
-        categoryId: 5,
-        label: element.name[locale],
-        description: "",
-        explanation: "",
-        image: "👞 👔 👗",
-        source: element
-      }
-      clotheItems.push(item);
-    });
+    import(`../data/ademe/${locale}/5-habillement.json`).then(habillement => 
+      habillement.data.forEach((element: AdemeECV) => {
+        const item: Item = {
+          id: element.slug,
+          categoryId: 5,
+          label: element.name,
+          description: "",
+          explanation: "",
+          image: "👞 👔 👗",
+          source: element
+        }
+        clotheItems.push(item);
+      })
+    );
   }
   return clotheItems;
 }
@@ -210,18 +215,20 @@ function loadClothes(locale: Locale): Item[] {
 const householdApplianceItems: Item[] = [];
 function loadHouseholdAppliances(locale: Locale): Item[] {
   if (householdApplianceItems.length === 0) {
-    electromenager.data.forEach(element => {
-      const item: Item = {
-        id: element.slug,
-        categoryId: 6,
-        label: element.name[locale],
-        description: element.usage ? "Achat et usage pendant " + element.usage.defaultyears + " ans." : "",
-        explanation: "",
-        image: "🧊 🛁 ☕",
-        source: element
-      }
-      householdApplianceItems.push(item);
-    });
+    import(`../data/ademe/${locale}/6-electromenager.json`).then(electromenager => 
+      electromenager.data.forEach((element: AdemeECV) => {
+        const item: Item = {
+          id: element.slug,
+          categoryId: 6,
+          label: element.name,
+          description: element.usage ? "Achat et usage pendant " + element.usage.defaultyears + " ans." : "",
+          explanation: "",
+          image: "🧊 🛁 ☕",
+          source: element
+        }
+        householdApplianceItems.push(item);
+      })
+    );
   }
   return householdApplianceItems;
 }
@@ -229,18 +236,20 @@ function loadHouseholdAppliances(locale: Locale): Item[] {
 const furnitureItems: Item[] = [];
 function loadFurnitures(locale: Locale): Item[] {
   if (furnitureItems.length === 0) {
-    mobilier.data.forEach(element => {
-      const item: Item = {
-        id: element.slug,
-        categoryId: 7,
-        label: element.name[locale],
-        description: "",
-        explanation: "",
-        image: "🛏️ 🪑 🛋️",
-        source: element
-      }
-      furnitureItems.push(item);
-    });
+    import(`../data/ademe/${locale}/7-mobilier.json`).then(mobilier => 
+      mobilier.data.forEach((element: AdemeECV) => {
+        const item: Item = {
+          id: element.slug,
+          categoryId: 7,
+          label: element.name,
+          description: "",
+          explanation: "",
+          image: "🛏️ 🪑 🛋️",
+          source: element
+        }
+        furnitureItems.push(item);
+      })
+    );
   }
   return furnitureItems;
 }
@@ -248,20 +257,22 @@ function loadFurnitures(locale: Locale): Item[] {
 const heatingItems: Item[] = [];
 function loadHeating(locale: Locale): Item[] {
   if (heatingItems.length === 0) {
-    chauffage.data.forEach(element => {
-      const item: Item = {
-        id: element.slug,
-        categoryId: 8,
-        label: element.name[locale],
-        description: locale === "fr" ?
-          "60m2 par mois en moyenne annuel." :
-          "60m2 per month on yearly average.",
-        explanation: "",
-        image: "🪵 🏠 🌡️",
-        source: element
-      }
-      heatingItems.push(item);
-    });
+    import(`../data/ademe/${locale}/8-chauffage.json`).then(chauffage => 
+      chauffage.data.forEach((element: AdemeECV) => {
+        const item: Item = {
+          id: element.slug,
+          categoryId: 8,
+          label: element.name,
+          description: locale === "fr" ?
+            "60m2 par mois en moyenne annuel." :
+            "60m2 per month on yearly average.",
+          explanation: "",
+          image: "🪵 🏠 🌡️",
+          source: element
+        }
+        heatingItems.push(item);
+      })
+    );
   }
   return heatingItems;
 }
@@ -269,18 +280,20 @@ function loadHeating(locale: Locale): Item[] {
 const vegetablesAndFruitsItems: Item[] = [];
 function loadVegetablesAndFruits(locale: Locale): Item[] {
   if (vegetablesAndFruitsItems.length === 0) {
-    vegetablesAndFruits.data.forEach(element => {
-      const item: Item = {
-        id: element.slug,
-        categoryId: 9,
-        label: element.name[locale] + " (1kg)",
-        description: "Consommé le mois de mars",
-        explanation: "",
-        image: "🥑 🍇 🍅",
-        source: element
-      }
-      vegetablesAndFruitsItems.push(item);
-    });
+    import(`../data/ademe/${locale}/9-fruitsetlegumes.json`).then(fruitsetlegumes => 
+      fruitsetlegumes.data.forEach((element: AdemeECV) => {
+        const item: Item = {
+          id: element.slug,
+          categoryId: 9,
+          label: element.name + " (1kg)",
+          description: "Consommé le mois de mars",
+          explanation: "",
+          image: "🥑 🍇 🍅",
+          source: element
+        }
+        vegetablesAndFruitsItems.push(item);
+      })
+    );
   }
   return vegetablesAndFruitsItems;
 }

@@ -10,6 +10,7 @@ import enElectromenager from "../data/ademe/en/6-electromenager.json";
 import enMobilier from "../data/ademe/en/7-mobilier.json";
 import enChauffage from "../data/ademe/en/8-chauffage.json";
 import enVegetablesAndFruits from "../data/ademe/en/9-fruitsetlegumes.json";
+import enDigitalUsages from "../data/ademe/en/10-usagenumerique.json";
 import frNumerique from "../data/ademe/fr/1-numerique.json";
 import frRepas from "../data/ademe/fr/2-repas.json";
 import frBoisson from "../data/ademe/fr/3-boisson.json";
@@ -19,6 +20,7 @@ import frElectromenager from "../data/ademe/fr/6-electromenager.json";
 import frMobilier from "../data/ademe/fr/7-mobilier.json";
 import frChauffage from "../data/ademe/fr/8-chauffage.json";
 import frVegetablesAndFruits from "../data/ademe/fr/9-fruitsetlegumes.json";
+import frDigitalUsages from "../data/ademe/fr/10-usagenumerique.json";
 import footprintDetailCategories from "../data/ademe/footprintDetailCategories.json";
 import { AdemeCategory, AdemeECV, FootprintDetails } from "../types/AdemeECV";
 import { Locale } from "../types/i18n";
@@ -111,7 +113,7 @@ export function loadCategory(id: number, locale: Locale): Item[] {
     case 9:
       return loadVegetablesAndFruits(locale);
     case 10:
-      return []; // TODO Usage numérique needs more work
+      return loadDigitalUsagesItems(locale);
     default:
       return [];
   }
@@ -301,18 +303,24 @@ function loadVegetablesAndFruits(locale: Locale): Item[] {
   return vegetablesAndFruitsItems;
 }
 
-// Not ready on Ademe side, they should explain with which device, on which network, how much, etc.
-// usageNumerique.data.forEach(element => {
-//   const item: Item = {
-//     id: element.slug,
-//     category: "digital",
-//     label: element.name,
-//     description: "Achat et usage pendant " + element.usage.defaultyears + " ans.",
-//     explanation: "",
-//     source: element
-//   }
-//   items.push(item);
-// });
+const digitalUsagesItems: Item[] = [];
+function loadDigitalUsagesItems(locale: Locale): Item[] {
+  if (digitalUsagesItems.length === 0) {
+    const digitalUsages = locale === "fr" ? frDigitalUsages : enDigitalUsages;
+    digitalUsages.data.forEach(element => {
+      const item: Item = {
+        id: element.slug,
+        categoryId: 10,
+        label: element.name,
+        description: "",
+        explanation: "",
+        source: element
+      }
+      digitalUsagesItems.push(item);
+    });
+  }
+  return digitalUsagesItems;
+}
 
 export function getFootprintDetails(): FootprintDetails {
   return footprintDetailCategories;

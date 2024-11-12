@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { loadCategories } from "../lib/ademe-api";
 import classNames from "classnames";
 import styles from "../styles/categories-selector.module.scss";
-import { Trans, t } from "@lingui/macro";
+import { Trans } from "@lingui/macro";
 import { Item } from "../types/item";
 import Button from "./button";
 import { loadCategory } from "../lib/ademe-api";
@@ -22,13 +22,8 @@ export default function CategoriesSelector({setSelectedItems, setCategoriesMode}
   // Make 0 a fake one, to avoid the hassle of subtracting by one all the time.
   const [selectedCategories, setSelectedCategories] = useState<boolean[]>(Array(categories.length + 1).fill(false));
   const updateCategories = (id: number) => {
-    // Some categories are not available yet
-    if (id === 10) {
-      alert(t`This category is not yet available.`);
-    } else {
-      selectedCategories[id] = !selectedCategories[id];
-      setSelectedCategories([...selectedCategories]); // We create a new array to force a React rerender 
-    }
+    selectedCategories[id] = !selectedCategories[id];
+    setSelectedCategories([...selectedCategories]); // We create a new array to force a React rerender
   };
 
   return (

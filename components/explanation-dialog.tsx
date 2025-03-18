@@ -45,6 +45,11 @@ export default function ExplanationDialog(props: ExplanationDialogProps) {
           <div className={styles.result}>
             <strong className={styles[total > 0 ? "result-negative" : "result-positive"]}>{total} kg CO<sub>2</sub>e</strong>
           </div>
+          <div className="warning-box">
+            <Trans>These values are computed by the french goverment agency ADEME. You can access the raw data
+              at <a href="https://base-empreinte.ademe.fr/" rel="noreferrer" target="_blank">base-empreinte.ademe.fr</a> and <a href="https://agribalyse.ademe.fr/" rel="noreferrer" target="_blank">agribalyse.ademe.fr</a>.
+             Other countries may have different values, especially those involving electricity consumption.</Trans>
+          </div>
         </footer>
       </div>
     </div>

@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: components/explanation-dialog.tsx:67
+#: components/explanation-dialog.tsx:71
 msgid "{0} per year, estimated lifetime: {1} years."
 msgstr "{0} per year, estimated lifetime: {1} years."
 
@@ -34,7 +34,7 @@ msgid "A real deck of cards?"
 msgstr "A real deck of cards?"
 
 #: components/board.tsx:133
-#: components/categories-selector.tsx:55
+#: components/categories-selector.tsx:56
 msgid "Back"
 msgstr "Back"
 
@@ -61,7 +61,7 @@ msgstr "Copied!"
 msgid "disCO2very is a free game to discover the orders of magnitude of the CO2 footprint"
 msgstr "disCO2very is a free game to discover the orders of magnitude of the CO2 footprint"
 
-#: components/explanation-dialog.tsx:73
+#: components/explanation-dialog.tsx:77
 msgid "End of life:"
 msgstr "End of life:"
 
@@ -134,7 +134,7 @@ msgstr "Restart"
 msgid "Select categories"
 msgstr "Select categories"
 
-#: components/categories-selector.tsx:37
+#: components/categories-selector.tsx:38
 msgid "Select the categories you want to play with:"
 msgstr "Select the categories you want to play with:"
 
@@ -142,7 +142,7 @@ msgstr "Select the categories you want to play with:"
 msgid "Share your score"
 msgstr "Share your score"
 
-#: components/categories-selector.tsx:54
+#: components/categories-selector.tsx:55
 #: components/instructions.tsx:46
 msgid "Start game"
 msgstr "Start game"
@@ -155,7 +155,11 @@ msgstr "The disCO2very logo, featuring a molecule of CO2."
 msgid "The numbers are coming from the <0>Ademe</0> platform <1>Impact CO<2>2</2></1>. Thanks to them for their amazing work!"
 msgstr "The numbers are coming from the <0>Ademe</0> platform <1>Impact CO<2>2</2></1>. Thanks to them for their amazing work!"
 
-#: components/categories-selector.tsx:27
+#: components/explanation-dialog.tsx:49
+msgid "These values are computed by the french goverment agency ADEME. You can access the raw data at <0>base-empreinte.ademe.fr</0> and <1>agribalyse.ademe.fr</1>. Other countries may have different values, especially those involving electricity consumption."
+msgstr "These values are computed by the french goverment agency ADEME. You can access the raw data at <0>base-empreinte.ademe.fr</0> and <1>agribalyse.ademe.fr</1>. Other countries may have different values, especially those involving electricity consumption."
+
+#: components/categories-selector.tsx:28
 msgid "This category is not yet available."
 msgstr "This category is not yet available."
 
@@ -168,7 +172,7 @@ msgstr "This game is currently a digital app but the ultimate goal is to print a
 msgid "This streak"
 msgstr "This streak"
 
-#: components/explanation-dialog.tsx:45
+#: components/explanation-dialog.tsx:44
 msgid "Total:"
 msgstr "Total:"
 
@@ -176,7 +180,7 @@ msgstr "Total:"
 msgid "Try again!"
 msgstr "Try again!"
 
-#: components/explanation-dialog.tsx:65
+#: components/explanation-dialog.tsx:69
 msgid "Usage:"
 msgstr "Usage:"
 

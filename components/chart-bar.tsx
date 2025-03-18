@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../styles/chart-bar.module.scss";
 import { displayCO2 } from "../lib/items";
+import classNames from "classnames";
 
 interface ChartBarProps {
   value: number,
@@ -10,17 +11,14 @@ interface ChartBarProps {
 export default function ChartBar(props: ChartBarProps) {
   const {value, total} = props;
   let percent = value * 100 / total;
-  let color = red;
+  let cssClass = "result-negative";
   if (value < 0) {
     percent = -percent;
-    color = green;
+    cssClass = "result-positive";
   }
 
   return (<div className={styles.chartBar}>
-    <span className={styles.bar} style={{width: percent + "%", backgroundColor: color}}></span>
+    <span className={classNames(styles.bar, styles[cssClass])} style={{width: percent + "%"}}></span>
     <span className={styles.co2}>{displayCO2(value)}</span>
   </div>);
 }
-
-export const red = "#ce2550";
-export const green = "#25CFA4";

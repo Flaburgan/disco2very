@@ -1,14 +1,13 @@
-import React from "react";
+import { Trans, t } from "@lingui/macro";
+import { useLingui } from "@lingui/react";
 import classNames from "classnames";
-import { Item } from "../types/item";
+import { getFootprintDetails } from "../lib/ademe-api";
 import { displayCO2, round2 } from "../lib/items";
 import styles from "../styles/explanation-dialog.module.scss";
-import { Trans, t } from "@lingui/macro";
 import { FootprintDetails } from "../types/AdemeECV";
-import { useLingui } from "@lingui/react";
-import { getFootprintDetails } from "../lib/ademe-api";
 import { Locale } from "../types/i18n";
-import ChartBar, { green, red } from "./chart-bar";
+import { Item } from "../types/item";
+import ChartBar from "./chart-bar";
 
 interface ExplanationDialogProps {
   item: Item;
@@ -43,8 +42,8 @@ export default function ExplanationDialog(props: ExplanationDialogProps) {
         </main>
         <footer>
           <h3><Trans>Total:</Trans></h3>
-          <div>
-            <strong style={{backgroundColor: total > 0 ? red : green}}>{total} kg CO<sub>2</sub>e</strong>
+          <div className={styles.result}>
+            <strong className={styles[total > 0 ? "result-negative" : "result-positive"]}>{total} kg CO<sub>2</sub>e</strong>
           </div>
         </footer>
       </div>

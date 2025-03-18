@@ -58,14 +58,28 @@
 
     h3 {
       font-size: 1.4rem;
-      margin-bottom: 1rem;
+    }
+
+    .result {
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
     }
 
     strong {
       font-size: 1.6rem;
       padding: .4rem .8rem;
-      border: solid #333 2px;
+      border: solid 3px;
       border-radius: 3px;
+    }
+
+    .result-negative {
+      background-color: #fdd;
+      border-color: $result-negative;
+    }
+
+    .result-positive {
+      background-color: #dfd;
+      border-color: $result-positive;
     }
   }
 }

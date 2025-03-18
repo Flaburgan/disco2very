@@ -24,6 +24,7 @@ body {
 
 a {
   color: $text-light;
+  white-space: nowrap;
 
   &:hover {
     color: $link-hover;
@@ -117,8 +118,16 @@ input {
   border: solid 2px $font-color;
   background-color: $background-color;
   border-radius: 5px;
-  padding: 12px;
-  color: $font-color;
+  padding: 8px 10px;
+
+  &,
+  a {
+    color: $font-color;
+  }
+
+  a:hover {
+    color: darken($font-color, 25%);
+  }
 
   :first-child {
     margin-top: 0;
@@ -134,7 +143,7 @@ input {
 }
 
 .warning-box {
-  @include message-box(#8c2c0c, #fd9f36);
+  @include message-box(#ac0c00, #ffbf56);
 }
 
 .success-box {

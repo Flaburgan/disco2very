@@ -34,7 +34,7 @@ msgid "A real deck of cards?"
 msgstr "Un vrai jeu de cartes ?"
 
 #: components/board.tsx:133
-#: components/categories-selector.tsx:56
+#: components/categories-selector.tsx:57
 msgid "Back"
 msgstr "Retour"
 
@@ -134,7 +134,7 @@ msgstr "Recommencer"
 msgid "Select categories"
 msgstr "Sélectionner les catégories"
 
-#: components/categories-selector.tsx:38
+#: components/categories-selector.tsx:40
 msgid "Select the categories you want to play with:"
 msgstr "Sélectionnez les catégories avec lesquelles vous voulez jouer :"
 
@@ -142,7 +142,7 @@ msgstr "Sélectionnez les catégories avec lesquelles vous voulez jouer :"
 msgid "Share your score"
 msgstr "Partagez votre score"
 
-#: components/categories-selector.tsx:55
+#: components/categories-selector.tsx:56
 #: components/instructions.tsx:46
 msgid "Start game"
 msgstr "Démarrer la partie"
@@ -159,7 +159,7 @@ msgstr "Les chiffres viennent de la plateforme de l'<0>Ademe</0> <1>Impact CO<2>
 msgid "These values are computed by the french goverment agency ADEME. You can access the raw data at <0>base-empreinte.ademe.fr</0> and <1>agribalyse.ademe.fr</1>. Other countries may have different values, especially those involving electricity consumption."
 msgstr "Ces valeurs sont calculées pour la France. Vous pouvez accéder aux données brutes sur <0>base-empreinte.ademe.fr</0> et <1>agribalyse.ademe.fr</1>. D'autres pays peuvent avoir des valeurs différentes, en particulier celles impliquant de la consommation d'électricité."
 
-#: components/categories-selector.tsx:28
+#: components/categories-selector.tsx:27
 msgid "This category is not yet available."
 msgstr "Cette catégorie n'est pas encore disponible."
 

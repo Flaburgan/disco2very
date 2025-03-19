@@ -34,7 +34,7 @@ msgid "A real deck of cards?"
 msgstr "A real deck of cards?"
 
 #: components/board.tsx:133
-#: components/categories-selector.tsx:56
+#: components/categories-selector.tsx:57
 msgid "Back"
 msgstr "Back"
 
@@ -134,7 +134,7 @@ msgstr "Restart"
 msgid "Select categories"
 msgstr "Select categories"
 
-#: components/categories-selector.tsx:38
+#: components/categories-selector.tsx:40
 msgid "Select the categories you want to play with:"
 msgstr "Select the categories you want to play with:"
 
@@ -142,7 +142,7 @@ msgstr "Select the categories you want to play with:"
 msgid "Share your score"
 msgstr "Share your score"
 
-#: components/categories-selector.tsx:55
+#: components/categories-selector.tsx:56
 #: components/instructions.tsx:46
 msgid "Start game"
 msgstr "Start game"
@@ -159,7 +159,7 @@ msgstr "The numbers are coming from the <0>Ademe</0> platform <1>Impact CO<2>2</
 msgid "These values are computed by the french goverment agency ADEME. You can access the raw data at <0>base-empreinte.ademe.fr</0> and <1>agribalyse.ademe.fr</1>. Other countries may have different values, especially those involving electricity consumption."
 msgstr "These values are computed by the french goverment agency ADEME. You can access the raw data at <0>base-empreinte.ademe.fr</0> and <1>agribalyse.ademe.fr</1>. Other countries may have different values, especially those involving electricity consumption."
 
-#: components/categories-selector.tsx:28
+#: components/categories-selector.tsx:27
 msgid "This category is not yet available."
 msgstr "This category is not yet available."
 

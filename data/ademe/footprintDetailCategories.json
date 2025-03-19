@@ -74,5 +74,21 @@
   "35": {
     "en": "Consumption",
     "fr": "Consommation"
+  },
+  "50": {
+    "en": "Energy consumption",
+    "fr": "Consommation d'énergie"
+  },
+  "51": {
+    "en": "Maintenance service",
+    "fr": "Service d'entretien"
+  },
+  "52": {
+    "en": "Staff commuting",
+    "fr": "Déplacement du personnel"
+  },
+  "53": {
+    "en": "Construction of infrastructures",
+    "fr": "Construction des infrastructures"
   }
 }

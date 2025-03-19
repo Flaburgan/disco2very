@@ -17,18 +17,20 @@ interface CategoriesSelectorProps {
 export default function CategoriesSelector({setSelectedItems, setCategoriesMode}: CategoriesSelectorProps) {
   const { i18n } = useLingui();
   const locale = i18n.locale as Locale;
-
   const categories = loadCategories();
 
-  // Make 0 a fake one, to avoid the hassle of subtracting by one all the time.
   const [selectedCategories, setSelectedCategories] = useState(new Set<number>());
+
   const updateCategories = (id: number) => {
     // Some categories are not available yet
     if (id === 10) {
       alert(t`This category is not yet available.`);
     } else {
-      selectedCategories.has(id) ? selectedCategories.delete(id) : selectedCategories.add(id);
-      setSelectedCategories(new Set(selectedCategories)); // We create a new Set to force a React rerender
+      setSelectedCategories(prevSet => {
+        const newSet = new Set(prevSet); // We create a new Set to force a React rerender
+        newSet.has(id) ? newSet.delete(id) : newSet.add(id);
+        return newSet;
+      });
     }
   };
 
@@ -37,9 +39,8 @@ export default function CategoriesSelector({setSelectedItems, setCategoriesMode}
       <div>
         <h3><Trans>Select the categories you want to play with:</Trans></h3>
         <div className={classNames(styles.categoriesSelection)}>
-          {categories.values().map((category) => {
+          {[...categories.values()].map((category) => {
             const id = category.id;
-
             return (
               <div key={id} className={selectedCategories.has(id) ? classNames(styles.selected) : ""} onClick={() => updateCategories(id)}>
                 <div>

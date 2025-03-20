@@ -24,6 +24,7 @@ import frPracticalCases from "../data/ademe/fr/13-caspratiques.json";
 import footprintDetailCategories from "../data/ademe/footprintDetailCategories.json";
 import { AdemeCategory, AdemeECV, FootprintDetails } from "../types/AdemeECV";
 import { Locale } from "../types/i18n";
+import { t } from "@lingui/macro";
 
 export function getDefaultItems(locale: Locale): Item[] {
   const slugs = [
@@ -130,10 +131,7 @@ function loadDigital(locale: Locale): Item[] {
         id: element.slug,
         categoryId: 1,
         label: element.name,
-        description: !element.usage ? "" :
-          locale === "fr" ?
-            "Achat et usage pendant " + element.usage.defaultyears + " ans" :
-            "Purchase and usage for " + element.usage.defaultyears + " years.",
+        description: !element.usage ? "" : t`Purchase and usage for ${element.usage.defaultyears} years.`,
         explanation: "",
         source: element
       }
@@ -230,10 +228,7 @@ function loadHouseholdAppliances(locale: Locale): Item[] {
         id: element.slug,
         categoryId: 6,
         label: element.name,
-        description: !element.usage ? "" :
-          locale === "fr" ?
-            "Achat et usage pendant " + element.usage.defaultyears + " ans" :
-            "Purchase and usage for " + element.usage.defaultyears + " years.",
+        description: !element.usage ? "" : t`Purchase and usage for ${element.usage.defaultyears} years.`,
         explanation: "",
         source: element
       }
@@ -272,12 +267,8 @@ function loadHeating(locale: Locale): Item[] {
         id: element.slug,
         categoryId: 8,
         label: element.name.replace(" par m²", "").replace(" per m²", ""),
-        description: locale === "fr" ?
-          "<strong>par mois</strong> pour 60m²" :
-          "<strong>per month</strong> for 60m²",
-        explanation: locale === "fr" ?
-          "Impact pour un mois de chauffage d'un logement de 60m² en lissant la consommation sur l'année." :
-          "Impact of one month of heating a house of 60m², spreading the consumption over the year.",
+        description: t`<strong>per month</strong> for 60m²`,
+        explanation: t`Impact of one month of heating a house of 60m², spreading the consumption over the year.`,
         source: element
       }
       heatingItems.push(item);
@@ -295,9 +286,7 @@ function loadVegetablesAndFruits(locale: Locale): Item[] {
         id: element.slug,
         categoryId: 9,
         label: element.name + " (1kg)",
-        description: locale === "fr" ?
-          "Consommé le mois de mars" :
-          "Bought in March",
+        description: t`Bought in March`,
         explanation: "",
         source: element
       }

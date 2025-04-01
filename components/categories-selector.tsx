@@ -15,10 +15,10 @@ interface CategoriesSelectorProps {
   setCategoriesMode: (categoriesMode: boolean) => void;
 }
 
-export default function CategoriesSelector({setSelectedItems, setCategoriesMode}: CategoriesSelectorProps) {
+export default async function CategoriesSelector({setSelectedItems, setCategoriesMode}: CategoriesSelectorProps) {
   const { i18n } = useLingui();
   const locale = i18n.locale as Locale;
-  const categories = loadCategories();
+  const categories = await loadCategories();
 
   const [selectedCategories, setSelectedCategories] = useState(new Set<number>());
 

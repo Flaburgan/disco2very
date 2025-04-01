@@ -1,32 +1,12 @@
 
 import { Item } from "../types/item";
 import ademeCategories from "../data/ademe/0-categories.json";
-import enNumerique from "../data/ademe/en/1-numerique.json";
-import enAlimentation from "../data/ademe/en/2-alimentation.json";
-import enBoisson from "../data/ademe/en/3-boisson.json";
-import enTransport from "../data/ademe/en/4-transport.json";
-import enHabillement from "../data/ademe/en/5-habillement.json";
-import enElectromenager from "../data/ademe/en/6-electromenager.json";
-import enMobilier from "../data/ademe/en/7-mobilier.json";
-import enChauffage from "../data/ademe/en/8-chauffage.json";
-import enVegetablesAndFruits from "../data/ademe/en/9-fruitsetlegumes.json";
-import enPracticalCases from "../data/ademe/en/13-caspratiques.json";
-import frNumerique from "../data/ademe/fr/1-numerique.json";
-import frAlimentation from "../data/ademe/fr/2-alimentation.json";
-import frBoisson from "../data/ademe/fr/3-boisson.json";
-import frTransport from "../data/ademe/fr/4-transport.json";
-import frHabillement from "../data/ademe/fr/5-habillement.json";
-import frElectromenager from "../data/ademe/fr/6-electromenager.json";
-import frMobilier from "../data/ademe/fr/7-mobilier.json";
-import frChauffage from "../data/ademe/fr/8-chauffage.json";
-import frVegetablesAndFruits from "../data/ademe/fr/9-fruitsetlegumes.json";
-import frPracticalCases from "../data/ademe/fr/13-caspratiques.json";
 import footprintDetailCategories from "../data/ademe/footprintDetailCategories.json";
 import { AdemeCategory, AdemeECV, FootprintDetails } from "../types/AdemeECV";
 import { Locale } from "../types/i18n";
 import { t } from "@lingui/macro";
 
-export function getDefaultItems(locale: Locale): Item[] {
+export async function getDefaultItems(locale: Locale): Promise<Item[]> {
   const slugs = [
     "smartphone",
     "television",
@@ -56,7 +36,8 @@ export function getDefaultItems(locale: Locale): Item[] {
   ];
 
   const selectedItems: Item[] = [];
-  getAllItems(locale).forEach(item => {
+  const allItems = await getAllItems(locale);
+  allItems.forEach(item => {
     if (slugs.includes(item.source.slug)) {
       selectedItems.push(item);
     }
@@ -64,8 +45,8 @@ export function getDefaultItems(locale: Locale): Item[] {
   return selectedItems;
 }
 
-export function getItemFromSlug(slug: string, locale: Locale): Item | undefined {
-  const allItems = getAllItems(locale);
+export async function getItemFromSlug(slug: string, locale: Locale): Promise<Item | undefined> {
+  const allItems = await getAllItems(locale);
   for (let i = 0; i < allItems.length; i++) {
     if (allItems[i].source.slug === slug) {
       return allItems[i];
@@ -74,265 +55,140 @@ export function getItemFromSlug(slug: string, locale: Locale): Item | undefined 
   return undefined;
 }
 
-const allItems: Item[] = [];
-function getAllItems(locale: Locale): Item[] {
-  if (allItems.length === 0) {
-    loadCategories().forEach((_, id) => {
-      allItems.push(...loadCategoryItems(id, locale));
-    });
+async function getAllItems(locale: Locale): Promise<Item[]> {
+  const allItems: Item[] = [];
+  for (const [id, category] of loadCategories()) {
+      allItems.push(...(await loadCategoryItems(category, locale)));
   }
   return allItems;
 }
 
-const categories: Map<number, AdemeCategory> = new Map();
 export function loadCategories(): Map<number, AdemeCategory> {
-  if (categories.size === 0) {
-    ademeCategories.data.forEach(category => categories.set(category.id, category));
-  }
+  const categories: Map<number, AdemeCategory> = new Map();
+  ademeCategories.data.forEach(category => categories.set(category.id, category));
   return categories;
-}
-
-export function loadCategoryItems(id: number, locale: Locale): Item[] {
-  // Hardcoded at the moment, to be seen with ADEME if we don't need to extend their data at some point
-  switch (id) {
-    case 1:
-      return loadDigital(locale);
-    case 2:
-      return loadFood(locale);
-    case 3:
-      return loadDrinks(locale);
-    case 4:
-      return loadTransports(locale);
-    case 5:
-      return loadClothes(locale);
-    case 6:
-      return loadHouseholdAppliances(locale);
-    case 7:
-      return loadFurnitures(locale);
-    case 8:
-      return loadHeating(locale);
-    case 9:
-      return loadVegetablesAndFruits(locale);
-    case 10:
-      return []; // TODO Usage numérique needs more work
-    case 13:
-      return loadPracticalCases(locale);
-    default:
-      return [];
-  }
-}
-
-const digitalItems: Item[] = [];
-function loadDigital(locale: Locale): Item[] {
-  if (digitalItems.length === 0) {
-    const numerique = locale === "fr" ? frNumerique : enNumerique;
-    numerique.data.forEach(element => {
-      const item: Item = {
-        id: element.slug,
-        categoryId: 1,
-        label: element.name,
-        description: !element.usage ? "" : t`Purchase and usage for ${element.usage.defaultyears} years.`,
-        explanation: "",
-        source: element
-      }
-      digitalItems.push(item);
-    });
-  }
-  return digitalItems;
-}
-
-const foodItems: Item[] = [];
-function loadFood(locale: Locale): Item[] {
-  if (foodItems.length === 0) {
-    const alimentation = locale === "fr" ? frAlimentation : enAlimentation;
-    alimentation.data.forEach(element => {
-      const item: Item = {
-        id: element.slug,
-        categoryId: 2,
-        label: element.name + (element.slug.startsWith("repas") ? "" : " (1kg)"),
-        description: "",
-        explanation: "",
-        source: element
-      }
-      foodItems.push(item);
-    });
-  }
-  return foodItems;
-}
-
-const drinkItems: Item[] = [];
-function loadDrinks(locale: Locale): Item[] {
-  if (drinkItems.length === 0) {
-    const boisson = locale === "fr" ? frBoisson : enBoisson;
-    boisson.data.forEach(element => {
-      const item: Item = {
-        id: element.slug,
-        categoryId: 3,
-        label: element.name + " (1L)",
-        description: "",
-        explanation: "",
-        source: element
-      }
-      drinkItems.push(item);
-    });
-  }
-  return drinkItems;
-}
-
-const transportItems: Item[] = [];
-function loadTransports(locale: Locale): Item[] {
-  if (transportItems.length === 0) {
-    const transport = locale === "fr" ? frTransport : enTransport;
-    transport.data.forEach(element => {
-      const coeff = transportCoeff[element.slug];
-      applyCoefficient(element, coeff);
-      const item: Item = {
-        id: element.slug,
-        categoryId: 4,
-        label: element.name + ` (${coeff}km)`,
-        description: "",
-        explanation: "",
-        source: element
-      }
-      transportItems.push(item);
-    });
-  }
-  return transportItems;
-}
-
-const clotheItems: Item[] = [];
-function loadClothes(locale: Locale): Item[] {
-  if (clotheItems.length === 0) {
-    const habillement = locale === "fr" ? frHabillement : enHabillement;
-    habillement.data.forEach(element => {
-      const item: Item = {
-        id: element.slug,
-        categoryId: 5,
-        label: element.name,
-        description: "",
-        explanation: "",
-        source: element
-      }
-      clotheItems.push(item);
-    });
-  }
-  return clotheItems;
-}
-
-const householdApplianceItems: Item[] = [];
-function loadHouseholdAppliances(locale: Locale): Item[] {
-  if (householdApplianceItems.length === 0) {
-    const electromenager = locale === "fr" ? frElectromenager : enElectromenager;
-    electromenager.data.forEach(element => {
-      const item: Item = {
-        id: element.slug,
-        categoryId: 6,
-        label: element.name,
-        description: !element.usage ? "" : t`Purchase and usage for ${element.usage.defaultyears} years.`,
-        explanation: "",
-        source: element
-      }
-      householdApplianceItems.push(item);
-    });
-  }
-  return householdApplianceItems;
-}
-
-const furnitureItems: Item[] = [];
-function loadFurnitures(locale: Locale): Item[] {
-  if (furnitureItems.length === 0) {
-    const mobilier = locale === "fr" ? frMobilier : enMobilier;
-    mobilier.data.forEach(element => {
-      const item: Item = {
-        id: element.slug,
-        categoryId: 7,
-        label: element.name,
-        description: "",
-        explanation: "",
-        source: element
-      }
-      furnitureItems.push(item);
-    });
-  }
-  return furnitureItems;
-}
-
-const heatingItems: Item[] = [];
-function loadHeating(locale: Locale): Item[] {
-  if (heatingItems.length === 0) {
-    const chauffage = locale === "fr" ? frChauffage : enChauffage;
-    chauffage.data.forEach(element => {
-      applyCoefficient(element, 60/12); // From 1m2 to 60m2, from 12 months to 1 month
-      const item: Item = {
-        id: element.slug,
-        categoryId: 8,
-        label: element.name.replace(" par m²", "").replace(" per m²", ""),
-        description: t`<strong>per month</strong> for 60m²`,
-        explanation: t`Impact of one month of heating a house of 60m², spreading the consumption over the year.`,
-        source: element
-      }
-      heatingItems.push(item);
-    });
-  }
-  return heatingItems;
-}
-
-const vegetablesAndFruitsItems: Item[] = [];
-function loadVegetablesAndFruits(locale: Locale): Item[] {
-  if (vegetablesAndFruitsItems.length === 0) {
-    const vegetablesAndFruits = locale === "fr" ? frVegetablesAndFruits : enVegetablesAndFruits;
-    vegetablesAndFruits.data.forEach(element => {
-      const item: Item = {
-        id: element.slug,
-        categoryId: 9,
-        label: element.name + " (1kg)",
-        description: t`Bought in March`,
-        explanation: "",
-        source: element
-      }
-      vegetablesAndFruitsItems.push(item);
-    });
-  }
-  return vegetablesAndFruitsItems;
-}
-
-// Not ready on Ademe side, they should explain with which device, on which network, how much, etc.
-// usageNumerique.data.forEach(element => {
-//   const item: Item = {
-//     id: element.slug,
-//     category: "digital",
-//     label: element.name,
-//     description: "Achat et usage pendant " + element.usage.defaultyears + " ans.",
-//     explanation: "",
-//     source: element
-//   }
-//   items.push(item);
-// });
-
-const practicalCasesItems: Item[] = [];
-function loadPracticalCases(locale: Locale): Item[] {
-  if (practicalCasesItems.length === 0) {
-    const practicalCases = locale === "fr" ? frPracticalCases : enPracticalCases;
-    practicalCases.data.forEach(element => {
-      const item: Item = {
-        id: element.slug,
-        categoryId: 13,
-        label: element.name,
-        description: "",
-        explanation: "",
-        source: element
-      }
-      practicalCasesItems.push(item);
-    });
-  }
-  return practicalCasesItems;
 }
 
 export function getFootprintDetails(): FootprintDetails {
   return footprintDetailCategories;
 }
 
-const transportCoeff: {[key: string]: number} = {
+type ComputeItemFunc = (element: AdemeECV) => { label: string, description: string, explanation: string };
+
+export async function loadCategoryItems(category: AdemeCategory, locale: Locale): Promise<Item[]> {
+  const pathToData = `../data/ademe/${locale}/${category.id}-${category.slug}.json`;
+  console.log("Loading " + pathToData);
+  const data: AdemeECV[] = (await import(pathToData)).data;
+  console.log(data);
+  const computeItemFunc: ComputeItemFunc = getComputeFunction(category.id);
+  return data.map(element => {
+    return {
+      id: element.slug,
+      categoryId: category.id,
+      source: element,
+      ...computeItemFunc(element)
+    }
+  });
+}
+
+function getComputeFunction(categoryId: number): ComputeItemFunc {
+  switch (categoryId) {
+    case 1: // Digital
+      return (element: AdemeECV) => {
+        return {
+          label: element.name,
+          description: !element.usage ? "" : t`Purchase and usage for ${element.usage.defaultyears} years.`,
+          explanation: ""
+        }
+      };
+    case 2: // Food
+      return (element: AdemeECV) => {
+        return {
+          label: element.name + (element.slug.startsWith("repas") ? "" : " (1kg)"),
+          description: "",
+          explanation: ""
+        }
+      };
+    case 3: // Drinks
+      return (element: AdemeECV) => {
+        return {
+          label: element.name + " (1L)",
+          description: "",
+          explanation: ""
+        }
+      };
+    case 4: // Transport
+      return (element: AdemeECV) => {
+        const coeff = transportCoeff[element.slug];
+        applyCoefficient(element, coeff);
+        return {
+          label: element.name + ` (${coeff}km)`,
+          description: "",
+          explanation: ""
+        }
+      };
+    case 5: // Clothing
+      return (element: AdemeECV) => {
+        return {
+          label: element.name,
+          description: "",
+          explanation: ""
+        }
+      };
+    case 6: // Household appliance
+      return (element: AdemeECV) => {
+        return {
+          label: element.name,
+          description: !element.usage ? "" : t`Purchase and usage for ${element.usage.defaultyears} years.`,
+          explanation: ""
+        }
+      };
+    case 7: // Furnitures
+      return (element: AdemeECV) => {
+        return {
+          label: element.name,
+          description: !element.usage ? "" : t`Purchase and usage for ${element.usage.defaultyears} years.`,
+          explanation: ""
+        }
+      };
+    case 8: // Heating
+      return (element: AdemeECV) => {
+        applyCoefficient(element, 60 / 12); // From 1m2 to 60m2, from 12 months to 1 month
+        return {
+          label: element.name.replace(" par m²", "").replace(" per m²", ""),
+          description: t`<strong>per month</strong> for 60m²`,
+          explanation: t`Impact of one month of heating a house of 60m², spreading the consumption over the year.`,
+        }
+      };
+    case 9: // Vegetables and fruits
+      return (element: AdemeECV) => {
+        return {
+          label: element.name + " (1kg)",
+          description: t`Bought in March`,
+          explanation: ""
+        }
+      };
+    // case 10: // TODO Usage numérique needs more work
+    case 13: // Practical cases
+    return (element: AdemeECV) => {
+      return {
+        label: element.name,
+        description: "",
+        explanation: ""
+      }
+    };
+    default:
+      return (element: AdemeECV) => {
+        return {
+          label: element.name,
+          description: "",
+          explanation: ""
+        }
+      };;
+  }
+}
+
+const transportCoeff: { [key: string]: number } = {
   "avion-courtcourrier": 800,
   "avion-moyencourrier": 2000,
   "avion-longcourrier": 6000,

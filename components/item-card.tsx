@@ -20,9 +20,9 @@ export default function ItemCard(props: Props) {
   return (
     <div
       className={styles.front}
-      style={{border: "solid " + categories.get(item.categoryId)!.color + " 4px" }}
     >
       <header className={styles.top}>
+        <img className={styles.categoryLogo} src={`./images/ademe/${categories.get(item.categoryId)!.slug}.svg`} />
         <h2 className={styles.label}>{capitalize(item.label)}</h2>
       </header>
       <main>

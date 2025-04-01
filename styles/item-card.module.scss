@@ -6,6 +6,7 @@
   justify-content: space-between;
   width: $card-width;
   height: $card-height;
+  border: solid $card-border-color 3px;
   border-radius: $box-border-radius;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
     rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -16,19 +17,30 @@
 
   .top,
   main {
-    padding: 8px;
+    padding: 6px;
 
     h2 {
       margin: 0;
+      margin-left: 26px;
       font-size: 14px;
     }
+  }
+
+  .categoryLogo {
+    width: 26px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 3px 3px 0;
+    border-radius: 0 0 4px 0;
+    background-color: $card-border-color;
   }
 
   main {
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding-top: 0;
+    padding-top: 3px;
 
     .description {
       font-size: .9rem;
@@ -44,7 +56,7 @@
     }
 
     img {
-      height: 50px;
+      height: 56px;
     }
   }
 
@@ -56,7 +68,6 @@
     font-weight: 700;
     background-color: $primary;
     color: $text-light;
-    border-radius: 0 0 4px 4px; // This should be 8px theorically, I don't get why it has to be 4 for it to match the card border angle
     transition: background-color 5s ease-in-out;
 
     &:hover {

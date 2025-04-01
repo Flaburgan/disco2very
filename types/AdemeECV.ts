@@ -25,7 +25,6 @@ export interface AdemeCategory {
     fr: string;
   };
   slug: string;
-  color: string;
 }
 
 export interface FootprintDetails {

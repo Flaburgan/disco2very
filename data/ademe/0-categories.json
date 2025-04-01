@@ -6,8 +6,7 @@
         "en": "Digital",
         "fr": "Numérique"
       },
-      "slug": "numerique",
-      "color": "#28c"
+      "slug": "numerique"
     },
     {
       "id": 2,
@@ -15,8 +14,7 @@
         "en": "Food",
         "fr": "Alimentation"
       },
-      "slug": "alimentation",
-      "color": "#acf"
+      "slug": "alimentation"
     },
     {
       "id": 3,
@@ -24,8 +22,7 @@
         "en": "Drink",
         "fr": "Boisson"
       },
-      "slug": "boisson",
-      "color": "#d04"
+      "slug": "boisson"
     },
     {
       "id": 4,
@@ -33,8 +30,7 @@
         "en": "Transport",
         "fr": "Transport"
       },
-      "slug": "transport",
-      "color": "#981b5e"
+      "slug": "transport"
     },
     {
       "id": 5,
@@ -42,8 +38,7 @@
         "en": "Clothing",
         "fr": "Habillement"
       },
-      "slug": "habillement",
-      "color": "#b0b"
+      "slug": "habillement"
     },
     {
       "id": 6,
@@ -51,8 +46,7 @@
         "en": "Home Appliance",
         "fr": "Électroménager"
       },
-      "slug": "electromenager",
-      "color": "#aab"
+      "slug": "electromenager"
     },
     {
       "id": 7,
@@ -60,8 +54,7 @@
         "en": "Furniture",
         "fr": "Mobilier"
       },
-      "slug": "mobilier",
-      "color": "#d74"
+      "slug": "mobilier"
     },
     {
       "id": 8,
@@ -69,8 +62,7 @@
         "en": "Heating",
         "fr": "Chauffage"
       },
-      "slug": "chauffage",
-      "color": "#4b1"
+      "slug": "chauffage"
     },
     {
       "id": 9,
@@ -78,8 +70,7 @@
         "en": "Fruits and Vegetables",
         "fr": "Fruits et légumes"
       },
-      "slug": "fruitsetlegumes",
-      "color": "#d26"
+      "slug": "fruitsetlegumes"
     },
     {
       "id": 10,
@@ -87,8 +78,7 @@
         "en": "Digital Use",
         "fr": "Usage numérique"
       },
-      "slug": "usagenumerique",
-      "color": "#d26"
+      "slug": "usagenumerique"
     },
     {
       "id": 13,
@@ -96,8 +86,7 @@
         "en": "Practical cases",
         "fr": "Cas pratique"
       },
-      "slug": "caspratiques",
-      "color": "#d26"
+      "slug": "caspratiques"
     }
   ]
 }

@@ -22,10 +22,27 @@
   background-color: #fff;
   border-radius: $box-border-radius;
 
+  a {
+    color: inherit;
+  }
+
   header,
   main,
   footer {
     padding: 1rem;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    .cross {
+      width: 18px;
+      padding: 3px; // So it's easier to click on it
+      margin-top: -3px;
+      margin-right: -3px;
+    }
   }
 
   main {
@@ -55,6 +72,7 @@
 
   footer {
     text-align: center;
+    padding-top: 0;
 
     h3 {
       font-size: 1.4rem;
@@ -80,6 +98,10 @@
     .result-positive {
       background-color: #dfd;
       border-color: $result-positive;
+    }
+
+    .source {
+      margin-bottom: .5rem;
     }
   }
 }

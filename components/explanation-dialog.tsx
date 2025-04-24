@@ -25,9 +25,10 @@ export default function ExplanationDialog(props: ExplanationDialogProps) {
 
   return (
     <div className={classNames(styles.explanationDialogContainer)} onClick={onExit}>
-      <div className={classNames(styles.explanationDialog)}>
+      <div className={classNames(styles.explanationDialog)} onClick={(ev) => ev.stopPropagation()}>
         <header className={styles.top}>
-          <h2 className={styles.label}>{item.label}:</h2>
+          <h2 className={styles.label}>{item.label}</h2>
+          <img className={styles.cross} src="images/cross.svg" onClick={onExit} />
         </header>
         <main>
           {
@@ -45,10 +46,15 @@ export default function ExplanationDialog(props: ExplanationDialogProps) {
           <div className={styles.result}>
             <strong className={styles[total > 0 ? "result-negative" : "result-positive"]}>{total} kg CO<sub>2</sub>e</strong>
           </div>
-          <div className="warning-box">
-            <Trans>These values are computed by the french goverment agency ADEME. You can access the raw data
-              at <a href="https://base-empreinte.ademe.fr/" rel="noreferrer" target="_blank">base-empreinte.ademe.fr</a> and <a href="https://agribalyse.ademe.fr/" rel="noreferrer" target="_blank">agribalyse.ademe.fr</a>.
-             Other countries may have different values, especially those involving electricity consumption.</Trans>
+          <div className={styles.source}>
+            <Trans>
+              Source: <a href="https://base-empreinte.ademe.fr/" rel="noreferrer" target="_blank">Base Empreinte</a> and <a href="https://agribalyse.ademe.fr/" rel="noreferrer" target="_blank">Agribalyse</a>.
+            </Trans>
+          </div>
+          <div className="info">
+            <Trans>
+              These values are computed by the french goverment agency <abbr title="Agence de l'environnement et de la maîtrise de l'énergie">ADEME</abbr> and are based on France characteristics. Other countries may have different values, especially those resulting from electricity consumption.
+            </Trans>
           </div>
         </footer>
       </div>
@@ -68,7 +74,7 @@ function displayUsage(usage: {peryear: number, defaultyears: number}, total: num
   return <li>
     <h3><Trans>Usage:</Trans></h3>
     <ChartBar value={value} total={total} />
-    <em>{t`${displayCO2(usage.peryear)} per year, estimated lifetime: ${usage.defaultyears} years.`}</em>
+    <em>{t`${displayCO2(usage.peryear)} per year, estimated lifespan: ${usage.defaultyears} years.`}</em>
   </li>;
 }
 

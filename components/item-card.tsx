@@ -22,8 +22,8 @@ export default function ItemCard(props: Props) {
       className={styles.front}
     >
       <header className={styles.top}>
-        <img className={styles.categoryLogo} src={`./images/ademe/${categories.get(item.categoryId)!.slug}.svg`} />
         <h2 className={styles.label}>{capitalize(item.label)}</h2>
+        <img className={styles.categoryLogo} src={`./images/ademe/${categories.get(item.categoryId)!.slug}.svg`} />
       </header>
       <main>
         <div className={styles.description} dangerouslySetInnerHTML={{__html: item.description}}></div>

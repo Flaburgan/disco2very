@@ -41,7 +41,9 @@ export default function Instructions(props: Props) {
             <CategoriesSelector setSelectedItems={setSelectedItems} setCategoriesMode={setCategoriesMode} />
             : 
           <>
-            <ExampleCards />
+            <div onClick={() => {setSelectedItems(getDefaultItems(locale));}}>
+              <ExampleCards />
+            </div>
             <div className={styles.startGameContainer}>
               <Button onClick={() => {setSelectedItems(getDefaultItems(locale));}} animated><Trans>Start game</Trans></Button>
               <Button onClick={() => setCategoriesMode(true)} minimal={true}><Trans>Pick categories</Trans></Button>

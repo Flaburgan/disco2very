@@ -21,7 +21,7 @@
 
     h2 {
       margin: 0;
-      margin-left: 26px;
+      margin-right: 24px;
       font-size: 14px;
     }
   }
@@ -30,9 +30,9 @@
     width: 26px;
     position: absolute;
     top: 0;
-    left: 0;
-    padding: 0 3px 3px 0;
-    border-radius: 0 0 4px 0;
+    right: 0;
+    padding: 0 0 3px 3px;
+    border-radius: 0 0 0 4px;
     background-color: $card-border-color;
   }
 

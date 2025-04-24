@@ -13,8 +13,8 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: components/explanation-dialog.tsx:71
-msgid "{0} per year, estimated lifetime: {1} years."
+#: components/explanation-dialog.tsx:77
+msgid "{0} per year, estimated lifespan: {1} years."
 msgstr "{0} par an, durée de vie estimée : {1} ans."
 
 #: components/email-registration.tsx:24
@@ -61,7 +61,7 @@ msgstr "Copié !"
 msgid "disCO2very is a free game to discover the orders of magnitude of the CO2 footprint"
 msgstr "disCO2very est un jeu libre pour découvrir les ordres de grandeur de l'empreinte carbone"
 
-#: components/explanation-dialog.tsx:77
+#: components/explanation-dialog.tsx:83
 msgid "End of life:"
 msgstr "Fin de vie :"
 
@@ -142,6 +142,10 @@ msgstr "Sélectionnez les catégories avec lesquelles vous voulez jouer :"
 msgid "Share your score"
 msgstr "Partagez votre score"
 
+#: components/explanation-dialog.tsx:50
+msgid "Source: <0>Base Empreinte</0> and <1>Agribalyse</1>."
+msgstr "Source : <0>Base Empreinte</0> et <1>Agribalyse</1>."
+
 #: components/categories-selector.tsx:56
 #: components/instructions.tsx:46
 msgid "Start game"
@@ -155,9 +159,13 @@ msgstr "Le logo disCO2very, avec une molécule de CO2."
 msgid "The numbers are coming from the <0>Ademe</0> platform <1>Impact CO<2>2</2></1>. Thanks to them for their amazing work!"
 msgstr "Les chiffres viennent de la plateforme de l'<0>Ademe</0> <1>Impact CO<2>2</2></1>. Merci à eux pour leur travail incroyable !"
 
+#: components/explanation-dialog.tsx:55
+msgid "These values are computed by the french goverment agency <0>ADEME</0> and are based on France characteristics. Other countries may have different values, especially those resulting from electricity consumption."
+msgstr "Ces données sont calculées par l'agence gouvernementale française <0>ADEME</0> et sont basées sur les caractéristiques de la France. D'autres pays peuvent avoir des valeurs différentes, en particulier celles découlant de la consommation d'électricité."
+
 #: components/explanation-dialog.tsx:49
-msgid "These values are computed by the french goverment agency ADEME. You can access the raw data at <0>base-empreinte.ademe.fr</0> and <1>agribalyse.ademe.fr</1>. Other countries may have different values, especially those involving electricity consumption."
-msgstr "Ces valeurs sont calculées pour la France. Vous pouvez accéder aux données brutes sur <0>base-empreinte.ademe.fr</0> et <1>agribalyse.ademe.fr</1>. D'autres pays peuvent avoir des valeurs différentes, en particulier celles impliquant de la consommation d'électricité."
+#~ msgid "These values are computed by the french goverment agency ADEME. You can access the raw data at <0>base-empreinte.ademe.fr</0> and <1>agribalyse.ademe.fr</1>. Other countries may have different values, especially those involving electricity consumption."
+#~ msgstr "Ces valeurs sont calculées pour la France. Vous pouvez accéder aux données brutes sur <0>base-empreinte.ademe.fr</0> et <1>agribalyse.ademe.fr</1>. D'autres pays peuvent avoir des valeurs différentes, en particulier celles impliquant de la consommation d'électricité."
 
 #: components/categories-selector.tsx:27
 msgid "This category is not yet available."
@@ -172,7 +180,7 @@ msgstr "Ce jeu est pour l'instant une application, mais le but final est d'impri
 msgid "This streak"
 msgstr "Cette série"
 
-#: components/explanation-dialog.tsx:44
+#: components/explanation-dialog.tsx:45
 msgid "Total:"
 msgstr "Total :"
 
@@ -180,7 +188,7 @@ msgstr "Total :"
 msgid "Try again!"
 msgstr "Essayez à nouveau !"
 
-#: components/explanation-dialog.tsx:69
+#: components/explanation-dialog.tsx:75
 msgid "Usage:"
 msgstr "Usage :"
 

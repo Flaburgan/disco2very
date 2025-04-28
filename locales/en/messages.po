@@ -29,6 +29,10 @@ msgstr "{email} is already registered."
 msgid "{email} is not a valid email address."
 msgstr "{email} is not a valid email address."
 
+#: lib/ademe-api.ts:270
+msgid "<strong>per month</strong> for 60m²"
+msgstr "<strong>per month</strong> for 60m²"
+
 #: components/real-cards-game.tsx:9
 msgid "A real deck of cards?"
 msgstr "A real deck of cards?"
@@ -43,6 +47,10 @@ msgstr "Back"
 #: components/instructions.tsx:36
 msgid "Best streak"
 msgstr "Best streak"
+
+#: lib/ademe-api.ts:289
+msgid "Bought in March"
+msgstr "Bought in March"
 
 #: components/instructions.tsx:59
 msgid "Code based on from the <0>wikitrivia</0> game by <1>Tom James Watson</1>. Thank you!"
@@ -76,6 +84,10 @@ msgstr "Game over"
 #: components/game-over.tsx:41
 msgid "Guess the CO2 footprint!"
 msgstr "Guess the CO2 footprint!"
+
+#: lib/ademe-api.ts:271
+msgid "Impact of one month of heating a house of 60m², spreading the consumption over the year."
+msgstr "Impact of one month of heating a house of 60m², spreading the consumption over the year."
 
 #: components/real-cards-game.tsx:14
 msgid "Interested? Or you simply want to be informed about the latest disCO<0>2</0>very news? We can keep in touch by e-mail!"
@@ -121,6 +133,11 @@ msgstr "Play again"
 #: components/email-registration.tsx:51
 msgid "Please contact fla (a) framasoft.org to unregister"
 msgstr "Please contact fla (a) framasoft.org to unregister"
+
+#: lib/ademe-api.ts:134
+#: lib/ademe-api.ts:231
+msgid "Purchase and usage for {0} years."
+msgstr "Purchase and usage for {0} years."
 
 #: components/email-registration.tsx:44
 msgid "Register"

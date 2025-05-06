@@ -1,0 +1,187 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-13 21:32+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
+"Language-Team: nl <vistausss@fastmail.com>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
+
+#: components/explanation-dialog.tsx:71
+msgid "{0} per year, estimated lifetime: {1} years."
+msgstr "{0} per jaar. Geschatte levensduur: {1} jaar."
+
+#: components/email-registration.tsx:24
+msgid "{email} has been successfully registered."
+msgstr "{email} is geregistreerd."
+
+#: components/email-registration.tsx:30
+msgid "{email} is already registered."
+msgstr "{email} is al geregistreerd."
+
+#: components/email-registration.tsx:28
+msgid "{email} is not a valid email address."
+msgstr "{email} is geen geldig e-mailadres."
+
+#: components/real-cards-game.tsx:9
+msgid "A real deck of cards?"
+msgstr "Een echte kaartenset?"
+
+#: components/board.tsx:133 components/categories-selector.tsx:56
+msgid "Back"
+msgstr "Terug"
+
+#: components/game-over.tsx:43 components/game-over.tsx:77
+#: components/instructions.tsx:36
+msgid "Best streak"
+msgstr "Record"
+
+#: components/instructions.tsx:59
+msgid "Code based on from the <0>wikitrivia</0> game by <1>Tom James Watson</1>. Thank you!"
+msgstr "De code is gebaseerd op die van <0>wikitrivia</0>, een spel van <1>Tom James Watson</1>. Bedankt!"
+
+#: components/game-over.tsx:62
+msgid "Congratulations!"
+msgstr "Gefeliciteerd!"
+
+#: components/game-over.tsx:52
+msgid "Copied!"
+msgstr "Gekopieerd!"
+
+#: components/app.tsx:22 components/app.tsx:23
+msgid "disCO2very is a free game to discover the orders of magnitude of the CO2 footprint"
+msgstr "disCO2very is een gratis spel waarmee je inzicht krijgt in de impact die CO2 op onze planeet heeft"
+
+#: components/explanation-dialog.tsx:77
+msgid "End of life:"
+msgstr "Levenseinde:"
+
+#: components/email-registration.tsx:32
+msgid "Error: {0}"
+msgstr "Foutmelding: {0}"
+
+#: components/game-over.tsx:68
+msgid "Game over"
+msgstr "Spel afgelopen"
+
+#: components/game-over.tsx:41
+msgid "Guess the CO2 footprint!"
+msgstr "Raad de CO2-impact!"
+
+#: components/real-cards-game.tsx:14
+msgid "Interested? Or you simply want to be informed about the latest disCO<0>2</0>very news? We can keep in touch by e-mail!"
+msgstr "Ben je geïnteresseerd of wil je gewoon op de hoogte worden gehouden van het laatste disCO<0>2</0>very-nieuws? Schrijf je dan in op onze nieuwsbrief!"
+
+#: components/instructions.tsx:57
+msgid "License AGPL - Source code available <0>on github</0>."
+msgstr "Licentie: AGPL. De broncode is beschikbaar <0>op GitHub</0>."
+
+#: components/instructions.tsx:56
+msgid "love"
+msgstr "liefde"
+
+#: components/instructions.tsx:56
+msgid "Made with <0/> by <1>Fla</1> & Sara."
+msgstr "Gemaakt met <0/> door <1>Fla</1> & Sara."
+
+#: components/email-registration.tsx:42
+msgid "myemail@myprovider.org"
+msgstr "mijne-mailadres@mijnprovider.org"
+
+#: components/example-cards.tsx:18
+msgid "or"
+msgstr "of"
+
+#: components/app.tsx:21
+msgid "Order items to discover their CO2 footprint!"
+msgstr "Schaf items aan waarmee je de CO2-impact kunt ontdekken!"
+
+#: components/instructions.tsx:47
+msgid "Pick categories"
+msgstr "Kies categorieën"
+
+#: components/instructions.tsx:34
+msgid "Place the cards in the correct order guessing their CO<0>2</0> footprint."
+msgstr "Plaats de kaarten in de juiste volgorde om de CO<0>2</0>-impact te ontdekken."
+
+#: components/game-over.tsx:82
+msgid "Play again"
+msgstr "Opnieuw"
+
+#: components/email-registration.tsx:51
+msgid "Please contact fla (a) framasoft.org to unregister"
+msgstr "Neem contact op met fla (a) framasoft.org om je uit te schrijven"
+
+#: components/email-registration.tsx:44
+msgid "Register"
+msgstr "Registreren"
+
+#: components/board.tsx:134
+msgid "Restart"
+msgstr "Herstarten"
+
+#: components/game-over.tsx:83
+msgid "Select categories"
+msgstr "Kies categorieën"
+
+#: components/categories-selector.tsx:38
+msgid "Select the categories you want to play with:"
+msgstr "Kies de categorieën die je wilt doorlopen:"
+
+#: components/game-over.tsx:15
+msgid "Share your score"
+msgstr "Deel je score"
+
+#: components/categories-selector.tsx:55 components/instructions.tsx:46
+msgid "Start game"
+msgstr "Spel starten"
+
+#: components/app.tsx:24
+msgid "The disCO2very logo, featuring a molecule of CO2."
+msgstr "Het disCO2very-logo, voorzien van een CO2-molecuul."
+
+#: components/instructions.tsx:64
+msgid "The numbers are coming from the <0>Ademe</0> platform <1>Impact CO<2>2</2></1>. Thanks to them for their amazing work!"
+msgstr "De getallen worden aangeleverd door het <0>Ademe</0>-platform <1>Impact CO<2>2</2></1>. Met dank aan hun geweldige werk!"
+
+#: components/explanation-dialog.tsx:49
+msgid "These values are computed by the french goverment agency ADEME. You can access the raw data at <0>base-empreinte.ademe.fr</0> and <1>agribalyse.ademe.fr</1>. Other countries may have different values, especially those involving electricity consumption."
+msgstr "Deze waarden worden berekend door de Franse overheidsorganisatie ADEME. De gegevens zijn in te zien op <0>base-empreinte.ademe.fr</0> en <1>agribalyse.ademe.fr</1>. In andere landen kunnen de waarden anders zijn, vooral die van het elektriciteitsgebruik."
+
+#: components/categories-selector.tsx:28
+msgid "This category is not yet available."
+msgstr "Deze categorie is nog niet beschikbaar."
+
+#: components/real-cards-game.tsx:11
+msgid "This game is currently a digital app but the ultimate goal is to print a real deck of cards, as we feel that it can be a useful tool to raise awareness about climate change. Possibly, we may do a crowdfunding campaign, so you could order your own deck!"
+msgstr "Het spel is momenteel alleen digitaal verkrijgbaar, maar het streven is om een echte set met kaarten te maken, daar dat een positieve sociale invloed kan hebben. Mogelijk zetten we hiervoor zelfs een crowdfundingcampagne op."
+
+#: components/game-over.tsx:42 components/game-over.tsx:74
+msgid "This streak"
+msgstr "Dit record"
+
+#: components/explanation-dialog.tsx:44
+msgid "Total:"
+msgstr "Totaal:"
+
+#: components/game-over.tsx:69
+msgid "Try again!"
+msgstr "Opnieuw proberen!"
+
+#: components/explanation-dialog.tsx:69
+msgid "Usage:"
+msgstr "Gebruik:"
+
+#: components/game-over.tsx:63
+msgid "You ordered all the cards!"
+msgstr "Alle kaarten zijn in de juiste volgorde geplaatst!"
+
+#: components/game-over.tsx:64
+msgid "You should probably select more categories?"
+msgstr "Wil je meer categorieën kiezen?"

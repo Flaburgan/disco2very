@@ -4,7 +4,7 @@ export const sourceLocale = "en";
 export const catalogs = [
   {
     path: "<rootDir>/locales/{locale}/messages",
-    include: ["components", "data", "lib"],
+    include: ["components", "lib"]
   },
 ];
 export const format = "po";

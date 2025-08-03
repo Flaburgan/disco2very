@@ -1,12 +1,57 @@
 
 import { Item } from "../types/item";
 import ademeCategories from "../data/ademe/0-categories.json";
+import enNumerique from "../data/ademe/en/1-numerique.json";
+import enAlimentation from "../data/ademe/en/2-alimentation.json";
+import enBoisson from "../data/ademe/en/3-boisson.json";
+import enTransport from "../data/ademe/en/4-transport.json";
+import enHabillement from "../data/ademe/en/5-habillement.json";
+import enElectromenager from "../data/ademe/en/6-electromenager.json";
+import enMobilier from "../data/ademe/en/7-mobilier.json";
+import enChauffage from "../data/ademe/en/8-chauffage.json";
+import enVegetablesAndFruits from "../data/ademe/en/9-fruitsetlegumes.json";
+import enPracticalCases from "../data/ademe/en/13-caspratiques.json";
+import frNumerique from "../data/ademe/fr/1-numerique.json";
+import frAlimentation from "../data/ademe/fr/2-alimentation.json";
+import frBoisson from "../data/ademe/fr/3-boisson.json";
+import frTransport from "../data/ademe/fr/4-transport.json";
+import frHabillement from "../data/ademe/fr/5-habillement.json";
+import frElectromenager from "../data/ademe/fr/6-electromenager.json";
+import frMobilier from "../data/ademe/fr/7-mobilier.json";
+import frChauffage from "../data/ademe/fr/8-chauffage.json";
+import frVegetablesAndFruits from "../data/ademe/fr/9-fruitsetlegumes.json";
+import frPracticalCases from "../data/ademe/fr/13-caspratiques.json";
 import footprintDetailCategories from "../data/ademe/footprintDetailCategories.json";
 import { AdemeCategory, AdemeECV, FootprintDetails } from "../types/AdemeECV";
 import { Locale } from "../types/i18n";
-import { t } from "@lingui/macro";
+import { t } from "@lingui/core/macro";
 
-export async function getDefaultItems(locale: Locale): Promise<Item[]> {
+
+const allItemsByLocale: {[locale in Locale]: Item[]} = {"en": [], "fr": []};
+
+allItemsByLocale.en.push(...computeItemsForCategory(1, enNumerique.data));
+allItemsByLocale.en.push(...computeItemsForCategory(2, enAlimentation.data));
+allItemsByLocale.en.push(...computeItemsForCategory(3, enBoisson.data));
+allItemsByLocale.en.push(...computeItemsForCategory(4, enTransport.data));
+allItemsByLocale.en.push(...computeItemsForCategory(5, enHabillement.data));
+allItemsByLocale.en.push(...computeItemsForCategory(6, enElectromenager.data));
+allItemsByLocale.en.push(...computeItemsForCategory(7, enMobilier.data));
+allItemsByLocale.en.push(...computeItemsForCategory(8, enChauffage.data));
+allItemsByLocale.en.push(...computeItemsForCategory(9, enVegetablesAndFruits.data));
+allItemsByLocale.en.push(...computeItemsForCategory(13, enPracticalCases.data));
+
+allItemsByLocale.fr.push(...computeItemsForCategory(1, frNumerique.data));
+allItemsByLocale.fr.push(...computeItemsForCategory(2, frAlimentation.data));
+allItemsByLocale.fr.push(...computeItemsForCategory(3, frBoisson.data));
+allItemsByLocale.fr.push(...computeItemsForCategory(4, frTransport.data));
+allItemsByLocale.fr.push(...computeItemsForCategory(5, frHabillement.data));
+allItemsByLocale.fr.push(...computeItemsForCategory(6, frElectromenager.data));
+allItemsByLocale.fr.push(...computeItemsForCategory(7, frMobilier.data));
+allItemsByLocale.fr.push(...computeItemsForCategory(8, frChauffage.data));
+allItemsByLocale.fr.push(...computeItemsForCategory(9, frVegetablesAndFruits.data));
+allItemsByLocale.fr.push(...computeItemsForCategory(13, frPracticalCases.data));
+
+export function getDefaultItems(locale: Locale): Item[] {
   const slugs = [
     "smartphone",
     "television",
@@ -36,7 +81,7 @@ export async function getDefaultItems(locale: Locale): Promise<Item[]> {
   ];
 
   const selectedItems: Item[] = [];
-  const allItems = await getAllItems(locale);
+  const allItems = allItemsByLocale[locale];
   allItems.forEach(item => {
     if (slugs.includes(item.source.slug)) {
       selectedItems.push(item);
@@ -45,8 +90,8 @@ export async function getDefaultItems(locale: Locale): Promise<Item[]> {
   return selectedItems;
 }
 
-export async function getItemFromSlug(slug: string, locale: Locale): Promise<Item | undefined> {
-  const allItems = await getAllItems(locale);
+export function getItemFromSlug(slug: string, locale: Locale): Item | undefined {
+  const allItems = allItemsByLocale[locale];
   for (let i = 0; i < allItems.length; i++) {
     if (allItems[i].source.slug === slug) {
       return allItems[i];
@@ -55,15 +100,7 @@ export async function getItemFromSlug(slug: string, locale: Locale): Promise<Ite
   return undefined;
 }
 
-async function getAllItems(locale: Locale): Promise<Item[]> {
-  const allItems: Item[] = [];
-  for (const [id, category] of loadCategories()) {
-      allItems.push(...(await loadCategoryItems(category, locale)));
-  }
-  return allItems;
-}
-
-export function loadCategories(): Map<number, AdemeCategory> {
+export function getCategories(): Map<number, AdemeCategory> {
   const categories: Map<number, AdemeCategory> = new Map();
   ademeCategories.data.forEach(category => categories.set(category.id, category));
   return categories;
@@ -73,18 +110,21 @@ export function getFootprintDetails(): FootprintDetails {
   return footprintDetailCategories;
 }
 
+export function getItemsFromCategoryId(categoryId: number, locale: Locale): Item[] {
+  return allItemsByLocale[locale].filter(item => item.categoryId === categoryId);
+}
+
+// We have to make some computation on the data to make it better for users
+// Functions below are only doing that
+
 type ComputeItemFunc = (element: AdemeECV) => { label: string, description: string, explanation: string };
 
-export async function loadCategoryItems(category: AdemeCategory, locale: Locale): Promise<Item[]> {
-  const pathToData = `../data/ademe/${locale}/${category.id}-${category.slug}.json`;
-  console.log("Loading " + pathToData);
-  const data: AdemeECV[] = (await import(pathToData)).data;
-  console.log(data);
-  const computeItemFunc: ComputeItemFunc = getComputeFunction(category.id);
+function computeItemsForCategory(categoryId: number, data: AdemeECV[]): Item[] {
+  const computeItemFunc: ComputeItemFunc = getComputeFunction(categoryId);
   return data.map(element => {
     return {
       id: element.slug,
-      categoryId: category.id,
+      categoryId: categoryId,
       source: element,
       ...computeItemFunc(element)
     }
@@ -92,12 +132,36 @@ export async function loadCategoryItems(category: AdemeCategory, locale: Locale)
 }
 
 function getComputeFunction(categoryId: number): ComputeItemFunc {
+  const transportCoeff: { [key: string]: number } = {
+    "avion-courtcourrier": 800,
+    "avion-moyencourrier": 2000,
+    "avion-longcourrier": 6000,
+    "tgv": 700,
+    "intercites": 400,
+    "voiturethermique": 100,
+    "voitureelectrique": 100,
+    "autocar": 400,
+    "velo": 5,
+    "veloelectrique": 5,
+    "busthermique": 5,
+    "tramway": 5,
+    "metro": 5,
+    "scooter": 5,
+    "moto": 100,
+    "rer": 20,
+    "ter": 100,
+    "buselectrique": 5,
+    "trottinette": 5,
+    "busgnv": 5,
+    "marche": 5
+  }
+
   switch (categoryId) {
     case 1: // Digital
       return (element: AdemeECV) => {
         return {
           label: element.name,
-          description: !element.usage ? "" : t`Purchase and usage for ${element.usage.defaultyears} years.`,
+          description: getDescriptionForDefaultYear(element),
           explanation: ""
         }
       };
@@ -139,7 +203,7 @@ function getComputeFunction(categoryId: number): ComputeItemFunc {
       return (element: AdemeECV) => {
         return {
           label: element.name,
-          description: !element.usage ? "" : t`Purchase and usage for ${element.usage.defaultyears} years.`,
+          description: getDescriptionForDefaultYear(element),
           explanation: ""
         }
       };
@@ -147,7 +211,7 @@ function getComputeFunction(categoryId: number): ComputeItemFunc {
       return (element: AdemeECV) => {
         return {
           label: element.name,
-          description: !element.usage ? "" : t`Purchase and usage for ${element.usage.defaultyears} years.`,
+          description: getDescriptionForDefaultYear(element),
           explanation: ""
         }
       };
@@ -170,13 +234,13 @@ function getComputeFunction(categoryId: number): ComputeItemFunc {
       };
     // case 10: // TODO Usage numérique needs more work
     case 13: // Practical cases
-    return (element: AdemeECV) => {
-      return {
-        label: element.name,
-        description: "",
-        explanation: ""
-      }
-    };
+      return (element: AdemeECV) => {
+        return {
+          label: element.name,
+          description: "",
+          explanation: ""
+        }
+      };
     default:
       return (element: AdemeECV) => {
         return {
@@ -188,28 +252,13 @@ function getComputeFunction(categoryId: number): ComputeItemFunc {
   }
 }
 
-const transportCoeff: { [key: string]: number } = {
-  "avion-courtcourrier": 800,
-  "avion-moyencourrier": 2000,
-  "avion-longcourrier": 6000,
-  "tgv": 700,
-  "intercites": 400,
-  "voiturethermique": 100,
-  "voitureelectrique": 100,
-  "autocar": 400,
-  "velo": 5,
-  "veloelectrique": 5,
-  "busthermique": 5,
-  "tramway": 5,
-  "metro": 5,
-  "scooter": 5,
-  "moto": 100,
-  "rer": 20,
-  "ter": 100,
-  "buselectrique": 5,
-  "trottinette": 5,
-  "busgnv": 5,
-  "marche": 5
+function getDescriptionForDefaultYear(element: AdemeECV) {
+  let description = "";
+  if (element.usage) {
+    const defaultYears = element.usage?.defaultyears;
+    description = t`Purchase and usage for ${defaultYears} years.`;
+  }
+  return description;
 }
 
 function applyCoefficient(element: AdemeECV, coeff: number) {

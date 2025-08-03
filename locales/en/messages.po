@@ -29,12 +29,16 @@ msgstr "{email} is not a valid email address."
 msgid "{perYearDisplay} per year, estimated lifespan: {defaultYearDisplay} years."
 msgstr "{perYearDisplay} per year, estimated lifespan: {defaultYearDisplay} years."
 
+#: lib/ademe-api.ts:223
+msgid "<strong>per month</strong> for 60m²"
+msgstr "<strong>per month</strong> for 60m²"
+
 #: components/real-cards-game.tsx:9
 msgid "A real deck of cards?"
 msgstr "A real deck of cards?"
 
 #: components/board.tsx:133
-#: components/categories-selector.tsx:62
+#: components/categories-selector.tsx:60
 msgid "Back"
 msgstr "Back"
 
@@ -43,6 +47,10 @@ msgstr "Back"
 #: components/instructions.tsx:52
 msgid "Best streak"
 msgstr "Best streak"
+
+#: lib/ademe-api.ts:231
+msgid "Bought in March"
+msgstr "Bought in March"
 
 #: components/instructions.tsx:61
 msgid "Code based on from the <0>wikitrivia</0> game by <1>Tom James Watson</1>. Thank you!"
@@ -76,6 +84,10 @@ msgstr "Game over"
 #: components/game-over.tsx:35
 msgid "Guess the CO2 footprint!"
 msgstr "Guess the CO2 footprint!"
+
+#: lib/ademe-api.ts:224
+msgid "Impact of one month of heating a house of 60m², spreading the consumption over the year."
+msgstr "Impact of one month of heating a house of 60m², spreading the consumption over the year."
 
 #: components/real-cards-game.tsx:14
 msgid "Interested? Or you simply want to be informed about the latest disCO<0>2</0>very news? We can keep in touch by e-mail!"
@@ -122,6 +134,10 @@ msgstr "Play again"
 msgid "Please contact fla (a) framasoft.org to unregister"
 msgstr "Please contact fla (a) framasoft.org to unregister"
 
+#: lib/ademe-api.ts:259
+msgid "Purchase and usage for {defaultYears} years."
+msgstr "Purchase and usage for {defaultYears} years."
+
 #: components/email-registration.tsx:46
 msgid "Register"
 msgstr "Register"
@@ -134,7 +150,7 @@ msgstr "Restart"
 msgid "Select categories"
 msgstr "Select categories"
 
-#: components/categories-selector.tsx:45
+#: components/categories-selector.tsx:43
 msgid "Select the categories you want to play with:"
 msgstr "Select the categories you want to play with:"
 
@@ -146,7 +162,7 @@ msgstr "Share your score"
 msgid "Source: <0>Base Empreinte</0> and <1>Agribalyse</1>."
 msgstr "Source: <0>Base Empreinte</0> and <1>Agribalyse</1>."
 
-#: components/categories-selector.tsx:61
+#: components/categories-selector.tsx:59
 #: components/instructions.tsx:45
 msgid "Start game"
 msgstr "Start game"
@@ -163,7 +179,7 @@ msgstr "The numbers are coming from the <0>Ademe</0> platform <1>Impact CO<2>2</
 msgid "These values are computed by the french goverment agency <0>ADEME</0> and are based on France characteristics. Other countries may have different values, especially those resulting from electricity consumption."
 msgstr "These values are computed by the french goverment agency <0>ADEME</0> and are based on France characteristics. Other countries may have different values, especially those resulting from electricity consumption."
 
-#: components/categories-selector.tsx:28
+#: components/categories-selector.tsx:26
 msgid "This category is not yet available."
 msgstr "This category is not yet available."
 

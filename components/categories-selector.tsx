@@ -1,24 +1,22 @@
 import { t } from "@lingui/core/macro";
-import { Trans } from "@lingui/react/macro";
-import React, { useState } from "react";
-import { loadCategories } from "../lib/ademe-api";
+import { Trans, useLingui } from "@lingui/react/macro";
 import classNames from "classnames";
+import { useState } from "react";
+import { getCategories, getItemsFromCategoryId } from "../lib/ademe-api";
 import styles from "../styles/categories-selector.module.scss";
+import { Locale } from "../types/i18n";
 import { Item } from "../types/item";
 import Button from "./button";
-import { loadCategoryItems } from "../lib/ademe-api";
-import { useLingui } from "@lingui/react";
-import { Locale } from "../types/i18n";
 
 interface CategoriesSelectorProps {
   setSelectedItems: (selectedItems: Item[]) => void;
   setCategoriesMode: (categoriesMode: boolean) => void;
 }
 
-export default async function CategoriesSelector({setSelectedItems, setCategoriesMode}: CategoriesSelectorProps) {
+export default function CategoriesSelector({ setSelectedItems, setCategoriesMode }: CategoriesSelectorProps) {
   const { i18n } = useLingui();
   const locale = i18n.locale as Locale;
-  const categories = await loadCategories();
+  const categories = getCategories();
 
   const [selectedCategories, setSelectedCategories] = useState(new Set<number>());
 
@@ -67,6 +65,9 @@ export default async function CategoriesSelector({setSelectedItems, setCategorie
 
 function getItemsFromCategories(selectedCategories: Set<number>, locale: Locale) {
   const items: Item[] = [];
-  selectedCategories.forEach(id => items.push(...loadCategoryItems(id, locale)));
+  for (const id of selectedCategories) {
+    const categoryItems = getItemsFromCategoryId(id, locale);
+    items.push(...categoryItems);
+  }
   return items;
-}
+} 

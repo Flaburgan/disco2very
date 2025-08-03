@@ -214,3 +214,8 @@ input {
     display: flex;
   }
 }
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}

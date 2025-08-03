@@ -1,5 +1,4 @@
 import React from "react";
-import { animated, useSpring } from "react-spring";
 import styles from "../styles/game-over.module.scss";
 import Button from "./button";
 import Score from "./score";
@@ -28,12 +27,6 @@ function getMedal(score: number): string {
 export default function GameOver(props: Props) {
   const { highscore, resetGame, score, lives } = props;
 
-  const animProps = useSpring({
-    opacity: 1,
-    from: { opacity: 0 },
-    config: { duration: 500 },
-  });
-
 
   const [shareText, setShareText] = React.useState(defaultShareText);
 
@@ -56,7 +49,7 @@ https://disco2very.org`
   }, [highscore, score]);
 
   return (
-    <animated.div style={animProps} className={styles.gameOver}>
+    <div className={styles.gameOver}>
       {lives > 0 ?
         <>
           <h1><Trans>Congratulations!</Trans></h1>
@@ -82,6 +75,6 @@ https://disco2very.org`
         <Button onClick={() => resetGame(false)} minimal={lives > 0}><Trans>Play again</Trans></Button>
         <Button onClick={() => resetGame(true)} minimal={lives === 0}><Trans>Select categories</Trans></Button>
       </p>
-    </animated.div>
+    </div>
   );
 }

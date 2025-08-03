@@ -9,13 +9,12 @@ interface Props {
 export default function Score(props: Props) {
   const { score, children } = props;
 
-  let backgroundColor = "#ffffff";
-
+  let backgroundColor;
   if (score >= 20) {
     backgroundColor = "#FFC940";
   } else if (score >= 10) {
     backgroundColor = "#A7B6C2";
-  } else if (score >= 1) {
+  } else {
     backgroundColor = "#C99765";
   }
 

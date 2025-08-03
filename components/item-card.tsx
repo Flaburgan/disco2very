@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import { Item, PlayedItem } from "../types/item";
 import { round2 } from "../lib/items";
-import { loadCategories } from "../lib/ademe-api";
+import { getCategories } from "../lib/ademe-api";
 import styles from "../styles/item-card.module.scss";
 
 type Props = {
@@ -15,7 +15,7 @@ function capitalize(str: string): string {
 
 export default function ItemCard(props: Props) {
   const { item } = props;
-  const categories = loadCategories();
+  const categories = getCategories();
 
   return (
     <div

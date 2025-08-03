@@ -36,7 +36,7 @@ Then visit http://localhost:3000/ to preview the website.
 
 ### Translations
 
-disCO<sub>2</sub>very uses [Lingui](https://lingui.dev/) to manage translation. If you add or modify any text in the app, you must run:
+disCO<sub>2</sub>very uses [Lingui](https://lingui.dev/) to manage translations. If you add or modify any text in the app, you must run:
 
 ```bash
 npm run i18n-extract

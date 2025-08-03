@@ -180,6 +180,10 @@ input {
   color: $text;
   background-color: #fff;
   z-index: 2;
+
+  span {
+    margin-left: 1px; // Don't ask me why, the "?" does not look centered without this
+  }
 }
 
 .hoverInterrogation {

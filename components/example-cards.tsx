@@ -14,9 +14,9 @@ export default function ExampleCards() {
     <div className={styles.exampleCardsContainer}>
       <ItemCard item={getItemFromSlug("smartphone", locale)!} />
       <div className={styles.question}>
-        <p>+</p>
+        <p className={styles.more}>+</p>
         <p><Trans>or</Trans></p>
-        <p>-</p>
+        <p className={styles.less}>-</p>
         <p>🤔</p>
       </div>
       <ItemCard item={getItemFromSlug("repasavecduboeuf", locale)!} />

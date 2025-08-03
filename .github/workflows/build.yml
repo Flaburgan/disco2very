@@ -15,6 +15,7 @@ jobs:
         node-version: '18.x'
         cache: 'npm'
     - run: npm ci
+    - run: npm run lint
     - run: npm run i18n-compile
     - run: npm run build
     - name: Upload the build as Artifact

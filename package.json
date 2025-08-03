@@ -5,9 +5,9 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,scss,json,yml}\"",
-    "lint": "eslint --max-warnings=0 --cache --ext .js,.ts,.tsx .",
-    "lint-fix": "eslint --fix --cache --ext .js,.ts,.tsx .",
+    "format": "prettier --write '**/*.{ts,tsx,css,scss,json,yml}'",
+    "lint": "eslint --max-warnings=0 --cache '**/*.{ts,tsx,css,scss,json,yml}'",
+    "lint-fix": "eslint --fix --cache '**/*.{ts,tsx,css,scss,json,yml}'",
     "start": "next start",
     "i18n-extract": "lingui extract",
     "i18n-compile": "lingui compile --typescript"
@@ -30,6 +30,7 @@
     "@typescript-eslint/parser": "^8.16.0",
     "babel-plugin-macros": "^3.1.0",
     "eslint": "^9.15.0",
+    "eslint-plugin-lingui": "^0.10.1",
     "prettier": "^2.5.1",
     "sass": "^1.32.10",
     "typescript": "^5.7.2",

@@ -19,17 +19,18 @@ export default function EmailRegistration() {
       },
     ).then((res) => {
       const email = formData.get("email");
+      const status = res.status;
       if (res.ok) {
         setMessageType("success");
         setMessageText(t`${email} has been successfully registered.`);
       } else {
         setMessageType("error");
-        if (res.status === 422) {
+        if (status === 422) {
           setMessageText(t`${email} is not a valid email address.`);
-        } else if (res.status === 409) {
+        } else if (status === 409) {
           setMessageText(t`${email} is already registered.`);
         } else {
-          setMessageText(t`Error: ${res.status}`);
+          setMessageText(t`Error: ${status}`);
         }
       }
     });

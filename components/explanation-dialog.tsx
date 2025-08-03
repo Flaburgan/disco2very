@@ -1,3 +1,4 @@
+import React, { JSX } from "react";
 import { Trans, t } from "@lingui/macro";
 import { useLingui } from "@lingui/react";
 import classNames from "classnames";

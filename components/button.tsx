@@ -1,4 +1,4 @@
-import React from "react";
+import React, { JSX } from "react";
 
 interface Props {
   minimal?: boolean;
@@ -7,7 +7,7 @@ interface Props {
   disabled?: boolean;
   animated?: boolean;
   onClick: () => void;
-  children: React.JSX.Element;
+  children: JSX.Element;
 }
 
 export default function Button(props: Props) {

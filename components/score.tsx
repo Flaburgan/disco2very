@@ -1,9 +1,9 @@
-import React from "react";
+import React, { JSX } from "react";
 import styles from "../styles/score.module.scss";
 
 interface Props {
   score: number;
-  children: React.JSX.Element;
+  children: JSX.Element;
 }
 
 export default function Score(props: Props) {

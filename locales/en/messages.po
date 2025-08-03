@@ -29,12 +29,16 @@ msgstr "{email} is not a valid email address."
 msgid "{perYearDisplay} per year, estimated lifespan: {defaultYearDisplay} years."
 msgstr "{perYearDisplay} per year, estimated lifespan: {defaultYearDisplay} years."
 
+#: lib/ademe-api.ts:223
+msgid "<strong>per month</strong> for 60m²"
+msgstr "<strong>per month</strong> for 60m²"
+
 #: components/real-cards-game.tsx:9
 msgid "A real deck of cards?"
 msgstr "A real deck of cards?"
 
 #: components/board.tsx:133
-#: components/categories-selector.tsx:62
+#: components/categories-selector.tsx:60
 msgid "Back"
 msgstr "Back"
 
@@ -44,9 +48,13 @@ msgstr "Back"
 msgid "Best streak"
 msgstr "Best streak"
 
+#: lib/ademe-api.ts:231
+msgid "Bought in March"
+msgstr "Bought in March"
+
 #: components/instructions.tsx:61
 msgid "Code based on from the <0>wikitrivia</0> game by <1>Tom James Watson</1>. Thank you!"
-msgstr "Code based on from the <0>wikitrivia</0> game by <1>Tom James Watson</1>. Thank you!"
+msgstr "Code based on from the <0>wikitrivia</0> game by <1>Tom James Watson</1>. Thank you!<<<<<<< HEAD"
 
 #: components/game-over.tsx:56
 msgid "Congratulations!"
@@ -67,7 +75,7 @@ msgstr "End of life:"
 
 #: components/email-registration.tsx:34
 msgid "Error: {status}"
-msgstr "Error: {status}"
+msgstr "Error: {status}<<<<<<< HEAD"
 
 #: components/game-over.tsx:62
 msgid "Game over"
@@ -76,6 +84,10 @@ msgstr "Game over"
 #: components/game-over.tsx:35
 msgid "Guess the CO2 footprint!"
 msgstr "Guess the CO2 footprint!"
+
+#: lib/ademe-api.ts:224
+msgid "Impact of one month of heating a house of 60m², spreading the consumption over the year."
+msgstr "Impact of one month of heating a house of 60m², spreading the consumption over the year."
 
 #: components/real-cards-game.tsx:14
 msgid "Interested? Or you simply want to be informed about the latest disCO<0>2</0>very news? We can keep in touch by e-mail!"
@@ -112,7 +124,7 @@ msgstr "Pick categories"
 
 #: components/instructions.tsx:34
 msgid "Place the cards in the correct order guessing their CO<0>2</0> footprint."
-msgstr "Place the cards in the correct order guessing their CO<0>2</0> footprint."
+msgstr "Place the cards in the correct order guessing their CO<0>2</0> footprint.<<<<<<< HEAD"
 
 #: components/game-over.tsx:76
 msgid "Play again"
@@ -120,7 +132,11 @@ msgstr "Play again"
 
 #: components/email-registration.tsx:53
 msgid "Please contact fla (a) framasoft.org to unregister"
-msgstr "Please contact fla (a) framasoft.org to unregister"
+msgstr "Please contact fla (a) framasoft.org to unregister<<<<<<< HEAD"
+
+#: lib/ademe-api.ts:259
+msgid "Purchase and usage for {defaultYears} years."
+msgstr "Purchase and usage for {defaultYears} years."
 
 #: components/email-registration.tsx:46
 msgid "Register"
@@ -128,13 +144,13 @@ msgstr "Register"
 
 #: components/board.tsx:134
 msgid "Restart"
-msgstr "Restart"
+msgstr "Restart<<<<<<< HEAD"
 
 #: components/game-over.tsx:77
 msgid "Select categories"
 msgstr "Select categories"
 
-#: components/categories-selector.tsx:45
+#: components/categories-selector.tsx:43
 msgid "Select the categories you want to play with:"
 msgstr "Select the categories you want to play with:"
 
@@ -144,9 +160,9 @@ msgstr "Share your score"
 
 #: components/explanation-dialog.tsx:52
 msgid "Source: <0>Base Empreinte</0> and <1>Agribalyse</1>."
-msgstr "Source: <0>Base Empreinte</0> and <1>Agribalyse</1>."
+msgstr "Source: <0>Base Empreinte</0> and <1>Agribalyse</1>.<<<<<<< HEAD"
 
-#: components/categories-selector.tsx:61
+#: components/categories-selector.tsx:59
 #: components/instructions.tsx:45
 msgid "Start game"
 msgstr "Start game"
@@ -161,15 +177,15 @@ msgstr "The numbers are coming from the <0>Ademe</0> platform <1>Impact CO<2>2</
 
 #: components/explanation-dialog.tsx:57
 msgid "These values are computed by the french goverment agency <0>ADEME</0> and are based on France characteristics. Other countries may have different values, especially those resulting from electricity consumption."
-msgstr "These values are computed by the french goverment agency <0>ADEME</0> and are based on France characteristics. Other countries may have different values, especially those resulting from electricity consumption."
+msgstr "These values are computed by the french goverment agency <0>ADEME</0> and are based on France characteristics. Other countries may have different values, especially those resulting from electricity consumption.<<<<<<< HEAD"
 
-#: components/categories-selector.tsx:28
+#: components/categories-selector.tsx:26
 msgid "This category is not yet available."
 msgstr "This category is not yet available."
 
 #: components/real-cards-game.tsx:11
 msgid "This game is currently a digital app but the ultimate goal is to print a real deck of cards, as we feel that it can be a useful tool to raise awareness about climate change. Possibly, we may do a crowdfunding campaign, so you could order your own deck!"
-msgstr "This game is currently a digital app but the ultimate goal is to print a real deck of cards, as we feel that it can be a useful tool to raise awareness about climate change. Possibly, we may do a crowdfunding campaign, so you could order your own deck!"
+msgstr "This game is currently a digital app but the ultimate goal is to print a real deck of cards, as we feel that it can be a useful tool to raise awareness about climate change. Possibly, we may do a crowdfunding campaign, so you could order your own deck!<<<<<<< HEAD"
 
 #: components/game-over.tsx:36
 #: components/game-over.tsx:68
@@ -178,7 +194,7 @@ msgstr "This streak"
 
 #: components/explanation-dialog.tsx:47
 msgid "Total:"
-msgstr "Total:"
+msgstr "Total:<<<<<<< HEAD"
 
 #: components/game-over.tsx:63
 msgid "Try again!"
@@ -186,7 +202,7 @@ msgstr "Try again!"
 
 #: components/explanation-dialog.tsx:79
 msgid "Usage:"
-msgstr "Usage:"
+msgstr "Usage:<<<<<<< HEAD"
 
 #: components/game-over.tsx:57
 msgid "You ordered all the cards!"

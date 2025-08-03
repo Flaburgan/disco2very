@@ -83,7 +83,7 @@ function getAllItems(locale: Locale): Item[] {
   return allItems;
 }
 
-let categories: Map<number, AdemeCategory> = new Map();
+const categories: Map<number, AdemeCategory> = new Map();
 export function loadCategories(): Map<number, AdemeCategory> {
   if (categories.size === 0) {
     ademeCategories.data.forEach(category => categories.set(category.id, category));

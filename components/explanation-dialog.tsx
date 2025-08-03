@@ -71,11 +71,13 @@ function displayDetail(detail: {id: number, value: number}, footprintDetails: Fo
 }
 
 function displayUsage(usage: {peryear: number, defaultyears: number}, total: number): JSX.Element {
+  const perYearDisplay = displayCO2(usage.peryear);
+  const defaultYearDisplay = usage.defaultyears;
   const value = usage.peryear * usage.defaultyears;
   return <li>
     <h3><Trans>Usage:</Trans></h3>
     <ChartBar value={value} total={total} />
-    <em>{t`${displayCO2(usage.peryear)} per year, estimated lifespan: ${usage.defaultyears} years.`}</em>
+    <em>{t`${perYearDisplay} per year, estimated lifespan: ${defaultYearDisplay} years.`}</em>
   </li>;
 }
 

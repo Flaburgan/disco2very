@@ -13,28 +13,28 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: components/explanation-dialog.tsx:77
-msgid "{0} per year, estimated lifespan: {1} years."
-msgstr "{0} per year, estimated lifespan: {1} years."
-
-#: components/email-registration.tsx:24
+#: components/email-registration.tsx:25
 msgid "{email} has been successfully registered."
 msgstr "{email} has been successfully registered."
 
-#: components/email-registration.tsx:30
+#: components/email-registration.tsx:31
 msgid "{email} is already registered."
 msgstr "{email} is already registered."
 
-#: components/email-registration.tsx:28
+#: components/email-registration.tsx:29
 msgid "{email} is not a valid email address."
 msgstr "{email} is not a valid email address."
+
+#: components/explanation-dialog.tsx:80
+msgid "{perYearDisplay} per year, estimated lifespan: {defaultYearDisplay} years."
+msgstr "{perYearDisplay} per year, estimated lifespan: {defaultYearDisplay} years."
 
 #: components/real-cards-game.tsx:9
 msgid "A real deck of cards?"
 msgstr "A real deck of cards?"
 
 #: components/board.tsx:133
-#: components/categories-selector.tsx:57
+#: components/categories-selector.tsx:61
 msgid "Back"
 msgstr "Back"
 
@@ -44,7 +44,7 @@ msgstr "Back"
 msgid "Best streak"
 msgstr "Best streak"
 
-#: components/instructions.tsx:59
+#: components/instructions.tsx:61
 msgid "Code based on from the <0>wikitrivia</0> game by <1>Tom James Watson</1>. Thank you!"
 msgstr "Code based on from the <0>wikitrivia</0> game by <1>Tom James Watson</1>. Thank you!"
 
@@ -61,13 +61,13 @@ msgstr "Copied!"
 msgid "disCO2very is a free game to discover the orders of magnitude of the CO2 footprint"
 msgstr "disCO2very is a free game to discover the orders of magnitude of the CO2 footprint"
 
-#: components/explanation-dialog.tsx:83
+#: components/explanation-dialog.tsx:86
 msgid "End of life:"
 msgstr "End of life:"
 
-#: components/email-registration.tsx:32
-msgid "Error: {0}"
-msgstr "Error: {0}"
+#: components/email-registration.tsx:33
+msgid "Error: {status}"
+msgstr "Error: {status}"
 
 #: components/game-over.tsx:68
 msgid "Game over"
@@ -81,20 +81,20 @@ msgstr "Guess the CO2 footprint!"
 msgid "Interested? Or you simply want to be informed about the latest disCO<0>2</0>very news? We can keep in touch by e-mail!"
 msgstr "Interested? Or you simply want to be informed about the latest disCO<0>2</0>very news? We can keep in touch by e-mail!"
 
-#: components/instructions.tsx:57
+#: components/instructions.tsx:59
 msgid "License AGPL - Source code available <0>on github</0>."
 msgstr "License AGPL - Source code available <0>on github</0>."
 
-#: components/instructions.tsx:56
-#: components/instructions.tsx:56
+#: components/instructions.tsx:58
+#: components/instructions.tsx:58
 msgid "love"
 msgstr "love"
 
-#: components/instructions.tsx:56
+#: components/instructions.tsx:58
 msgid "Made with <0/> by <1>Fla</1> & Sara."
 msgstr "Made with <0/> by <1>Fla</1> & Sara."
 
-#: components/email-registration.tsx:42
+#: components/email-registration.tsx:43
 msgid "myemail@myprovider.org"
 msgstr "myemail@myprovider.org"
 
@@ -106,7 +106,7 @@ msgstr "or"
 msgid "Order items to discover their CO2 footprint!"
 msgstr "Order items to discover their CO2 footprint!"
 
-#: components/instructions.tsx:47
+#: components/instructions.tsx:49
 msgid "Pick categories"
 msgstr "Pick categories"
 
@@ -118,11 +118,11 @@ msgstr "Place the cards in the correct order guessing their CO<0>2</0> footprint
 msgid "Play again"
 msgstr "Play again"
 
-#: components/email-registration.tsx:51
+#: components/email-registration.tsx:52
 msgid "Please contact fla (a) framasoft.org to unregister"
 msgstr "Please contact fla (a) framasoft.org to unregister"
 
-#: components/email-registration.tsx:44
+#: components/email-registration.tsx:45
 msgid "Register"
 msgstr "Register"
 
@@ -134,7 +134,7 @@ msgstr "Restart"
 msgid "Select categories"
 msgstr "Select categories"
 
-#: components/categories-selector.tsx:40
+#: components/categories-selector.tsx:44
 msgid "Select the categories you want to play with:"
 msgstr "Select the categories you want to play with:"
 
@@ -142,12 +142,12 @@ msgstr "Select the categories you want to play with:"
 msgid "Share your score"
 msgstr "Share your score"
 
-#: components/explanation-dialog.tsx:50
+#: components/explanation-dialog.tsx:51
 msgid "Source: <0>Base Empreinte</0> and <1>Agribalyse</1>."
 msgstr "Source: <0>Base Empreinte</0> and <1>Agribalyse</1>."
 
-#: components/categories-selector.tsx:56
-#: components/instructions.tsx:46
+#: components/categories-selector.tsx:60
+#: components/instructions.tsx:48
 msgid "Start game"
 msgstr "Start game"
 
@@ -155,21 +155,13 @@ msgstr "Start game"
 msgid "The disCO2very logo, featuring a molecule of CO2."
 msgstr "The disCO2very logo, featuring a molecule of CO2."
 
-#: components/instructions.tsx:64
+#: components/instructions.tsx:66
 msgid "The numbers are coming from the <0>Ademe</0> platform <1>Impact CO<2>2</2></1>. Thanks to them for their amazing work!"
 msgstr "The numbers are coming from the <0>Ademe</0> platform <1>Impact CO<2>2</2></1>. Thanks to them for their amazing work!"
 
-#: components/explanation-dialog.tsx:55
+#: components/explanation-dialog.tsx:56
 msgid "These values are computed by the french goverment agency <0>ADEME</0> and are based on France characteristics. Other countries may have different values, especially those resulting from electricity consumption."
 msgstr "These values are computed by the french goverment agency <0>ADEME</0> and are based on France characteristics. Other countries may have different values, especially those resulting from electricity consumption."
-
-#: components/explanation-dialog.tsx:54
-#~ msgid "These values are computed by the french goverment agency <0>ADEME</0> and are based on France characteristics. Other countries may have different values, especially those resulting from electricity consumption.<1/>"
-#~ msgstr "These values are computed by the french goverment agency <0>ADEME</0> and are based on France characteristics. Other countries may have different values, especially those resulting from electricity consumption.<1/>"
-
-#: components/explanation-dialog.tsx:49
-#~ msgid "These values are computed by the french goverment agency ADEME. You can access the raw data at <0>base-empreinte.ademe.fr</0> and <1>agribalyse.ademe.fr</1>. Other countries may have different values, especially those involving electricity consumption."
-#~ msgstr "These values are computed by the french goverment agency ADEME. You can access the raw data at <0>base-empreinte.ademe.fr</0> and <1>agribalyse.ademe.fr</1>. Other countries may have different values, especially those involving electricity consumption."
 
 #: components/categories-selector.tsx:27
 msgid "This category is not yet available."
@@ -184,7 +176,7 @@ msgstr "This game is currently a digital app but the ultimate goal is to print a
 msgid "This streak"
 msgstr "This streak"
 
-#: components/explanation-dialog.tsx:45
+#: components/explanation-dialog.tsx:46
 msgid "Total:"
 msgstr "Total:"
 
@@ -192,7 +184,7 @@ msgstr "Total:"
 msgid "Try again!"
 msgstr "Try again!"
 
-#: components/explanation-dialog.tsx:75
+#: components/explanation-dialog.tsx:78
 msgid "Usage:"
 msgstr "Usage:"
 

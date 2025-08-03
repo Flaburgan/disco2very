@@ -28,7 +28,11 @@ export default function CategoriesSelector({setSelectedItems, setCategoriesMode}
     } else {
       setSelectedCategories(prevSet => {
         const newSet = new Set(prevSet); // We create a new Set to force a React rerender
-        newSet.has(id) ? newSet.delete(id) : newSet.add(id);
+        if (newSet.has(id)) {
+          newSet.delete(id);
+        } else {
+          newSet.add(id);
+        }
         return newSet;
       });
     }

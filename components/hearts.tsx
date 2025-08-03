@@ -1,21 +1,6 @@
 import React from "react";
-import classNames from "classnames";
 import styles from "../styles/hearts.module.scss";
 
-interface HeartProps {
-  have: boolean;
-}
-
-function Heart(props: HeartProps) {
-  const { have } = props;
-
-  return (
-    <img
-      className={classNames(styles.heart, have ? "" : styles.lost)}
-      src="./images/heart.svg"
-    />
-  );
-}
 
 interface Props {
   lives: number;

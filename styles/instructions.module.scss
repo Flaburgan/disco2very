@@ -16,13 +16,13 @@
   .wrapper {
     flex-grow: 1;
     gap: 3rem;
-    margin: 2rem;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     max-width: $content-max-width;
+    margin-top: 1rem;
 
     .mainHeader {
       h1,
@@ -32,7 +32,11 @@
       }
 
       h2 {
-        margin-top: 0;
+        margin: 0;
+      }
+
+      @media screen and (max-width: 450px) {
+        font-size: 0.8rem;
       }
     }
 

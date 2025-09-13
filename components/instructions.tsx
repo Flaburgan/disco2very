@@ -32,9 +32,6 @@ export default function Instructions(props: Props) {
             <img src="./images/logo.png" title="disCO2very" alt="disCO2very" className={styles.logo} />
           </h1>
           <h2><Trans>Place the cards in the correct order guessing their CO<sub>2</sub> footprint.</Trans></h2>
-          {highscore !== 0 && (
-            <Score score={highscore}><Trans>Best streak</Trans></Score>
-          )}
         </header>
         {
           categoriesMode ?
@@ -51,6 +48,9 @@ export default function Instructions(props: Props) {
           </>
         }
       </div>
+      {highscore !== 0 && (
+        <Score score={highscore}><Trans>Best streak</Trans></Score>
+      )}
 
       <RealCardsGame />
 

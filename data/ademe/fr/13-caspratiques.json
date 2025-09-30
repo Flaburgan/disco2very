@@ -7,13 +7,13 @@
       "footprint": 1770
     },
     {
-      "name": "A/R Paris - Berlin en tgv",
+      "name": "A/R Paris - Berlin en TGV",
       "slug": "tgv-paris-berlin",
       "ecv": 7.26,
       "footprint": 7.26
     },
     {
-      "name": "A/R Paris - Marseille en tgv",
+      "name": "A/R Paris - Marseille en TGV",
       "slug": "tgv-paris-marseille",
       "ecv": 4.4,
       "footprint": 4.4
@@ -27,8 +27,8 @@
     {
       "name": "Empreinte carbone d'un citoyen français",
       "slug": "francais",
-      "ecv": 9300,
-      "footprint": 9300
+      "ecv": 9100,
+      "footprint": 9100
     },
     {
       "name": "Game of Thrones en streaming",
@@ -141,6 +141,114 @@
       "slug": "2050",
       "ecv": 2000,
       "footprint": 2000
+    },
+    {
+      "name": "Jour de circulation des voitures particulières en France",
+      "slug": "voiturefrancaisejour",
+      "ecv": 193699000,
+      "footprint": 193699000
+    },
+    {
+      "name": "Année d’émissions des voitures particulières en France",
+      "slug": "voiturefrancaisean",
+      "ecv": 70700135000,
+      "footprint": 70700135000
+    },
+    {
+      "name": "Année d’émissions de la population en France",
+      "slug": "populationfrancaise",
+      "ecv": 624000000000,
+      "footprint": 624000000000
+    },
+    {
+      "name": "Année d’émissions du parc bovin en France",
+      "slug": "parcbovin",
+      "ecv": 38032000000,
+      "footprint": 38032000000
+    },
+    {
+      "name": "Année  d’émissions du chauffage domestique en France",
+      "slug": "chauffageenfrance",
+      "ecv": 43320025000,
+      "footprint": 43320025000
+    },
+    {
+      "name": "Année d’émissions du numérique en France",
+      "slug": "numeriqueenfrance",
+      "ecv": 29500000000,
+      "footprint": 29500000000
+    },
+    {
+      "name": "Année d’émissions de l’aviation civile en France",
+      "slug": "aviationcivileenfrance",
+      "ecv": 4380000000,
+      "footprint": 4380000000
+    },
+    {
+      "name": "Jour d'activité agricole en France",
+      "slug": "agricoleenfrancejour",
+      "ecv": 216439000,
+      "footprint": 216439000
+    },
+    {
+      "name": "Jour d'utilisation du chauffage domestique en France",
+      "slug": "chauffageenfrancejour",
+      "ecv": 118685000,
+      "footprint": 118685000
+    },
+    {
+      "name": "Jour d’absorption de CO2e par les forêts et les prairies en France",
+      "slug": "foretenfrancejour",
+      "ecv": 151636000,
+      "footprint": 151636000
+    },
+    {
+      "name": "Jour d'utilisation des climatisations domestiques en France",
+      "slug": "climatisationenfrancejour",
+      "ecv": 3277000,
+      "footprint": 3277000
+    },
+    {
+      "name": "Heure de circulation des voitures particulières en France",
+      "slug": "voiturefrancaiseheure",
+      "ecv": 8071000,
+      "footprint": 8071000
+    },
+    {
+      "name": "Jour de fonctionnement du numérique en France",
+      "slug": "numeriqueenfrancejour",
+      "ecv": 80822000,
+      "footprint": 80822000
+    },
+    {
+      "name": "Jour de traitement des déchets et eaux usées domestiques",
+      "slug": "traitementdechetsjour",
+      "ecv": 5178000,
+      "footprint": 5178000
+    },
+    {
+      "name": "Jour de circulation des trains en France",
+      "slug": "trainenfrancejour",
+      "ecv": 1178000,
+      "footprint": 1178000
+    },
+    {
+      "name": "Jour de fonctionnement d’un campus de data center en France",
+      "slug": "datacenterjour",
+      "ecv": 185000,
+      "footprint": 185000
+    },
+    {
+      "name": "A/R Johannesburg-Paris d’une équipe de rugby",
+      "slug": "avion-johannesburg-paris-rugby",
+      "ecv": 119430,
+      "footprint": 119430
+    },
+    {
+      "name": "Maison neuve",
+      "slug": "maisonneuve",
+      "ecv": 50000,
+      "footprint": 50000
     }
   ]
 }

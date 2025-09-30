@@ -3,7 +3,7 @@
     {
       "name": "Bouilloire",
       "slug": "bouilloire",
-      "ecv": 40.88403605825422,
+      "ecv": 37.80339914,
       "footprint": 9.907,
       "footprintDetail": [
         {
@@ -27,12 +27,12 @@
         "peryear": 5.27273319,
         "defaultyears": 6
       },
-      "endOfLife": -0.659363081745786
+      "endOfLife": -3.74
     },
     {
       "name": "Cafetière à dosettes",
       "slug": "cafetieredosette",
-      "ecv": 251.0035526905852,
+      "ecv": 237.95439,
       "footprint": 22.454,
       "footprintDetail": [
         {
@@ -56,12 +56,12 @@
         "peryear": 35.160078,
         "defaultyears": 5
       },
-      "endOfLife": 52.7491626905852
+      "endOfLife": 39.7
     },
     {
       "name": "Cafetière filtre",
       "slug": "cafetierefiltre",
-      "ecv": 197.69817433391722,
+      "ecv": 191.32567550000002,
       "footprint": 31.9,
       "footprintDetail": [
         {
@@ -85,12 +85,12 @@
         "peryear": 27.1831351,
         "defaultyears": 5
       },
-      "endOfLife": 29.8824988339172
+      "endOfLife": 23.51
     },
     {
       "name": "Cafetière expresso",
       "slug": "cafetiereexpresso",
-      "ecv": 211.7710842705374,
+      "ecv": 212.25088599999998,
       "footprint": 47.617000000000004,
       "footprintDetail": [
         {
@@ -114,12 +114,12 @@
         "peryear": 28.0487772,
         "defaultyears": 5
       },
-      "endOfLife": 23.9101982705374
+      "endOfLife": 24.39
     },
     {
       "name": "Four électrique",
       "slug": "fourelectrique",
-      "ecv": 263.06469996,
+      "ecv": 272.60739995999995,
       "footprint": 217.58999999999997,
       "footprintDetail": [
         {
@@ -143,12 +143,12 @@
         "peryear": 6.29728333,
         "defaultyears": 12
       },
-      "endOfLife": -30.0927
+      "endOfLife": -20.55
     },
     {
       "name": "Lave-vaisselle",
       "slug": "lavevaisselle",
-      "ecv": 467.9982177292116,
+      "ecv": 460.79,
       "footprint": 271.19,
       "footprintDetail": [
         {
@@ -169,15 +169,15 @@
         }
       ],
       "usage": {
-        "peryear": 21.943837,
-        "defaultyears": 10
+        "peryear": 18.25,
+        "defaultyears": 12
       },
-      "endOfLife": -22.6301522707884
+      "endOfLife": -29.4
     },
     {
       "name": "Lave-linge",
       "slug": "lavelinge",
-      "ecv": 510.2572583409827,
+      "ecv": 513.42,
       "footprint": 341.09999999999997,
       "footprintDetail": [
         {
@@ -198,15 +198,15 @@
         }
       ],
       "usage": {
-        "peryear": 21.6932702,
-        "defaultyears": 10
+        "peryear": 18.08,
+        "defaultyears": 12
       },
-      "endOfLife": -47.7754436590173
+      "endOfLife": -44.64
     },
     {
       "name": "Réfrigérateur",
       "slug": "refrigirateur",
-      "ecv": 325.46071642401705,
+      "ecv": 338.7140334,
       "footprint": 257.3,
       "footprintDetail": [
         {
@@ -230,12 +230,12 @@
         "peryear": 8.83240334,
         "defaultyears": 10
       },
-      "endOfLife": -20.163316975983
+      "endOfLife": -6.91
     },
     {
       "name": "Aspirateur",
       "slug": "aspirateur",
-      "ecv": 47.31,
+      "ecv": 73.43,
       "footprint": 47.31,
       "footprintDetail": [
         {
@@ -254,12 +254,17 @@
           "id": 4,
           "value": 17.45
         }
-      ]
+      ],
+      "usage": {
+        "peryear": 3.7325,
+        "defaultyears": 8
+      },
+      "endOfLife": -3.74
     },
     {
       "name": "Climatiseur",
       "slug": "climatiseur",
-      "ecv": 413.8812884443126,
+      "ecv": 421.747903,
       "footprint": 238.89999999999998,
       "footprintDetail": [
         {
@@ -283,7 +288,36 @@
         "peryear": 18.2596505,
         "defaultyears": 6
       },
-      "endOfLife": 65.4233854443126
+      "endOfLife": 73.29
+    },
+    {
+      "name": "Micro-ondes",
+      "slug": "microondes",
+      "ecv": 121.35000000000001,
+      "footprint": 98.34,
+      "footprintDetail": [
+        {
+          "id": 1,
+          "value": 58.6
+        },
+        {
+          "id": 2,
+          "value": 3.43
+        },
+        {
+          "id": 3,
+          "value": 6.91
+        },
+        {
+          "id": 4,
+          "value": 29.4
+        }
+      ],
+      "usage": {
+        "peryear": 2.45,
+        "defaultyears": 12
+      },
+      "endOfLife": -6.39
     }
   ]
 }

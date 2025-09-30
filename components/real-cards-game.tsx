@@ -1,7 +1,7 @@
+import { Trans } from "@lingui/react/macro";
 import React from "react";
 import EmailRegistration from "./email-registration";
 import styles from "../styles/real-cards-game.module.scss";
-import { Trans } from "@lingui/macro";
 
 export default function realCardsGame() {
   return (

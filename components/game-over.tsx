@@ -1,8 +1,9 @@
+import { t } from "@lingui/core/macro";
+import { Trans } from "@lingui/react/macro";
 import React from "react";
 import styles from "../styles/game-over.module.scss";
 import Button from "./button";
 import Score from "./score";
-import { Trans, t } from "@lingui/macro";
 
 interface Props {
   highscore: number;

@@ -56,3 +56,15 @@ To build a static version of the website to the `out` folder, that you can then 
 ```bash
 npm run build
 ```
+
+### Update data
+
+The data used is hardcoded in the code to allow to play offline. That's why it's important to regularly pull the latest data from the ImpactCO2 github repository.
+1. For the data, use the ADEME [API documentation page](https://impactco2.fr/doc/api) to execute queries.
+   - Start with the `/thematiques` route, click on `Try it out` and then compare the categories with `data/ademe/0-categories.json` and complete the file if needed
+   - Then use the `/thematiques/ecv/{id}` route, execute it with the `detail` parameter set to `1` for each category number and each language, and copy paste the response to the corresponding file in `data/ademe/{language}/{thegoodfile}.json`
+   - `git diff` your changes to check the `id`s used in `footprintDetail`, it has to have a matching ID in `data/ademe/footprintDetailCategories.json`. If you are missing it here, you have to investigate in the ImpactCO2 website to find what the new category is, as they are not providing them in the API
+2. For the icons,
+   - Download all the SVG icons from [the github repository](https://github.com/incubateur-ademe/impactco2/tree/develop/public/icons) `public/icons` folder and save them in `public/images/ademe`
+   - Execute the `./clean-ademe-image.sh` script, as not all the ADEME images are used in disCO2very, so no need to bundle them
+3. Finish by updating the date above in this file, to inform people of the last time the data has been updated

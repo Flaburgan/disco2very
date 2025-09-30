@@ -18,7 +18,7 @@ export default function EmailRegistration() {
         body: formData,
       },
     ).then((res) => {
-      const email = formData.get("email");
+      const email = formData.get("email") as string; // FormDataEntryValue can be File | string, we will always get a string in response
       const status = res.status;
       if (res.ok) {
         setMessageType("success");

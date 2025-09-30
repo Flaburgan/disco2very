@@ -1,10 +1,10 @@
+import { msg } from "@lingui/core/macro";
+import { Trans } from "@lingui/react/macro";
 import React from "react";
 import styles from "../styles/instructions.module.scss";
 import Button from "./button";
 import Score from "./score";
 import CategoriesSelector from "./categories-selector";
-import { Trans } from "@lingui/macro";
-import { msg } from "@lingui/macro";
 import { useLingui } from "@lingui/react";
 import RealCardsGame from "./real-cards-game";
 import { Item } from "../types/item";

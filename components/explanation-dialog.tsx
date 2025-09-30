@@ -1,5 +1,6 @@
+import { t } from "@lingui/core/macro";
+import { Trans } from "@lingui/react/macro";
 import React, { JSX } from "react";
-import { Trans, t } from "@lingui/macro";
 import { useLingui } from "@lingui/react";
 import classNames from "classnames";
 import { getFootprintDetails } from "../lib/ademe-api";

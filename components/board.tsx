@@ -1,3 +1,4 @@
+import { Trans } from "@lingui/react/macro";
 import React, { useState } from "react";
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
 import { GameState } from "../types/game";
@@ -9,7 +10,6 @@ import styles from "../styles/board.module.scss";
 import Hearts from "./hearts";
 import GameOver from "./game-over";
 import Button from "./button";
-import { Trans } from "@lingui/macro";
 
 interface Props {
   highscore: number;

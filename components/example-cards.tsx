@@ -1,8 +1,8 @@
+import { Trans } from "@lingui/react/macro";
 import React from "react";
 import styles from "../styles/example-cards.module.scss";
 import ItemCard from "./item-card";
 import { getItemFromSlug } from "../lib/ademe-api";
-import { Trans } from "@lingui/macro";
 import { useLingui } from "@lingui/react";
 import { Locale } from "../types/i18n";
 

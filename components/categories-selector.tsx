@@ -1,8 +1,9 @@
+import { t } from "@lingui/core/macro";
+import { Trans } from "@lingui/react/macro";
 import React, { useState } from "react";
 import { loadCategories } from "../lib/ademe-api";
 import classNames from "classnames";
 import styles from "../styles/categories-selector.module.scss";
-import { Trans, t } from "@lingui/macro";
 import { Item } from "../types/item";
 import Button from "./button";
 import { loadCategoryItems } from "../lib/ademe-api";

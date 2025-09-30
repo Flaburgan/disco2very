@@ -27,8 +27,8 @@
     {
       "name": "French citizen's carbon footprint",
       "slug": "francais",
-      "ecv": 9300,
-      "footprint": 9300
+      "ecv": 9100,
+      "footprint": 9100
     },
     {
       "name": "Game of Thrones streaming",
@@ -141,6 +141,114 @@
       "slug": "2050",
       "ecv": 2000,
       "footprint": 2000
+    },
+    {
+      "name": "Day of circulation of private cars in France",
+      "slug": "voiturefrancaisejour",
+      "ecv": 193699000,
+      "footprint": 193699000
+    },
+    {
+      "name": "Year of emissions of private cars in France",
+      "slug": "voiturefrancaisean",
+      "ecv": 70700135000,
+      "footprint": 70700135000
+    },
+    {
+      "name": "Year of emissions of the population in France",
+      "slug": "populationfrancaise",
+      "ecv": 624000000000,
+      "footprint": 624000000000
+    },
+    {
+      "name": "Year of emissions of the cattle herd in France",
+      "slug": "parcbovin",
+      "ecv": 38032000000,
+      "footprint": 38032000000
+    },
+    {
+      "name": "Year of emissions of domestic heating in France",
+      "slug": "chauffageenfrance",
+      "ecv": 43320025000,
+      "footprint": 43320025000
+    },
+    {
+      "name": "Year of emissions of digital technology in France",
+      "slug": "numeriqueenfrance",
+      "ecv": 29500000000,
+      "footprint": 29500000000
+    },
+    {
+      "name": "Year of emissions of civil aviation in France",
+      "slug": "aviationcivileenfrance",
+      "ecv": 4380000000,
+      "footprint": 4380000000
+    },
+    {
+      "name": "Day of agricultural activity in France",
+      "slug": "agricoleenfrancejour",
+      "ecv": 216439000,
+      "footprint": 216439000
+    },
+    {
+      "name": "Day of domestic heating use in France",
+      "slug": "chauffageenfrancejour",
+      "ecv": 118685000,
+      "footprint": 118685000
+    },
+    {
+      "name": "Day of CO2e absorption by forests and grasslands in France",
+      "slug": "foretenfrancejour",
+      "ecv": 151636000,
+      "footprint": 151636000
+    },
+    {
+      "name": "Day of domestic air conditioning use in France",
+      "slug": "climatisationenfrancejour",
+      "ecv": 3277000,
+      "footprint": 3277000
+    },
+    {
+      "name": "Hour of circulation of private cars in France",
+      "slug": "voiturefrancaiseheure",
+      "ecv": 8071000,
+      "footprint": 8071000
+    },
+    {
+      "name": "Day of operation of digital services in France",
+      "slug": "numeriqueenfrancejour",
+      "ecv": 80822000,
+      "footprint": 80822000
+    },
+    {
+      "name": "Day of treatment of domestic waste and wastewater",
+      "slug": "traitementdechetsjour",
+      "ecv": 5178000,
+      "footprint": 5178000
+    },
+    {
+      "name": "Day of train circulation in France",
+      "slug": "trainenfrancejour",
+      "ecv": 1178000,
+      "footprint": 1178000
+    },
+    {
+      "name": "Day of operation of a data center campus in France",
+      "slug": "datacenterjour",
+      "ecv": 185000,
+      "footprint": 185000
+    },
+    {
+      "name": "Roundtrip Johannesburg-Paris of a rugby team",
+      "slug": "avion-johannesburg-paris-rugby",
+      "ecv": 119430,
+      "footprint": 119430
+    },
+    {
+      "name": "New house",
+      "slug": "maisonneuve",
+      "ecv": 50000,
+      "footprint": 50000
     }
   ]
 }

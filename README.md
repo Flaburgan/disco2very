@@ -6,7 +6,7 @@ A free software game designed to explore the orders of magnitude of CO<sub>2</su
 
 ## About
 
-This project uses open data provided by ADEME (*Agence de l'Environnement et de la Maîtrise de l'Énergie*, the French state agency working on climate change). The raw data is available on the [ADEME website](https://www.ademe.fr/), either through a [user-friendly website](https://impactco2.fr), or via [an API](https://impactco2.fr/api-doc). To enable offline gameplay and reduce redundant API calls (since the data doesn't change frequently), the information is stored within the app and manually updated regularly. The last update was performed on **2025-03-05**.
+This project uses open data provided by ADEME (*Agence de l'Environnement et de la Maîtrise de l'Énergie*, the French state agency working on climate change). The raw data is available on the [ADEME website](https://www.ademe.fr/), either through a [user-friendly website](https://impactco2.fr), or via [an API](https://impactco2.fr/api-doc). To enable offline gameplay and reduce redundant API calls (since the data doesn't change frequently), the information is stored within the app and manually updated regularly. The last update was performed on **2025-09-30**.
 
 ⚠️ **Note:** Since the data is provided by ADEME, the CO<sub>2</sub> values are based on France's characteristics. A key difference compared to other countries is France’s low-carbon electricity sources. In contrast, countries relying on other electricity sources such as coal-fired power plants will have significantly higher CO<sub>2</sub> footprints for electricity-related activities.
 

@@ -29,12 +29,16 @@ msgstr "{email} n'est pas une adresse e-mail valide."
 msgid "{perYearDisplay} per year, estimated lifespan: {defaultYearDisplay} years."
 msgstr "{perYearDisplay} par an, durée de vie estimée : {defaultYearDisplay} ans."
 
+#: lib/ademe-api.ts:223
+msgid "<strong>per month</strong> for 60m²"
+msgstr "<strong>par mois</strong> pour 60m²"
+
 #: components/real-cards-game.tsx:9
 msgid "A real deck of cards?"
 msgstr "Un vrai jeu de cartes ?"
 
 #: components/board.tsx:133
-#: components/categories-selector.tsx:62
+#: components/categories-selector.tsx:60
 msgid "Back"
 msgstr "Retour"
 
@@ -43,6 +47,10 @@ msgstr "Retour"
 #: components/instructions.tsx:52
 msgid "Best streak"
 msgstr "Meilleure série"
+
+#: lib/ademe-api.ts:231
+msgid "Bought in March"
+msgstr "Acheté en mars"
 
 #: components/instructions.tsx:61
 msgid "Code based on from the <0>wikitrivia</0> game by <1>Tom James Watson</1>. Thank you!"
@@ -56,8 +64,8 @@ msgstr "Félicitations !"
 msgid "Copied!"
 msgstr "Copié !"
 
-#: components/app.tsx:22
-#: components/app.tsx:23
+#: components/app.tsx:24
+#: components/app.tsx:25
 msgid "disCO2very is a free game to discover the orders of magnitude of the CO2 footprint"
 msgstr "disCO2very est un jeu libre pour découvrir les ordres de grandeur de l'empreinte carbone"
 
@@ -76,6 +84,10 @@ msgstr "Partie terminée"
 #: components/game-over.tsx:35
 msgid "Guess the CO2 footprint!"
 msgstr "Devinez l'empreinte CO2 !"
+
+#: lib/ademe-api.ts:224
+msgid "Impact of one month of heating a house of 60m², spreading the consumption over the year."
+msgstr "Impact d'un mois de chauffage pour une maison de 60m², avec la consommation répartie sur l'année"
 
 #: components/real-cards-game.tsx:14
 msgid "Interested? Or you simply want to be informed about the latest disCO<0>2</0>very news? We can keep in touch by e-mail!"
@@ -102,7 +114,7 @@ msgstr "monemail@monfournisseur.fr"
 msgid "or"
 msgstr "ou"
 
-#: components/app.tsx:21
+#: components/app.tsx:23
 msgid "Order items to discover their CO2 footprint!"
 msgstr "Ordonne des éléments pour découvrir leur empreinte CO2 !"
 
@@ -122,6 +134,10 @@ msgstr "Rejouer"
 msgid "Please contact fla (a) framasoft.org to unregister"
 msgstr "Merci de contacter fla (a) framasoft.org pour vous désinscrire"
 
+#: lib/ademe-api.ts:259
+msgid "Purchase and usage for {defaultYears} years."
+msgstr "Achat et usage pendant {defaultYears} ans."
+
 #: components/email-registration.tsx:46
 msgid "Register"
 msgstr "S'inscrire"
@@ -134,7 +150,7 @@ msgstr "Recommencer"
 msgid "Select categories"
 msgstr "Sélectionner les catégories"
 
-#: components/categories-selector.tsx:45
+#: components/categories-selector.tsx:43
 msgid "Select the categories you want to play with:"
 msgstr "Sélectionnez les catégories avec lesquelles vous voulez jouer :"
 
@@ -146,12 +162,12 @@ msgstr "Partagez votre score"
 msgid "Source: <0>Base Empreinte</0> and <1>Agribalyse</1>."
 msgstr "Source : <0>Base Empreinte</0> et <1>Agribalyse</1>."
 
-#: components/categories-selector.tsx:61
+#: components/categories-selector.tsx:59
 #: components/instructions.tsx:45
 msgid "Start game"
 msgstr "Démarrer la partie"
 
-#: components/app.tsx:24
+#: components/app.tsx:26
 msgid "The disCO2very logo, featuring a molecule of CO2."
 msgstr "Le logo disCO2very, avec une molécule de CO2."
 
@@ -163,7 +179,7 @@ msgstr "Les chiffres viennent de la plateforme de l'<0>Ademe</0> <1>Impact CO<2>
 msgid "These values are computed by the french goverment agency <0>ADEME</0> and are based on France characteristics. Other countries may have different values, especially those resulting from electricity consumption."
 msgstr "Ces données sont calculées par l'agence gouvernementale française <0>ADEME</0> et sont basées sur les caractéristiques de la France. D'autres pays peuvent avoir des valeurs différentes, en particulier celles découlant de la consommation d'électricité."
 
-#: components/categories-selector.tsx:28
+#: components/categories-selector.tsx:26
 msgid "This category is not yet available."
 msgstr "Cette catégorie n'est pas encore disponible."
 

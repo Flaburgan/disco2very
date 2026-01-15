@@ -1,11 +1,13 @@
 import React from "react";
 import Head from "next/head";
+import dynamic from "next/dynamic";
 import { i18n } from "@lingui/core";
 import { I18nProvider } from "@lingui/react";
 import {messages as enMessages} from "../locales/en/messages";
 import {messages as frMessages} from "../locales/fr/messages";
 import { t } from "@lingui/core/macro";
-import Game from "./game";
+
+const Game = dynamic(() => import("./game"));
 
 export const locales = ["en", "fr"];
 export const defaultLocale = "en";

@@ -64,8 +64,8 @@ msgstr "Félicitations !"
 msgid "Copied!"
 msgstr "Copié !"
 
-#: components/app.tsx:22
-#: components/app.tsx:23
+#: components/app.tsx:24
+#: components/app.tsx:25
 msgid "disCO2very is a free game to discover the orders of magnitude of the CO2 footprint"
 msgstr "disCO2very est un jeu libre pour découvrir les ordres de grandeur de l'empreinte carbone"
 
@@ -114,7 +114,7 @@ msgstr "monemail@monfournisseur.fr"
 msgid "or"
 msgstr "ou"
 
-#: components/app.tsx:21
+#: components/app.tsx:23
 msgid "Order items to discover their CO2 footprint!"
 msgstr "Ordonne des éléments pour découvrir leur empreinte CO2 !"
 
@@ -167,7 +167,7 @@ msgstr "Source : <0>Base Empreinte</0> et <1>Agribalyse</1>."
 msgid "Start game"
 msgstr "Démarrer la partie"
 
-#: components/app.tsx:24
+#: components/app.tsx:26
 msgid "The disCO2very logo, featuring a molecule of CO2."
 msgstr "Le logo disCO2very, avec une molécule de CO2."
 

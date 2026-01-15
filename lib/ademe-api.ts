@@ -1,7 +1,8 @@
 
-import { Item } from "../types/item";
+import { t } from "@lingui/core/macro";
 import ademeCategories from "../data/ademe/0-categories.json";
 import enNumerique from "../data/ademe/en/1-numerique.json";
+import enPracticalCases from "../data/ademe/en/13-caspratiques.json";
 import enAlimentation from "../data/ademe/en/2-alimentation.json";
 import enBoisson from "../data/ademe/en/3-boisson.json";
 import enTransport from "../data/ademe/en/4-transport.json";
@@ -10,8 +11,9 @@ import enElectromenager from "../data/ademe/en/6-electromenager.json";
 import enMobilier from "../data/ademe/en/7-mobilier.json";
 import enChauffage from "../data/ademe/en/8-chauffage.json";
 import enVegetablesAndFruits from "../data/ademe/en/9-fruitsetlegumes.json";
-import enPracticalCases from "../data/ademe/en/13-caspratiques.json";
+import footprintDetailCategories from "../data/ademe/footprintDetailCategories.json";
 import frNumerique from "../data/ademe/fr/1-numerique.json";
+import frPracticalCases from "../data/ademe/fr/13-caspratiques.json";
 import frAlimentation from "../data/ademe/fr/2-alimentation.json";
 import frBoisson from "../data/ademe/fr/3-boisson.json";
 import frTransport from "../data/ademe/fr/4-transport.json";
@@ -20,11 +22,9 @@ import frElectromenager from "../data/ademe/fr/6-electromenager.json";
 import frMobilier from "../data/ademe/fr/7-mobilier.json";
 import frChauffage from "../data/ademe/fr/8-chauffage.json";
 import frVegetablesAndFruits from "../data/ademe/fr/9-fruitsetlegumes.json";
-import frPracticalCases from "../data/ademe/fr/13-caspratiques.json";
-import footprintDetailCategories from "../data/ademe/footprintDetailCategories.json";
 import { AdemeCategory, AdemeECV, FootprintDetails } from "../types/AdemeECV";
 import { Locale } from "../types/i18n";
-import { t } from "@lingui/core/macro";
+import { Item } from "../types/item";
 
 
 const allItemsByLocale: {[locale in Locale]: Item[]} = {"en": [], "fr": []};
@@ -248,7 +248,7 @@ function getComputeFunction(categoryId: number): ComputeItemFunc {
           description: "",
           explanation: ""
         }
-      };;
+      };
   }
 }
 

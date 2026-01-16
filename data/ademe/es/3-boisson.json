@@ -1,0 +1,250 @@
+{
+  "data": [
+    {
+      "name": "Agua del grifo",
+      "slug": "eaudurobinet",
+      "ecv": 0.000132,
+      "footprint": 0.000132
+    },
+    {
+      "name": "Agua embotellada",
+      "slug": "eauenbouteille",
+      "ecv": 0.320735,
+      "footprint": 0.320735,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 0.00106
+        },
+        {
+          "id": 32,
+          "value": 0.187
+        },
+        {
+          "id": 33,
+          "value": 0.116
+        },
+        {
+          "id": 34,
+          "value": 0.0157
+        },
+        {
+          "id": 35,
+          "value": 0.000975
+        }
+      ]
+    },
+    {
+      "name": "Refresco",
+      "slug": "soda",
+      "ecv": 0.49333000000000005,
+      "footprint": 0.49333000000000005,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 0.0902
+        },
+        {
+          "id": 31,
+          "value": 0.013
+        },
+        {
+          "id": 32,
+          "value": 0.138
+        },
+        {
+          "id": 33,
+          "value": 0.209
+        },
+        {
+          "id": 34,
+          "value": 0.0363
+        },
+        {
+          "id": 35,
+          "value": 0.00683
+        }
+      ]
+    },
+    {
+      "name": "Cerveza",
+      "slug": "biere",
+      "ecv": 1.34703,
+      "footprint": 1.34703,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 0.0799
+        },
+        {
+          "id": 31,
+          "value": 0.273
+        },
+        {
+          "id": 32,
+          "value": 0.621
+        },
+        {
+          "id": 33,
+          "value": 0.33
+        },
+        {
+          "id": 34,
+          "value": 0.0363
+        },
+        {
+          "id": 35,
+          "value": 0.00683
+        }
+      ]
+    },
+    {
+      "name": "Vino",
+      "slug": "vin",
+      "ecv": 1.2686300000000001,
+      "footprint": 1.2686300000000001,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 0.301
+        },
+        {
+          "id": 31,
+          "value": 0.0331
+        },
+        {
+          "id": 32,
+          "value": 0.679
+        },
+        {
+          "id": 33,
+          "value": 0.233
+        },
+        {
+          "id": 34,
+          "value": 0.0157
+        },
+        {
+          "id": 35,
+          "value": 0.00683
+        }
+      ]
+    },
+    {
+      "name": "Leche de vaca",
+      "slug": "laitdevache",
+      "ecv": 1.1505,
+      "footprint": 1.1505,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 0.812
+        },
+        {
+          "id": 31,
+          "value": 0.0124
+        },
+        {
+          "id": 32,
+          "value": 0.0959
+        },
+        {
+          "id": 33,
+          "value": 0.214
+        },
+        {
+          "id": 34,
+          "value": 0.0162
+        }
+      ]
+    },
+    {
+      "name": "Leche de soja",
+      "slug": "soja",
+      "ecv": 0.4272,
+      "footprint": 0.4272,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 0.0874
+        },
+        {
+          "id": 31,
+          "value": 0.0934
+        },
+        {
+          "id": 32,
+          "value": 0.0964
+        },
+        {
+          "id": 33,
+          "value": 0.135
+        },
+        {
+          "id": 34,
+          "value": 0.015
+        }
+      ]
+    },
+    {
+      "name": "Té",
+      "slug": "the",
+      "ecv": 0.043587,
+      "footprint": 0.043587,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 0.0224
+        },
+        {
+          "id": 32,
+          "value": 0.00639
+        },
+        {
+          "id": 33,
+          "value": 0.00313
+        },
+        {
+          "id": 34,
+          "value": 0.000167
+        },
+        {
+          "id": 35,
+          "value": 0.0115
+        }
+      ]
+    },
+    {
+      "name": "Café",
+      "slug": "cafe",
+      "ecv": 0.635463,
+      "footprint": 0.635463,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 0.436
+        },
+        {
+          "id": 31,
+          "value": 0.0181
+        },
+        {
+          "id": 32,
+          "value": 0.129
+        },
+        {
+          "id": 33,
+          "value": 0.0402
+        },
+        {
+          "id": 34,
+          "value": 0.000963
+        },
+        {
+          "id": 35,
+          "value": 0.0112
+        }
+      ]
+    }
+  ]
+}

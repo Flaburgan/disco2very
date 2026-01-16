@@ -29,7 +29,7 @@ msgstr "{email} n'est pas une adresse e-mail valide."
 msgid "{perYearDisplay} per year, estimated lifespan: {defaultYearDisplay} years."
 msgstr "{perYearDisplay} par an, durée de vie estimée : {defaultYearDisplay} ans."
 
-#: lib/ademe-api.ts:223
+#: lib/ademe-api.ts:244
 msgid "<strong>per month</strong> for 60m²"
 msgstr "<strong>par mois</strong> pour 60m²"
 
@@ -48,7 +48,7 @@ msgstr "Retour"
 msgid "Best streak"
 msgstr "Meilleure série"
 
-#: lib/ademe-api.ts:231
+#: lib/ademe-api.ts:252
 msgid "Bought in January"
 msgstr "Acheté en janvier"
 
@@ -64,8 +64,8 @@ msgstr "Félicitations !"
 msgid "Copied!"
 msgstr "Copié !"
 
-#: components/app.tsx:24
-#: components/app.tsx:25
+#: components/app.tsx:22
+#: components/app.tsx:23
 msgid "disCO2very is a free game to discover the orders of magnitude of the CO2 footprint"
 msgstr "disCO2very est un jeu libre pour découvrir les ordres de grandeur de l'empreinte carbone"
 
@@ -85,7 +85,7 @@ msgstr "Partie terminée"
 msgid "Guess the CO2 footprint!"
 msgstr "Devinez l'empreinte CO2 !"
 
-#: lib/ademe-api.ts:224
+#: lib/ademe-api.ts:245
 msgid "Impact of one month of heating a house of 60m², spreading the consumption over the year."
 msgstr "Impact d'un mois de chauffage pour une maison de 60m², avec la consommation répartie sur l'année"
 
@@ -114,7 +114,7 @@ msgstr "monemail@monfournisseur.fr"
 msgid "or"
 msgstr "ou"
 
-#: components/app.tsx:23
+#: components/app.tsx:21
 msgid "Order items to discover their CO2 footprint!"
 msgstr "Ordonne des éléments pour découvrir leur empreinte CO2 !"
 
@@ -134,7 +134,7 @@ msgstr "Rejouer"
 msgid "Please contact fla (a) framasoft.org to unregister"
 msgstr "Merci de contacter fla (a) framasoft.org pour vous désinscrire"
 
-#: lib/ademe-api.ts:259
+#: lib/ademe-api.ts:280
 msgid "Purchase and usage for {defaultYears} years."
 msgstr "Achat et usage pendant {defaultYears} ans."
 
@@ -167,7 +167,7 @@ msgstr "Source : <0>Base Empreinte</0> et <1>Agribalyse</1>."
 msgid "Start game"
 msgstr "Démarrer la partie"
 
-#: components/app.tsx:26
+#: components/app.tsx:24
 msgid "The disCO2very logo, featuring a molecule of CO2."
 msgstr "Le logo disCO2very, avec une molécule de CO2."
 

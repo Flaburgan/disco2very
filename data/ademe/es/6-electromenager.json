@@ -1,0 +1,323 @@
+{
+  "data": [
+    {
+      "name": "Hervidor de agua",
+      "slug": "bouilloire",
+      "ecv": 37.80339914,
+      "footprint": 9.907,
+      "footprintDetail": [
+        {
+          "id": 1,
+          "value": 3.93
+        },
+        {
+          "id": 2,
+          "value": 0.237
+        },
+        {
+          "id": 3,
+          "value": 0.59
+        },
+        {
+          "id": 4,
+          "value": 5.1499999999999995
+        }
+      ],
+      "usage": {
+        "peryear": 5.27273319,
+        "defaultyears": 6
+      },
+      "endOfLife": -3.74
+    },
+    {
+      "name": "Cafetera de cápsulas",
+      "slug": "cafetieredosette",
+      "ecv": 237.95439,
+      "footprint": 22.454,
+      "footprintDetail": [
+        {
+          "id": 1,
+          "value": 8.46
+        },
+        {
+          "id": 2,
+          "value": 0.394
+        },
+        {
+          "id": 3,
+          "value": 1.28
+        },
+        {
+          "id": 4,
+          "value": 12.32
+        }
+      ],
+      "usage": {
+        "peryear": 35.160078,
+        "defaultyears": 5
+      },
+      "endOfLife": 39.7
+    },
+    {
+      "name": "Cafetera de filtro",
+      "slug": "cafetierefiltre",
+      "ecv": 191.32567550000002,
+      "footprint": 31.9,
+      "footprintDetail": [
+        {
+          "id": 1,
+          "value": 16.7
+        },
+        {
+          "id": 2,
+          "value": 0.5
+        },
+        {
+          "id": 3,
+          "value": 1.5
+        },
+        {
+          "id": 4,
+          "value": 13.200000000000001
+        }
+      ],
+      "usage": {
+        "peryear": 27.1831351,
+        "defaultyears": 5
+      },
+      "endOfLife": 23.51
+    },
+    {
+      "name": "Cafetera express",
+      "slug": "cafetiereexpresso",
+      "ecv": 212.25088599999998,
+      "footprint": 47.617000000000004,
+      "footprintDetail": [
+        {
+          "id": 1,
+          "value": 27.1
+        },
+        {
+          "id": 2,
+          "value": 0.937
+        },
+        {
+          "id": 3,
+          "value": 3.21
+        },
+        {
+          "id": 4,
+          "value": 16.37
+        }
+      ],
+      "usage": {
+        "peryear": 28.0487772,
+        "defaultyears": 5
+      },
+      "endOfLife": 24.39
+    },
+    {
+      "name": "Horno eléctrico",
+      "slug": "fourelectrique",
+      "ecv": 272.60739995999995,
+      "footprint": 217.58999999999997,
+      "footprintDetail": [
+        {
+          "id": 1,
+          "value": 133
+        },
+        {
+          "id": 2,
+          "value": 8.19
+        },
+        {
+          "id": 3,
+          "value": 33.6
+        },
+        {
+          "id": 4,
+          "value": 42.8
+        }
+      ],
+      "usage": {
+        "peryear": 6.29728333,
+        "defaultyears": 12
+      },
+      "endOfLife": -20.55
+    },
+    {
+      "name": "Lavavajillas",
+      "slug": "lavevaisselle",
+      "ecv": 460.79,
+      "footprint": 271.19,
+      "footprintDetail": [
+        {
+          "id": 1,
+          "value": 155
+        },
+        {
+          "id": 2,
+          "value": 9.09
+        },
+        {
+          "id": 3,
+          "value": 40.1
+        },
+        {
+          "id": 4,
+          "value": 67
+        }
+      ],
+      "usage": {
+        "peryear": 18.25,
+        "defaultyears": 12
+      },
+      "endOfLife": -29.4
+    },
+    {
+      "name": "Lavadora",
+      "slug": "lavelinge",
+      "ecv": 513.42,
+      "footprint": 341.09999999999997,
+      "footprintDetail": [
+        {
+          "id": 1,
+          "value": 191
+        },
+        {
+          "id": 2,
+          "value": 12.2
+        },
+        {
+          "id": 3,
+          "value": 47.6
+        },
+        {
+          "id": 4,
+          "value": 90.3
+        }
+      ],
+      "usage": {
+        "peryear": 18.08,
+        "defaultyears": 12
+      },
+      "endOfLife": -44.64
+    },
+    {
+      "name": "Refrigerador",
+      "slug": "refrigirateur",
+      "ecv": 338.7140334,
+      "footprint": 257.3,
+      "footprintDetail": [
+        {
+          "id": 1,
+          "value": 133
+        },
+        {
+          "id": 2,
+          "value": 13.5
+        },
+        {
+          "id": 3,
+          "value": 28
+        },
+        {
+          "id": 4,
+          "value": 82.8
+        }
+      ],
+      "usage": {
+        "peryear": 8.83240334,
+        "defaultyears": 10
+      },
+      "endOfLife": -6.91
+    },
+    {
+      "name": "Aspiradora",
+      "slug": "aspirateur",
+      "ecv": 73.43,
+      "footprint": 47.31,
+      "footprintDetail": [
+        {
+          "id": 1,
+          "value": 20.2
+        },
+        {
+          "id": 2,
+          "value": 2.43
+        },
+        {
+          "id": 3,
+          "value": 7.23
+        },
+        {
+          "id": 4,
+          "value": 17.45
+        }
+      ],
+      "usage": {
+        "peryear": 3.7325,
+        "defaultyears": 8
+      },
+      "endOfLife": -3.74
+    },
+    {
+      "name": "Aires acondicionados",
+      "slug": "climatiseur",
+      "ecv": 421.747903,
+      "footprint": 238.89999999999998,
+      "footprintDetail": [
+        {
+          "id": 1,
+          "value": 170
+        },
+        {
+          "id": 2,
+          "value": 5.2
+        },
+        {
+          "id": 3,
+          "value": 18.7
+        },
+        {
+          "id": 4,
+          "value": 45
+        }
+      ],
+      "usage": {
+        "peryear": 18.2596505,
+        "defaultyears": 6
+      },
+      "endOfLife": 73.29
+    },
+    {
+      "name": "Microondas",
+      "slug": "microondes",
+      "ecv": 121.35000000000001,
+      "footprint": 98.34,
+      "footprintDetail": [
+        {
+          "id": 1,
+          "value": 58.6
+        },
+        {
+          "id": 2,
+          "value": 3.43
+        },
+        {
+          "id": 3,
+          "value": 6.91
+        },
+        {
+          "id": 4,
+          "value": 29.4
+        }
+      ],
+      "usage": {
+        "peryear": 2.45,
+        "defaultyears": 12
+      },
+      "endOfLife": -6.39
+    }
+  ]
+}

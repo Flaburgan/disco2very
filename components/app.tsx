@@ -5,18 +5,26 @@ import { i18n } from "@lingui/core";
 import { I18nProvider } from "@lingui/react";
 import {messages as enMessages} from "../locales/en/messages";
 import {messages as frMessages} from "../locales/fr/messages";
+import {messages as esMessages} from "../locales/es/messages";
 import { t } from "@lingui/core/macro";
-
-const Game = dynamic(() => import("./game"));
-
-export const locales = ["en", "fr"];
-export const defaultLocale = "en";
+import {locales, sourceLocale} from "../lingui.config";
 
 export default function App() {
   const lang = navigator.language.substring(0,2);
-  const locale = locales.includes(lang) ? lang : defaultLocale;
-  i18n.load(locale, locale === "en" ? enMessages : frMessages);
+  const locale = locales.includes(lang) ? lang : sourceLocale;
+  let messages = enMessages;
+  switch (locale) {
+    case "fr":
+      messages = frMessages;
+      break;
+    case "es":
+      messages = esMessages;
+      break;
+  }
+  i18n.load(locale, messages);
   i18n.activate(locale);
+
+  const Game = dynamic(() => import("./game"));
 
   return <I18nProvider i18n={i18n}>
     <Head>

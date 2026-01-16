@@ -1,0 +1,254 @@
+{
+  "data": [
+    {
+      "name": "Viaje de ida y vuelta París - Nueva York en avión",
+      "slug": "avion-pny",
+      "ecv": 2060,
+      "footprint": 2060
+    },
+    {
+      "name": "Viaje de ida y vuelta París - Berlin en tren",
+      "slug": "tgv-paris-berlin",
+      "ecv": 7.26,
+      "footprint": 7.26
+    },
+    {
+      "name": "Viaje de ida y vuelta París - Marseille en tren",
+      "slug": "tgv-paris-marseille",
+      "ecv": 4.4,
+      "footprint": 4.4
+    },
+    {
+      "name": "Viaje de ida y vuelta Lille - Nîmes en coche",
+      "slug": "voiture-lille-nimes",
+      "ecv": 410,
+      "footprint": 410
+    },
+    {
+      "name": "Carbono de un ciudadano francés",
+      "slug": "francais",
+      "ecv": 9100,
+      "footprint": 9100
+    },
+    {
+      "name": "Game of Thrones streaming",
+      "slug": "game-of-thrones",
+      "ecv": 0.0317,
+      "footprint": 0.0317
+    },
+    {
+      "name": "Programa de TV completo de Friends streaming",
+      "slug": "friends",
+      "ecv": 7.86,
+      "footprint": 7.86
+    },
+    {
+      "name": "Día de esquí",
+      "slug": "ski",
+      "ecv": 48.9,
+      "footprint": 48.9
+    },
+    {
+      "name": "Llenado de piscinas",
+      "slug": "piscine",
+      "ecv": 7.54,
+      "footprint": 7.54
+    },
+    {
+      "name": "Recorrido por la tierra en coche",
+      "slug": "terre-voiture",
+      "ecv": 8704,
+      "footprint": 8704
+    },
+    {
+      "name": "Maratón de películas de Harry Potter en streaming",
+      "slug": "harry-potter",
+      "ecv": 0.63,
+      "footprint": 0.63
+    },
+    {
+      "name": "Noche en un hotel",
+      "slug": "hotel",
+      "ecv": 4.3,
+      "footprint": 4.3,
+      "footprintDetail": [
+        {
+          "id": 50,
+          "value": 2.1
+        },
+        {
+          "id": 51,
+          "value": 1.5
+        },
+        {
+          "id": 52,
+          "value": 0.3
+        },
+        {
+          "id": 53,
+          "value": 0.4
+        }
+      ]
+    },
+    {
+      "name": "Noche en el camping",
+      "slug": "camping",
+      "ecv": 1.4,
+      "footprint": 1.4
+    },
+    {
+      "name": "Noche en un alquiler por temporada",
+      "slug": "location",
+      "ecv": 5.2,
+      "footprint": 5.2,
+      "footprintDetail": [
+        {
+          "id": 50,
+          "value": 2
+        },
+        {
+          "id": 51,
+          "value": 2.7
+        },
+        {
+          "id": 53,
+          "value": 0.5
+        }
+      ]
+    },
+    {
+      "name": "Noche en una segunda casa",
+      "slug": "residencesecondaire",
+      "ecv": 7,
+      "footprint": 7,
+      "footprintDetail": [
+        {
+          "id": 50,
+          "value": 2.4
+        },
+        {
+          "id": 51,
+          "value": 1.2
+        },
+        {
+          "id": 53,
+          "value": 3.4
+        }
+      ]
+    },
+    {
+      "name": "Objetivo ciudadano para 2050",
+      "slug": "2050",
+      "ecv": 2000,
+      "footprint": 2000
+    },
+    {
+      "name": "Día de circulación de coches particulares en Francia",
+      "slug": "voiturefrancaisejour",
+      "ecv": 193699000,
+      "footprint": 193699000
+    },
+    {
+      "name": "Año de emisiones de coches particulares en Francia",
+      "slug": "voiturefrancaisean",
+      "ecv": 70700135000,
+      "footprint": 70700135000
+    },
+    {
+      "name": "Año de emisiones de la población en Francia",
+      "slug": "populationfrancaise",
+      "ecv": 624000000000,
+      "footprint": 624000000000
+    },
+    {
+      "name": "Año de emisiones del ganado vacuno en Francia",
+      "slug": "parcbovin",
+      "ecv": 38032000000,
+      "footprint": 38032000000
+    },
+    {
+      "name": "Año de emisiones de calefacción doméstica en Francia",
+      "slug": "chauffageenfrance",
+      "ecv": 43320025000,
+      "footprint": 43320025000
+    },
+    {
+      "name": "Año de emisiones digitales en Francia",
+      "slug": "numeriqueenfrance",
+      "ecv": 29500000000,
+      "footprint": 29500000000
+    },
+    {
+      "name": "Año de emisiones de aviación civil en Francia",
+      "slug": "aviationcivileenfrance",
+      "ecv": 4380000000,
+      "footprint": 4380000000
+    },
+    {
+      "name": "Día de actividad agrícola en Francia",
+      "slug": "agricoleenfrancejour",
+      "ecv": 216439000,
+      "footprint": 216439000
+    },
+    {
+      "name": "Día de uso de calefacción doméstica en Francia",
+      "slug": "chauffageenfrancejour",
+      "ecv": 118685000,
+      "footprint": 118685000
+    },
+    {
+      "name": "Día de absorción de CO2e por bosques y praderas en Francia",
+      "slug": "foretenfrancejour",
+      "ecv": 151636000,
+      "footprint": 151636000
+    },
+    {
+      "name": "Día de uso de aire acondicionado doméstico en Francia",
+      "slug": "climatisationenfrancejour",
+      "ecv": 3277000,
+      "footprint": 3277000
+    },
+    {
+      "name": "Hora de circulación de coches particulares en Francia",
+      "slug": "voiturefrancaiseheure",
+      "ecv": 8071000,
+      "footprint": 8071000
+    },
+    {
+      "name": "Día de funcionamiento de servicios digitales en Francia",
+      "slug": "numeriqueenfrancejour",
+      "ecv": 80822000,
+      "footprint": 80822000
+    },
+    {
+      "name": "Día de tratamiento de residuos y aguas residuales domésticas",
+      "slug": "traitementdechetsjour",
+      "ecv": 5178000,
+      "footprint": 5178000
+    },
+    {
+      "name": "Día de circulación de trenes en Francia",
+      "slug": "trainenfrancejour",
+      "ecv": 1178000,
+      "footprint": 1178000
+    },
+    {
+      "name": "Día de funcionamiento de un campus de centro de datos en Francia",
+      "slug": "datacenterjour",
+      "ecv": 185000,
+      "footprint": 185000
+    },
+    {
+      "name": "Ida y vuelta Johannesburgo-París de un equipo de rugby",
+      "slug": "avion-johannesburg-paris-rugby",
+      "ecv": 140000,
+      "footprint": 140000
+    },
+    {
+      "name": "Casa nueva",
+      "slug": "maisonneuve",
+      "ecv": 50000,
+      "footprint": 50000
+    }
+  ]
+}

@@ -1,94 +1,167 @@
 {
   "1": {
     "en": "Raw materials",
-    "fr": "Matières premières"
+    "fr": "Matières premières",
+    "es": "Materias primas"
   },
   "2": {
     "en": "Supplying",
-    "fr": "Approvisionnement"
+    "fr": "Approvisionnement",
+    "es": "Abastecimiento"
   },
   "3": {
     "en": "Formatting",
-    "fr": "Mise en forme"
+    "fr": "Mise en forme",
+    "es": "Formado"
   },
   "4": {
     "en": "Assembly and delivery",
-    "fr": "Assemblage et distribution"
+    "fr": "Assemblage et distribution",
+    "es": "Ensamblaje y distribución"
   },
   "5": {
     "en": "Building",
-    "fr": "Construction"
+    "fr": "Construction",
+    "es": "Construcción"
   },
   "6": {
     "en": "Fuel",
-    "fr": "Carburant"
+    "fr": "Carburant",
+    "es": "Combustible"
   },
   "7": {
     "en": "Condensation trails",
-    "fr": "Trainées de condensation"
+    "fr": "Trainées de condensation",
+    "es": "Estelas de condensación"
   },
   "8": {
     "en": "Usage",
-    "fr": "Usage"
+    "fr": "Usage",
+    "es": "Uso"
+  },
+  "9": {
+    "en": "Fin de vie",
+    "fr": "End of life",
+    "es": "Fin de vida"
   },
   "13": {
     "en": "Devices building",
-    "fr": "Construction des appareils"
+    "fr": "Construction des appareils",
+    "es": "Construcción de terminales"
   },
   "14": {
     "en": "Devices usage",
-    "fr": "Usage des appareils"
+    "fr": "Usage des appareils",
+    "es": "Uso de terminales"
   },
   "15": {
     "en": "Transmission",
-    "fr": "Transmission"
+    "fr": "Transmission",
+    "es": "Transmisión"
   },
   "16": {
     "en": "Data-centers construction",
-    "fr": "Construction des data-centers"
+    "fr": "Construction des data-centers",
+    "es": "Construcción de centros de datos"
   },
   "17": {
     "en": "Data-centers usage",
-    "fr": "Utilisation des data-centers"
+    "fr": "Utilisation des data-centers",
+    "es": "Uso de centros de datos"
+  },
+  "18": {
+    "en": "Network construction",
+    "fr": "Construction des réseaux",
+    "es": "Construcción de redes"
   },
   "30": {
-    "en": "Farming",
-    "fr": "Agriculture"
+    "en": "Agriculture",
+    "fr": "Agriculture",
+    "es": "Agricultura"
   },
   "31": {
     "en": "Processing",
-    "fr": "Transformation"
+    "fr": "Transformation",
+    "es": "Transformación"
   },
   "32": {
     "en": "Packaging",
-    "fr": "Emballage"
+    "fr": "Emballage",
+    "es": "Embalaje"
   },
   "33": {
-    "en": "Delivery",
-    "fr": "Transport"
+    "en": "Transport",
+    "fr": "Transport",
+    "es": "Transporte"
   },
   "34": {
     "en": "Supermarket and distribution",
-    "fr": "Supermarché et distribution"
+    "fr": "Supermarché et distribution",
+    "es": "Supermercado y distribución"
   },
   "35": {
     "en": "Consumption",
-    "fr": "Consommation"
+    "fr": "Consommation",
+    "es": "Consumo"
+  },
+  "40": {
+    "en": "Terminal construction",
+    "fr": "Construction des terminaux",
+    "es": "Construcción de terminales"
+  },
+  "41": {
+    "en": "Terminal usage",
+    "fr": "Usage des terminaux",
+    "es": "Uso de terminales"
+  },
+  "42": {
+    "en": "Transmission",
+    "fr": "Transmission",
+    "es": "Transmisión"
+  },
+  "43": {
+    "en": "Data-centers",
+    "fr": "Data-centers",
+    "es": "Centros de datos"
   },
   "50": {
     "en": "Energy consumption",
-    "fr": "Consommation d'énergie"
+    "fr": "Consommation d'énergie",
+    "es": "Consumo de energía"
   },
   "51": {
     "en": "Maintenance service",
-    "fr": "Service d'entretien"
+    "fr": "Service d'entretien",
+    "es": "Servicios de mantenimiento"
   },
   "52": {
     "en": "Staff commuting",
-    "fr": "Déplacement du personnel"
+    "fr": "Déplacement du personnel",
+    "es": "Desplazamiento del personal"
   },
   "53": {
-    "en": "Construction of infrastructures",
-    "fr": "Construction des infrastructures"
+    "en": "Infrastructure construction",
+    "fr": "Construction des infrastructures",
+    "es": "Construcción de infraestructuras"
+  },
+  "54": {
+    "en": "Order & Preparation",
+    "fr": "Commande & Préparation",
+    "es": "Pedido y Preparación"
+  },
+  "55": {
+    "en": "Storage & Transit",
+    "fr": "Stockage & Transit",
+    "es": "Almacenamiento y Tránsito"
+  },
+  "56": {
+    "en": "My trip to 7km round trip",
+    "fr": "Mon déplacement à 7km A/R",
+    "es": "Mi desplazamiento a 7km ida y vuelta"
+  },
+  "57": {
+    "en": "My trip to 30km round trip",
+    "fr": "Mon déplacement à 30km A/R",
+    "es": "Mi desplazamiento a 30km ida y vuelta"
   }
 }

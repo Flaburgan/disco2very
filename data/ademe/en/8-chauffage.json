@@ -1,46 +1,58 @@
 {
   "data": [
     {
-      "name": "Gas heating per m²",
+      "name": "Gas boiler",
       "slug": "chauffagegaz",
-      "ecv": 39,
-      "footprint": 39
+      "ecv": 17.837078297821858,
+      "footprint": 17.837078297821858
     },
     {
-      "name": "Oil heating per m²",
+      "name": "Oil boiler",
       "slug": "chauffagefioul",
-      "ecv": 57.17,
-      "footprint": 57.17
+      "ecv": 34.97117557474335,
+      "footprint": 34.97117557474335
     },
     {
-      "name": "Electric heating per m²",
+      "name": "Electric boiler or heater",
       "slug": "chauffageelectrique",
-      "ecv": 11.85,
-      "footprint": 11.85
+      "ecv": 2.40969157390629,
+      "footprint": 2.40969157390629
     },
     {
-      "name": "Heating with a heat pump per m²",
+      "name": "Heat pump",
       "slug": "pompeachaleur",
-      "ecv": 3.95,
-      "footprint": 3.95
+      "ecv": 1.6333840880841795,
+      "footprint": 1.6333840880841795
     },
     {
-      "name": "Heating with a pellet stove per m²",
+      "name": "Pellet stove",
       "slug": "poeleagranule",
-      "ecv": 5.64,
-      "footprint": 5.64
+      "ecv": 5.91695473372542,
+      "footprint": 5.91695473372542
     },
     {
-      "name": "Heating with a wood stove per m²",
+      "name": "Wood stove",
       "slug": "poeleabois",
-      "ecv": 9.2,
-      "footprint": 9.2
+      "ecv": 8.505622429730291,
+      "footprint": 8.505622429730291
     },
     {
-      "name": "Heating via a district heating network per m²",
+      "name": "District heating",
       "slug": "reseaudechaleur",
-      "ecv": 18.67,
-      "footprint": 18.67
+      "ecv": 11.077353589467888,
+      "footprint": 11.077353589467888
+    },
+    {
+      "name": "Pellet boiler",
+      "slug": "chaudiereagranule",
+      "ecv": 5.976712890838115,
+      "footprint": 5.976712890838115
+    },
+    {
+      "name": "Wood boiler",
+      "slug": "chaudiereabois",
+      "ecv": 8.59152478057979,
+      "footprint": 8.59152478057979
     }
   ]
 }

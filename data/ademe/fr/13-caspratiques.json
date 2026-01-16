@@ -3,8 +3,8 @@
     {
       "name": "A/R Paris - New-York en avion",
       "slug": "avion-pny",
-      "ecv": 1770,
-      "footprint": 1770
+      "ecv": 2060,
+      "footprint": 2060
     },
     {
       "name": "A/R Paris - Berlin en TGV",
@@ -241,8 +241,8 @@
     {
       "name": "A/R Johannesburg-Paris d’une équipe de rugby",
       "slug": "avion-johannesburg-paris-rugby",
-      "ecv": 119430,
-      "footprint": 119430
+      "ecv": 140000,
+      "footprint": 140000
     },
     {
       "name": "Maison neuve",

@@ -11,6 +11,6 @@ for file in "$IMAGE_DIR"/*.svg; do
 
   # Search in data/ademe/ for the slug
   if ! grep -qr "\"slug\":\s*\"$slug\"" "$DATA_DIR"; then
-    rm "public/images/ademe/$slug.svg"
+    echo "Delete $slug.svg" && rm "public/images/ademe/$slug.svg"
   fi
 done

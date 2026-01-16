@@ -153,7 +153,7 @@ function getComputeFunction(categoryId: number): ComputeItemFunc {
     "buselectrique": 5,
     "trottinette": 5,
     "busgnv": 5,
-    "marche": 5
+    "marche": 2
   }
 
   switch (categoryId) {
@@ -219,7 +219,7 @@ function getComputeFunction(categoryId: number): ComputeItemFunc {
       return (element: AdemeECV) => {
         applyCoefficient(element, 60 / 12); // From 1m2 to 60m2, from 12 months to 1 month
         return {
-          label: element.name.replace(" par m²", "").replace(" per m²", ""),
+          label: element.name,
           description: t`<strong>per month</strong> for 60m²`,
           explanation: t`Impact of one month of heating a house of 60m², spreading the consumption over the year.`,
         }
@@ -228,7 +228,7 @@ function getComputeFunction(categoryId: number): ComputeItemFunc {
       return (element: AdemeECV) => {
         return {
           label: element.name + " (1kg)",
-          description: t`Bought in March`,
+          description: t`Bought in January`,
           explanation: ""
         }
       };

@@ -3,60 +3,60 @@
     {
       "name": "Plane short-haul",
       "slug": "avion-courtcourrier",
-      "ecv": 0.25858,
-      "footprint": 0.25858,
+      "ecv": 0.224572,
+      "footprint": 0.224572,
       "footprintDetail": [
         {
           "id": 5,
-          "value": 0.00038
+          "value": 0.000372
         },
         {
           "id": 6,
-          "value": 0.1412
+          "value": 0.1232
         },
         {
           "id": 7,
-          "value": 0.117
+          "value": 0.101
         }
       ]
     },
     {
       "name": "Plane medium-haul",
       "slug": "avion-moyencourrier",
-      "ecv": 0.18756,
-      "footprint": 0.18756,
+      "ecv": 0.18466100000000002,
+      "footprint": 0.18466100000000002,
       "footprintDetail": [
         {
           "id": 5,
-          "value": 0.00036
+          "value": 0.000361
         },
         {
           "id": 6,
-          "value": 0.1024
+          "value": 0.1013
         },
         {
           "id": 7,
-          "value": 0.0848
+          "value": 0.083
         }
       ]
     },
     {
       "name": "Plane long-haul",
       "slug": "avion-longcourrier",
-      "ecv": 0.15195999999999998,
-      "footprint": 0.15195999999999998,
+      "ecv": 0.177894,
+      "footprint": 0.177894,
       "footprintDetail": [
         {
           "id": 5,
-          "value": 0.00026
+          "value": 0.000294
         },
         {
           "id": 6,
-          "value": 0.08299999999999999
+          "value": 0.0976
         },
         {
           "id": 7,
-          "value": 0.0687
+          "value": 0.08
         }
       ]
     },
@@ -127,17 +127,16 @@
     {
       "name": "Combustion coach",
       "slug": "autocar",
-      "ecv": 0.029421306270000003,
-      "footprint": 0.029421306270000003,
+      "ecv": 0.03756,
+      "footprint": 0.03756,
       "footprintDetail": [
         {
-          "value": 0.025,
-          "id": 6
+          "id": 5,
+          "value": 0.00442
         },
         {
-          "value": 0.00442130627,
-          "_comment": "// = (Valeur en kgCO₂e/kg de véhicule * Masse type) / Nombre de passagers / Durée de vie en km = (4 * 12000) / 30 / 361884",
-          "id": 5
+          "id": 6,
+          "value": 0.03314
         }
       ]
     },
@@ -178,16 +177,16 @@
     {
       "name": "Combustion bus",
       "slug": "busthermique",
-      "ecv": 0.11320000000000001,
-      "footprint": 0.11320000000000001,
+      "ecv": 0.12242,
+      "footprint": 0.12242,
       "footprintDetail": [
         {
           "id": 5,
-          "value": 0.0089
+          "value": 0.00892
         },
         {
           "id": 6,
-          "value": 0.1043
+          "value": 0.1135
         }
       ]
     },
@@ -242,16 +241,16 @@
     {
       "name": "Combustion motorcycle",
       "slug": "moto",
-      "ecv": 0.1913,
-      "footprint": 0.1913,
+      "ecv": 0.2167,
+      "footprint": 0.2167,
       "footprintDetail": [
         {
           "id": 5,
-          "value": 0.0265
+          "value": 0.0292
         },
         {
           "id": 6,
-          "value": 0.1648
+          "value": 0.1875
         }
       ]
     },

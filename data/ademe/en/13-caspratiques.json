@@ -3,8 +3,8 @@
     {
       "name": "Roundtrip Paris - New-York by plane",
       "slug": "avion-pny",
-      "ecv": 1770,
-      "footprint": 1770
+      "ecv": 2060,
+      "footprint": 2060
     },
     {
       "name": "Roundtrip Paris - Berlin by train",
@@ -241,8 +241,8 @@
     {
       "name": "Roundtrip Johannesburg-Paris of a rugby team",
       "slug": "avion-johannesburg-paris-rugby",
-      "ecv": 119430,
-      "footprint": 119430
+      "ecv": 140000,
+      "footprint": 140000
     },
     {
       "name": "New house",

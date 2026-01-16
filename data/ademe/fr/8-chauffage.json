@@ -1,46 +1,58 @@
 {
   "data": [
     {
-      "name": "Chauffage au gaz par m²",
+      "name": "Chaudière à gaz",
       "slug": "chauffagegaz",
-      "ecv": 39,
-      "footprint": 39
+      "ecv": 17.837078297821858,
+      "footprint": 17.837078297821858
     },
     {
-      "name": "Chauffage au fioul par m²",
+      "name": "Chaudière au fioul",
       "slug": "chauffagefioul",
-      "ecv": 57.17,
-      "footprint": 57.17
+      "ecv": 34.97117557474335,
+      "footprint": 34.97117557474335
     },
     {
-      "name": "Chauffage électrique par m²",
+      "name": "Chaudière ou convecteur électrique",
       "slug": "chauffageelectrique",
-      "ecv": 11.85,
-      "footprint": 11.85
+      "ecv": 2.40969157390629,
+      "footprint": 2.40969157390629
     },
     {
-      "name": "Chauffage avec une pompe à chaleur par m²",
+      "name": "Pompe à chaleur",
       "slug": "pompeachaleur",
-      "ecv": 3.95,
-      "footprint": 3.95
+      "ecv": 1.6333840880841795,
+      "footprint": 1.6333840880841795
     },
     {
-      "name": "Chauffage avec un poêle à granulés par m²",
+      "name": "Poêle à granulés",
       "slug": "poeleagranule",
-      "ecv": 5.64,
-      "footprint": 5.64
+      "ecv": 5.91695473372542,
+      "footprint": 5.91695473372542
     },
     {
-      "name": "Chauffage avec un poêle à bois par m²",
+      "name": "Poêle à bûches",
       "slug": "poeleabois",
-      "ecv": 9.2,
-      "footprint": 9.2
+      "ecv": 8.505622429730291,
+      "footprint": 8.505622429730291
     },
     {
-      "name": "Chauffage via un réseau de chaleur par m²",
+      "name": "Réseau de chaleur",
       "slug": "reseaudechaleur",
-      "ecv": 18.67,
-      "footprint": 18.67
+      "ecv": 11.077353589467888,
+      "footprint": 11.077353589467888
+    },
+    {
+      "name": "Chaudière à granulés",
+      "slug": "chaudiereagranule",
+      "ecv": 5.976712890838115,
+      "footprint": 5.976712890838115
+    },
+    {
+      "name": "Chaudière à bûches",
+      "slug": "chaudiereabois",
+      "ecv": 8.59152478057979,
+      "footprint": 8.59152478057979
     }
   ]
 }

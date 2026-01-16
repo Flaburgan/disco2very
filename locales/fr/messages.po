@@ -49,8 +49,8 @@ msgid "Best streak"
 msgstr "Meilleure série"
 
 #: lib/ademe-api.ts:231
-msgid "Bought in March"
-msgstr "Acheté en mars"
+msgid "Bought in January"
+msgstr "Acheté en janvier"
 
 #: components/instructions.tsx:61
 msgid "Code based on from the <0>wikitrivia</0> game by <1>Tom James Watson</1>. Thank you!"

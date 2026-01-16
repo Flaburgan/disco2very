@@ -3,75 +3,75 @@
     {
       "name": "Smartphone",
       "slug": "smartphone",
-      "ecv": 85.85,
-      "footprint": 85.1,
+      "ecv": 80.15534312499999,
+      "footprint": 79.27,
       "footprintDetail": [
         {
           "id": 4,
-          "value": 2.1
+          "value": 2.27
         },
         {
           "id": 5,
-          "value": 83
+          "value": 77
         }
       ],
       "usage": {
-        "peryear": 0.22,
+        "peryear": 0.25573725,
         "defaultyears": 2.5
       },
-      "endOfLife": 0.2
+      "endOfLife": 0.246
     },
     {
       "name": "Desktop computer without screen (personal)",
       "slug": "ordinateurfixeparticulier",
-      "ecv": 299.3,
-      "footprint": 261.5,
+      "ecv": 300.37508,
+      "footprint": 261.94,
       "footprintDetail": [
         {
           "id": 4,
-          "value": 2.9
+          "value": 2.94
         },
         {
           "id": 5,
-          "value": 258.6
+          "value": 259
         }
       ],
       "usage": {
-        "peryear": 5.2,
+        "peryear": 5.304180000000001,
         "defaultyears": 6
       },
-      "endOfLife": 6.6
+      "endOfLife": 6.61
     },
     {
       "name": "Desktop computer without screen (office)",
       "slug": "ordinateurfixeprofessionnel",
-      "ecv": 258.1,
-      "footprint": 204.4,
+      "ecv": 259.19762000000003,
+      "footprint": 204.85,
       "footprintDetail": [
         {
           "id": 4,
-          "value": 1.8
+          "value": 1.85
         },
         {
           "id": 5,
-          "value": 202.6
+          "value": 203
         }
       ],
       "usage": {
-        "peryear": 7.85,
+        "peryear": 7.956270000000001,
         "defaultyears": 6
       },
-      "endOfLife": 6.6
+      "endOfLife": 6.61
     },
     {
       "name": "Computer screen",
       "slug": "ecran",
-      "ecv": 91.4,
-      "footprint": 65.89999999999999,
+      "ecv": 92.5722,
+      "footprint": 65.89,
       "footprintDetail": [
         {
           "id": 4,
-          "value": 1.3
+          "value": 1.29
         },
         {
           "id": 5,
@@ -79,58 +79,58 @@
         }
       ],
       "usage": {
-        "peryear": 3.6,
+        "peryear": 3.7886999999999995,
         "defaultyears": 6
       },
-      "endOfLife": 3.9
+      "endOfLife": 3.95
     },
     {
       "name": "Tablet",
       "slug": "tabletteclassique",
-      "ecv": 61.89999999999999,
-      "footprint": 59.699999999999996,
+      "ecv": 87.13552500000002,
+      "footprint": 83.93,
       "footprintDetail": [
         {
           "id": 4,
-          "value": 3.4
+          "value": 3.43
         },
         {
           "id": 5,
-          "value": 56.3
+          "value": 80.5
         }
       ],
       "usage": {
-        "peryear": 0.6,
+        "peryear": 0.9471749999999999,
         "defaultyears": 3
       },
-      "endOfLife": 0.4
+      "endOfLife": 0.364
     },
     {
       "name": "Television",
       "slug": "television",
-      "ecv": 472.40000000000003,
-      "footprint": 375.8,
+      "ecv": 369.71185999999994,
+      "footprint": 328.26,
       "footprintDetail": [
         {
           "id": 4,
-          "value": 3.2
+          "value": 3.26
         },
         {
           "id": 5,
-          "value": 372.6
+          "value": 325
         }
       ],
       "usage": {
-        "peryear": 10.6,
+        "peryear": 3.6939825,
         "defaultyears": 8
       },
-      "endOfLife": 11.8
+      "endOfLife": 11.9
     },
     {
       "name": "Laptop",
       "slug": "ordinateurportable",
-      "ecv": 193.00000000000003,
-      "footprint": 182.60000000000002,
+      "ecv": 192.62004125,
+      "footprint": 182.3,
       "footprintDetail": [
         {
           "id": 4,
@@ -138,19 +138,19 @@
         },
         {
           "id": 5,
-          "value": 170.3
+          "value": 170
         }
       ],
       "usage": {
-        "peryear": 1.52,
+        "peryear": 1.50600825,
         "defaultyears": 5
       },
-      "endOfLife": 2.8
+      "endOfLife": 2.79
     },
     {
       "name": "Bluetooth speaker",
       "slug": "enceintebluetooth",
-      "ecv": 26.5,
+      "ecv": 26.183049999999998,
       "footprint": 19.8,
       "footprintDetail": [
         {
@@ -163,7 +163,7 @@
         }
       ],
       "usage": {
-        "peryear": 1.2,
+        "peryear": 1.13661,
         "defaultyears": 5
       },
       "endOfLife": 0.7
@@ -188,100 +188,130 @@
     {
       "name": "Virtual reality headset",
       "slug": "casquevr",
-      "ecv": 72.30000000000001,
-      "footprint": 70.80000000000001,
+      "ecv": 72.59443499999999,
+      "footprint": 70.72999999999999,
       "footprintDetail": [
         {
           "id": 4,
-          "value": 0.4
+          "value": 0.38
         },
         {
           "id": 5,
-          "value": 70.4
+          "value": 70.35
         }
       ],
       "usage": {
-        "peryear": 0.04,
+        "peryear": 0.037887,
         "defaultyears": 5
       },
-      "endOfLife": 1.3
+      "endOfLife": 1.675
     },
     {
       "name": "External power supply for laptop",
       "slug": "alimentationordinateur",
-      "ecv": 4.1,
-      "footprint": 3.6,
+      "ecv": 4.192,
+      "footprint": 3.65,
       "footprintDetail": [
         {
           "id": 4,
-          "value": 0.1
+          "value": 0.14
         },
         {
           "id": 5,
-          "value": 3.5
+          "value": 3.51
         }
       ],
-      "endOfLife": 0.5
+      "endOfLife": 0.542
     },
     {
       "name": "External power supply for smartphone or tablet",
       "slug": "alimentationsmartphone",
-      "ecv": 0.4,
-      "footprint": 0.3,
+      "ecv": 0.4153,
+      "footprint": 0.3626,
       "footprintDetail": [
         {
           "id": 4,
-          "value": 0
+          "value": 0.0136
         },
         {
           "id": 5,
-          "value": 0.3
+          "value": 0.349
         }
       ],
-      "endOfLife": 0.1
+      "endOfLife": 0.052700000000000004
     },
     {
       "name": "External hard drive",
       "slug": "disquedur",
-      "ecv": 11.9,
-      "footprint": 11.6,
+      "ecv": 12.65774,
+      "footprint": 11.613,
       "footprintDetail": [
         {
           "id": 4,
-          "value": 0.1
+          "value": 0.113
         },
         {
           "id": 5,
           "value": 11.5
         }
       ],
-      "endOfLife": 0.3
+      "usage": {
+        "peryear": 0.151548,
+        "defaultyears": 5
+      },
+      "endOfLife": 0.287
+    },
+    {
+      "name": "External SSD",
+      "slug": "ssd",
+      "ecv": 135.1904175,
+      "footprint": 135.0161,
+      "footprintDetail": [
+        {
+          "id": 4,
+          "value": 0.0161
+        },
+        {
+          "id": 5,
+          "value": 135
+        }
+      ],
+      "usage": {
+        "peryear": 0.0189435,
+        "defaultyears": 5
+      },
+      "endOfLife": 0.07959999999999999
     },
     {
       "name": "Usb key",
       "slug": "clefusb",
-      "ecv": 2.9,
-      "footprint": 2.9,
+      "ecv": 5.217427,
+      "footprint": 5.16424,
       "footprintDetail": [
         {
           "id": 4,
-          "value": 0
+          "value": 0.00424
         },
         {
           "id": 5,
-          "value": 2.9
+          "value": 5.16
         }
-      ]
+      ],
+      "usage": {
+        "peryear": 0.0075774,
+        "defaultyears": 5
+      },
+      "endOfLife": 0.015300000000000001
     },
     {
       "name": "Box",
       "slug": "box",
-      "ecv": 82,
-      "footprint": 61.4,
+      "ecv": 81.22576,
+      "footprint": 61.41,
       "footprintDetail": [
         {
           "id": 4,
-          "value": 0.6
+          "value": 0.61
         },
         {
           "id": 5,
@@ -289,10 +319,10 @@
         }
       ],
       "usage": {
-        "peryear": 3.8,
+        "peryear": 3.6371520000000004,
         "defaultyears": 5
       },
-      "endOfLife": 1.6
+      "endOfLife": 1.63
     }
   ]
 }

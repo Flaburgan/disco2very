@@ -12,7 +12,7 @@ This project uses open data provided by ADEME (*Agence de l'Environnement et de 
 
 ## Contributions
 
-Contributions to the project are very welcome! By contributing, you agree that your work will be licensed under the AGPL licence (see the `LICENSE` file for details).
+Contributions to the project are very welcome! By contributing, you agree that your work will be licensed under the AGPL license (see the `LICENSE` file for details).
 
 ## Technical informations
 

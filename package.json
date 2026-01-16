@@ -13,8 +13,8 @@
     "i18n-compile": "lingui compile --typescript"
   },
   "dependencies": {
-    "@lingui/core": "^5.5.0",
-    "@lingui/react": "^5.5.0",
+    "@lingui/core": "^5.8.0",
+    "@lingui/react": "^5.8.0",
     "classnames": "^2.3.1",
     "next": "^14.2.16",
     "react": "18.3.1",
@@ -24,8 +24,8 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
-    "@lingui/babel-plugin-lingui-macro": "^5.5.0",
-    "@lingui/cli": "^5.5.0",
+    "@lingui/babel-plugin-lingui-macro": "^5.8.0",
+    "@lingui/cli": "^5.8.0",
     "@types/react-beautiful-dnd": "^13.0.0",
     "@typescript-eslint/eslint-plugin": "^8.16.0",
     "@typescript-eslint/parser": "^8.16.0",

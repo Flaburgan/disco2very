@@ -1,5 +1,5 @@
 import React from "react";
-import { Droppable } from "react-beautiful-dnd";
+import { Droppable } from "../lib/dnd";
 import { Item } from "../types/item";
 import DraggableItemCard from "./draggable-item-card";
 import styles from "../styles/next-item-list.module.scss";
@@ -17,12 +17,17 @@ export default function NextItemList(props: NextItemListProps) {
         {(provided) => (
           <div className={styles.wrapper + " bordered-area"}>
             <div
-              ref={provided.innerRef}
+              ref={provided.innerRef as React.Ref<HTMLDivElement>}
               {...provided.droppableProps}
               className={styles.list}
             >
               {next && (
-                <DraggableItemCard draggable index={0} item={next} key={next.id} />
+                <DraggableItemCard
+                  draggable
+                  index={0}
+                  item={next}
+                  key={next.id}
+                />
               )}
               {provided.placeholder}
             </div>

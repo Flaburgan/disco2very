@@ -215,6 +215,22 @@ input {
   }
 }
 
+// Drag and drop styles
+.dragging * {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+[data-draggable-id] {
+  touch-action: none;
+}
+
+.dragging [data-draggable-id] {
+  transition: opacity 0.2s ease;
+}
+
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}

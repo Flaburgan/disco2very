@@ -6,30 +6,41 @@ function moveStepByStep(
   moveCallback: (position: DragPosition) => void,
   dropCallback: () => void,
   transformValues: number[],
-  scrollValues: number[]
+  scrollValues: number[],
+  startX: number
 ) {
   requestAnimationFrame(() => {
     const playedItemsContainer = document.getElementById("top");
 
     if (playedItemsContainer === null) {
-      throw new Error("Can't find #top");
+      dropCallback();
+      return;
     }
 
-    const newPosition = transformValues.shift();
+    const newTransform = transformValues.shift();
     const newScroll = scrollValues.shift();
 
-    if (newPosition === undefined || newScroll === undefined) {
+    if (newTransform === undefined || newScroll === undefined) {
       dropCallback();
     } else {
       playedItemsContainer.scrollLeft = newScroll;
-      moveCallback({ x: newPosition, y: 0 });
-      moveStepByStep(moveCallback, dropCallback, transformValues, scrollValues);
+      moveCallback({ x: startX + newTransform, y: 0 });
+      moveStepByStep(
+        moveCallback,
+        dropCallback,
+        transformValues,
+        scrollValues,
+        startX
+      );
     }
   });
 }
 
 export default function useAutoMoveSensorVanilla(state: GameState): DragSensor {
   return async (api: SensorAPI) => {
+    // Add a small delay to ensure the DOM is ready
+    await new Promise((resolve) => setTimeout(resolve, 100));
+
     if (
       state.badlyPlaced === null ||
       state.badlyPlaced.index === null ||
@@ -38,36 +49,52 @@ export default function useAutoMoveSensorVanilla(state: GameState): DragSensor {
       return;
     }
 
-    const preDrag = api.tryGetLock?.(state.played[state.badlyPlaced.index].id);
+    const badlyPlacedItem = state.played[state.badlyPlaced.index];
+    if (!badlyPlacedItem) {
+      return;
+    }
+
+    const preDrag = api.tryGetLock?.(badlyPlacedItem.id);
 
     if (!preDrag) {
       return;
     }
 
     const itemEl: HTMLElement | null = document.querySelector(
-      `[data-draggable-id='${state.played[state.badlyPlaced.index].id}']`
+      `[data-draggable-id='${badlyPlacedItem.id}']`
     );
-    const destEl: HTMLElement | null = document.querySelector(
-      `[data-draggable-id='${
-        state.played[state.badlyPlaced.index + state.badlyPlaced.delta].id
-      }']`
-    );
-    const playedItemsContainer: HTMLElement | null = document.getElementById("top");
 
-    if (itemEl === null || destEl === null || playedItemsContainer === null) {
-      throw new Error("Can't find element");
+    const targetIndex = state.badlyPlaced.index + state.badlyPlaced.delta;
+    const targetItem = state.played[targetIndex];
+
+    if (!targetItem) {
+      return;
     }
 
-    const leftMarker = playedItemsContainer.scrollLeft + playedItemsContainer.clientWidth / 4;
+    const destEl: HTMLElement | null = document.querySelector(
+      `[data-draggable-id='${targetItem.id}']`
+    );
+    const playedItemsContainer: HTMLElement | null =
+      document.getElementById("top");
+
+    if (itemEl === null || destEl === null || playedItemsContainer === null) {
+      return;
+    }
+
+    const itemRect = itemEl.getBoundingClientRect();
+    const destRect = destEl.getBoundingClientRect();
+    const containerRect = playedItemsContainer.getBoundingClientRect();
+
+    const leftMarker =
+      playedItemsContainer.scrollLeft + playedItemsContainer.clientWidth / 4;
     const rightMarker =
-      playedItemsContainer.scrollLeft + (playedItemsContainer.clientWidth / 4) * 3 - itemEl.clientWidth;
+      playedItemsContainer.scrollLeft +
+      (playedItemsContainer.clientWidth / 4) * 3 -
+      itemEl.clientWidth;
 
     let scrollDistance = 0;
 
-    if (
-      destEl.offsetLeft < leftMarker ||
-      destEl.offsetLeft > rightMarker
-    ) {
+    if (destEl.offsetLeft < leftMarker || destEl.offsetLeft > rightMarker) {
       // Destination is not in middle two quarters of the screen. Calculate
       // distance we therefore need to scroll.
       scrollDistance =
@@ -82,7 +109,9 @@ export default function useAutoMoveSensorVanilla(state: GameState): DragSensor {
         playedItemsContainer.scrollWidth - playedItemsContainer.clientWidth
       ) {
         scrollDistance =
-          playedItemsContainer.scrollWidth - playedItemsContainer.clientWidth - playedItemsContainer.scrollLeft;
+          playedItemsContainer.scrollWidth -
+          playedItemsContainer.clientWidth -
+          playedItemsContainer.scrollLeft;
       }
     }
 
@@ -91,15 +120,23 @@ export default function useAutoMoveSensorVanilla(state: GameState): DragSensor {
     const transformDistance =
       destEl.offsetLeft - itemEl.offsetLeft - scrollDistance;
 
-    const drag = preDrag.fluidLift({ x: 0, y: 0 });
+    const startPosition = {
+      x: itemRect.left + itemRect.width / 2,
+      y: itemRect.top + itemRect.height / 2,
+    };
+
+    const drag = preDrag.fluidLift(startPosition);
 
     // Create a series of eased transformations and scrolls to animate from the
     // current state to the desired state.
     const transformPoints = [];
     const scrollPoints = [];
-    const numberOfPoints = 30 + 5 * Math.abs(state.badlyPlaced.delta);
+    const numberOfPoints = Math.min(
+      60,
+      30 + 5 * Math.abs(state.badlyPlaced.delta)
+    );
 
-    for (let i = 0; i < numberOfPoints; i++) {
+    for (let i = 1; i <= numberOfPoints; i++) {
       transformPoints.push(
         tweenFunctions.easeOutCirc(i, 0, transformDistance, numberOfPoints)
       );
@@ -113,6 +150,12 @@ export default function useAutoMoveSensorVanilla(state: GameState): DragSensor {
       );
     }
 
-    moveStepByStep(drag.move, drag.drop, transformPoints, scrollPoints);
+    moveStepByStep(
+      drag.move,
+      drag.drop,
+      transformPoints,
+      scrollPoints,
+      startPosition.x
+    );
   };
 }

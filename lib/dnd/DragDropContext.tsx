@@ -62,22 +62,33 @@ export default function DragDropContext({
     draggablesRef.current.delete(id);
   }, []);
 
-  const createGhostElement = useCallback((originalElement: HTMLElement) => {
-    const ghost = originalElement.cloneNode(true) as HTMLElement;
-    ghost.style.position = "fixed";
-    ghost.style.pointerEvents = "none";
-    ghost.style.zIndex = "9999";
-    ghost.style.transform = "rotate(5deg)";
-    ghost.style.opacity = "0.8";
-    ghost.style.transition = "none";
-    document.body.appendChild(ghost);
-    return ghost;
-  }, []);
+  const createGhostElement = useCallback(
+    (originalElement: HTMLElement, position: DragPosition) => {
+      const ghost = originalElement.cloneNode(true) as HTMLElement;
+      const rect = originalElement.getBoundingClientRect();
+
+      ghost.style.position = "fixed";
+      ghost.style.pointerEvents = "none";
+      ghost.style.zIndex = "9999";
+      ghost.style.transform = "rotate(5deg)";
+      ghost.style.opacity = "0.8";
+      ghost.style.transition = "none";
+      ghost.style.width = `${rect.width}px`;
+      ghost.style.height = `${rect.height}px`;
+      ghost.style.left = `${position.x - rect.width / 2}px`;
+      ghost.style.top = `${position.y - rect.height / 2}px`;
+
+      document.body.appendChild(ghost);
+      return ghost;
+    },
+    []
+  );
 
   const updateGhostPosition = useCallback((position: DragPosition) => {
     if (ghostElementRef.current) {
-      ghostElementRef.current.style.left = `${position.x - 20}px`;
-      ghostElementRef.current.style.top = `${position.y - 20}px`;
+      const rect = ghostElementRef.current.getBoundingClientRect();
+      ghostElementRef.current.style.left = `${position.x - rect.width / 2}px`;
+      ghostElementRef.current.style.top = `${position.y - rect.height / 2}px`;
     }
   }, []);
 
@@ -96,19 +107,25 @@ export default function DragDropContext({
         ) {
           // Find the insertion index
           const draggables = Array.from(draggablesRef.current.entries())
-            .filter(([, data]) => data.droppableId === droppableId)
+            .filter(([draggableId, data]) => {
+              // Exclude the currently dragged item from insertion calculation
+              return (
+                data.droppableId === droppableId &&
+                (!draggedItem || draggableId !== draggedItem.id)
+              );
+            })
             .sort(([, a], [, b]) => a.index - b.index);
 
-          let insertIndex = draggables.length;
+          let insertIndex = 0;
+          const isVertical =
+            droppableElement.style.flexDirection === "column" ||
+            droppableElement.dataset.direction === "vertical";
 
           for (let i = 0; i < draggables.length; i++) {
             const [, data] = draggables[i];
             const elementRect = data.element.getBoundingClientRect();
 
-            if (
-              droppableElement.style.flexDirection === "column" ||
-              droppableElement.dataset.direction === "vertical"
-            ) {
+            if (isVertical) {
               if (position.y < elementRect.top + elementRect.height / 2) {
                 insertIndex = i;
                 break;
@@ -119,6 +136,7 @@ export default function DragDropContext({
                 break;
               }
             }
+            insertIndex = i + 1;
           }
 
           return { droppableId, index: insertIndex };
@@ -126,14 +144,19 @@ export default function DragDropContext({
       }
       return null;
     },
-    []
+    [draggedItem]
   );
 
   const startDrag = useCallback(
     (draggableId: string, position: DragPosition) => {
+      console.log("Starting drag:", draggableId, position);
       const draggableData = draggablesRef.current.get(draggableId);
-      if (!draggableData) return;
+      if (!draggableData) {
+        console.warn("No draggable data found for:", draggableId);
+        return;
+      }
 
+      console.log("Draggable data:", draggableData);
       setIsDragging(true);
       setDraggedItem({
         id: draggableId,
@@ -147,8 +170,10 @@ export default function DragDropContext({
       initialPositionRef.current = position;
 
       // Create ghost element
-      ghostElementRef.current = createGhostElement(draggableData.element);
-      updateGhostPosition(position);
+      ghostElementRef.current = createGhostElement(
+        draggableData.element,
+        position
+      );
 
       // Hide original element
       draggableData.element.style.opacity = "0.5";
@@ -160,6 +185,7 @@ export default function DragDropContext({
 
   const updateDragPosition = useCallback(
     (position: DragPosition) => {
+      // console.log('Updating drag position:', position);
       updateGhostPosition(position);
     },
     [updateGhostPosition]
@@ -167,13 +193,22 @@ export default function DragDropContext({
 
   const endDrag = useCallback(
     (position: DragPosition) => {
-      if (!draggedItem) return;
+      if (!draggedItem) {
+        console.warn("EndDrag called but no dragged item");
+        return;
+      }
 
+      console.log("Ending drag:", draggedItem.id, "at position:", position);
       const destination = findDropTarget(position);
+      console.log("Drop destination:", destination);
 
       // Clean up ghost element
       if (ghostElementRef.current) {
-        document.body.removeChild(ghostElementRef.current);
+        try {
+          document.body.removeChild(ghostElementRef.current);
+        } catch (error) {
+          console.warn("Ghost element already removed");
+        }
         ghostElementRef.current = null;
       }
 
@@ -188,6 +223,7 @@ export default function DragDropContext({
         destination,
       };
 
+      console.log("Drop result:", result);
       setIsDragging(false);
       setDraggedItem(null);
       initialPositionRef.current = null;
@@ -224,9 +260,15 @@ export default function DragDropContext({
 
   // Run sensors
   React.useEffect(() => {
-    sensors.forEach((sensor) => {
-      sensor(sensorAPI);
-    });
+    if (sensors.length > 0) {
+      sensors.forEach((sensor) => {
+        try {
+          sensor(sensorAPI);
+        } catch (error) {
+          console.warn("Sensor error:", error);
+        }
+      });
+    }
   }, [sensors]);
 
   const contextValue: DragContext = {

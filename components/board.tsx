@@ -62,9 +62,13 @@ export default function Board(props: Props) {
         ...state.next,
         played: { correct },
       });
-      const randomIndex = Math.floor(Math.random() * newDeck.length);
-      const newNext = newDeck[randomIndex];
-      newDeck.splice(randomIndex, 1);
+
+      let newNext = null;
+      if (newDeck.length > 0) {
+        const randomIndex = Math.floor(Math.random() * newDeck.length);
+        newNext = newDeck[randomIndex];
+        newDeck.splice(randomIndex, 1);
+      }
 
       setState({
         ...state,

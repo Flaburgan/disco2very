@@ -32,13 +32,14 @@ export default function Draggable({
   const isDraggingThis = isDragging && draggedItem?.id === draggableId;
 
   useEffect(() => {
-    if (elementRef.current) {
+    const element = elementRef.current;
+    if (element) {
       // Find the droppable parent
-      const droppableParent = elementRef.current.closest("[data-droppable-id]");
+      const droppableParent = element.closest("[data-droppable-id]");
       const droppableId =
         droppableParent?.getAttribute("data-droppable-id") || "";
 
-      registerDraggable(draggableId, elementRef.current, index, droppableId);
+      registerDraggable(draggableId, element, index, droppableId);
     }
 
     return () => {
@@ -60,34 +61,47 @@ export default function Draggable({
     if (isDragDisabled) return;
 
     event.preventDefault();
+    event.stopPropagation();
+
     const startPosition = getMousePosition(event);
+    let hasDragStarted = false;
+    let dragStartTimeout: NodeJS.Timeout;
 
     const handleMouseMove = (moveEvent: MouseEvent) => {
+      moveEvent.preventDefault();
+
       const currentPosition = {
         x: moveEvent.clientX,
         y: moveEvent.clientY,
       };
 
-      if (!isDragging) {
+      if (!hasDragStarted) {
         // Start dragging if we've moved enough
         const distance = Math.sqrt(
           Math.pow(currentPosition.x - startPosition.x, 2) +
             Math.pow(currentPosition.y - startPosition.y, 2)
         );
 
-        if (distance > 5) {
-          startDrag(draggableId, startPosition);
+        if (distance > 3) {
+          console.log(
+            "Mouse drag threshold reached, starting drag:",
+            draggableId
+          );
+          clearTimeout(dragStartTimeout);
+          startDrag(draggableId, currentPosition);
+          hasDragStarted = true;
         }
-      } else {
+      } else if (isDragging && draggedItem?.id === draggableId) {
         updateDragPosition(currentPosition);
       }
     };
 
     const handleMouseUp = (upEvent: MouseEvent) => {
-      document.removeEventListener("mousemove", handleMouseMove);
-      document.removeEventListener("mouseup", handleMouseUp);
+      clearTimeout(dragStartTimeout);
+      document.removeEventListener("mousemove", handleMouseMove, true);
+      document.removeEventListener("mouseup", handleMouseUp, true);
 
-      if (isDragging && draggedItem?.id === draggableId) {
+      if (hasDragStarted && isDragging && draggedItem?.id === draggableId) {
         endDrag({
           x: upEvent.clientX,
           y: upEvent.clientY,
@@ -95,51 +109,91 @@ export default function Draggable({
       }
     };
 
-    document.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mouseup", handleMouseUp);
+    // Start drag immediately on long press (for touch-like behavior on desktop)
+    dragStartTimeout = setTimeout(() => {
+      if (!hasDragStarted) {
+        console.log("Mouse long press timeout, starting drag:", draggableId);
+        startDrag(draggableId, startPosition);
+        hasDragStarted = true;
+      }
+    }, 150);
+
+    document.addEventListener("mousemove", handleMouseMove, true);
+    document.addEventListener("mouseup", handleMouseUp, true);
   };
 
   const handleTouchStart = (event: React.TouchEvent) => {
     if (isDragDisabled) return;
 
     event.preventDefault();
+    event.stopPropagation();
+
     const startPosition = getTouchPosition(event);
+    let hasDragStarted = false;
+    let longPressTimeout: NodeJS.Timeout;
 
     const handleTouchMove = (moveEvent: TouchEvent) => {
+      moveEvent.preventDefault();
+
+      if (moveEvent.touches.length === 0) return;
+
       const currentPosition = {
         x: moveEvent.touches[0].clientX,
         y: moveEvent.touches[0].clientY,
       };
 
-      if (!isDragging) {
-        // Start dragging if we've moved enough
+      if (!hasDragStarted) {
+        // Start dragging if we've moved enough or after long press
         const distance = Math.sqrt(
           Math.pow(currentPosition.x - startPosition.x, 2) +
             Math.pow(currentPosition.y - startPosition.y, 2)
         );
 
-        if (distance > 5) {
-          startDrag(draggableId, startPosition);
+        if (distance > 3) {
+          console.log(
+            "Touch drag threshold reached, starting drag:",
+            draggableId
+          );
+          clearTimeout(longPressTimeout);
+          startDrag(draggableId, currentPosition);
+          hasDragStarted = true;
         }
-      } else {
+      } else if (isDragging && draggedItem?.id === draggableId) {
         updateDragPosition(currentPosition);
       }
     };
 
     const handleTouchEnd = (endEvent: TouchEvent) => {
-      document.removeEventListener("touchmove", handleTouchMove);
+      clearTimeout(longPressTimeout);
+      document.removeEventListener(
+        "touchmove",
+        handleTouchMove as EventListener
+      );
       document.removeEventListener("touchend", handleTouchEnd);
 
-      if (isDragging && draggedItem?.id === draggableId) {
-        const lastTouch = endEvent.changedTouches[0];
-        endDrag({
-          x: lastTouch.clientX,
-          y: lastTouch.clientY,
-        });
+      if (hasDragStarted && isDragging && draggedItem?.id === draggableId) {
+        const lastTouch = endEvent.changedTouches[0] || endEvent.touches[0];
+        if (lastTouch) {
+          endDrag({
+            x: lastTouch.clientX,
+            y: lastTouch.clientY,
+          });
+        }
       }
     };
 
-    document.addEventListener("touchmove", handleTouchMove);
+    // Long press to start drag
+    longPressTimeout = setTimeout(() => {
+      if (!hasDragStarted) {
+        console.log("Touch long press timeout, starting drag:", draggableId);
+        startDrag(draggableId, startPosition);
+        hasDragStarted = true;
+      }
+    }, 300);
+
+    document.addEventListener("touchmove", handleTouchMove as EventListener, {
+      passive: false,
+    });
     document.addEventListener("touchend", handleTouchEnd);
   };
 

@@ -4,7 +4,7 @@
 
 [Ubuntu Touch](https://www.ubuntu-touch.io/) is a GNU/Linux operating system for mobile phone and desktop pc running the Lomiri interface (shell) based on Qt.
 
-**You don't need to build disCO2very yourself to run it on your phone**, it is available on the [official OpenStore](https://open-store.io/app/disco2very.flaburgan), or you can also download the `.click` file as an artifact of the CI here on github.
+**You don't need to build disCO2very yourself to run it on your phone**, it is available on the [official OpenStore](https://open-store.io/app/disco2very.flaburgan), or you can also download the `.click` file as an artifact attached to a release here on github.
 
 ## Build
 

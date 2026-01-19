@@ -1,0 +1,176 @@
+{
+  "data": [
+    {
+      "name": "E-Mail",
+      "slug": "email",
+      "ecv": 0.00246181262,
+      "footprint": 0.00246181262,
+      "footprintDetail": [
+        {
+          "value": 0.001286218,
+          "id": 13
+        },
+        {
+          "value": 8.684837e-05,
+          "id": 14
+        },
+        {
+          "value": 3.580927e-05,
+          "id": 15
+        },
+        {
+          "value": 0.00093525547,
+          "id": 16
+        },
+        {
+          "value": 0.00011768151,
+          "id": 17
+        }
+      ]
+    },
+    {
+      "name": "Spam",
+      "slug": "spam",
+      "ecv": 0.00373863698,
+      "footprint": 0.00373863698,
+      "footprintDetail": [
+        {
+          "value": 0.0026857,
+          "id": 15
+        },
+        {
+          "value": 0.00093525547,
+          "id": 16
+        },
+        {
+          "value": 0.00011768151,
+          "id": 17
+        }
+      ]
+    },
+    {
+      "name": "GB Daten (1 Jahr Cloud-Speicher)",
+      "slug": "stockagedonnee",
+      "ecv": 0.00023533417,
+      "footprint": 0.00023533417,
+      "footprintDetail": [
+        {
+          "value": 0.00012454537,
+          "id": 16
+        },
+        {
+          "value": 0.0001107888,
+          "id": 17
+        }
+      ]
+    },
+    {
+      "name": "Websuche",
+      "slug": "rechercheweb",
+      "ecv": 0.0012300000000000002,
+      "footprint": 0.0012300000000000002,
+      "footprintDetail": [
+        {
+          "value": 0.000369,
+          "id": 13
+        },
+        {
+          "value": 0.000246,
+          "id": 14
+        },
+        {
+          "value": 1.97e-05,
+          "id": 15
+        },
+        {
+          "value": 0.0003395,
+          "id": 16
+        },
+        {
+          "value": 0.0002263,
+          "id": 17
+        },
+        {
+          "value": 2.95e-05,
+          "id": 18
+        }
+      ]
+    },
+    {
+      "name": "Video-Streaming",
+      "slug": "streamingvideo",
+      "ecv": 0.06401675291000002,
+      "footprint": 0.06401675291000002,
+      "footprintDetail": [
+        {
+          "value": 0.0327361035,
+          "id": 13
+        },
+        {
+          "value": 0.002903607,
+          "id": 14
+        },
+        {
+          "value": 0.02780804,
+          "id": 15
+        },
+        {
+          "value": 0.000236636,
+          "id": 16
+        },
+        {
+          "value": 0.00033236641,
+          "id": 17
+        }
+      ]
+    },
+    {
+      "name": "Videokonferenz",
+      "slug": "visioconference",
+      "ecv": 0.05706336546216,
+      "footprint": 0.05706336546216,
+      "footprintDetail": [
+        {
+          "value": 0.04100456621,
+          "id": 13
+        },
+        {
+          "value": 0.002845,
+          "id": 14
+        },
+        {
+          "value": 0.0129770857,
+          "id": 15
+        },
+        {
+          "value": 0.000236636,
+          "id": 16
+        },
+        {
+          "value": 7.755216e-08,
+          "id": 17
+        }
+      ]
+    },
+    {
+      "name": "GB Daten (Download)",
+      "slug": "telechargement",
+      "ecv": 0.00950468087,
+      "footprint": 0.00950468087,
+      "footprintDetail": [
+        {
+          "value": 0.0092693467,
+          "id": 15
+        },
+        {
+          "value": 0.00012454537,
+          "id": 16
+        },
+        {
+          "value": 0.0001107888,
+          "id": 17
+        }
+      ]
+    }
+  ]
+}

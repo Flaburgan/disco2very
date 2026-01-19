@@ -1,0 +1,338 @@
+{
+  "data": [
+    {
+      "name": "Flugzeug Kurzstrecke",
+      "slug": "avion-courtcourrier",
+      "ecv": 0.224572,
+      "footprint": 0.224572,
+      "footprintDetail": [
+        {
+          "id": 5,
+          "value": 0.000372
+        },
+        {
+          "id": 6,
+          "value": 0.1232
+        },
+        {
+          "id": 7,
+          "value": 0.101
+        }
+      ]
+    },
+    {
+      "name": "Flugzeug Mittelstrecke",
+      "slug": "avion-moyencourrier",
+      "ecv": 0.18466100000000002,
+      "footprint": 0.18466100000000002,
+      "footprintDetail": [
+        {
+          "id": 5,
+          "value": 0.000361
+        },
+        {
+          "id": 6,
+          "value": 0.1013
+        },
+        {
+          "id": 7,
+          "value": 0.083
+        }
+      ]
+    },
+    {
+      "name": "Flugzeug Langstrecke",
+      "slug": "avion-longcourrier",
+      "ecv": 0.177894,
+      "footprint": 0.177894,
+      "footprintDetail": [
+        {
+          "id": 5,
+          "value": 0.000294
+        },
+        {
+          "id": 6,
+          "value": 0.0976
+        },
+        {
+          "id": 7,
+          "value": 0.08
+        }
+      ]
+    },
+    {
+      "name": "Hochgeschwindigkeitszug",
+      "slug": "tgv",
+      "ecv": 0.00293,
+      "footprint": 0.00293,
+      "footprintDetail": [
+        {
+          "id": 5,
+          "value": 0.00063
+        },
+        {
+          "id": 6,
+          "value": 0.0023
+        }
+      ]
+    },
+    {
+      "name": "Intercity-Zug",
+      "slug": "intercites",
+      "ecv": 0.00898,
+      "footprint": 0.00898,
+      "footprintDetail": [
+        {
+          "id": 5,
+          "value": 0.00318
+        },
+        {
+          "id": 6,
+          "value": 0.0058
+        }
+      ]
+    },
+    {
+      "name": "Verbrennungsauto",
+      "slug": "voiturethermique",
+      "ecv": 0.21760000000000002,
+      "footprint": 0.21760000000000002,
+      "footprintDetail": [
+        {
+          "value": 0.192,
+          "id": 6
+        },
+        {
+          "value": 0.0256,
+          "id": 5
+        }
+      ]
+    },
+    {
+      "name": "Electric car",
+      "slug": "voitureelectrique",
+      "ecv": 0.10339999999999999,
+      "footprint": 0.10339999999999999,
+      "footprintDetail": [
+        {
+          "value": 0.0198,
+          "id": 6
+        },
+        {
+          "value": 0.0836,
+          "id": 5
+        }
+      ]
+    },
+    {
+      "name": "Reisebus mit Verbrennungsmotor",
+      "slug": "autocar",
+      "ecv": 0.03756,
+      "footprint": 0.03756,
+      "footprintDetail": [
+        {
+          "id": 5,
+          "value": 0.00442
+        },
+        {
+          "id": 6,
+          "value": 0.03314
+        }
+      ]
+    },
+    {
+      "name": "Zu Fuß",
+      "slug": "marche",
+      "ecv": 0,
+      "footprint": 0
+    },
+    {
+      "name": "Fahrrad",
+      "slug": "velo",
+      "ecv": 0.00017,
+      "footprint": 0.00017,
+      "footprintDetail": [
+        {
+          "id": 5,
+          "value": 0.00017
+        }
+      ]
+    },
+    {
+      "name": "Elektrofahrrad",
+      "slug": "veloelectrique",
+      "ecv": 0.010950000000000001,
+      "footprint": 0.010950000000000001,
+      "footprintDetail": [
+        {
+          "id": 5,
+          "value": 0.00872
+        },
+        {
+          "id": 6,
+          "value": 0.00223
+        }
+      ]
+    },
+    {
+      "name": "Bus mit Verbrennungsmotor",
+      "slug": "busthermique",
+      "ecv": 0.12242,
+      "footprint": 0.12242,
+      "footprintDetail": [
+        {
+          "id": 5,
+          "value": 0.00892
+        },
+        {
+          "id": 6,
+          "value": 0.1135
+        }
+      ]
+    },
+    {
+      "name": "Straßenbahn",
+      "slug": "tramway",
+      "ecv": 0.00428,
+      "footprint": 0.00428,
+      "footprintDetail": [
+        {
+          "id": 5,
+          "value": 0.00048
+        },
+        {
+          "id": 6,
+          "value": 0.0038
+        }
+      ]
+    },
+    {
+      "name": "U-Bahn",
+      "slug": "metro",
+      "ecv": 0.0044399999999999995,
+      "footprint": 0.0044399999999999995,
+      "footprintDetail": [
+        {
+          "id": 5,
+          "value": 0.00024
+        },
+        {
+          "id": 6,
+          "value": 0.0042
+        }
+      ]
+    },
+    {
+      "name": "Roller oder Leichtmotorrad",
+      "slug": "scooter",
+      "ecv": 0.0763,
+      "footprint": 0.0763,
+      "footprintDetail": [
+        {
+          "id": 5,
+          "value": 0.0159
+        },
+        {
+          "id": 6,
+          "value": 0.0604
+        }
+      ]
+    },
+    {
+      "name": "Motorrad mit Verbrennungsmotor",
+      "slug": "moto",
+      "ecv": 0.2167,
+      "footprint": 0.2167,
+      "footprintDetail": [
+        {
+          "id": 5,
+          "value": 0.0292
+        },
+        {
+          "id": 6,
+          "value": 0.1875
+        }
+      ]
+    },
+    {
+      "name": "S-Bahn",
+      "slug": "rer",
+      "ecv": 0.00978,
+      "footprint": 0.00978,
+      "footprintDetail": [
+        {
+          "id": 5,
+          "value": 0.00318
+        },
+        {
+          "id": 6,
+          "value": 0.0066
+        }
+      ]
+    },
+    {
+      "name": "Regionalzug",
+      "slug": "ter",
+      "ecv": 0.02769,
+      "footprint": 0.02769,
+      "footprintDetail": [
+        {
+          "id": 5,
+          "value": 0.00479
+        },
+        {
+          "id": 6,
+          "value": 0.0229
+        }
+      ]
+    },
+    {
+      "name": "Elektrobus",
+      "slug": "buselectrique",
+      "ecv": 0.0217,
+      "footprint": 0.0217,
+      "footprintDetail": [
+        {
+          "id": 5,
+          "value": 0.0122
+        },
+        {
+          "id": 6,
+          "value": 0.0095
+        }
+      ]
+    },
+    {
+      "name": "Elektroroller",
+      "slug": "trottinette",
+      "ecv": 0.0249,
+      "footprint": 0.0249,
+      "footprintDetail": [
+        {
+          "id": 5,
+          "value": 0.0229
+        },
+        {
+          "id": 6,
+          "value": 0.002
+        }
+      ]
+    },
+    {
+      "name": "Bus (Erdgas)",
+      "slug": "busgnv",
+      "ecv": 0.1217,
+      "footprint": 0.1217,
+      "footprintDetail": [
+        {
+          "id": 5,
+          "value": 0.0089
+        },
+        {
+          "id": 6,
+          "value": 0.1128
+        }
+      ]
+    }
+  ]
+}

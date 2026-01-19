@@ -3,14 +3,15 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 import { i18n } from "@lingui/core";
 import { I18nProvider } from "@lingui/react";
-import {messages as enMessages} from "../locales/en/messages";
-import {messages as frMessages} from "../locales/fr/messages";
-import {messages as esMessages} from "../locales/es/messages";
+import { messages as enMessages } from "../locales/en/messages";
+import { messages as frMessages } from "../locales/fr/messages";
+import { messages as esMessages } from "../locales/es/messages";
+import { messages as deMessages } from "../locales/de/messages";
 import { t } from "@lingui/core/macro";
-import {locales, sourceLocale} from "../lingui.config";
+import { locales, sourceLocale } from "../lingui.config";
 
 export default function App() {
-  const lang = navigator.language.substring(0,2);
+  const lang = navigator.language.substring(0, 2);
   const locale = locales.includes(lang) ? lang : sourceLocale;
   let messages = enMessages;
   switch (locale) {
@@ -19,6 +20,9 @@ export default function App() {
       break;
     case "es":
       messages = esMessages;
+      break;
+    case "de":
+      messages = deMessages;
       break;
   }
   i18n.load(locale, messages);

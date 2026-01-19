@@ -1,0 +1,254 @@
+{
+  "data": [
+    {
+      "name": "Rundreise Paris - New York mit dem Flugzeug",
+      "slug": "avion-pny",
+      "ecv": 2060,
+      "footprint": 2060
+    },
+    {
+      "name": "Rundreise Paris - Berlin mit dem Zug",
+      "slug": "tgv-paris-berlin",
+      "ecv": 7.26,
+      "footprint": 7.26
+    },
+    {
+      "name": "Rundreise Paris - Marseille mit dem Zug",
+      "slug": "tgv-paris-marseille",
+      "ecv": 4.4,
+      "footprint": 4.4
+    },
+    {
+      "name": "Rundreise Lille - Nîmes mit dem Auto",
+      "slug": "voiture-lille-nimes",
+      "ecv": 410,
+      "footprint": 410
+    },
+    {
+      "name": "CO2-Fußabdruck eines französischen Bürgers",
+      "slug": "francais",
+      "ecv": 9100,
+      "footprint": 9100
+    },
+    {
+      "name": "Game of Thrones Streaming",
+      "slug": "game-of-thrones",
+      "ecv": 0.0317,
+      "footprint": 0.0317
+    },
+    {
+      "name": "Komplett Friends TV-Show Streaming",
+      "slug": "friends",
+      "ecv": 7.86,
+      "footprint": 7.86
+    },
+    {
+      "name": "Skitag",
+      "slug": "ski",
+      "ecv": 48.9,
+      "footprint": 48.9
+    },
+    {
+      "name": "Poolbefüllung",
+      "slug": "piscine",
+      "ecv": 7.54,
+      "footprint": 7.54
+    },
+    {
+      "name": "Erdumrundung mit dem Auto",
+      "slug": "terre-voiture",
+      "ecv": 8704,
+      "footprint": 8704
+    },
+    {
+      "name": "Harry Potter Filme-Marathon Streaming",
+      "slug": "harry-potter",
+      "ecv": 0.63,
+      "footprint": 0.63
+    },
+    {
+      "name": "Nacht im Hotel",
+      "slug": "hotel",
+      "ecv": 4.3,
+      "footprint": 4.3,
+      "footprintDetail": [
+        {
+          "id": 50,
+          "value": 2.1
+        },
+        {
+          "id": 51,
+          "value": 1.5
+        },
+        {
+          "id": 52,
+          "value": 0.3
+        },
+        {
+          "id": 53,
+          "value": 0.4
+        }
+      ]
+    },
+    {
+      "name": "Nacht auf dem Campingplatz",
+      "slug": "camping",
+      "ecv": 1.4,
+      "footprint": 1.4
+    },
+    {
+      "name": "Nacht in einer Ferienwohnung",
+      "slug": "location",
+      "ecv": 5.2,
+      "footprint": 5.2,
+      "footprintDetail": [
+        {
+          "id": 50,
+          "value": 2
+        },
+        {
+          "id": 51,
+          "value": 2.7
+        },
+        {
+          "id": 53,
+          "value": 0.5
+        }
+      ]
+    },
+    {
+      "name": "Nacht im Zweitwohnsitz",
+      "slug": "residencesecondaire",
+      "ecv": 7,
+      "footprint": 7,
+      "footprintDetail": [
+        {
+          "id": 50,
+          "value": 2.4
+        },
+        {
+          "id": 51,
+          "value": 1.2
+        },
+        {
+          "id": 53,
+          "value": 3.4
+        }
+      ]
+    },
+    {
+      "name": "Bürgerziel für 2050",
+      "slug": "2050",
+      "ecv": 2000,
+      "footprint": 2000
+    },
+    {
+      "name": "Tag des privaten Autoverkehrs in Frankreich",
+      "slug": "voiturefrancaisejour",
+      "ecv": 193699000,
+      "footprint": 193699000
+    },
+    {
+      "name": "Jahr der Emissionen privater Autos in Frankreich",
+      "slug": "voiturefrancaisean",
+      "ecv": 70700135000,
+      "footprint": 70700135000
+    },
+    {
+      "name": "Jahr der Emissionen der Bevölkerung in Frankreich",
+      "slug": "populationfrancaise",
+      "ecv": 624000000000,
+      "footprint": 624000000000
+    },
+    {
+      "name": "Jahr der Emissionen des Viehbestands in Frankreich",
+      "slug": "parcbovin",
+      "ecv": 38032000000,
+      "footprint": 38032000000
+    },
+    {
+      "name": "Jahr der Emissionen der Hausheizung in Frankreich",
+      "slug": "chauffageenfrance",
+      "ecv": 43320025000,
+      "footprint": 43320025000
+    },
+    {
+      "name": "Jahr der Emissionen der Digitaltechnik in Frankreich",
+      "slug": "numeriqueenfrance",
+      "ecv": 29500000000,
+      "footprint": 29500000000
+    },
+    {
+      "name": "Jahr der Emissionen der Zivilluftfahrt in Frankreich",
+      "slug": "aviationcivileenfrance",
+      "ecv": 4380000000,
+      "footprint": 4380000000
+    },
+    {
+      "name": "Tag der landwirtschaftlichen Tätigkeit in Frankreich",
+      "slug": "agricoleenfrancejour",
+      "ecv": 216439000,
+      "footprint": 216439000
+    },
+    {
+      "name": "Tag der Hausheizungsnutzung in Frankreich",
+      "slug": "chauffageenfrancejour",
+      "ecv": 118685000,
+      "footprint": 118685000
+    },
+    {
+      "name": "Tag der CO2e-Absorption durch Wälder und Grasland in Frankreich",
+      "slug": "foretenfrancejour",
+      "ecv": 151636000,
+      "footprint": 151636000
+    },
+    {
+      "name": "Tag der Klimaanlagennutzung in Frankreich",
+      "slug": "climatisationenfrancejour",
+      "ecv": 3277000,
+      "footprint": 3277000
+    },
+    {
+      "name": "Stunde des privaten Autoverkehrs in Frankreich",
+      "slug": "voiturefrancaiseheure",
+      "ecv": 8071000,
+      "footprint": 8071000
+    },
+    {
+      "name": "Tag des Betriebs digitaler Dienste in Frankreich",
+      "slug": "numeriqueenfrancejour",
+      "ecv": 80822000,
+      "footprint": 80822000
+    },
+    {
+      "name": "Tag der Behandlung von Hausmüll und Abwasser",
+      "slug": "traitementdechetsjour",
+      "ecv": 5178000,
+      "footprint": 5178000
+    },
+    {
+      "name": "Tag des Zugverkehrs in Frankreich",
+      "slug": "trainenfrancejour",
+      "ecv": 1178000,
+      "footprint": 1178000
+    },
+    {
+      "name": "Tag des Betriebs eines Rechenzentrum-Campus in Frankreich",
+      "slug": "datacenterjour",
+      "ecv": 185000,
+      "footprint": 185000
+    },
+    {
+      "name": "Rundreise Johannesburg-Paris eines Rugby-Teams",
+      "slug": "avion-johannesburg-paris-rugby",
+      "ecv": 140000,
+      "footprint": 140000
+    },
+    {
+      "name": "Neues Haus",
+      "slug": "maisonneuve",
+      "ecv": 50000,
+      "footprint": 50000
+    }
+  ]
+}

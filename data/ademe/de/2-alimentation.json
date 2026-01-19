@@ -1,0 +1,1648 @@
+{
+  "data": [
+    {
+      "name": "Rindfleisch",
+      "slug": "boeuf",
+      "ecv": 28.009169999999997,
+      "footprint": 28.009169999999997,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 27.316666666666666
+        },
+        {
+          "id": 31,
+          "value": 0.08891666666666666
+        },
+        {
+          "id": 32,
+          "value": 0.21699999999999997
+        },
+        {
+          "id": 33,
+          "value": 0.3083333333333333
+        },
+        {
+          "id": 34,
+          "value": 0.04396666666666666
+        },
+        {
+          "id": 35,
+          "value": 0.03428666666666667
+        }
+      ]
+    },
+    {
+      "name": "Kalbfleisch",
+      "slug": "veau",
+      "ecv": 22.50465333333333,
+      "footprint": 22.50465333333333,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 21.833333333333332
+        },
+        {
+          "id": 31,
+          "value": 0.07403333333333333
+        },
+        {
+          "id": 32,
+          "value": 0.21699999999999997
+        },
+        {
+          "id": 33,
+          "value": 0.302
+        },
+        {
+          "id": 34,
+          "value": 0.044000000000000004
+        },
+        {
+          "id": 35,
+          "value": 0.03428666666666667
+        }
+      ]
+    },
+    {
+      "name": "Schweinefleisch",
+      "slug": "porc",
+      "ecv": 6.671304949999999,
+      "footprint": 6.671304949999999,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 6.0649999999999995
+        },
+        {
+          "id": 31,
+          "value": 6.495e-05
+        },
+        {
+          "id": 32,
+          "value": 0.22549999999999998
+        },
+        {
+          "id": 33,
+          "value": 0.2875
+        },
+        {
+          "id": 34,
+          "value": 0.045649999999999996
+        },
+        {
+          "id": 35,
+          "value": 0.04759
+        }
+      ]
+    },
+    {
+      "name": "Ente",
+      "slug": "canard",
+      "ecv": 8.0609,
+      "footprint": 8.0609,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 6.05
+        },
+        {
+          "id": 31,
+          "value": 1.04
+        },
+        {
+          "id": 32,
+          "value": 0.472
+        },
+        {
+          "id": 33,
+          "value": 0.359
+        },
+        {
+          "id": 34,
+          "value": 0.0507
+        },
+        {
+          "id": 35,
+          "value": 0.0892
+        }
+      ]
+    },
+    {
+      "name": "Kaninchen",
+      "slug": "lapin",
+      "ecv": 5.782900000000001,
+      "footprint": 5.782900000000001,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 3.75
+        },
+        {
+          "id": 31,
+          "value": 1.04
+        },
+        {
+          "id": 32,
+          "value": 0.472
+        },
+        {
+          "id": 33,
+          "value": 0.381
+        },
+        {
+          "id": 34,
+          "value": 0.0507
+        },
+        {
+          "id": 35,
+          "value": 0.0892
+        }
+      ]
+    },
+    {
+      "name": "Hähnchen",
+      "slug": "poulet",
+      "ecv": 4.56043,
+      "footprint": 4.56043,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 3
+        },
+        {
+          "id": 31,
+          "value": 0.83
+        },
+        {
+          "id": 32,
+          "value": 0.378
+        },
+        {
+          "id": 33,
+          "value": 0.305
+        },
+        {
+          "id": 34,
+          "value": 0.0406
+        },
+        {
+          "id": 35,
+          "value": 0.00683
+        }
+      ]
+    },
+    {
+      "name": "Garnelen",
+      "slug": "crevettes",
+      "ecv": 20.345228,
+      "footprint": 20.345228,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 17.9
+        },
+        {
+          "id": 31,
+          "value": 0.000128
+        },
+        {
+          "id": 32,
+          "value": 0.685
+        },
+        {
+          "id": 33,
+          "value": 1.26
+        },
+        {
+          "id": 34,
+          "value": 0.0901
+        },
+        {
+          "id": 35,
+          "value": 0.41
+        }
+      ]
+    },
+    {
+      "name": "Muscheln",
+      "slug": "moules",
+      "ecv": 5.328231000000001,
+      "footprint": 5.328231000000001,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 1.98
+        },
+        {
+          "id": 31,
+          "value": 0.000231
+        },
+        {
+          "id": 32,
+          "value": 1.23
+        },
+        {
+          "id": 33,
+          "value": 0.961
+        },
+        {
+          "id": 34,
+          "value": 0.162
+        },
+        {
+          "id": 35,
+          "value": 0.995
+        }
+      ]
+    },
+    {
+      "name": "Austern",
+      "slug": "huitres",
+      "ecv": 5.328231000000001,
+      "footprint": 5.328231000000001,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 1.98
+        },
+        {
+          "id": 31,
+          "value": 0.000231
+        },
+        {
+          "id": 32,
+          "value": 1.23
+        },
+        {
+          "id": 33,
+          "value": 0.961
+        },
+        {
+          "id": 34,
+          "value": 0.162
+        },
+        {
+          "id": 35,
+          "value": 0.995
+        }
+      ]
+    },
+    {
+      "name": "Kabeljau (roh)",
+      "slug": "cabillaud",
+      "ecv": 12.0864877,
+      "footprint": 12.0864877,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 10.3
+        },
+        {
+          "id": 31,
+          "value": 5.77e-05
+        },
+        {
+          "id": 32,
+          "value": 0.469
+        },
+        {
+          "id": 33,
+          "value": 1.27
+        },
+        {
+          "id": 34,
+          "value": 0.0406
+        },
+        {
+          "id": 35,
+          "value": 0.00683
+        }
+      ]
+    },
+    {
+      "name": "Seelachs oder Seehecht (roh)",
+      "slug": "lieu",
+      "ecv": 12.0864877,
+      "footprint": 12.0864877,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 10.3
+        },
+        {
+          "id": 31,
+          "value": 5.77e-05
+        },
+        {
+          "id": 32,
+          "value": 0.469
+        },
+        {
+          "id": 33,
+          "value": 1.27
+        },
+        {
+          "id": 34,
+          "value": 0.0406
+        },
+        {
+          "id": 35,
+          "value": 0.00683
+        }
+      ]
+    },
+    {
+      "name": "Dorade",
+      "slug": "dorade",
+      "ecv": 11.1914877,
+      "footprint": 11.1914877,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 9.585
+        },
+        {
+          "id": 31,
+          "value": 5.77e-05
+        },
+        {
+          "id": 32,
+          "value": 0.469
+        },
+        {
+          "id": 33,
+          "value": 1.09
+        },
+        {
+          "id": 34,
+          "value": 0.0406
+        },
+        {
+          "id": 35,
+          "value": 0.00683
+        }
+      ]
+    },
+    {
+      "name": "Lachs oder Zuchtforelle (roh)",
+      "slug": "saumon",
+      "ecv": 5.55693,
+      "footprint": 5.55693,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 4.16
+        },
+        {
+          "id": 31,
+          "value": 0.0275
+        },
+        {
+          "id": 32,
+          "value": 0.469
+        },
+        {
+          "id": 33,
+          "value": 0.853
+        },
+        {
+          "id": 34,
+          "value": 0.0406
+        },
+        {
+          "id": 35,
+          "value": 0.00683
+        }
+      ]
+    },
+    {
+      "name": "Thunfisch (roh)",
+      "slug": "thon",
+      "ecv": 4.98343,
+      "footprint": 4.98343,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 3.61
+        },
+        {
+          "id": 32,
+          "value": 0.469
+        },
+        {
+          "id": 33,
+          "value": 0.857
+        },
+        {
+          "id": 34,
+          "value": 0.0406
+        },
+        {
+          "id": 35,
+          "value": 0.00683
+        }
+      ]
+    },
+    {
+      "name": "Sardinen",
+      "slug": "sardines",
+      "ecv": 2.2764877,
+      "footprint": 2.2764877,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 0.776
+        },
+        {
+          "id": 31,
+          "value": 5.77e-05
+        },
+        {
+          "id": 32,
+          "value": 0.469
+        },
+        {
+          "id": 33,
+          "value": 0.984
+        },
+        {
+          "id": 34,
+          "value": 0.0406
+        },
+        {
+          "id": 35,
+          "value": 0.00683
+        }
+      ]
+    },
+    {
+      "name": "Butter",
+      "slug": "beurre",
+      "ecv": 7.91333,
+      "footprint": 7.91333,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 7.285
+        },
+        {
+          "id": 31,
+          "value": 0.050199999999999995
+        },
+        {
+          "id": 32,
+          "value": 0.124
+        },
+        {
+          "id": 33,
+          "value": 0.407
+        },
+        {
+          "id": 34,
+          "value": 0.0403
+        },
+        {
+          "id": 35,
+          "value": 0.00683
+        }
+      ]
+    },
+    {
+      "name": "Hartkäse",
+      "slug": "fromagedure",
+      "ecv": 6.27838,
+      "footprint": 6.27838,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 5.2225
+        },
+        {
+          "id": 31,
+          "value": 0.35625
+        },
+        {
+          "id": 32,
+          "value": 0.40975000000000006
+        },
+        {
+          "id": 33,
+          "value": 0.24625
+        },
+        {
+          "id": 34,
+          "value": 0.0368
+        },
+        {
+          "id": 35,
+          "value": 0.00683
+        }
+      ]
+    },
+    {
+      "name": "Feta (Schaf)",
+      "slug": "feta",
+      "ecv": 6.30563,
+      "footprint": 6.30563,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 5.11
+        },
+        {
+          "id": 31,
+          "value": 0.246
+        },
+        {
+          "id": 32,
+          "value": 0.648
+        },
+        {
+          "id": 33,
+          "value": 0.258
+        },
+        {
+          "id": 34,
+          "value": 0.0368
+        },
+        {
+          "id": 35,
+          "value": 0.00683
+        }
+      ]
+    },
+    {
+      "name": "Weichkäse",
+      "slug": "fromagemolle",
+      "ecv": 5.144405000000001,
+      "footprint": 5.144405000000001,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 4.4375
+        },
+        {
+          "id": 31,
+          "value": 0.2335
+        },
+        {
+          "id": 32,
+          "value": 0.17325000000000002
+        },
+        {
+          "id": 33,
+          "value": 0.2565
+        },
+        {
+          "id": 34,
+          "value": 0.036825
+        },
+        {
+          "id": 35,
+          "value": 0.00683
+        }
+      ]
+    },
+    {
+      "name": "Mozzarella",
+      "slug": "mozarella",
+      "ecv": 4.71463,
+      "footprint": 4.71463,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 3.82
+        },
+        {
+          "id": 31,
+          "value": 0.249
+        },
+        {
+          "id": 32,
+          "value": 0.35
+        },
+        {
+          "id": 33,
+          "value": 0.252
+        },
+        {
+          "id": 34,
+          "value": 0.0368
+        },
+        {
+          "id": 35,
+          "value": 0.00683
+        }
+      ]
+    },
+    {
+      "name": "Blauschimmelkäse",
+      "slug": "fromagebleu",
+      "ecv": 6.164963333333335,
+      "footprint": 6.164963333333335,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 4.943333333333334
+        },
+        {
+          "id": 31,
+          "value": 0.22399999999999998
+        },
+        {
+          "id": 32,
+          "value": 0.69
+        },
+        {
+          "id": 33,
+          "value": 0.264
+        },
+        {
+          "id": 34,
+          "value": 0.0368
+        },
+        {
+          "id": 35,
+          "value": 0.00683
+        }
+      ]
+    },
+    {
+      "name": "Eier",
+      "slug": "oeuf",
+      "ecv": 1.8780103000000001,
+      "footprint": 1.8780103000000001,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 1.49
+        },
+        {
+          "id": 31,
+          "value": 8.03e-05
+        },
+        {
+          "id": 32,
+          "value": 0.109
+        },
+        {
+          "id": 33,
+          "value": 0.189
+        },
+        {
+          "id": 34,
+          "value": 0.00933
+        },
+        {
+          "id": 35,
+          "value": 0.0806
+        }
+      ]
+    },
+    {
+      "name": "Pflanzenfett",
+      "slug": "matieregrasse",
+      "ecv": 2.58463,
+      "footprint": 2.58463,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 1.7
+        },
+        {
+          "id": 31,
+          "value": 0.251
+        },
+        {
+          "id": 32,
+          "value": 0.281
+        },
+        {
+          "id": 33,
+          "value": 0.307
+        },
+        {
+          "id": 34,
+          "value": 0.0388
+        },
+        {
+          "id": 35,
+          "value": 0.00683
+        }
+      ]
+    },
+    {
+      "name": "Naturjoghurt oder griechischer Joghurt",
+      "slug": "yaourt",
+      "ecv": 1.8947299999999998,
+      "footprint": 1.8947299999999998,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 1.03
+        },
+        {
+          "id": 31,
+          "value": 0.152
+        },
+        {
+          "id": 32,
+          "value": 0.422
+        },
+        {
+          "id": 33,
+          "value": 0.247
+        },
+        {
+          "id": 34,
+          "value": 0.0369
+        },
+        {
+          "id": 35,
+          "value": 0.00683
+        }
+      ]
+    },
+    {
+      "name": "0% Frischkäse",
+      "slug": "fromageblanc",
+      "ecv": 1.8096299999999998,
+      "footprint": 1.8096299999999998,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 1.07
+        },
+        {
+          "id": 31,
+          "value": 0.221
+        },
+        {
+          "id": 32,
+          "value": 0.241
+        },
+        {
+          "id": 33,
+          "value": 0.234
+        },
+        {
+          "id": 34,
+          "value": 0.0368
+        },
+        {
+          "id": 35,
+          "value": 0.00683
+        }
+      ]
+    },
+    {
+      "name": "Rice",
+      "slug": "riz",
+      "ecv": 2.01458575,
+      "footprint": 2.01458575,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 1.61
+        },
+        {
+          "id": 31,
+          "value": 0.00013575000000000002
+        },
+        {
+          "id": 32,
+          "value": 0.0381
+        },
+        {
+          "id": 33,
+          "value": 0.346
+        },
+        {
+          "id": 34,
+          "value": 0.02035
+        }
+      ]
+    },
+    {
+      "name": "Nudeln (trocken)",
+      "slug": "pates",
+      "ecv": 1.9795,
+      "footprint": 1.9795,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 0.752
+        },
+        {
+          "id": 31,
+          "value": 0.989
+        },
+        {
+          "id": 32,
+          "value": 0.0556
+        },
+        {
+          "id": 33,
+          "value": 0.156
+        },
+        {
+          "id": 34,
+          "value": 0.0269
+        }
+      ]
+    },
+    {
+      "name": "Weizen",
+      "slug": "ble",
+      "ecv": 1.2262635,
+      "footprint": 1.2262635,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 0.6655
+        },
+        {
+          "id": 31,
+          "value": 0.1510385
+        },
+        {
+          "id": 32,
+          "value": 0.240525
+        },
+        {
+          "id": 33,
+          "value": 0.1515
+        },
+        {
+          "id": 34,
+          "value": 0.0177
+        }
+      ]
+    },
+    {
+      "name": "Bulgur",
+      "slug": "boulgour",
+      "ecv": 0.9499000000000001,
+      "footprint": 0.9499000000000001,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 0.748
+        },
+        {
+          "id": 32,
+          "value": 0.0381
+        },
+        {
+          "id": 33,
+          "value": 0.146
+        },
+        {
+          "id": 34,
+          "value": 0.0178
+        }
+      ]
+    },
+    {
+      "name": "Kichererbsen",
+      "slug": "poischiches",
+      "ecv": 0.8985430000000001,
+      "footprint": 0.8985430000000001,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 0.4
+        },
+        {
+          "id": 31,
+          "value": 0.000643
+        },
+        {
+          "id": 32,
+          "value": 0.129
+        },
+        {
+          "id": 33,
+          "value": 0.302
+        },
+        {
+          "id": 34,
+          "value": 0.0669
+        }
+      ]
+    },
+    {
+      "name": "Rote Bohnen",
+      "slug": "haricotsrouges",
+      "ecv": 0.858543,
+      "footprint": 0.858543,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 0.508
+        },
+        {
+          "id": 31,
+          "value": 0.000643
+        },
+        {
+          "id": 32,
+          "value": 0.129
+        },
+        {
+          "id": 33,
+          "value": 0.154
+        },
+        {
+          "id": 34,
+          "value": 0.0669
+        }
+      ]
+    },
+    {
+      "name": "Linsen (blond, grün, Koralle)",
+      "slug": "lentilles",
+      "ecv": 0.5815429999999999,
+      "footprint": 0.5815429999999999,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 0.141
+        },
+        {
+          "id": 31,
+          "value": 0.000643
+        },
+        {
+          "id": 32,
+          "value": 0.129
+        },
+        {
+          "id": 33,
+          "value": 0.244
+        },
+        {
+          "id": 34,
+          "value": 0.0669
+        }
+      ]
+    },
+    {
+      "name": "Cheeseburger",
+      "slug": "cheeseburger",
+      "ecv": 18.833399999999997,
+      "footprint": 18.833399999999997,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 17.4
+        },
+        {
+          "id": 31,
+          "value": 0.318
+        },
+        {
+          "id": 32,
+          "value": 0.676
+        },
+        {
+          "id": 33,
+          "value": 0.303
+        },
+        {
+          "id": 34,
+          "value": 0.0417
+        },
+        {
+          "id": 35,
+          "value": 0.0947
+        }
+      ]
+    },
+    {
+      "name": "Kebab",
+      "slug": "kebab",
+      "ecv": 12.806530000000002,
+      "footprint": 12.806530000000002,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 11.2
+        },
+        {
+          "id": 31,
+          "value": 0.217
+        },
+        {
+          "id": 32,
+          "value": 0.964
+        },
+        {
+          "id": 33,
+          "value": 0.377
+        },
+        {
+          "id": 34,
+          "value": 0.0417
+        },
+        {
+          "id": 35,
+          "value": 0.00683
+        }
+      ]
+    },
+    {
+      "name": "Hähnchen-Burger",
+      "slug": "burgerpoulet",
+      "ecv": 4.3614,
+      "footprint": 4.3614,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 2.53
+        },
+        {
+          "id": 31,
+          "value": 0.705
+        },
+        {
+          "id": 32,
+          "value": 0.676
+        },
+        {
+          "id": 33,
+          "value": 0.314
+        },
+        {
+          "id": 34,
+          "value": 0.0417
+        },
+        {
+          "id": 35,
+          "value": 0.0947
+        }
+      ]
+    },
+    {
+      "name": "Vier-Käse-Pizza",
+      "slug": "pizza",
+      "ecv": 3.5994,
+      "footprint": 3.5994,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 2.67
+        },
+        {
+          "id": 31,
+          "value": 0.28
+        },
+        {
+          "id": 32,
+          "value": 0.254
+        },
+        {
+          "id": 33,
+          "value": 0.259
+        },
+        {
+          "id": 34,
+          "value": 0.0417
+        },
+        {
+          "id": 35,
+          "value": 0.0947
+        }
+      ]
+    },
+    {
+      "name": "Sushi oder Maki",
+      "slug": "sushis",
+      "ecv": 2.6689999999999996,
+      "footprint": 2.6689999999999996,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 1.65
+        },
+        {
+          "id": 31,
+          "value": 0.0281
+        },
+        {
+          "id": 32,
+          "value": 0.543
+        },
+        {
+          "id": 33,
+          "value": 0.388
+        },
+        {
+          "id": 34,
+          "value": 0.0418
+        },
+        {
+          "id": 35,
+          "value": 0.0181
+        }
+      ]
+    },
+    {
+      "name": "Vegetarischer Burger",
+      "slug": "burgervegetarien",
+      "ecv": 2.7075,
+      "footprint": 2.7075,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 1.23
+        },
+        {
+          "id": 31,
+          "value": 0.394
+        },
+        {
+          "id": 32,
+          "value": 0.676
+        },
+        {
+          "id": 33,
+          "value": 0.271
+        },
+        {
+          "id": 34,
+          "value": 0.0418
+        },
+        {
+          "id": 35,
+          "value": 0.0947
+        }
+      ]
+    },
+    {
+      "name": "Pommes frites (frittiert)",
+      "slug": "frites",
+      "ecv": 1.4569999999999999,
+      "footprint": 1.4569999999999999,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 0.398
+        },
+        {
+          "id": 31,
+          "value": 0.137
+        },
+        {
+          "id": 32,
+          "value": 0.247
+        },
+        {
+          "id": 33,
+          "value": 0.389
+        },
+        {
+          "id": 34,
+          "value": 0.166
+        },
+        {
+          "id": 35,
+          "value": 0.12
+        }
+      ]
+    },
+    {
+      "name": "Naturtofu",
+      "slug": "tofu",
+      "ecv": 1.0042999999999997,
+      "footprint": 1.0042999999999997,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 0.0864
+        },
+        {
+          "id": 31,
+          "value": 0.146
+        },
+        {
+          "id": 32,
+          "value": 0.482
+        },
+        {
+          "id": 33,
+          "value": 0.23
+        },
+        {
+          "id": 34,
+          "value": 0.0418
+        },
+        {
+          "id": 35,
+          "value": 0.0181
+        }
+      ]
+    },
+    {
+      "name": "Schokoladenfelsen",
+      "slug": "boucheechocolat",
+      "ecv": 10.521899999999999,
+      "footprint": 10.521899999999999,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 9.01
+        },
+        {
+          "id": 31,
+          "value": 0.283
+        },
+        {
+          "id": 32,
+          "value": 0.957
+        },
+        {
+          "id": 33,
+          "value": 0.251
+        },
+        {
+          "id": 34,
+          "value": 0.0209
+        }
+      ]
+    },
+    {
+      "name": "Haselnussaufstrich",
+      "slug": "pateatartiner",
+      "ecv": 9.1169,
+      "footprint": 9.1169,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 8.05
+        },
+        {
+          "id": 31,
+          "value": 0.261
+        },
+        {
+          "id": 32,
+          "value": 0.49
+        },
+        {
+          "id": 33,
+          "value": 0.295
+        },
+        {
+          "id": 34,
+          "value": 0.0209
+        }
+      ]
+    },
+    {
+      "name": "Schokoladenbrownie",
+      "slug": "brownie",
+      "ecv": 8.3569,
+      "footprint": 8.3569,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 6.67
+        },
+        {
+          "id": 31,
+          "value": 0.247
+        },
+        {
+          "id": 32,
+          "value": 1.16
+        },
+        {
+          "id": 33,
+          "value": 0.253
+        },
+        {
+          "id": 34,
+          "value": 0.0269
+        }
+      ]
+    },
+    {
+      "name": "Schokobrot",
+      "slug": "painauchocolat",
+      "ecv": 5.7291,
+      "footprint": 5.7291,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 4.75
+        },
+        {
+          "id": 31,
+          "value": 0.212
+        },
+        {
+          "id": 32,
+          "value": 0.536
+        },
+        {
+          "id": 33,
+          "value": 0.219
+        },
+        {
+          "id": 34,
+          "value": 0.0121
+        }
+      ]
+    },
+    {
+      "name": "Schoko-Keks",
+      "slug": "cookie",
+      "ecv": 6.272900000000001,
+      "footprint": 6.272900000000001,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 4.84
+        },
+        {
+          "id": 31,
+          "value": 0.296
+        },
+        {
+          "id": 32,
+          "value": 0.88
+        },
+        {
+          "id": 33,
+          "value": 0.23
+        },
+        {
+          "id": 34,
+          "value": 0.0269
+        }
+      ]
+    },
+    {
+      "name": "Madeleine",
+      "slug": "madeleine",
+      "ecv": 2.2434,
+      "footprint": 2.2434,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 1.72
+        },
+        {
+          "id": 31,
+          "value": 0.2025
+        },
+        {
+          "id": 32,
+          "value": 0.113
+        },
+        {
+          "id": 33,
+          "value": 0.181
+        },
+        {
+          "id": 34,
+          "value": 0.0269
+        }
+      ]
+    },
+    {
+      "name": "Rosinenbrot",
+      "slug": "painauxraisins",
+      "ecv": 2.5641,
+      "footprint": 2.5641,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 2.05
+        },
+        {
+          "id": 31,
+          "value": 0.181
+        },
+        {
+          "id": 32,
+          "value": 0.135
+        },
+        {
+          "id": 33,
+          "value": 0.186
+        },
+        {
+          "id": 34,
+          "value": 0.0121
+        }
+      ]
+    },
+    {
+      "name": "Apfeltasche",
+      "slug": "chaussonauxpommes",
+      "ecv": 2.0441000000000003,
+      "footprint": 2.0441000000000003,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 1.53
+        },
+        {
+          "id": 31,
+          "value": 0.181
+        },
+        {
+          "id": 32,
+          "value": 0.135
+        },
+        {
+          "id": 33,
+          "value": 0.186
+        },
+        {
+          "id": 34,
+          "value": 0.0121
+        }
+      ]
+    },
+    {
+      "name": "Buttercroissant",
+      "slug": "croissant",
+      "ecv": 2.9431000000000003,
+      "footprint": 2.9431000000000003,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 2.02
+        },
+        {
+          "id": 31,
+          "value": 0.182
+        },
+        {
+          "id": 32,
+          "value": 0.536
+        },
+        {
+          "id": 33,
+          "value": 0.193
+        },
+        {
+          "id": 34,
+          "value": 0.0121
+        }
+      ]
+    },
+    {
+      "name": "Toastbrot",
+      "slug": "paindemie",
+      "ecv": 1.5591000000000002,
+      "footprint": 1.5591000000000002,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 1.09
+        },
+        {
+          "id": 31,
+          "value": 0.184
+        },
+        {
+          "id": 32,
+          "value": 0.11
+        },
+        {
+          "id": 33,
+          "value": 0.163
+        },
+        {
+          "id": 34,
+          "value": 0.0121
+        }
+      ]
+    },
+    {
+      "name": "Gummibärchen",
+      "slug": "bonbons",
+      "ecv": 1.4869,
+      "footprint": 1.4869,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 0.721
+        },
+        {
+          "id": 31,
+          "value": 0.303
+        },
+        {
+          "id": 32,
+          "value": 0.231
+        },
+        {
+          "id": 33,
+          "value": 0.211
+        },
+        {
+          "id": 34,
+          "value": 0.0209
+        }
+      ]
+    },
+    {
+      "name": "Traditionelles Baguette",
+      "slug": "baguette",
+      "ecv": 0.7767000000000001,
+      "footprint": 0.7767000000000001,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 0.387
+        },
+        {
+          "id": 31,
+          "value": 0.181
+        },
+        {
+          "id": 32,
+          "value": 0.0486
+        },
+        {
+          "id": 33,
+          "value": 0.148
+        },
+        {
+          "id": 34,
+          "value": 0.0121
+        }
+      ]
+    },
+    {
+      "name": "Neue Kartoffel",
+      "slug": "pommedeterre",
+      "ecv": 0.7062605000000001,
+      "footprint": 0.7062605000000001,
+      "footprintDetail": [
+        {
+          "id": 30,
+          "value": 0.102
+        },
+        {
+          "id": 31,
+          "value": 6.05e-05
+        },
+        {
+          "id": 32,
+          "value": 0.412
+        },
+        {
+          "id": 33,
+          "value": 0.175
+        },
+        {
+          "id": 34,
+          "value": 0.0172
+        }
+      ]
+    },
+    {
+      "name": "Mahlzeit mit Rindfleisch",
+      "slug": "repasavecduboeuf",
+      "ecv": 7.26,
+      "footprint": 7.26
+    },
+    {
+      "name": "Vegetarisches Essen",
+      "slug": "repasvegetarien",
+      "ecv": 0.51,
+      "footprint": 0.51
+    },
+    {
+      "name": "Veganes Essen",
+      "slug": "repasvegetalien",
+      "ecv": 0.39,
+      "footprint": 0.39
+    },
+    {
+      "name": "Mahlzeit mit Weißfisch",
+      "slug": "repasavecdupoissonblanc",
+      "ecv": 1.98,
+      "footprint": 1.98
+    },
+    {
+      "name": "Mahlzeit mit fettem Fisch",
+      "slug": "repasavecdupoissongras",
+      "ecv": 1.11,
+      "footprint": 1.11
+    },
+    {
+      "name": "Mahlzeit mit Hähnchen",
+      "slug": "repasavecdupoulet",
+      "ecv": 1.58,
+      "footprint": 1.58
+    }
+  ]
+}

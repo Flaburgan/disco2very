@@ -31,13 +31,23 @@ import esHabillement from "../data/ademe/es/5-habillement.json";
 import esElectromenager from "../data/ademe/es/6-electromenager.json";
 import esMobilier from "../data/ademe/es/7-mobilier.json";
 import esChauffage from "../data/ademe/es/8-chauffage.json";
+import deNumerique from "../data/ademe/de/1-numerique.json";
+import dePracticalCases from "../data/ademe/de/13-caspratiques.json";
+import deAlimentation from "../data/ademe/de/2-alimentation.json";
+import deBoisson from "../data/ademe/de/3-boisson.json";
+import deTransport from "../data/ademe/de/4-transport.json";
+import deHabillement from "../data/ademe/de/5-habillement.json";
+import deElectromenager from "../data/ademe/de/6-electromenager.json";
+import deMobilier from "../data/ademe/de/7-mobilier.json";
+import deChauffage from "../data/ademe/de/8-chauffage.json";
+import deVegetablesAndFruits from "../data/ademe/de/9-fruitsetlegumes.json";
 import esVegetablesAndFruits from "../data/ademe/es/9-fruitsetlegumes.json";
 import { AdemeCategory, AdemeECV, FootprintDetails } from "../types/AdemeECV";
 import { Locale } from "../types/i18n";
 import { Item } from "../types/item";
 
 
-const allItemsByLocale: {[locale in Locale]: Item[]} = {"en": [], "fr": [], "es": []};
+const allItemsByLocale: { [locale in Locale]: Item[] } = { en: [], fr: [], es: [], de: [] };
 
 allItemsByLocale.en.push(...computeItemsForCategory(1, enNumerique.data));
 allItemsByLocale.en.push(...computeItemsForCategory(2, enAlimentation.data));
@@ -71,6 +81,17 @@ allItemsByLocale.es.push(...computeItemsForCategory(7, esMobilier.data));
 allItemsByLocale.es.push(...computeItemsForCategory(8, esChauffage.data));
 allItemsByLocale.es.push(...computeItemsForCategory(9, esVegetablesAndFruits.data));
 allItemsByLocale.es.push(...computeItemsForCategory(13, esPracticalCases.data));
+
+allItemsByLocale.de.push(...computeItemsForCategory(1, deNumerique.data));
+allItemsByLocale.de.push(...computeItemsForCategory(2, deAlimentation.data));
+allItemsByLocale.de.push(...computeItemsForCategory(3, deBoisson.data));
+allItemsByLocale.de.push(...computeItemsForCategory(4, deTransport.data));
+allItemsByLocale.de.push(...computeItemsForCategory(5, deHabillement.data));
+allItemsByLocale.de.push(...computeItemsForCategory(6, deElectromenager.data));
+allItemsByLocale.de.push(...computeItemsForCategory(7, deMobilier.data));
+allItemsByLocale.de.push(...computeItemsForCategory(8, deChauffage.data));
+allItemsByLocale.de.push(...computeItemsForCategory(9, deVegetablesAndFruits.data));
+allItemsByLocale.de.push(...computeItemsForCategory(13, dePracticalCases.data));
 
 export function getDefaultItems(locale: Locale): Item[] {
   const slugs = [

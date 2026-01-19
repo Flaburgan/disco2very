@@ -5,7 +5,8 @@
       "name": {
         "en": "Digital Devices",
         "fr": "Numérique",
-        "es": "Digital"
+        "es": "Digital",
+        "de": "Digitale Geräte"
       },
       "slug": "numerique"
     },
@@ -14,7 +15,8 @@
       "name": {
         "en": "Food",
         "fr": "Alimentation",
-        "es": "Alimentación"
+        "es": "Alimentación",
+        "de": "Lebensmittel"
       },
       "slug": "alimentation"
     },
@@ -23,7 +25,8 @@
       "name": {
         "en": "Beverages",
         "fr": "Boisson",
-        "es": "Beba"
+        "es": "Beba",
+        "de": "Getränke"
       },
       "slug": "boisson"
     },
@@ -32,7 +35,8 @@
       "name": {
         "en": "Transport",
         "fr": "Transport",
-        "es": "Transporte"
+        "es": "Transporte",
+        "de": "Transport"
       },
       "slug": "transport"
     },
@@ -41,7 +45,8 @@
       "name": {
         "en": "Clothing",
         "fr": "Habillement",
-        "es": "Ropa"
+        "es": "Ropa",
+        "de": "Kleidung"
       },
       "slug": "habillement"
     },
@@ -50,7 +55,8 @@
       "name": {
         "en": "Home Appliance",
         "fr": "Électroménager",
-        "es": "Electrodomésticos"
+        "es": "Electrodomésticos",
+        "de": "Haushaltsgeräte"
       },
       "slug": "electromenager"
     },
@@ -59,7 +65,8 @@
       "name": {
         "en": "Furniture",
         "fr": "Mobilier",
-        "es": "Muebles"
+        "es": "Muebles",
+        "de": "Möbel"
       },
       "slug": "mobilier"
     },
@@ -68,7 +75,8 @@
       "name": {
         "en": "Heating",
         "fr": "Chauffage",
-        "es": "Calefacción"
+        "es": "Calefacción",
+        "de": "Heizung"
       },
       "slug": "chauffage"
     },
@@ -77,7 +85,8 @@
       "name": {
         "en": "Fruits and Vegetables",
         "fr": "Fruits et légumes",
-        "es": "Frutas y hortalizas"
+        "es": "Frutas y hortalizas",
+        "de": "Obst und Gemüse"
       },
       "slug": "fruitsetlegumes"
     },
@@ -86,7 +95,8 @@
       "name": {
         "en": "Digital Use",
         "fr": "Usage numérique",
-        "es": "Usos digitales"
+        "es": "Usos digitales",
+        "de": "Digitale Nutzung"
       },
       "slug": "usagenumerique"
     },
@@ -95,7 +105,8 @@
       "name": {
         "en": "Practical cases",
         "fr": "Cas pratique",
-        "es": "Casos práctico"
+        "es": "Casos práctico",
+        "de": "Praktische Fälle"
       },
       "slug": "caspratiques"
     }

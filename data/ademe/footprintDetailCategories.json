@@ -2,166 +2,199 @@
   "1": {
     "en": "Raw materials",
     "fr": "Matières premières",
-    "es": "Materias primas"
+    "es": "Materias primas",
+    "de": "Rohmaterialien"
   },
   "2": {
     "en": "Supplying",
     "fr": "Approvisionnement",
-    "es": "Abastecimiento"
+    "es": "Abastecimiento",
+    "de": "Versorgung"
   },
   "3": {
     "en": "Formatting",
     "fr": "Mise en forme",
-    "es": "Formado"
+    "es": "Formado",
+    "de": "Formatierung"
   },
   "4": {
     "en": "Assembly and delivery",
     "fr": "Assemblage et distribution",
-    "es": "Ensamblaje y distribución"
+    "es": "Ensamblaje y distribución",
+    "de": "Montage und Lieferung"
   },
   "5": {
     "en": "Building",
     "fr": "Construction",
-    "es": "Construcción"
+    "es": "Construcción",
+    "de": "Konstruktion"
   },
   "6": {
     "en": "Fuel",
     "fr": "Carburant",
-    "es": "Combustible"
+    "es": "Combustible",
+    "de": "Kraftstoff"
   },
   "7": {
     "en": "Condensation trails",
     "fr": "Trainées de condensation",
-    "es": "Estelas de condensación"
+    "es": "Estelas de condensación",
+    "de": "Kondensstreifen"
   },
   "8": {
     "en": "Usage",
     "fr": "Usage",
-    "es": "Uso"
+    "es": "Uso",
+    "de": "Nutzung"
   },
   "9": {
     "en": "Fin de vie",
     "fr": "End of life",
-    "es": "Fin de vida"
+    "es": "Fin de vida",
+    "de": "Lebensende"
   },
   "13": {
     "en": "Devices building",
     "fr": "Construction des appareils",
-    "es": "Construcción de terminales"
+    "es": "Construcción de terminales",
+    "de": "Gerätekonstruktion"
   },
   "14": {
     "en": "Devices usage",
     "fr": "Usage des appareils",
-    "es": "Uso de terminales"
+    "es": "Uso de terminales",
+    "de": "Gerätenutzung"
   },
   "15": {
     "en": "Transmission",
     "fr": "Transmission",
-    "es": "Transmisión"
+    "es": "Transmisión",
+    "de": "Übertragung"
   },
   "16": {
     "en": "Data-centers construction",
     "fr": "Construction des data-centers",
-    "es": "Construcción de centros de datos"
+    "es": "Construcción de centros de datos",
+    "de": "Rechenzentrum-Konstruktion"
   },
   "17": {
     "en": "Data-centers usage",
     "fr": "Utilisation des data-centers",
-    "es": "Uso de centros de datos"
+    "es": "Uso de centros de datos",
+    "de": "Rechenzentrum-Nutzung"
   },
   "18": {
     "en": "Network construction",
     "fr": "Construction des réseaux",
-    "es": "Construcción de redes"
+    "es": "Construcción de redes",
+    "de": "Netzwerkkonstruktion"
   },
   "30": {
     "en": "Agriculture",
     "fr": "Agriculture",
-    "es": "Agricultura"
+    "es": "Agricultura",
+    "de": "Landwirtschaft"
   },
   "31": {
     "en": "Processing",
     "fr": "Transformation",
-    "es": "Transformación"
+    "es": "Transformación",
+    "de": "Verarbeitung"
   },
   "32": {
     "en": "Packaging",
     "fr": "Emballage",
-    "es": "Embalaje"
+    "es": "Embalaje",
+    "de": "Verpackung"
   },
   "33": {
     "en": "Transport",
     "fr": "Transport",
-    "es": "Transporte"
+    "es": "Transporte",
+    "de": "Transport"
   },
   "34": {
     "en": "Supermarket and distribution",
     "fr": "Supermarché et distribution",
-    "es": "Supermercado y distribución"
+    "es": "Supermercado y distribución",
+    "de": "Supermarkt und Vertrieb"
   },
   "35": {
     "en": "Consumption",
     "fr": "Consommation",
-    "es": "Consumo"
+    "es": "Consumo",
+    "de": "Verbrauch"
   },
   "40": {
     "en": "Terminal construction",
     "fr": "Construction des terminaux",
-    "es": "Construcción de terminales"
+    "es": "Construcción de terminales",
+    "de": "Terminal-Konstruktion"
   },
   "41": {
     "en": "Terminal usage",
     "fr": "Usage des terminaux",
-    "es": "Uso de terminales"
+    "es": "Uso de terminales",
+    "de": "Terminal-Nutzung"
   },
   "42": {
     "en": "Transmission",
     "fr": "Transmission",
-    "es": "Transmisión"
+    "es": "Transmisión",
+    "de": "Übertragung"
   },
   "43": {
     "en": "Data-centers",
     "fr": "Data-centers",
-    "es": "Centros de datos"
+    "es": "Centros de datos",
+    "de": "Rechenzentren"
   },
   "50": {
     "en": "Energy consumption",
     "fr": "Consommation d'énergie",
-    "es": "Consumo de energía"
+    "es": "Consumo de energía",
+    "de": "Energieverbrauch"
   },
   "51": {
     "en": "Maintenance service",
     "fr": "Service d'entretien",
-    "es": "Servicios de mantenimiento"
+    "es": "Servicios de mantenimiento",
+    "de": "Wartungsdienst"
   },
   "52": {
     "en": "Staff commuting",
     "fr": "Déplacement du personnel",
-    "es": "Desplazamiento del personal"
+    "es": "Desplazamiento del personal",
+    "de": "Personalpendeln"
   },
   "53": {
     "en": "Infrastructure construction",
     "fr": "Construction des infrastructures",
-    "es": "Construcción de infraestructuras"
+    "es": "Construcción de infraestructuras",
+    "de": "Infrastrukturkonstruktion"
   },
   "54": {
     "en": "Order & Preparation",
     "fr": "Commande & Préparation",
-    "es": "Pedido y Preparación"
+    "es": "Pedido y Preparación",
+    "de": "Bestellung & Vorbereitung"
   },
   "55": {
     "en": "Storage & Transit",
     "fr": "Stockage & Transit",
-    "es": "Almacenamiento y Tránsito"
+    "es": "Almacenamiento y Tránsito",
+    "de": "Lagerung & Transit"
   },
   "56": {
     "en": "My trip to 7km round trip",
     "fr": "Mon déplacement à 7km A/R",
-    "es": "Mi desplazamiento a 7km ida y vuelta"
+    "es": "Mi desplazamiento a 7km ida y vuelta",
+    "de": "Meine Fahrt 7km hin und zurück"
   },
   "57": {
     "en": "My trip to 30km round trip",
     "fr": "Mon déplacement à 30km A/R",
-    "es": "Mi desplazamiento a 30km ida y vuelta"
+    "es": "Mi desplazamiento a 30km ida y vuelta",
+    "de": "Meine Fahrt 30km hin und zurück"
   }
 }

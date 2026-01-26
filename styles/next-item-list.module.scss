@@ -8,5 +8,7 @@
   .wrapper {
     position: relative;
     padding: $card-margin;
+    width: $card-width + $card-margin * 2;
+    height: $card-height + $card-margin * 2;
   }
 }

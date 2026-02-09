@@ -3,8 +3,13 @@ import Board from "./board";
 import Instructions from "./instructions";
 import { Item } from "../types/item";
 import createState from "../lib/create-state";
+import { recordNewGame } from "../lib/server";
 
 export default function Game() {
+  if (!localStorage.getItem("app-id") && self.crypto.randomUUID) {
+    localStorage.setItem("app-id", self.crypto.randomUUID());
+  }
+
   const [selectedItems, setSelectedItems] = useState<Item[]>([]);
   const [categoriesMode, setCategoriesMode] = useState(false);
 
@@ -22,9 +27,14 @@ export default function Game() {
     setCategoriesMode(categoriesMode);
   };
 
+  const startGame = (selectedItems: Item[]) => {
+    setSelectedItems(selectedItems);
+    recordNewGame(categoriesMode);
+  }
+
   return (selectedItems.length > 0 ?
     <Board highscore={highscore} initialState={createState(selectedItems)} updateHighscore={updateHighscore} restart={restart} />
     :
-    <Instructions highscore={highscore} setSelectedItems={setSelectedItems} categoriesMode={categoriesMode} setCategoriesMode={setCategoriesMode} />
+    <Instructions highscore={highscore} setSelectedItems={startGame} categoriesMode={categoriesMode} setCategoriesMode={setCategoriesMode} />
   );
 }

@@ -2,6 +2,7 @@ import { t } from "@lingui/core/macro";
 import { Trans } from "@lingui/react/macro";
 import React, { FormEvent, useState } from "react";
 import { useLingui } from "@lingui/react";
+import { SERVER_URL } from "../lib/server";
 
 export default function EmailRegistration() {
   const [messageText, setMessageText] = useState<string>("");
@@ -40,7 +41,7 @@ export default function EmailRegistration() {
 
   return (
     <div>
-      <form method="post" action="https://www.disco2very.org/server/" id="register-email" onSubmit={onSubmit}>
+      <form method="post" action={SERVER_URL + "newsletter.php"} id="register-email" onSubmit={onSubmit}>
         <input type="email" name="email" placeholder={t`myemail@myprovider.org`} autoComplete="email" required />
         <input type="hidden" name="language" value={i18n.locale} />
         <input type="submit" className="button" value={t`Register`} />

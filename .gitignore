@@ -38,4 +38,4 @@ yarn-error.log*
 /locales/**/*.ts
 
 #server
-/server
+/server/db.ini

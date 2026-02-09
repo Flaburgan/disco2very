@@ -9,7 +9,7 @@
             "desktop":  "disco2very.desktop"
         }
     },
-    "version": "0.5.0",
+    "version": "0.6.0",
     "maintainer": "Fla <fla@framasoft.org>",
     "framework" : "@CLICK_FRAMEWORK@"
 }

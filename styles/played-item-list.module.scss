@@ -37,3 +37,15 @@
   align-items: center;
   gap: 1rem;
 }
+
+// Gap opened in the timeline where the dragged card would be inserted.
+.gapBefore {
+  margin-left: calc(#{$card-width} + 1rem);
+}
+
+// Only animate the gap while a card is dragged: when the drag ends the gap is
+// replaced by the dropped card itself and must collapse instantly, so that
+// the badly-placed animation measures the final positions of the cards.
+.items.dragging > * {
+  transition: margin-left 0.2s ease;
+}

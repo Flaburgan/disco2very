@@ -1,34 +1,28 @@
 import React from "react";
-import { Droppable } from "react-beautiful-dnd";
 import { Item } from "../types/item";
 import DraggableItemCard from "./draggable-item-card";
 import styles from "../styles/next-item-list.module.scss";
 
 interface NextItemListProps {
   next: Item | null;
+  onCardPointerDown: (event: React.PointerEvent<HTMLDivElement>) => void;
 }
 
 export default function NextItemList(props: NextItemListProps) {
-  const { next } = props;
+  const { next, onCardPointerDown } = props;
 
   return (
     <div className={styles.container}>
-      <Droppable droppableId="next" direction="horizontal">
-        {(provided) => (
-          <div className={styles.wrapper + " bordered-area"}>
-            <div
-              ref={provided.innerRef}
-              {...provided.droppableProps}
-              className={styles.list}
-            >
-              {next && (
-                <DraggableItemCard draggable index={0} item={next} key={next.id} />
-              )}
-              {provided.placeholder}
-            </div>
-          </div>
+      <div className={styles.wrapper + " bordered-area"}>
+        {next && (
+          <DraggableItemCard
+            draggable
+            item={next}
+            key={next.id}
+            onPointerDown={onCardPointerDown}
+          />
         )}
-      </Droppable>
+      </div>
     </div>
   );
 }

@@ -25,6 +25,35 @@ jobs:
         path: ./out
         retention-days: 7
 
+  test-e2e:
+    name: End-to-end tests
+    runs-on: ubuntu-latest
+    needs: build-webapp
+    steps:
+    - uses: actions/checkout@v4
+    - name: Use Node.js
+      uses: actions/setup-node@v4
+      with:
+        # Playwright requires Node.js 20+
+        node-version: '20.x'
+        cache: 'npm'
+    - run: npm ci
+    - name: Download the web app built by the previous job
+      uses: actions/download-artifact@v4
+      with:
+        name: disco2very-web-app
+        path: ./out
+    - name: Install the Playwright browser
+      run: npx playwright install --with-deps chromium
+    - run: npx playwright test
+    - name: Upload the test report as Artifact
+      if: failure()
+      uses: actions/upload-artifact@v4
+      with:
+        name: playwright-report
+        path: playwright-report
+        retention-days: 7
+
   build-click:
     name: Build Click Package
     runs-on: ubuntu-latest

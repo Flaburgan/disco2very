@@ -9,6 +9,7 @@
     "lint": "eslint --max-warnings=0 --cache '**/*.{ts,tsx,css,scss,json,yml}'",
     "lint-fix": "eslint --fix --cache '**/*.{ts,tsx,css,scss,json,yml}'",
     "start": "next start",
+    "test-e2e": "playwright test",
     "update-ademe": "node scripts/update-ademe-data.mjs",
     "i18n-extract": "lingui extract",
     "i18n-compile": "lingui compile --typescript"
@@ -25,6 +26,7 @@
     "@eslint/js": "^9.15.0",
     "@lingui/babel-plugin-lingui-macro": "^5.8.0",
     "@lingui/cli": "^5.8.0",
+    "@playwright/test": "^1.61.1",
     "@types/react": "^18.3.31",
     "@types/react-dom": "^18.3.7",
     "@typescript-eslint/eslint-plugin": "^8.16.0",
@@ -32,6 +34,7 @@
     "babel-plugin-macros": "^3.1.0",
     "eslint": "^9.15.0",
     "eslint-plugin-lingui": "^0.10.1",
+    "http-server": "^14.1.1",
     "prettier": "^2.5.1",
     "sass": "^1.32.10",
     "typescript": "^5.7.2",

@@ -46,105 +46,120 @@ import { AdemeCategory, AdemeECV, FootprintDetails } from "../types/AdemeECV";
 import { Locale } from "../types/i18n";
 import { Item } from "../types/item";
 
+// The raw ADEME files, one per locale and category id.
+// Imports have to stay literal so the bundler can resolve them.
+const rawDataByLocale: { [L in Locale]: { [categoryId: number]: { data: AdemeECV[] } } } = {
+  en: {
+    1: enNumerique,
+    2: enAlimentation,
+    3: enBoisson,
+    4: enTransport,
+    5: enHabillement,
+    6: enElectromenager,
+    7: enMobilier,
+    8: enChauffage,
+    9: enVegetablesAndFruits,
+    13: enPracticalCases,
+  },
+  fr: {
+    1: frNumerique,
+    2: frAlimentation,
+    3: frBoisson,
+    4: frTransport,
+    5: frHabillement,
+    6: frElectromenager,
+    7: frMobilier,
+    8: frChauffage,
+    9: frVegetablesAndFruits,
+    13: frPracticalCases,
+  },
+  es: {
+    1: esNumerique,
+    2: esAlimentation,
+    3: esBoisson,
+    4: esTransport,
+    5: esHabillement,
+    6: esElectromenager,
+    7: esMobilier,
+    8: esChauffage,
+    9: esVegetablesAndFruits,
+    13: esPracticalCases,
+  },
+  de: {
+    1: deNumerique,
+    2: deAlimentation,
+    3: deBoisson,
+    4: deTransport,
+    5: deHabillement,
+    6: deElectromenager,
+    7: deMobilier,
+    8: deChauffage,
+    9: deVegetablesAndFruits,
+    13: dePracticalCases,
+  },
+};
 
-const allItemsByLocale: { [locale in Locale]: Item[] } = { en: [], fr: [], es: [], de: [] };
+const allItemsByLocale = {} as { [L in Locale]: Item[] };
+const itemsBySlugByLocale = {} as { [L in Locale]: Map<string, Item> };
 
-allItemsByLocale.en.push(...computeItemsForCategory(1, enNumerique.data));
-allItemsByLocale.en.push(...computeItemsForCategory(2, enAlimentation.data));
-allItemsByLocale.en.push(...computeItemsForCategory(3, enBoisson.data));
-allItemsByLocale.en.push(...computeItemsForCategory(4, enTransport.data));
-allItemsByLocale.en.push(...computeItemsForCategory(5, enHabillement.data));
-allItemsByLocale.en.push(...computeItemsForCategory(6, enElectromenager.data));
-allItemsByLocale.en.push(...computeItemsForCategory(7, enMobilier.data));
-allItemsByLocale.en.push(...computeItemsForCategory(8, enChauffage.data));
-allItemsByLocale.en.push(...computeItemsForCategory(9, enVegetablesAndFruits.data));
-allItemsByLocale.en.push(...computeItemsForCategory(13, enPracticalCases.data));
+for (const locale of Object.keys(rawDataByLocale) as Locale[]) {
+  const items: Item[] = [];
+  for (const [categoryId, file] of Object.entries(rawDataByLocale[locale])) {
+    items.push(...computeItemsForCategory(Number(categoryId), file.data));
+  }
+  allItemsByLocale[locale] = items;
 
-allItemsByLocale.fr.push(...computeItemsForCategory(1, frNumerique.data));
-allItemsByLocale.fr.push(...computeItemsForCategory(2, frAlimentation.data));
-allItemsByLocale.fr.push(...computeItemsForCategory(3, frBoisson.data));
-allItemsByLocale.fr.push(...computeItemsForCategory(4, frTransport.data));
-allItemsByLocale.fr.push(...computeItemsForCategory(5, frHabillement.data));
-allItemsByLocale.fr.push(...computeItemsForCategory(6, frElectromenager.data));
-allItemsByLocale.fr.push(...computeItemsForCategory(7, frMobilier.data));
-allItemsByLocale.fr.push(...computeItemsForCategory(8, frChauffage.data));
-allItemsByLocale.fr.push(...computeItemsForCategory(9, frVegetablesAndFruits.data));
-allItemsByLocale.fr.push(...computeItemsForCategory(13, frPracticalCases.data));
+  // Index by slug for direct lookups. Keep the first occurrence, like the
+  // previous linear scan did.
+  const itemsBySlug = new Map<string, Item>();
+  for (const item of items) {
+    if (!itemsBySlug.has(item.source.slug)) {
+      itemsBySlug.set(item.source.slug, item);
+    }
+  }
+  itemsBySlugByLocale[locale] = itemsBySlug;
+}
 
-allItemsByLocale.es.push(...computeItemsForCategory(1, esNumerique.data));
-allItemsByLocale.es.push(...computeItemsForCategory(2, esAlimentation.data));
-allItemsByLocale.es.push(...computeItemsForCategory(3, esBoisson.data));
-allItemsByLocale.es.push(...computeItemsForCategory(4, esTransport.data));
-allItemsByLocale.es.push(...computeItemsForCategory(5, esHabillement.data));
-allItemsByLocale.es.push(...computeItemsForCategory(6, esElectromenager.data));
-allItemsByLocale.es.push(...computeItemsForCategory(7, esMobilier.data));
-allItemsByLocale.es.push(...computeItemsForCategory(8, esChauffage.data));
-allItemsByLocale.es.push(...computeItemsForCategory(9, esVegetablesAndFruits.data));
-allItemsByLocale.es.push(...computeItemsForCategory(13, esPracticalCases.data));
+const categories: Map<number, AdemeCategory> = new Map();
+ademeCategories.data.forEach(category => categories.set(category.id, category));
 
-allItemsByLocale.de.push(...computeItemsForCategory(1, deNumerique.data));
-allItemsByLocale.de.push(...computeItemsForCategory(2, deAlimentation.data));
-allItemsByLocale.de.push(...computeItemsForCategory(3, deBoisson.data));
-allItemsByLocale.de.push(...computeItemsForCategory(4, deTransport.data));
-allItemsByLocale.de.push(...computeItemsForCategory(5, deHabillement.data));
-allItemsByLocale.de.push(...computeItemsForCategory(6, deElectromenager.data));
-allItemsByLocale.de.push(...computeItemsForCategory(7, deMobilier.data));
-allItemsByLocale.de.push(...computeItemsForCategory(8, deChauffage.data));
-allItemsByLocale.de.push(...computeItemsForCategory(9, deVegetablesAndFruits.data));
-allItemsByLocale.de.push(...computeItemsForCategory(13, dePracticalCases.data));
+const defaultItemSlugs = new Set([
+  "smartphone",
+  "television",
+  "ordinateurportable",
+  "repasavecduboeuf",
+  "repasvegetarien",
+  "repasavecdupoulet",
+  "eauenbouteille",
+  "vin",
+  "laitdevache",
+  "jeans",
+  "tshirtencoton",
+  "pullenlaine",
+  "fourelectrique",
+  "lavelinge",
+  "refrigirateur",
+  "chaiseenbois",
+  "lit",
+  "chauffagegaz",
+  "chauffagefioul",
+  "chauffageelectrique",
+  "pompeachaleur",
+  "avion-moyencourrier",
+  "tgv",
+  "voiturethermique",
+  "voitureelectrique"
+]);
 
 export function getDefaultItems(locale: Locale): Item[] {
-  const slugs = [
-    "smartphone",
-    "television",
-    "ordinateurportable",
-    "repasavecduboeuf",
-    "repasvegetarien",
-    "repasavecdupoulet",
-    "eauenbouteille",
-    "vin",
-    "laitdevache",
-    "jeans",
-    "tshirtencoton",
-    "pullenlaine",
-    "fourelectrique",
-    "lavelinge",
-    "refrigirateur",
-    "chaiseenbois",
-    "lit",
-    "chauffagegaz",
-    "chauffagefioul",
-    "chauffageelectrique",
-    "pompeachaleur",
-    "avion-moyencourrier",
-    "tgv",
-    "voiturethermique",
-    "voitureelectrique"
-  ];
-
-  const selectedItems: Item[] = [];
-  const allItems = allItemsByLocale[locale];
-  allItems.forEach(item => {
-    if (slugs.includes(item.source.slug)) {
-      selectedItems.push(item);
-    }
-  });
-  return selectedItems;
+  return allItemsByLocale[locale].filter(item => defaultItemSlugs.has(item.source.slug));
 }
 
 export function getItemFromSlug(slug: string, locale: Locale): Item | undefined {
-  const allItems = allItemsByLocale[locale];
-  for (let i = 0; i < allItems.length; i++) {
-    if (allItems[i].source.slug === slug) {
-      return allItems[i];
-    }
-  }
-  return undefined;
+  return itemsBySlugByLocale[locale].get(slug);
 }
 
 export function getCategories(): Map<number, AdemeCategory> {
-  const categories: Map<number, AdemeCategory> = new Map();
-  ademeCategories.data.forEach(category => categories.set(category.id, category));
   return categories;
 }
 
@@ -159,45 +174,79 @@ export function getItemsFromCategoryId(categoryId: number, locale: Locale): Item
 // We have to make some computation on the data to make it better for users
 // Functions below are only doing that
 
-type ComputeItemFunc = (element: AdemeECV) => { label: string, description: string, explanation: string };
+type ComputeItemFunc = (element: AdemeECV, coeff: number) => { label: string, description: string, explanation: string };
+
+const transportCoeff: { [key: string]: number } = {
+  "avion-courtcourrier": 800,
+  "avion-moyencourrier": 2000,
+  "avion-longcourrier": 6000,
+  "tgv": 700,
+  "intercites": 400,
+  "voiturethermique": 100,
+  "voitureelectrique": 100,
+  "autocar": 400,
+  "velo": 5,
+  "veloelectrique": 5,
+  "busthermique": 5,
+  "tramway": 5,
+  "metro": 5,
+  "scooter": 5,
+  "moto": 100,
+  "rer": 20,
+  "ter": 100,
+  "buselectrique": 5,
+  "trottinette": 5,
+  "busgnv": 5,
+  "marche": 2
+}
 
 function computeItemsForCategory(categoryId: number, data: AdemeECV[]): Item[] {
   const computeItemFunc: ComputeItemFunc = getComputeFunction(categoryId);
   return data.map(element => {
+    const coeff = getCoefficient(categoryId, element);
+    const source = withCoefficient(element, coeff);
     return {
-      id: element.slug,
+      id: source.slug,
       categoryId: categoryId,
-      source: element,
-      ...computeItemFunc(element)
+      source,
+      ...computeItemFunc(source, coeff)
     }
   });
 }
 
-function getComputeFunction(categoryId: number): ComputeItemFunc {
-  const transportCoeff: { [key: string]: number } = {
-    "avion-courtcourrier": 800,
-    "avion-moyencourrier": 2000,
-    "avion-longcourrier": 6000,
-    "tgv": 700,
-    "intercites": 400,
-    "voiturethermique": 100,
-    "voitureelectrique": 100,
-    "autocar": 400,
-    "velo": 5,
-    "veloelectrique": 5,
-    "busthermique": 5,
-    "tramway": 5,
-    "metro": 5,
-    "scooter": 5,
-    "moto": 100,
-    "rer": 20,
-    "ter": 100,
-    "buselectrique": 5,
-    "trottinette": 5,
-    "busgnv": 5,
-    "marche": 2
+function getCoefficient(categoryId: number, element: AdemeECV): number {
+  switch (categoryId) {
+    case 4: { // Transport: from 1km to a typical journey length
+      const coeff = transportCoeff[element.slug];
+      if (coeff === undefined) {
+        console.warn(`Missing transport coefficient for "${element.slug}", keeping the 1km value`);
+        return 1;
+      }
+      return coeff;
+    }
+    case 8: // Heating: from 1m² to 60m², from 12 months to 1 month
+      return 60 / 12;
+    default:
+      return 1;
   }
+}
 
+// Returns a scaled copy: the imported JSON objects are shared module state
+// and must never be mutated.
+function withCoefficient(element: AdemeECV, coeff: number): AdemeECV {
+  const copy: AdemeECV = {
+    ...element,
+    ecv: element.ecv * coeff,
+    footprintDetail: element.footprintDetail?.map(detail => ({ ...detail, value: detail.value * coeff })),
+    usage: element.usage ? { ...element.usage } : undefined,
+  };
+  if (copy.footprint !== undefined) {
+    copy.footprint = copy.footprint * coeff;
+  }
+  return copy;
+}
+
+function getComputeFunction(categoryId: number): ComputeItemFunc {
   switch (categoryId) {
     case 1: // Digital
       return (element: AdemeECV) => {
@@ -224,9 +273,7 @@ function getComputeFunction(categoryId: number): ComputeItemFunc {
         }
       };
     case 4: // Transport
-      return (element: AdemeECV) => {
-        const coeff = transportCoeff[element.slug];
-        applyCoefficient(element, coeff);
+      return (element: AdemeECV, coeff: number) => {
         return {
           label: element.name + ` (${coeff}km)`,
           description: "",
@@ -259,7 +306,6 @@ function getComputeFunction(categoryId: number): ComputeItemFunc {
       };
     case 8: // Heating
       return (element: AdemeECV) => {
-        applyCoefficient(element, 60 / 12); // From 1m2 to 60m2, from 12 months to 1 month
         return {
           label: element.name,
           description: t`<strong>per month</strong> for 60m²`,
@@ -297,18 +343,8 @@ function getComputeFunction(categoryId: number): ComputeItemFunc {
 function getDescriptionForDefaultYear(element: AdemeECV) {
   let description = "";
   if (element.usage) {
-    const defaultYears = element.usage?.defaultyears;
+    const defaultYears = element.usage.defaultyears;
     description = t`Purchase and usage for ${defaultYears} years.`;
   }
   return description;
-}
-
-function applyCoefficient(element: AdemeECV, coeff: number) {
-  element.ecv = element.ecv * coeff;
-  if (element.footprint) {
-    element.footprint = element.footprint * coeff;
-  }
-  if (element.footprintDetail) {
-    element.footprintDetail.forEach(detail => detail.value = detail.value * coeff);
-  }
 }

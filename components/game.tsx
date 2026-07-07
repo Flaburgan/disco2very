@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Board from "./board";
 import Instructions from "./instructions";
 import { Item } from "../types/item";
+import { GameState } from "../types/game";
 import createState from "../lib/create-state";
 import { recordNewGame } from "../lib/server";
 
@@ -10,7 +11,7 @@ export default function Game() {
     localStorage.setItem("app-id", self.crypto.randomUUID());
   }
 
-  const [selectedItems, setSelectedItems] = useState<Item[]>([]);
+  const [initialState, setInitialState] = useState<GameState | null>(null);
   const [categoriesMode, setCategoriesMode] = useState(false);
 
   const [highscore, setHighscore] = React.useState<number>(
@@ -23,17 +24,17 @@ export default function Game() {
   }, []);
 
   const restart = (categoriesMode: boolean) => {
-    setSelectedItems([]);
+    setInitialState(null);
     setCategoriesMode(categoriesMode);
   };
 
   const startGame = (selectedItems: Item[]) => {
-    setSelectedItems(selectedItems);
+    setInitialState(createState(selectedItems));
     recordNewGame(categoriesMode);
   }
 
-  return (selectedItems.length > 0 ?
-    <Board highscore={highscore} initialState={createState(selectedItems)} updateHighscore={updateHighscore} restart={restart} />
+  return (initialState !== null ?
+    <Board highscore={highscore} initialState={initialState} updateHighscore={updateHighscore} restart={restart} />
     :
     <Instructions highscore={highscore} setSelectedItems={startGame} categoriesMode={categoriesMode} setCategoriesMode={setCategoriesMode} />
   );

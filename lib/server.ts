@@ -13,5 +13,8 @@ export const recordNewGame = (categoriesMode: boolean) => {
   fetch(SERVER_URL + "telemetry.php", {
     method: "POST",
     body: formData,
+    keepalive: true,
+  }).catch(() => {
+    // Telemetry is best-effort: stay silent when offline or the server is unreachable
   });
 }

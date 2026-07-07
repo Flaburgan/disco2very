@@ -4,3 +4,14 @@
   display: inline-block;
   position: relative;
 }
+
+.draggable {
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+
+  img {
+    -webkit-user-drag: none;
+  }
+}

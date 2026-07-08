@@ -34,7 +34,6 @@
     "@vitejs/plugin-react": "^5.2.0",
     "eslint": "^10.6.0",
     "eslint-plugin-lingui": "^0.14.0",
-    "http-server": "^14.1.1",
     "prettier": "^3.9.4",
     "sass": "^1.32.10",
     "typescript": "^6.0.3",

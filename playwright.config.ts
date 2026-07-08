@@ -19,7 +19,7 @@ export default defineConfig({
   // The tests exercise the static export, exactly what is shipped.
   // Run "npm run build" first to populate out/.
   webServer: {
-    command: "npx http-server out -p 4173 -s -c-1",
+    command: "npx vite preview --port 4173 --strictPort",
     url: "http://localhost:4173",
     reuseExistingServer: !process.env.CI,
   },

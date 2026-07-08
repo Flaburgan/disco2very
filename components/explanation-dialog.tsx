@@ -3,10 +3,10 @@ import { Trans } from "@lingui/react/macro";
 import React, { JSX } from "react";
 import { useLingui } from "@lingui/react";
 import classNames from "classnames";
-import { getFootprintDetails } from "../lib/ademe-api";
+import { getCategories, getFootprintDetails } from "../lib/ademe-api";
 import { displayCO2, round2 } from "../lib/items";
 import styles from "../styles/explanation-dialog.module.scss";
-import { FootprintDetails } from "../types/AdemeECV";
+import { AdemeSource, FootprintDetails } from "../types/AdemeECV";
 import { Locale } from "../types/i18n";
 import { Item } from "../types/item";
 import ChartBar from "./chart-bar";
@@ -24,6 +24,9 @@ export default function ExplanationDialog(props: ExplanationDialogProps) {
   const usage = item.source.usage;
   const endOfLife = item.source.endOfLife;
   const total = round2(item.source.ecv);
+  // Some items document their own sources, the others use the category ones.
+  const itemSources = item.source.sources;
+  const sources = (itemSources && itemSources.length > 0 ? itemSources : getCategories().get(item.categoryId)?.sources) ?? [];
 
   return (
     <div className={classNames(styles.explanationDialogContainer)} onClick={onExit}>
@@ -42,17 +45,22 @@ export default function ExplanationDialog(props: ExplanationDialogProps) {
               </ul>
             )
           }
+          {item.source.hypothesis && (
+            <p className={styles.hypothesis}>
+              <strong><Trans>Hypotheses:</Trans></strong> {item.source.hypothesis}
+            </p>
+          )}
         </main>
         <footer>
           <h3><Trans>Total:</Trans></h3>
           <div className={styles.result}>
             <strong className={styles[total > 0 ? "result-negative" : "result-positive"]}>{total} kg CO<sub>2</sub>e</strong>
           </div>
-          <div className={styles.source}>
-            <Trans>
-              Source: <a href="https://base-empreinte.ademe.fr/" rel="noreferrer" target="_blank">Base Empreinte</a> and <a href="https://agribalyse.ademe.fr/" rel="noreferrer" target="_blank">Agribalyse</a>.
-            </Trans>
-          </div>
+          {sources.length > 0 && (
+            <div className={styles.source}>
+              <Trans>Source:</Trans> {sources.map((source, index) => displaySource(source, index))}
+            </div>
+          )}
           <div className="info">
             <Trans>
               These values are computed by the french goverment agency <abbr title="Agence de l'environnement et de la maîtrise de l'énergie">ADEME</abbr> and are based on France characteristics. Other countries may have different values, especially those resulting from electricity consumption.
@@ -62,6 +70,13 @@ export default function ExplanationDialog(props: ExplanationDialogProps) {
       </div>
     </div>
   );
+}
+
+function displaySource(source: AdemeSource, index: number): JSX.Element {
+  return <React.Fragment key={source.href + index}>
+    {index > 0 && ", "}
+    <a href={source.href} rel="noreferrer" target="_blank">{source.label}</a>
+  </React.Fragment>;
 }
 
 function displayDetail(detail: {id: number, value: number}, footprintDetails: FootprintDetails, total: number, locale: Locale): JSX.Element {

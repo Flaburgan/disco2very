@@ -1,0 +1,23 @@
+{
+  "avion-courtcourrier": 800,
+  "avion-moyencourrier": 2000,
+  "avion-longcourrier": 6000,
+  "tgv": 700,
+  "intercites": 400,
+  "voiturethermique": 100,
+  "voitureelectrique": 100,
+  "autocar": 400,
+  "velo": 5,
+  "veloelectrique": 5,
+  "busthermique": 5,
+  "tramway": 5,
+  "metro": 5,
+  "scooter": 5,
+  "moto": 100,
+  "rer": 20,
+  "ter": 100,
+  "buselectrique": 5,
+  "trottinette": 5,
+  "busgnv": 5,
+  "marche": 2
+}

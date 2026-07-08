@@ -8,7 +8,17 @@
         "es": "Digital",
         "de": "Digitale Geräte"
       },
-      "slug": "numerique"
+      "slug": "numerique",
+      "sources": [
+        {
+          "label": "Étude ADEME / ARCEP",
+          "href": "https://librairie.ademe.fr/changement-climatique/7880-evaluation-de-l-impact-environnemental-du-numerique-en-france.html"
+        },
+        {
+          "label": "Base Empreinte ADEME",
+          "href": "https://base-empreinte.ademe.fr/donnees/jeu-donnees"
+        }
+      ]
     },
     {
       "id": 2,
@@ -18,7 +28,13 @@
         "es": "Alimentación",
         "de": "Lebensmittel"
       },
-      "slug": "alimentation"
+      "slug": "alimentation",
+      "sources": [
+        {
+          "label": "Agribalyse 3.2",
+          "href": "https://agribalyse.ademe.fr/app"
+        }
+      ]
     },
     {
       "id": 3,
@@ -28,7 +44,13 @@
         "es": "Beba",
         "de": "Getränke"
       },
-      "slug": "boisson"
+      "slug": "boisson",
+      "sources": [
+        {
+          "label": "Agribalyse 3.2",
+          "href": "https://agribalyse.ademe.fr/app"
+        }
+      ]
     },
     {
       "id": 4,
@@ -38,7 +60,13 @@
         "es": "Transporte",
         "de": "Transport"
       },
-      "slug": "transport"
+      "slug": "transport",
+      "sources": [
+        {
+          "label": "Base Empreinte ADEME",
+          "href": "https://base-empreinte.ademe.fr/donnees/jeu-donnees"
+        }
+      ]
     },
     {
       "id": 5,
@@ -48,7 +76,17 @@
         "es": "Ropa",
         "de": "Kleidung"
       },
-      "slug": "habillement"
+      "slug": "habillement",
+      "sources": [
+        {
+          "label": "Rapport : Modélisation et évaluation…",
+          "href": "https://librairie.ademe.fr/consommer-autrement/1189-modelisation-et-evaluation-des-impacts-environnementaux-de-produits-de-consommation-et-biens-d-equipement.html"
+        },
+        {
+          "label": "Base Empreinte ADEME",
+          "href": "https://base-empreinte.ademe.fr/donnees/jeu-donnees"
+        }
+      ]
     },
     {
       "id": 6,
@@ -58,7 +96,17 @@
         "es": "Electrodomésticos",
         "de": "Haushaltsgeräte"
       },
-      "slug": "electromenager"
+      "slug": "electromenager",
+      "sources": [
+        {
+          "label": "Rapport : Modélisation et évaluation…",
+          "href": "https://librairie.ademe.fr/consommer-autrement/1189-modelisation-et-evaluation-des-impacts-environnementaux-de-produits-de-consommation-et-biens-d-equipement.html"
+        },
+        {
+          "label": "Base Empreinte ADEME",
+          "href": "https://base-empreinte.ademe.fr/donnees/jeu-donnees"
+        }
+      ]
     },
     {
       "id": 7,
@@ -68,7 +116,17 @@
         "es": "Muebles",
         "de": "Möbel"
       },
-      "slug": "mobilier"
+      "slug": "mobilier",
+      "sources": [
+        {
+          "label": "Rapport : Modélisation et évaluation…",
+          "href": "https://librairie.ademe.fr/consommer-autrement/1189-modelisation-et-evaluation-des-impacts-environnementaux-de-produits-de-consommation-et-biens-d-equipement.html"
+        },
+        {
+          "label": "Base Empreinte ADEME",
+          "href": "https://base-empreinte.ademe.fr/donnees/jeu-donnees"
+        }
+      ]
     },
     {
       "id": 8,
@@ -78,7 +136,17 @@
         "es": "Calefacción",
         "de": "Heizung"
       },
-      "slug": "chauffage"
+      "slug": "chauffage",
+      "sources": [
+        {
+          "label": "Consommation d'énergie par usage du résidentiel",
+          "href": "https://www.statistiques.developpement-durable.gouv.fr/consommation-denergie-par-usage-du-residentiel"
+        },
+        {
+          "label": "Base Empreinte ADEME",
+          "href": "https://base-empreinte.ademe.fr/donnees/jeu-donnees"
+        }
+      ]
     },
     {
       "id": 9,
@@ -88,7 +156,13 @@
         "es": "Frutas y hortalizas",
         "de": "Obst und Gemüse"
       },
-      "slug": "fruitsetlegumes"
+      "slug": "fruitsetlegumes",
+      "sources": [
+        {
+          "label": "Agribalyse 3.2",
+          "href": "https://agribalyse.ademe.fr/app"
+        }
+      ]
     },
     {
       "id": 10,
@@ -98,7 +172,13 @@
         "es": "Usos digitales",
         "de": "Digitale Nutzung"
       },
-      "slug": "usagenumerique"
+      "slug": "usagenumerique",
+      "sources": [
+        {
+          "label": "Base Empreinte ADEME",
+          "href": "https://base-empreinte.ademe.fr/donnees/jeu-donnees"
+        }
+      ]
     },
     {
       "id": 13,
@@ -108,7 +188,8 @@
         "es": "Casos práctico",
         "de": "Praktische Fälle"
       },
-      "slug": "caspratiques"
+      "slug": "caspratiques",
+      "sources": []
     }
   ]
 }

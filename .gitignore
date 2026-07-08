@@ -25,8 +25,6 @@ npm-debug.log*
 .env.test.local
 .env.production.local
 
-# i18n compilation files
-/locales/**/*.ts
 
 #server
 /server/db.ini

@@ -23,7 +23,6 @@ NodeJS 24 or higher is required to build and run the project.
 
 ```bash
 npm install
-npm run i18n-compile
 ```
 
 ### Development
@@ -44,10 +43,7 @@ npm run i18n-extract
 This will modify the english keys in `locales/en/messages.po`. Look for entries starting with `#~`: these are now outdated and should be removed.
 Then open the other languages files like `locales/fr/messages.po` and look for empty strings `""` to add the missing translations.
 
-Once done, run:
-```bash
-npm run i18n-compile
-```
+The `.po` catalogs are compiled automatically when the app is built or served, there is no separate compilation step.
 
 ### Static build
 

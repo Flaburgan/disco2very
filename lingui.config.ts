@@ -1,10 +1,12 @@
+import { formatter } from "@lingui/format-po";
+
+export { locales, sourceLocale } from "./lib/locales";
+
 /** @type {import('@lingui/conf').LinguiConfig} */
-export const locales = ["en", "fr", "es", "de"];
-export const sourceLocale = "en";
 export const catalogs = [
   {
     path: "<rootDir>/locales/{locale}/messages",
     include: ["components", "lib"],
   },
 ];
-export const format = "po";
+export const format = formatter();

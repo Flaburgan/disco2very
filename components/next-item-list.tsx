@@ -13,7 +13,7 @@ export default function NextItemList(props: NextItemListProps) {
 
   return (
     <div className={styles.container}>
-      <div className={styles.wrapper + " bordered-area"}>
+      <div className={styles["next-items"] + " bordered-area"}>
         {next && (
           <DraggableItemCard
             draggable

@@ -7,8 +7,7 @@
 /test-results/
 /playwright-report/
 
-# next.js
-/.next/
+# build output
 /out/
 
 # misc

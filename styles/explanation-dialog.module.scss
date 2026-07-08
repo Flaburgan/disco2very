@@ -1,4 +1,4 @@
-@import "./variables";
+@use "variables";
 
 .explanationDialogContainer {
   position: fixed;
@@ -18,9 +18,9 @@
 .explanationDialog {
   width: 100%;
   max-width: 400px;
-  color: $text;
+  color: variables.$text;
   background-color: #fff;
-  border-radius: $box-border-radius;
+  border-radius: variables.$box-border-radius;
 
   a {
     color: inherit;
@@ -98,12 +98,12 @@
 
     .result-negative {
       background-color: #fdd;
-      border-color: $result-negative;
+      border-color: variables.$result-negative;
     }
 
     .result-positive {
       background-color: #dfd;
-      border-color: $result-positive;
+      border-color: variables.$result-positive;
     }
 
     .source {

@@ -1,12 +1,12 @@
-@import "./variables";
+@use "variables";
 
 .realCardsGame {
-  max-width: $content-max-width;
+  max-width: variables.$content-max-width;
   padding: 1.2rem;
-  border: 2px solid $text-muted;
-  border-radius: $small-border-radius;
+  border: 2px solid variables.$text-muted;
+  border-radius: variables.$small-border-radius;
   color: #ddd;
-  background-color: $box-background;
+  background-color: variables.$box-background;
   text-align: left;
 
   h2 {

@@ -13,38 +13,38 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: components/email-registration.tsx:27
+#: components/email-registration.tsx:24
 msgid "{email} has been successfully registered."
 msgstr "{email} wurde erfolgreich registriert."
 
-#: components/email-registration.tsx:33
+#: components/email-registration.tsx:30
 msgid "{email} is already registered."
 msgstr "{email} ist bereits registriert."
 
-#: components/email-registration.tsx:31
+#: components/email-registration.tsx:28
 msgid "{email} is not a valid email address."
 msgstr "{email} ist keine gültige E-Mail-Adresse."
 
-#: components/explanation-dialog.tsx:96
+#: components/explanation-dialog.tsx:148
 msgid "{perYearDisplay} per year, estimated lifespan: {defaultYearDisplay} years."
 msgstr "{perYearDisplay} pro Jahr, angenommene Lebensdauer: {defaultYearDisplay} Jahre."
 
-#: lib/ademe-api.ts:311
+#: lib/ademe-api.ts:351
 msgid "<strong>per month</strong> for 60m²"
 msgstr "<strong>pro Monat</strong> für 60m²"
 
-#: components/real-cards-game.tsx:9
+#: components/real-cards-game.tsx:10
 msgid "A real deck of cards?"
 msgstr "Ein echtes Kartendeck?"
 
-#: components/board.tsx:131
-#: components/categories-selector.tsx:60
+#: components/board.tsx:139
+#: components/categories-selector.tsx:80
 msgid "Back"
 msgstr "Zurück"
 
-#: components/game-over.tsx:37
-#: components/game-over.tsx:71
-#: components/instructions.tsx:52
+#: components/game-over.tsx:36
+#: components/game-over.tsx:83
+#: components/instructions.tsx:79
 msgid "Best streak"
 msgstr "Beste Serie"
 
@@ -52,7 +52,7 @@ msgstr "Beste Serie"
 #~ msgid "Bought in January"
 #~ msgstr "Gekauft im Januar"
 
-#: components/instructions.tsx:61
+#: components/instructions.tsx:120
 msgid "Code based on from the <0>wikitrivia</0> game by <1>Tom James Watson</1>. Thank you!"
 msgstr "Code basiert auf dem <0>wikitrivia</0> Spiel von <1>Tom James Watson</1>. Vielen Dank!"
 
@@ -60,69 +60,68 @@ msgstr "Code basiert auf dem <0>wikitrivia</0> Spiel von <1>Tom James Watson</1>
 msgid "Congratulations!"
 msgstr "Gratulation!"
 
-#: components/game-over.tsx:46
+#: components/game-over.tsx:45
 msgid "Copied!"
 msgstr "Kopiert!"
 
 #: components/app.tsx:36
-#: components/app.tsx:37
 msgid "disCO2very is a free game to discover the orders of magnitude of the CO2 footprint"
 msgstr "disCO2very ist ein freies Spiel, um die Größenunterschiede beim CO₂-Fußabdruck zu entdecken."
 
-#: components/explanation-dialog.tsx:102
+#: components/explanation-dialog.tsx:157
 msgid "End of life:"
 msgstr "End of Life (Produktzyklusende)::"
 
-#: components/email-registration.tsx:35
+#: components/email-registration.tsx:32
 msgid "Error: {status}"
 msgstr "Fehler: {status}"
 
-#: components/game-over.tsx:62
+#: components/game-over.tsx:68
 msgid "Game over"
 msgstr "Game over"
 
-#: components/game-over.tsx:35
+#: components/game-over.tsx:34
 msgid "Guess the CO2 footprint!"
 msgstr "Errate den CO₂-Fußabdruck!"
 
-#: components/explanation-dialog.tsx:50
+#: components/explanation-dialog.tsx:68
 msgid "Hypotheses:"
 msgstr "Annahmen:"
 
-#: lib/ademe-api.ts:312
+#: lib/ademe-api.ts:352
 msgid "Impact of one month of heating a house of 60m², spreading the consumption over the year."
 msgstr "Ausstoß pro Monat beim Heizen eines 60m²-Hauses, runtergerechnet vom Jahresdurchschnitt."
 
-#: lib/ademe-api.ts:349
+#: lib/ademe-api.ts:392
 msgid "In season all year round"
 msgstr "Das ganze Jahr über Saison"
 
-#: lib/ademe-api.ts:375
+#: lib/ademe-api.ts:423
 msgid "In season: {season}"
 msgstr "Saison: {season}"
 
-#: components/real-cards-game.tsx:14
+#: components/real-cards-game.tsx:21
 msgid "Interested? Or you simply want to be informed about the latest disCO<0>2</0>very news? We can keep in touch by e-mail!"
 msgstr "Interessiert? Oder einfach informiert bleiben über die letzten disCO<0>2</0>-News? Wir halten dich per E-Mail auf dem Laufenden!"
 
-#: components/instructions.tsx:59
+#: components/instructions.tsx:107
 msgid "License AGPL - Source code available <0>on github</0>."
 msgstr "License AGPL - Quellcode zu finden <0>auf github</0>."
 
-#: components/instructions.tsx:58
-#: components/instructions.tsx:58
+#: components/instructions.tsx:91
+#: components/instructions.tsx:92
 msgid "love"
 msgstr "Liebe"
 
-#: components/instructions.tsx:58
+#: components/instructions.tsx:87
 msgid "Made with <0/> by <1>Fla</1> & Sara."
 msgstr "Geschrieben mit <0/> von <1>Fla</1> & Sara."
 
-#: components/email-registration.tsx:45
+#: components/email-registration.tsx:50
 msgid "myemail@myprovider.org"
 msgstr "myemail@myprovider.org"
 
-#: components/example-cards.tsx:18
+#: components/example-cards.tsx:19
 msgid "or"
 msgstr "oder"
 
@@ -130,39 +129,39 @@ msgstr "oder"
 msgid "Order items to discover their CO2 footprint!"
 msgstr "Sortieren die Karten in die richte Reihenfolge ein, um ihren CO₂-Fußabdruck zu erfahren!"
 
-#: components/instructions.tsx:46
+#: components/instructions.tsx:71
 msgid "Pick categories"
 msgstr "Wähle Kategorien aus"
 
-#: components/instructions.tsx:34
+#: components/instructions.tsx:41
 msgid "Place the cards in the correct order guessing their CO<0>2</0> footprint."
 msgstr "Ordne die Karten in der korrekten Reihenfolge nach ihrem vermeintlichen CO<0>₂</0>-Fußabdruck."
 
-#: components/game-over.tsx:76
+#: components/game-over.tsx:92
 msgid "Play again"
 msgstr "Noch einmal"
 
-#: components/email-registration.tsx:54
+#: components/email-registration.tsx:63
 msgid "Please contact fla (a) framasoft.org to unregister"
 msgstr "Bitte kontaktiere fla (a) framasoft.org zum Abmelden"
 
-#: lib/ademe-api.ts:339
+#: lib/ademe-api.ts:379
 msgid "Purchase and usage for {defaultYears} years."
 msgstr "Anschaffung und Benutzung für {defaultYears} Jahre."
 
-#: components/email-registration.tsx:47
+#: components/email-registration.tsx:55
 msgid "Register"
 msgstr "Anmelden"
 
-#: components/board.tsx:132
+#: components/board.tsx:142
 msgid "Restart"
 msgstr "Neustart"
 
-#: components/game-over.tsx:77
+#: components/game-over.tsx:95
 msgid "Select categories"
 msgstr "Markiere Kategorien"
 
-#: components/categories-selector.tsx:43
+#: components/categories-selector.tsx:48
 msgid "Select the categories you want to play with:"
 msgstr "Markiere die Kategorien, mit denen du spielen willst."
 
@@ -170,7 +169,7 @@ msgstr "Markiere die Kategorien, mit denen du spielen willst."
 msgid "Share your score"
 msgstr "Teile dein Ergebnis"
 
-#: components/explanation-dialog.tsx:61
+#: components/explanation-dialog.tsx:89
 msgid "Source:"
 msgstr "Quelle:"
 
@@ -178,52 +177,52 @@ msgstr "Quelle:"
 #~ msgid "Source: <0>Base Empreinte</0> and <1>Agribalyse</1>."
 #~ msgstr "Quelle: <0>Base Empreinte</0> und <1>Agribalyse</1>."
 
-#: components/categories-selector.tsx:59
-#: components/instructions.tsx:45
+#: components/categories-selector.tsx:77
+#: components/instructions.tsx:68
 msgid "Start game"
 msgstr "Spiel beginnen"
 
-#: components/app.tsx:38
+#: components/app.tsx:37
 msgid "The disCO2very logo, featuring a molecule of CO2."
 msgstr "Das disCO2very-Logo stellt ein CO₂-Molekül dar."
 
-#: components/instructions.tsx:66
+#: components/instructions.tsx:137
 msgid "The numbers are coming from the <0>Ademe</0> platform <1>Impact CO<2>2</2></1>. Thanks to them for their amazing work!"
 msgstr "Diese Zahlen stammen von der <0>Ademe</0> Plattform <1>Impact CO<2>2</2></1>. Vielen Dank für diese fantastische Arbeit!"
 
-#: components/explanation-dialog.tsx:65
+#: components/explanation-dialog.tsx:94
 msgid "These values are computed by the french goverment agency <0>ADEME</0> and are based on France characteristics. Other countries may have different values, especially those resulting from electricity consumption."
 msgstr "Diese Werte wurden berechnet von der französischen Agentur <0>ADEME</0> und basieren auf Daten für Frankreich. Die Werte anderer Länder, insbesondere beim Stromverbrauch, könnten hiervon abweichen."
 
-#: components/categories-selector.tsx:26
+#: components/categories-selector.tsx:30
 msgid "This category is not yet available."
 msgstr "Diese Kategorie ist nicht verfügbar."
 
-#: components/real-cards-game.tsx:11
+#: components/real-cards-game.tsx:13
 msgid "This game is currently a digital app but the ultimate goal is to print a real deck of cards, as we feel that it can be a useful tool to raise awareness about climate change. Possibly, we may do a crowdfunding campaign, so you could order your own deck!"
 msgstr "Dieses Spiel ist zurzeit ausschließlich digital, aber das Ziel ist, ein echtes Kartendeck zu entwickeln. Unserer Meinung nach ein nützliches Tool zur Sensibilisierung für den Klimawandel. Eventuell werden wir ein Crowdfunding-Kampagne starten, damit du dein eigenes Deck sortieren kannst!"
 
-#: components/game-over.tsx:36
-#: components/game-over.tsx:68
+#: components/game-over.tsx:35
+#: components/game-over.tsx:78
 msgid "This streak"
 msgstr "Diese Serie"
 
-#: components/explanation-dialog.tsx:55
+#: components/explanation-dialog.tsx:76
 msgid "Total:"
 msgstr "Insgesamt:"
 
-#: components/game-over.tsx:63
+#: components/game-over.tsx:71
 msgid "Try again!"
 msgstr "Versuche es erneut!"
 
-#: components/explanation-dialog.tsx:94
+#: components/explanation-dialog.tsx:145
 msgid "Usage:"
 msgstr "Anwendung:"
 
-#: components/game-over.tsx:57
+#: components/game-over.tsx:59
 msgid "You ordered all the cards!"
 msgstr "Du hast alle Karten einsortiert!"
 
-#: components/game-over.tsx:58
+#: components/game-over.tsx:62
 msgid "You should probably select more categories?"
 msgstr "Vielleicht solltest du mehr Kategorien auswählen?"

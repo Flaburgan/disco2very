@@ -16,7 +16,7 @@ Contributions to the project are very welcome! By contributing, you agree that y
 
 ## Technical informations
 
-This project is using the [Next.js](https://nextjs.org/) framework, itself based on React.
+This project is a [React](https://react.dev/) single-page application built with [Vite](https://vite.dev/).
 NodeJS 24 or higher is required to build and run the project.
 
 ### Prerequisites
@@ -32,7 +32,7 @@ npm run i18n-compile
 npm run dev
 ```
 
-Then visit http://localhost:3000/ to preview the website.
+Then visit http://localhost:5173/ to preview the website.
 
 ### Translations
 

@@ -144,7 +144,7 @@ export default function Board(props: Props) {
         </div>
         <Hearts lives={state.lives} />
       </div>
-      <div ref={scrollContainerRef} className={styles.top}>
+      <div ref={scrollContainerRef} className={styles["top-panel"]}>
         <PlayedItemList
           dragging={isDragging}
           dropIndex={dropIndex}
@@ -152,7 +152,7 @@ export default function Board(props: Props) {
           listRef={playedListRef}
         />
       </div>
-      <div className={styles.bottom}>
+      <div className={styles["bottom-panel"]}>
         {state.lives > 0 && state.next ? (
           <>
             {/* We keep the container outside of the if so the space is still used when the arrow disappears and the bottom part doesn't move */}

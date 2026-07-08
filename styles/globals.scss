@@ -1,4 +1,6 @@
-@import "./variables";
+@use "sass:color";
+
+@use "variables";
 
 html,
 body {
@@ -16,14 +18,14 @@ body {
     Droid Sans,
     Helvetica Neue,
     sans-serif;
-  color: $text-light;
+  color: variables.$text-light;
   font-size: 14px;
-  background: $background;
+  background: variables.$background;
 }
 
 html,
 body,
-#__next {
+#root {
   width: 100%;
   height: 100%;
 }
@@ -33,11 +35,11 @@ body {
 }
 
 a {
-  color: $text-light;
+  color: variables.$text-light;
   white-space: nowrap;
 
   &:hover {
-    color: $link-hover;
+    color: variables.$link-hover;
   }
 }
 
@@ -53,10 +55,10 @@ a {
 
 .button {
   border: none;
-  background: $primary;
-  color: $text-light;
+  background: variables.$primary;
+  color: variables.$text-light;
   padding: 10px 24px;
-  border-radius: $button-border-radius;
+  border-radius: variables.$button-border-radius;
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 700;
@@ -70,7 +72,7 @@ a {
 
   &.minimal {
     background: none;
-    border: 2px solid $primary;
+    border: 2px solid variables.$primary;
   }
 
   &.small {
@@ -98,7 +100,7 @@ a {
       animation: bounce 4s;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
-      border-radius: $button-border-radius;
+      border-radius: variables.$button-border-radius;
       top: 0;
       left: 0;
       bottom: 0;
@@ -115,12 +117,12 @@ a {
 
 input {
   padding: 10px;
-  border: solid 3px $box-background;
-  border-radius: $box-border-radius;
+  border: solid 3px variables.$box-background;
+  border-radius: variables.$box-border-radius;
 
   &:focus {
     outline: none;
-    border: solid 3px $primary;
+    border: solid 3px variables.$primary;
   }
 }
 
@@ -136,7 +138,7 @@ input {
   }
 
   a:hover {
-    color: darken($font-color, 25%);
+    color: color.adjust($font-color, $lightness: -25%);
   }
 
   :first-child {
@@ -167,7 +169,7 @@ input {
 }
 
 .bordered-area {
-  border: 1px dashed $dashes;
+  border: 1px dashed variables.$dashes;
   border-radius: 5px;
 }
 
@@ -185,9 +187,9 @@ input {
   width: 24px;
   height: 24px;
   font-size: 1.2rem;
-  border: solid $dashes 2px;
+  border: solid variables.$dashes 2px;
   border-radius: 50%;
-  color: $text;
+  color: variables.$text;
   background-color: #fff;
   z-index: 2;
 
@@ -209,7 +211,7 @@ input {
     line-height: 50px;
     font-size: 2rem;
     border-radius: 50%;
-    color: $text;
+    color: variables.$text;
     background-color: #fff;
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 6px 20px;

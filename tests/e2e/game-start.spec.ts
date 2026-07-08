@@ -12,12 +12,12 @@ test("starting a default game shows the board", async ({ page }) => {
   // One revealed card on the timeline, showing its footprint.
   await expect(playedCards(page)).toHaveCount(1);
   await expect(
-    playedCards(page).locator('[class*="item-card_bottom__"]'),
+    playedCards(page).locator('[class*="_bottom_"]'),
   ).toContainText(/\d+(\.\d+)? kg CO/);
   // The next card is face down.
   await expect(nextCard(page)).toBeVisible();
   await expect(
-    nextCard(page).locator('[class*="item-card_bottom__"]'),
+    nextCard(page).locator('[class*="_bottom_"]'),
   ).toContainText("? kg CO");
   // Five lives and the game actions.
   await expect(hearts(page)).toHaveText("5");

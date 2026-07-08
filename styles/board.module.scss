@@ -1,4 +1,4 @@
-@import "./variables";
+@use "variables";
 
 .wrapper {
   display: flex;
@@ -12,7 +12,7 @@
   justify-content: space-between;
   align-self: center;
   width: 100%;
-  max-width: $content-max-width;
+  max-width: variables.$content-max-width;
   padding: 1rem;
 
   .actionsContainer {
@@ -22,19 +22,19 @@
   }
 }
 
-.top,
-.bottom {
+.top-panel,
+.bottom-panel {
   flex-grow: 1;
 }
 
-.top {
+.top-panel {
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow-x: auto;
 }
 
-.bottom {
+.bottom-panel {
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -19,7 +19,7 @@ test("losing five lives ends the game, play again restarts it", async ({
   await expect(page.getByText("This streak")).toBeVisible();
   await expect(page.getByText("Best streak")).toBeVisible();
   // Five incorrect placements: both streaks are 0.
-  await expect(page.locator('[class*="score_value__"]')).toHaveText(["0", "0"]);
+  await expect(page.locator('[class*="_value_"]')).toHaveText(["0", "0"]);
 
   await page.getByRole("button", { name: "Play again" }).click();
   await expect(playedCards(page)).toHaveCount(1);
@@ -66,7 +66,7 @@ test("placing all the cards of a category wins the game", async ({ page }) => {
   await expect(page.getByText("You ordered all the cards!")).toBeVisible();
   // No mistake was made.
   await expect(hearts(page)).toHaveText("5");
-  await expect(page.locator('[class*="item-card_incorrect__"]')).toHaveCount(0);
+  await expect(page.locator('[class*="_incorrect_"]')).toHaveCount(0);
 });
 
 test("the highscore is shown on the home screen and survives a reload", async ({
@@ -77,9 +77,9 @@ test("the highscore is shown on the home screen and survives a reload", async ({
 
   await page.getByRole("button", { name: "Back" }).click();
   await expect(page.getByText("Best streak")).toBeVisible();
-  await expect(page.locator('[class*="score_value__"]')).toHaveText(["1"]);
+  await expect(page.locator('[class*="_value_"]')).toHaveText(["1"]);
 
   await page.reload();
   await expect(page.getByText("Best streak")).toBeVisible();
-  await expect(page.locator('[class*="score_value__"]')).toHaveText(["1"]);
+  await expect(page.locator('[class*="_value_"]')).toHaveText(["1"]);
 });

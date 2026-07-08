@@ -1,18 +1,18 @@
-@import "./variables";
+@use "variables";
 
 .front {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: $card-width;
-  height: $card-height;
-  border: solid $card-border-color 3px;
-  border-radius: $box-border-radius;
+  width: variables.$card-width;
+  height: variables.$card-height;
+  border: solid variables.$card-border-color 3px;
+  border-radius: variables.$box-border-radius;
   box-shadow:
     rgba(0, 0, 0, 0.19) 0px 10px 20px,
     rgba(0, 0, 0, 0.23) 0px 6px 6px;
   background-color: #ffffff;
-  color: $text;
+  color: variables.$text;
   will-change: transform, opacity;
   overflow: hidden;
 
@@ -35,7 +35,7 @@
     right: 0;
     padding: 0 0 3px 3px;
     border-radius: 0 0 0 4px;
-    background-color: $card-border-color;
+    background-color: variables.$card-border-color;
   }
 
   main {
@@ -68,8 +68,8 @@
     align-items: center;
     line-height: 30px;
     font-weight: 700;
-    background-color: $primary;
-    color: $text-light;
+    background-color: variables.$primary;
+    color: variables.$text-light;
     transition: background-color 5s ease-in-out;
 
     &:hover {
@@ -77,11 +77,11 @@
     }
 
     &.correct {
-      background-color: $correct;
+      background-color: variables.$correct;
     }
 
     &.incorrect {
-      background-color: $incorrect;
+      background-color: variables.$incorrect;
     }
   }
 

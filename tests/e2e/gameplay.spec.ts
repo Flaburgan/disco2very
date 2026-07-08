@@ -20,11 +20,11 @@ test("a correct placement reveals the card and keeps the lives", async ({
 
   await expect(playedCards(page)).toHaveCount(2);
   // Both the initial card and the newly placed one are marked correct.
-  await expect(page.locator('[class*="item-card_correct__"]')).toHaveCount(2);
-  await expect(page.locator('[class*="item-card_incorrect__"]')).toHaveCount(0);
+  await expect(page.locator('[class*="_correct_"]')).toHaveCount(2);
+  await expect(page.locator('[class*="_incorrect_"]')).toHaveCount(0);
   // The placed card now shows its footprint.
   await expect(
-    playedCards(page).nth(index).locator('[class*="item-card_bottom__"]'),
+    playedCards(page).nth(index).locator('[class*="_bottom_"]'),
   ).toContainText(/\d+(\.\d+)? kg CO/);
   await expect(hearts(page)).toHaveText("5");
   // A new next card was dealt.
@@ -39,7 +39,7 @@ test("an incorrect placement costs a life and the card moves to its place", asyn
   const index = await correctIndex(page);
   await placeNextCard(page, index === 0 ? 1 : 0);
 
-  await expect(page.locator('[class*="item-card_incorrect__"]')).toHaveCount(1);
+  await expect(page.locator('[class*="_incorrect_"]')).toHaveCount(1);
   await expect(hearts(page)).toHaveText("4");
   // After the auto-move animation, the timeline is sorted by footprint again.
   const values = (await timelineSlugs(page)).map(ecvOf);
@@ -54,7 +54,7 @@ test("clicking a played card opens the explanation dialog", async ({
   await playedCards(page).first().click();
 
   const dialog = page.locator(
-    '[class*="explanation-dialog_explanationDialog__"]',
+    '[class*="_explanationDialog_"]',
   );
   await expect(dialog).toBeVisible();
   await expect(dialog.getByRole("heading", { name: "Total:" })).toBeVisible();

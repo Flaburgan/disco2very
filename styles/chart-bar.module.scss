@@ -1,4 +1,4 @@
-@import "./variables";
+@use "variables";
 
 .chartBar {
   display: flex;
@@ -17,10 +17,10 @@
   }
 
   .result-negative {
-    background-color: $result-negative;
+    background-color: variables.$result-negative;
   }
 
   .result-positive {
-    background-color: $result-positive;
+    background-color: variables.$result-positive;
   }
 }

@@ -1,23 +1,22 @@
 import { expect, Locator, Page } from "@playwright/test";
 import { ecvOf } from "./ecv";
 
-// CSS module class names survive the production build as
-// "<file>_<class>__<hash>", so [class*="file_class__"] selectors stay stable.
+// CSS module class names survive the production build as "_<class>_<hash>"
+// (Vite's default naming), so [class*="_class_"] selectors stay stable. The
+// class names used here are unique across the .module.scss files.
 
-const itemImage = '[class*="item-card_imageContainer__"] img';
+const itemImage = '[class*="_imageContainer_"] img';
 
 export function playedCards(page: Page): Locator {
   return page.locator("[data-timeline-card]");
 }
 
 export function nextCard(page: Page): Locator {
-  return page.locator(
-    '[class*="next-item-list_wrapper__"] [class*="draggable-item-card_itemCard__"]',
-  );
+  return page.locator('[class*="_next-items_"] [class*="_itemCard_"]');
 }
 
 export function hearts(page: Page): Locator {
-  return page.locator('[class*="hearts_hearts__"]');
+  return page.locator('[class*="_hearts_"]');
 }
 
 function slugFromSrc(src: string): string {

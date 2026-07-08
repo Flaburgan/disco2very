@@ -9,7 +9,7 @@ test("home page shows the game introduction", async ({ page }) => {
     page.getByRole("button", { name: "Pick categories" }),
   ).toBeVisible();
   // The two example cards teasing the game.
-  await expect(page.locator('[class*="item-card_front__"]')).toHaveCount(2);
+  await expect(page.locator('[class*="_front_"]')).toHaveCount(2);
   // The about section.
   await expect(page.getByText("License AGPL")).toBeVisible();
   // No highscore is displayed on a first visit.

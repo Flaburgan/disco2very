@@ -1,12 +1,12 @@
-@import "./variables";
+@use "variables";
 
 .hearts {
   display: flex;
   gap: 5px;
   align-items: center;
   font-size: 30px;
-  border: solid 2px $dashes;
-  border-radius: $small-border-radius;
+  border: solid 2px variables.$dashes;
+  border-radius: variables.$small-border-radius;
   padding: 3px 5px;
 
   .heart {

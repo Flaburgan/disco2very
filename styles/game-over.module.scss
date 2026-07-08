@@ -1,4 +1,4 @@
-@import "./variables";
+@use "variables";
 
 .gameOver {
   display: flex;
@@ -32,7 +32,7 @@
   }
 
   .shareAction {
-    color: $link-hover;
+    color: variables.$link-hover;
     margin-top: 1rem;
     margin-bottom: $score-margin;
     cursor: pointer;

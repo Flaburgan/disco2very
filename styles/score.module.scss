@@ -1,12 +1,12 @@
-@import "./variables.scss";
+@use "variables.scss";
 
 .score {
   display: inline-block;
   transform: skewX(-12deg);
-  border-radius: $box-border-radius;
+  border-radius: variables.$box-border-radius;
   padding: 10px 24px;
   text-align: left;
-  color: $text;
+  color: variables.$text;
 
   .title {
     font-weight: 700;

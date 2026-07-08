@@ -1,4 +1,4 @@
-@import "./variables.scss";
+@use "variables.scss";
 
 .instructions {
   display: flex;
@@ -21,7 +21,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    max-width: $content-max-width;
+    max-width: variables.$content-max-width;
     margin-top: 1rem;
 
     .mainHeader {
@@ -51,7 +51,7 @@
     flex-grow: 0;
     text-align: center;
     margin-bottom: 1rem;
-    color: $text-muted;
+    color: variables.$text-muted;
 
     p:first-child {
       margin-top: 0;
@@ -68,10 +68,10 @@
 
     a {
       margin-bottom: 10px;
-      color: $text-muted;
+      color: variables.$text-muted;
 
       &:hover {
-        color: $text-light;
+        color: variables.$text-light;
       }
     }
 

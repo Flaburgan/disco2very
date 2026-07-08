@@ -1,4 +1,4 @@
-@import "./variables";
+@use "variables";
 
 .categoriesSelection {
   display: flex;
@@ -15,8 +15,8 @@
     justify-content: center;
     padding: 1rem;
     border: solid #aaa 2px;
-    border-radius: $small-border-radius;
-    background-color: $box-background;
+    border-radius: variables.$small-border-radius;
+    background-color: variables.$box-background;
 
     &.selected {
       background-color: #050;
@@ -62,7 +62,7 @@
     left: 0;
     right: 0;
     border-top: solid 2px #666;
-    background-color: $background;
+    background-color: variables.$background;
     padding: 1rem;
     z-index: 1;
   }

@@ -1,14 +1,14 @@
-@import "./variables.scss";
+@use "variables.scss";
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  .wrapper {
+  .next-items {
     position: relative;
-    padding: $card-margin;
-    width: $card-width + $card-margin * 2;
-    height: $card-height + $card-margin * 2;
+    padding: variables.$card-margin;
+    width: variables.$card-width + variables.$card-margin * 2;
+    height: variables.$card-height + variables.$card-margin * 2;
   }
 }

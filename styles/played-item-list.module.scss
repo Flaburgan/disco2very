@@ -1,4 +1,4 @@
-@import "./variables.scss";
+@use "variables.scss";
 
 .listContainer {
   width: min-content;
@@ -14,7 +14,7 @@
     position: absolute;
     top: 50%;
     width: 100%;
-    border-bottom: 1px dashed $dashes;
+    border-bottom: 1px dashed variables.$dashes;
   }
 }
 
@@ -22,10 +22,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: $card-height;
-  min-width: $card-width;
-  padding: $card-margin;
-  background-color: $background;
+  height: variables.$card-height;
+  min-width: variables.$card-width;
+  padding: variables.$card-margin;
+  background-color: variables.$background;
   font-size: 2rem;
   z-index: 1;
 }
@@ -39,7 +39,7 @@
 
 // Gap opened in the timeline where the dragged card would be inserted.
 .gapBefore {
-  margin-left: calc(#{$card-width} + 1rem);
+  margin-left: calc(#{variables.$card-width} + 1rem);
 }
 
 // Only animate the gap while a card is dragged: when the drag ends the gap is

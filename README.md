@@ -17,7 +17,7 @@ Contributions to the project are very welcome! By contributing, you agree that y
 ## Technical informations
 
 This project is using the [Next.js](https://nextjs.org/) framework, itself based on React.
-NodeJS 18.17.0 or higher is required to build and run the project.
+NodeJS 24 or higher is required to build and run the project.
 
 ### Prerequisites
 

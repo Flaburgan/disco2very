@@ -31,7 +31,7 @@
     "eslint": "^9.15.0",
     "eslint-plugin-lingui": "^0.10.1",
     "http-server": "^14.1.1",
-    "prettier": "^2.5.1",
+    "prettier": "^3.9.4",
     "sass": "^1.32.10",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.16.0"

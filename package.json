@@ -2,12 +2,15 @@
   "name": "disco2very",
   "version": "0.6.0",
   "private": true,
+  "engines": {
+    "node": "^20.19.0 || ^22.13.0 || >=24"
+  },
   "scripts": {
     "build": "next build",
     "dev": "next dev",
     "format": "prettier --write '**/*.{ts,tsx,css,scss,json,yml}'",
-    "lint": "eslint --max-warnings=0 --cache '**/*.{ts,tsx,css,scss,json,yml}'",
-    "lint-fix": "eslint --fix --cache '**/*.{ts,tsx,css,scss,json,yml}'",
+    "lint": "eslint --max-warnings=0 --cache '**/*.{ts,tsx}'",
+    "lint-fix": "eslint --fix --cache '**/*.{ts,tsx}'",
     "start": "next start",
     "test-e2e": "playwright test",
     "update-ademe": "node scripts/update-ademe-data.mjs",

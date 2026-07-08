@@ -21,7 +21,9 @@ import { RawEquivalent } from "../../../types/AdemeECV";
 const distances: Record<string, number> = transportDistances;
 
 function totalEcv(raw: RawEquivalent, coeff: number): number {
-  const footprint = raw.ecv ? raw.ecv.reduce((sum, { value }) => sum + value, 0) : raw.total ?? 0;
+  const footprint = raw.ecv
+    ? raw.ecv.reduce((sum, { value }) => sum + value, 0)
+    : (raw.total ?? 0);
   const usage = raw.usage ? raw.usage.peryear * raw.usage.defaultyears : 0;
   return (footprint + usage + (raw.end ?? 0)) * coeff;
 }
@@ -35,15 +37,20 @@ function flattenTransports(equivalents: RawEquivalent[]): RawEquivalent[] {
           ...equivalent,
           ecvs: undefined,
           ecv: sub.ecv,
-          slug: `${equivalent.slug}-${sub.subtitle}`.replace(/ /g, "").toLowerCase(),
+          slug: `${equivalent.slug}-${sub.subtitle}`
+            .replace(/ /g, "")
+            .toLowerCase(),
         }))
-      : [equivalent]
+      : [equivalent],
   );
 }
 
 const ecvBySlug = new Map<string, number>();
 
-function add(data: RawEquivalent[], coeff: (raw: RawEquivalent) => number = () => 1) {
+function add(
+  data: RawEquivalent[],
+  coeff: (raw: RawEquivalent) => number = () => 1,
+) {
   for (const raw of data) {
     if (!ecvBySlug.has(raw.slug)) {
       ecvBySlug.set(raw.slug, totalEcv(raw, coeff(raw)));
@@ -56,8 +63,10 @@ add(alimentation);
 add(repas);
 add(boissons);
 add(
-  flattenTransports(deplacements).filter((transport) => distances[transport.slug] !== undefined),
-  (raw) => distances[raw.slug]
+  flattenTransports(deplacements).filter(
+    (transport) => distances[transport.slug] !== undefined,
+  ),
+  (raw) => distances[raw.slug],
 );
 add(habillements);
 add(electromenager);
@@ -70,7 +79,9 @@ add(casPratiques);
 export function ecvOf(slug: string): number {
   const ecv = ecvBySlug.get(slug);
   if (ecv === undefined) {
-    throw new Error(`Unknown item slug "${slug}", cannot compute its footprint`);
+    throw new Error(
+      `Unknown item slug "${slug}", cannot compute its footprint`,
+    );
   }
   return ecv;
 }

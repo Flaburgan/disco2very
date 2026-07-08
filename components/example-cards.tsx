@@ -15,7 +15,9 @@ export default function ExampleCards() {
       <ItemCard item={getItemFromSlug("smartphone", locale)!} />
       <div className={styles.question}>
         <p className={styles.more}>+</p>
-        <p><Trans>or</Trans></p>
+        <p>
+          <Trans>or</Trans>
+        </p>
         <p className={styles.less}>-</p>
         <p>🤔</p>
       </div>

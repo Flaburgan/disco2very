@@ -1,7 +1,7 @@
 export const habillements = [
   {
     id: 27043,
-    slug: 'jeans',
+    slug: "jeans",
 
     category: 5,
     ecv: [
@@ -32,7 +32,7 @@ export const habillements = [
   },
   {
     id: 27046,
-    slug: 'polo',
+    slug: "polo",
     category: 5,
     ecv: [
       {
@@ -61,8 +61,8 @@ export const habillements = [
   },
   {
     id: 27044,
-    subtitle: 'En coton',
-    slug: 'tshirtencoton',
+    subtitle: "En coton",
+    slug: "tshirtencoton",
 
     category: 5,
     ecv: [
@@ -93,8 +93,8 @@ export const habillements = [
   },
   {
     id: 27045,
-    subtitle: 'En polyester',
-    slug: 'tshirtenpolyester',
+    subtitle: "En polyester",
+    slug: "tshirtenpolyester",
 
     category: 5,
     ecv: [
@@ -124,8 +124,8 @@ export const habillements = [
   },
   {
     id: 27049,
-    subtitle: 'En coton',
-    slug: 'sweatencoton',
+    subtitle: "En coton",
+    slug: "sweatencoton",
 
     category: 5,
     ecv: [
@@ -155,8 +155,8 @@ export const habillements = [
   },
   {
     id: 27041,
-    subtitle: 'En coton',
-    slug: 'chemiseencoton',
+    subtitle: "En coton",
+    slug: "chemiseencoton",
 
     category: 5,
     ecv: [
@@ -187,8 +187,8 @@ export const habillements = [
   },
   {
     id: 27042,
-    subtitle: 'En viscose',
-    slug: 'chemiseenviscose',
+    subtitle: "En viscose",
+    slug: "chemiseenviscose",
 
     category: 5,
     ecv: [
@@ -218,8 +218,8 @@ export const habillements = [
   },
   {
     id: 27058,
-    subtitle: 'En cuir',
-    slug: 'chaussuresencuir',
+    subtitle: "En cuir",
+    slug: "chaussuresencuir",
 
     category: 5,
     ecv: [
@@ -250,8 +250,8 @@ export const habillements = [
   },
   {
     id: 27059,
-    subtitle: 'En tissu',
-    slug: 'chaussuresentissu',
+    subtitle: "En tissu",
+    slug: "chaussuresentissu",
 
     category: 5,
     ecv: [
@@ -281,8 +281,8 @@ export const habillements = [
   },
   {
     id: 27060,
-    subtitle: 'De sport',
-    slug: 'chaussuresdesport',
+    subtitle: "De sport",
+    slug: "chaussuresdesport",
 
     category: 5,
     ecv: [
@@ -312,8 +312,8 @@ export const habillements = [
   },
   {
     id: 27056,
-    subtitle: 'En coton',
-    slug: 'robeencoton',
+    subtitle: "En coton",
+    slug: "robeencoton",
 
     category: 5,
     ecv: [
@@ -343,8 +343,8 @@ export const habillements = [
   },
   {
     id: 27055,
-    subtitle: 'En polyester',
-    slug: 'robeenpolyester',
+    subtitle: "En polyester",
+    slug: "robeenpolyester",
 
     category: 5,
     ecv: [
@@ -374,8 +374,8 @@ export const habillements = [
   },
   {
     id: 27057,
-    subtitle: 'En viscose',
-    slug: 'robeenviscose',
+    subtitle: "En viscose",
+    slug: "robeenviscose",
 
     category: 5,
     ecv: [
@@ -405,8 +405,8 @@ export const habillements = [
   },
   {
     id: 27050,
-    subtitle: 'En laine',
-    slug: 'pullenlaine',
+    subtitle: "En laine",
+    slug: "pullenlaine",
 
     category: 5,
     ecv: [
@@ -437,8 +437,8 @@ export const habillements = [
   },
   {
     id: 27047,
-    subtitle: 'En acrylique',
-    slug: 'pullenacrylique',
+    subtitle: "En acrylique",
+    slug: "pullenacrylique",
 
     category: 5,
     ecv: [
@@ -468,8 +468,8 @@ export const habillements = [
   },
   {
     id: 27051,
-    subtitle: 'En coton recyclé',
-    slug: 'pullencotonrecycle',
+    subtitle: "En coton recyclé",
+    slug: "pullencotonrecycle",
 
     category: 5,
     ecv: [
@@ -499,7 +499,7 @@ export const habillements = [
   },
   {
     id: 27052,
-    slug: 'manteau',
+    slug: "manteau",
 
     category: 5,
     ecv: [
@@ -530,8 +530,8 @@ export const habillements = [
   },
   {
     id: 27053,
-    slug: 'vesteimpermeable',
-    synonyms: ['k-way', 'anorak'],
+    slug: "vesteimpermeable",
+    synonyms: ["k-way", "anorak"],
     category: 5,
     ecv: [
       {
@@ -560,7 +560,7 @@ export const habillements = [
   },
   {
     id: 27054,
-    slug: 'vestesimilicuir',
+    slug: "vestesimilicuir",
 
     category: 5,
     ecv: [
@@ -588,4 +588,4 @@ export const habillements = [
     end: 0.881444738170221,
     total: 24,
   },
-]
+];

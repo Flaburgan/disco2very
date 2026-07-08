@@ -28,7 +28,6 @@ function getMedal(score: number): string {
 export default function GameOver(props: Props) {
   const { highscore, resetGame, score, lives } = props;
 
-
   const [shareText, setShareText] = React.useState(defaultShareText);
 
   const share = React.useCallback(async () => {
@@ -41,7 +40,7 @@ ${guess}
 
 ${getMedal(score)}${streak}: ${score}\n${getMedal(highscore)}${bestStreak}: ${highscore}
 
-https://disco2very.org`
+https://disco2very.org`,
     );
     setShareText(<Trans>Copied!</Trans>);
     setTimeout(() => {
@@ -51,30 +50,50 @@ https://disco2very.org`
 
   return (
     <div className={styles.gameOver}>
-      {lives > 0 ?
+      {lives > 0 ? (
         <>
-          <h1><Trans>Congratulations!</Trans></h1>
-          <h2><Trans>You ordered all the cards!</Trans></h2>
-          <h3><Trans>You should probably select more categories?</Trans></h3>
+          <h1>
+            <Trans>Congratulations!</Trans>
+          </h1>
+          <h2>
+            <Trans>You ordered all the cards!</Trans>
+          </h2>
+          <h3>
+            <Trans>You should probably select more categories?</Trans>
+          </h3>
         </>
-        :
+      ) : (
         <>
-          <h1><Trans>Game over</Trans></h1>
-          <h2><Trans>Try again!</Trans></h2>
+          <h1>
+            <Trans>Game over</Trans>
+          </h1>
+          <h2>
+            <Trans>Try again!</Trans>
+          </h2>
         </>
-      }
+      )}
       <div className={styles.scoresWrapper}>
         <div className={styles.score}>
-          <Score score={score}><Trans>This streak</Trans></Score>
+          <Score score={score}>
+            <Trans>This streak</Trans>
+          </Score>
         </div>
         <div className={styles.score}>
-          <Score score={highscore}><Trans>Best streak</Trans></Score>
+          <Score score={highscore}>
+            <Trans>Best streak</Trans>
+          </Score>
         </div>
       </div>
-      <div onClick={share} className={styles.shareAction}>{shareText}</div>
+      <div onClick={share} className={styles.shareAction}>
+        {shareText}
+      </div>
       <p className={styles.buttons}>
-        <Button onClick={() => resetGame(false)} minimal={lives > 0}><Trans>Play again</Trans></Button>
-        <Button onClick={() => resetGame(true)} minimal={lives === 0}><Trans>Select categories</Trans></Button>
+        <Button onClick={() => resetGame(false)} minimal={lives > 0}>
+          <Trans>Play again</Trans>
+        </Button>
+        <Button onClick={() => resetGame(true)} minimal={lives === 0}>
+          <Trans>Select categories</Trans>
+        </Button>
       </p>
     </div>
   );

@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "../styles/hearts.module.scss";
 
-
 interface Props {
   lives: number;
 }

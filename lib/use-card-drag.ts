@@ -117,7 +117,7 @@ export default function useCardDrag(args: Args) {
   // to the card's lifted position.
   function slotPosition(
     session: DragSession,
-    index: number
+    index: number,
   ): { x: number; y: number } | null {
     const list = argsRef.current.playedListRef.current;
     const rect = session.rect;
@@ -141,7 +141,7 @@ export default function useCardDrag(args: Args) {
 
   function autoScrollSpeed(overlap: number): number {
     return Math.ceil(
-      AUTOSCROLL_MAX_SPEED * Math.min(1, overlap / AUTOSCROLL_ZONE)
+      AUTOSCROLL_MAX_SPEED * Math.min(1, overlap / AUTOSCROLL_ZONE),
     );
   }
 
@@ -171,7 +171,7 @@ export default function useCardDrag(args: Args) {
       const before = scrollContainer.scrollLeft;
       scrollContainer.scrollLeft = Math.max(
         0,
-        Math.min(maxScroll, before + delta)
+        Math.min(maxScroll, before + delta),
       );
       if (scrollContainer.scrollLeft !== before) {
         updateDropIndex(session);
@@ -241,7 +241,7 @@ export default function useCardDrag(args: Args) {
 
     const animation = session.el.animate(
       [{ transform: from }, { transform: to }],
-      { duration: DROP_DURATION, easing: DROP_EASING, fill: "forwards" }
+      { duration: DROP_DURATION, easing: DROP_EASING, fill: "forwards" },
     );
     animation.onfinish = () => {
       // Commit the new state and only then remove the drag styles, in the
@@ -306,7 +306,7 @@ export default function useCardDrag(args: Args) {
       if (session.rect === null) {
         const distance = Math.hypot(
           e.clientX - session.startX,
-          e.clientY - session.startY
+          e.clientY - session.startY,
         );
         if (distance < DRAG_THRESHOLD) {
           return;

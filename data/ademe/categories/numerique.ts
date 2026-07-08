@@ -1,42 +1,42 @@
 export const numeriques = [
   {
     synonyms: [
-      'telephone',
-      'gsm',
-      'mobile',
-      'portable',
-      'iphone',
-      'samsung',
-      'xiaomi',
-      'Apple',
-      'Samsung',
-      'Huawei',
-      'Xiaomi',
-      'OPPO',
-      'Sony',
-      'Realme',
-      'LG',
-      'Honor',
-      'OnePlus',
-      'Google',
-      'TCL',
-      'Alcatel',
-      'Nokia',
-      'Motorola',
-      'CAT',
-      'InnJoo',
-      'Lenovo',
-      'Microsoft',
-      'Elephone',
-      'HTC',
-      'ZTE',
-      'Vivo',
-      'Asus',
-      'Wiko',
-      'Haier',
-      'BlackBerry',
+      "telephone",
+      "gsm",
+      "mobile",
+      "portable",
+      "iphone",
+      "samsung",
+      "xiaomi",
+      "Apple",
+      "Samsung",
+      "Huawei",
+      "Xiaomi",
+      "OPPO",
+      "Sony",
+      "Realme",
+      "LG",
+      "Honor",
+      "OnePlus",
+      "Google",
+      "TCL",
+      "Alcatel",
+      "Nokia",
+      "Motorola",
+      "CAT",
+      "InnJoo",
+      "Lenovo",
+      "Microsoft",
+      "Elephone",
+      "HTC",
+      "ZTE",
+      "Vivo",
+      "Asus",
+      "Wiko",
+      "Haier",
+      "BlackBerry",
     ],
-    slug: 'smartphone',
+    slug: "smartphone",
     category: 1,
     ecv: [
       {
@@ -56,7 +56,7 @@ export const numeriques = [
     default: true,
   },
   {
-    slug: 'ordinateurfixeparticulier',
+    slug: "ordinateurfixeparticulier",
     category: 1,
     ecv: [
       {
@@ -76,7 +76,7 @@ export const numeriques = [
     default: true,
   },
   {
-    slug: 'ordinateurfixeprofessionnel',
+    slug: "ordinateurfixeprofessionnel",
     category: 1,
     ecv: [
       {
@@ -96,7 +96,7 @@ export const numeriques = [
     default: true,
   },
   {
-    slug: 'ecran',
+    slug: "ecran",
     category: 1,
     usage: {
       peryear: 3.7886999999999995,
@@ -115,7 +115,7 @@ export const numeriques = [
     ],
   },
   {
-    slug: 'tabletteclassique',
+    slug: "tabletteclassique",
     category: 1,
     usage: {
       peryear: 0.9471749999999999,
@@ -135,7 +135,7 @@ export const numeriques = [
     default: true,
   },
   {
-    slug: 'television',
+    slug: "television",
     category: 1,
     ecv: [
       {
@@ -155,7 +155,7 @@ export const numeriques = [
     default: true,
   },
   {
-    slug: 'ordinateurportable',
+    slug: "ordinateurportable",
     category: 1,
     ecv: [
       {
@@ -175,7 +175,7 @@ export const numeriques = [
     default: true,
   },
   {
-    slug: 'enceintebluetooth',
+    slug: "enceintebluetooth",
     category: 1,
     ecv: [
       {
@@ -194,7 +194,7 @@ export const numeriques = [
     end: 0.7,
   },
   {
-    slug: 'telephonebasique',
+    slug: "telephonebasique",
     category: 1,
     ecv: [
       {
@@ -209,7 +209,7 @@ export const numeriques = [
     end: 0.1,
   },
   {
-    slug: 'casquevr',
+    slug: "casquevr",
     category: 1,
     ecv: [
       {
@@ -228,8 +228,8 @@ export const numeriques = [
     end: 1.675,
   },
   {
-    subtitle: 'laptop',
-    slug: 'alimentationordinateur',
+    subtitle: "laptop",
+    slug: "alimentationordinateur",
     category: 1,
     ecv: [
       {
@@ -244,8 +244,8 @@ export const numeriques = [
     end: 0.542,
   },
   {
-    subtitle: 'smartphone',
-    slug: 'alimentationsmartphone',
+    subtitle: "smartphone",
+    slug: "alimentationsmartphone",
     category: 1,
     ecv: [
       {
@@ -260,7 +260,7 @@ export const numeriques = [
     end: 0.052700000000000004,
   },
   {
-    slug: 'disquedur',
+    slug: "disquedur",
     category: 1,
     ecv: [
       {
@@ -279,7 +279,7 @@ export const numeriques = [
     },
   },
   {
-    slug: 'ssd',
+    slug: "ssd",
     category: 1,
     ecv: [
       {
@@ -298,7 +298,7 @@ export const numeriques = [
     },
   },
   {
-    slug: 'clefusb',
+    slug: "clefusb",
     category: 1,
     ecv: [
       {
@@ -317,7 +317,7 @@ export const numeriques = [
     end: 0.015300000000000001,
   },
   {
-    slug: 'box',
+    slug: "box",
     category: 1,
     ecv: [
       {
@@ -336,7 +336,7 @@ export const numeriques = [
     end: 1.63,
   },
   {
-    slug: 'videoprojecteur',
+    slug: "videoprojecteur",
     category: 1,
     ecv: [
       {
@@ -355,10 +355,10 @@ export const numeriques = [
     end: 3.26,
     sources: [
       {
-        label: 'Étude ADEME/ARCEP - mise à jour 2025',
-        href: 'https://librairie.ademe.fr/changement-climatique/7880-evaluation-de-l-impact-environnemental-du-numerique-en-france.html',
+        label: "Étude ADEME/ARCEP - mise à jour 2025",
+        href: "https://librairie.ademe.fr/changement-climatique/7880-evaluation-de-l-impact-environnemental-du-numerique-en-france.html",
       },
     ],
     default: true,
   },
-]
+];

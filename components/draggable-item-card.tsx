@@ -17,28 +17,35 @@ export default function DraggableItemCard(props: Props) {
   const [showExplanation, setShowExplanation] = React.useState<boolean>(false);
   const played = "played" in item;
 
-  return (<>
-    <div
-      className={cx(styles.itemCard, className, {
-        [styles.draggable]: draggable,
-        played,
-      })}
-      data-timeline-card={played ? "" : undefined}
-      onPointerDown={draggable ? onPointerDown : undefined}
-      onClick={() => {
-        if (played) {
-          setShowExplanation(true);
-        }
-      }}
-    >
-      <ItemCard item={item} />
-      <div className="hoverInterrogation">
-        <div>?</div>
+  return (
+    <>
+      <div
+        className={cx(styles.itemCard, className, {
+          [styles.draggable]: draggable,
+          played,
+        })}
+        data-timeline-card={played ? "" : undefined}
+        onPointerDown={draggable ? onPointerDown : undefined}
+        onClick={() => {
+          if (played) {
+            setShowExplanation(true);
+          }
+        }}
+      >
+        <ItemCard item={item} />
+        <div className="hoverInterrogation">
+          <div>?</div>
+        </div>
+        <div className="clickInterrogation">
+          <span>?</span>
+        </div>
       </div>
-      <div className="clickInterrogation">
-        <span>?</span>
-      </div>
-    </div>
-    {showExplanation && <ExplanationDialog item={item} onExit={() => setShowExplanation(false)} />}
-  </>);
+      {showExplanation && (
+        <ExplanationDialog
+          item={item}
+          onExit={() => setShowExplanation(false)}
+        />
+      )}
+    </>
+  );
 }

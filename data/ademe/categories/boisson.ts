@@ -1,13 +1,13 @@
 export const boissons = [
   {
     id: 24283,
-    slug: 'eaudurobinet',
+    slug: "eaudurobinet",
     category: 3,
     total: 0.000132,
   },
   {
     id: 31000,
-    slug: 'eauenbouteille',
+    slug: "eauenbouteille",
     category: 3,
     ecv: [
       {
@@ -34,7 +34,7 @@ export const boissons = [
   },
   {
     id: 31001,
-    slug: 'soda',
+    slug: "soda",
     category: 3,
     ecv: [
       {
@@ -65,7 +65,7 @@ export const boissons = [
   },
   {
     id: 31002,
-    slug: 'biere',
+    slug: "biere",
     category: 3,
     ecv: [
       {
@@ -96,7 +96,7 @@ export const boissons = [
   },
   {
     id: 31003,
-    slug: 'vin',
+    slug: "vin",
     category: 3,
     ecv: [
       {
@@ -127,7 +127,7 @@ export const boissons = [
   },
   {
     id: 31004,
-    slug: 'laitdevache',
+    slug: "laitdevache",
     category: 3,
     ecv: [
       {
@@ -153,8 +153,8 @@ export const boissons = [
     ],
   },
   {
-    synonyms: ['lait'],
-    slug: 'soja',
+    synonyms: ["lait"],
+    slug: "soja",
     category: 3,
     ecv: [
       {
@@ -181,7 +181,7 @@ export const boissons = [
     total: 0.42,
   },
   {
-    slug: 'the',
+    slug: "the",
     category: 3,
     ecv: [
       {
@@ -207,7 +207,7 @@ export const boissons = [
     ],
   },
   {
-    slug: 'cafe',
+    slug: "cafe",
     category: 3,
     ecv: [
       {
@@ -236,4 +236,4 @@ export const boissons = [
       },
     ],
   },
-]
+];

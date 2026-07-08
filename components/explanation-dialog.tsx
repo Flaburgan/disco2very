@@ -18,51 +18,87 @@ interface ExplanationDialogProps {
 export default function ExplanationDialog(props: ExplanationDialogProps) {
   const { i18n } = useLingui();
   const footprintDetails = getFootprintDetails();
-  const {item, onExit} = props;
+  const { item, onExit } = props;
   const details = item.source.footprintDetail;
   const usage = item.source.usage;
   const endOfLife = item.source.endOfLife;
   const total = round2(item.source.ecv);
   // Some items document their own sources, the others use the category ones.
   const itemSources = item.source.sources;
-  const sources = (itemSources && itemSources.length > 0 ? itemSources : getCategories().get(item.categoryId)?.sources) ?? [];
+  const sources =
+    (itemSources && itemSources.length > 0
+      ? itemSources
+      : getCategories().get(item.categoryId)?.sources) ?? [];
 
   return (
     <div className={styles.explanationDialogContainer} onClick={onExit}>
-      <div className={styles.explanationDialog} onClick={(ev) => ev.stopPropagation()}>
+      <div
+        className={styles.explanationDialog}
+        onClick={(ev) => ev.stopPropagation()}
+      >
         <header className={styles.top}>
           <h2 className={styles.label}>{item.label}</h2>
-          <img className={styles.cross} src="images/cross.svg" onClick={onExit} />
+          <img
+            className={styles.cross}
+            src="images/cross.svg"
+            onClick={onExit}
+          />
         </header>
         <main>
-          {
-            item.explanation ? <p>{item.explanation}</p> : (
-              <ul>
-                {details && details.map((detail) => displayDetail(detail, footprintDetails, total, i18n.locale as Locale))}
-                {usage && displayUsage(usage, total)}
-                {endOfLife && displayEndOfLife(endOfLife, total)}
-              </ul>
-            )
-          }
+          {item.explanation ? (
+            <p>{item.explanation}</p>
+          ) : (
+            <ul>
+              {details &&
+                details.map((detail) =>
+                  displayDetail(
+                    detail,
+                    footprintDetails,
+                    total,
+                    i18n.locale as Locale,
+                  ),
+                )}
+              {usage && displayUsage(usage, total)}
+              {endOfLife && displayEndOfLife(endOfLife, total)}
+            </ul>
+          )}
           {item.source.hypothesis && (
             <p className={styles.hypothesis}>
-              <strong><Trans>Hypotheses:</Trans></strong> {item.source.hypothesis}
+              <strong>
+                <Trans>Hypotheses:</Trans>
+              </strong>{" "}
+              {item.source.hypothesis}
             </p>
           )}
         </main>
         <footer>
-          <h3><Trans>Total:</Trans></h3>
+          <h3>
+            <Trans>Total:</Trans>
+          </h3>
           <div className={styles.result}>
-            <strong className={styles[total > 0 ? "result-negative" : "result-positive"]}>{total} kg CO<sub>2</sub>e</strong>
+            <strong
+              className={
+                styles[total > 0 ? "result-negative" : "result-positive"]
+              }
+            >
+              {total} kg CO<sub>2</sub>e
+            </strong>
           </div>
           {sources.length > 0 && (
             <div className={styles.source}>
-              <Trans>Source:</Trans> {sources.map((source, index) => displaySource(source, index))}
+              <Trans>Source:</Trans>{" "}
+              {sources.map((source, index) => displaySource(source, index))}
             </div>
           )}
           <div className="info">
             <Trans>
-              These values are computed by the french goverment agency <abbr title="Agence de l'environnement et de la maîtrise de l'énergie">ADEME</abbr> and are based on France characteristics. Other countries may have different values, especially those resulting from electricity consumption.
+              These values are computed by the french goverment agency{" "}
+              <abbr title="Agence de l'environnement et de la maîtrise de l'énergie">
+                ADEME
+              </abbr>{" "}
+              and are based on France characteristics. Other countries may have
+              different values, especially those resulting from electricity
+              consumption.
             </Trans>
           </div>
         </footer>
@@ -72,33 +108,55 @@ export default function ExplanationDialog(props: ExplanationDialogProps) {
 }
 
 function displaySource(source: AdemeSource, index: number): JSX.Element {
-  return <React.Fragment key={source.href + index}>
-    {index > 0 && ", "}
-    <a href={source.href} rel="noreferrer" target="_blank">{source.label}</a>
-  </React.Fragment>;
+  return (
+    <React.Fragment key={source.href + index}>
+      {index > 0 && ", "}
+      <a href={source.href} rel="noreferrer" target="_blank">
+        {source.label}
+      </a>
+    </React.Fragment>
+  );
 }
 
-function displayDetail(detail: {id: number, value: number}, footprintDetails: FootprintDetails, total: number, locale: Locale): JSX.Element {
-  return <li key={"explanation-" + detail.id}>
-    <h3>{footprintDetails[detail.id][locale]}</h3>
-    <ChartBar value={detail.value} total={total} />
-  </li>;
+function displayDetail(
+  detail: { id: number; value: number },
+  footprintDetails: FootprintDetails,
+  total: number,
+  locale: Locale,
+): JSX.Element {
+  return (
+    <li key={"explanation-" + detail.id}>
+      <h3>{footprintDetails[detail.id][locale]}</h3>
+      <ChartBar value={detail.value} total={total} />
+    </li>
+  );
 }
 
-function displayUsage(usage: {peryear: number, defaultyears: number}, total: number): JSX.Element {
+function displayUsage(
+  usage: { peryear: number; defaultyears: number },
+  total: number,
+): JSX.Element {
   const perYearDisplay = displayCO2(usage.peryear);
   const defaultYearDisplay = usage.defaultyears;
   const value = usage.peryear * usage.defaultyears;
-  return <li>
-    <h3><Trans>Usage:</Trans></h3>
-    <ChartBar value={value} total={total} />
-    <em>{t`${perYearDisplay} per year, estimated lifespan: ${defaultYearDisplay} years.`}</em>
-  </li>;
+  return (
+    <li>
+      <h3>
+        <Trans>Usage:</Trans>
+      </h3>
+      <ChartBar value={value} total={total} />
+      <em>{t`${perYearDisplay} per year, estimated lifespan: ${defaultYearDisplay} years.`}</em>
+    </li>
+  );
 }
 
 function displayEndOfLife(endOfLife: number, total: number): JSX.Element {
-  return <li>
-    <h3><Trans>End of life:</Trans></h3>
-    <ChartBar value={endOfLife} total={total} />
-  </li>;
+  return (
+    <li>
+      <h3>
+        <Trans>End of life:</Trans>
+      </h3>
+      <ChartBar value={endOfLife} total={total} />
+    </li>
+  );
 }

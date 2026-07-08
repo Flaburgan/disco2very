@@ -15,7 +15,7 @@ export default function Game() {
   const [categoriesMode, setCategoriesMode] = useState(false);
 
   const [highscore, setHighscore] = React.useState<number>(
-    Number(localStorage.getItem("highscore") ?? "0")
+    Number(localStorage.getItem("highscore") ?? "0"),
   );
 
   const updateHighscore = React.useCallback((score: number) => {
@@ -31,11 +31,21 @@ export default function Game() {
   const startGame = (selectedItems: Item[]) => {
     setInitialState(createState(selectedItems));
     recordNewGame(categoriesMode);
-  }
+  };
 
-  return (initialState !== null ?
-    <Board highscore={highscore} initialState={initialState} updateHighscore={updateHighscore} restart={restart} />
-    :
-    <Instructions highscore={highscore} setSelectedItems={startGame} categoriesMode={categoriesMode} setCategoriesMode={setCategoriesMode} />
+  return initialState !== null ? (
+    <Board
+      highscore={highscore}
+      initialState={initialState}
+      updateHighscore={updateHighscore}
+      restart={restart}
+    />
+  ) : (
+    <Instructions
+      highscore={highscore}
+      setSelectedItems={startGame}
+      categoriesMode={categoriesMode}
+      setCategoriesMode={setCategoriesMode}
+    />
   );
 }

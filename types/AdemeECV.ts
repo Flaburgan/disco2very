@@ -13,21 +13,21 @@ export interface RawEquivalent {
   ecv?: {
     id: number;
     value: number;
-  }[],
+  }[];
   // Sub-equivalents ("avion" declines into courtcourrier, moyencourrier...).
   ecvs?: {
     subtitle: string;
     ecv: {
       id: number;
       value: number;
-    }[],
-  }[],
+    }[];
+  }[];
   // Total footprint, for items without an "ecv" detail.
   total?: number;
   usage?: {
     peryear: number;
     defaultyears: number;
-  },
+  };
   end?: number;
   // In-season months for fruits and vegetables, 0-indexed (0 = January).
   months?: number[];
@@ -39,16 +39,14 @@ export interface AdemeECV {
   ecv: number;
   slug: string;
   footprint?: number;
-  footprintDetail?:
-    {
-      id: number;
-      value: number;
-    }[]
-  ,
+  footprintDetail?: {
+    id: number;
+    value: number;
+  }[];
   usage?: {
     peryear: number;
     defaultyears: number;
-  },
+  };
   endOfLife?: number;
   months?: number[];
   hypothesis?: string;

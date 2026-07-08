@@ -18,15 +18,19 @@ export default function ItemCard(props: Props) {
   const categories = getCategories();
 
   return (
-    <div
-      className={styles.front}
-    >
+    <div className={styles.front}>
       <header className={styles.top}>
         <h2 className={styles.label}>{capitalize(item.label)}</h2>
-        <img className={styles.categoryLogo} src={`./images/ademe/${categories.get(item.categoryId)!.slug}.svg`} />
+        <img
+          className={styles.categoryLogo}
+          src={`./images/ademe/${categories.get(item.categoryId)!.slug}.svg`}
+        />
       </header>
       <main>
-        <div className={styles.description} dangerouslySetInnerHTML={{__html: item.description}}></div>
+        <div
+          className={styles.description}
+          dangerouslySetInnerHTML={{ __html: item.description }}
+        ></div>
         <div className={styles.imageContainer}>
           <img src={`./images/ademe/${item.id}.svg`} />
         </div>

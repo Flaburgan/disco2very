@@ -1,100 +1,100 @@
 export const casPratiques = [
   {
-    slug: 'avion-pny',
+    slug: "avion-pny",
     category: 13,
     total: 2060,
   },
   {
-    slug: 'tgv-paris-berlin',
+    slug: "tgv-paris-berlin",
     category: 13,
     total: 7.26,
   },
   {
-    slug: 'tgv-paris-marseille',
+    slug: "tgv-paris-marseille",
     category: 13,
     total: 4.4,
   },
   {
-    slug: 'voiture-lille-nimes',
+    slug: "voiture-lille-nimes",
     category: 13,
     total: 267.7209218160006,
   },
   {
-    unit: 'an',
-    slug: 'francais',
+    unit: "an",
+    slug: "francais",
     category: 13,
     percentage: true,
     total: 9100,
     sources: [
       {
-        label: 'Nos Gestes Climat',
-        href: 'https://nosgestesclimat.fr',
+        label: "Nos Gestes Climat",
+        href: "https://nosgestesclimat.fr",
       },
     ],
   },
   {
-    synonyms: ['streaming', 'série', 'netflix'],
-    unit: 'épisode',
-    slug: 'game-of-thrones',
+    synonyms: ["streaming", "série", "netflix"],
+    unit: "épisode",
+    slug: "game-of-thrones",
     category: 13,
     total: 0.0317,
   },
   {
-    synonyms: ['streaming', 'série', 'netflix'],
-    unit: 'intégrale',
-    slug: 'friends',
+    synonyms: ["streaming", "série", "netflix"],
+    unit: "intégrale",
+    slug: "friends",
     category: 13,
     total: 7.86,
   },
   {
-    synonyms: ['sport', 'montagne', 'neige', 'vacances'],
-    slug: 'ski',
+    synonyms: ["sport", "montagne", "neige", "vacances"],
+    slug: "ski",
     category: 13,
     total: 48.9,
     sources: [
       {
-        label: 'ADEME',
-        href: 'https://librairie.ademe.fr/ged/6913/guide_sectoriel_montagne_02062022.pdf',
+        label: "ADEME",
+        href: "https://librairie.ademe.fr/ged/6913/guide_sectoriel_montagne_02062022.pdf",
       },
       {
-        label: 'Infographie',
-        href: 'https://mtaterre.fr/wp-content/uploads/2023/12/infographie-empreinte-carbone-une-journee-au-ski.pdf',
+        label: "Infographie",
+        href: "https://mtaterre.fr/wp-content/uploads/2023/12/infographie-empreinte-carbone-une-journee-au-ski.pdf",
       },
     ],
   },
   {
-    synonyms: ['eau', 'bassin', 'baignade', 'nager'],
-    slug: 'piscine',
+    synonyms: ["eau", "bassin", "baignade", "nager"],
+    slug: "piscine",
     category: 13,
     total: 7.54,
     sources: [
       {
-        label: 'Base Empreinte ADEME',
-        href: 'https://base-empreinte.ademe.fr/donnees/jeu-donnees',
+        label: "Base Empreinte ADEME",
+        href: "https://base-empreinte.ademe.fr/donnees/jeu-donnees",
       },
     ],
   },
   {
-    synonyms: ['voyage', 'parcourir'],
-    slug: 'terre-voiture',
+    synonyms: ["voyage", "parcourir"],
+    slug: "terre-voiture",
     category: 13,
     total: 7570.825010920866,
     sources: [
       {
-        label: 'Base Empreinte ADEME',
-        href: 'https://base-empreinte.ademe.fr/donnees/jeu-donnees',
+        label: "Base Empreinte ADEME",
+        href: "https://base-empreinte.ademe.fr/donnees/jeu-donnees",
       },
     ],
   },
   {
-    synonyms: ['intégrale', 'séries'],
-    slug: 'harry-potter',
+    synonyms: ["intégrale", "séries"],
+    slug: "harry-potter",
     category: 13,
     total: 0.63,
   },
   {
-    synonyms: ['voyage'],
-    slug: 'hotel',
+    synonyms: ["voyage"],
+    slug: "hotel",
     category: 13,
     ecv: [
       {
@@ -116,20 +116,20 @@ export const casPratiques = [
     ],
     sources: [
       {
-        label: 'ADEME',
-        href: 'https://librairie.ademe.fr/changement-climatique/7637-bilan-des-emissions-de-gaz-a-effet-de-serre-du-secteur-du-tourisme-en-france-en-2022.html',
+        label: "ADEME",
+        href: "https://librairie.ademe.fr/changement-climatique/7637-bilan-des-emissions-de-gaz-a-effet-de-serre-du-secteur-du-tourisme-en-france-en-2022.html",
       },
     ],
   },
   {
-    synonyms: ['voyage', 'tente'],
-    slug: 'camping',
+    synonyms: ["voyage", "tente"],
+    slug: "camping",
     category: 13,
     total: 1.4,
   },
   {
-    synonyms: ['voyage', 'airbnb'],
-    slug: 'location',
+    synonyms: ["voyage", "airbnb"],
+    slug: "location",
     category: 13,
     ecv: [
       {
@@ -147,13 +147,13 @@ export const casPratiques = [
     ],
     sources: [
       {
-        label: 'ADEME',
-        href: 'https://librairie.ademe.fr/changement-climatique/7637-bilan-des-emissions-de-gaz-a-effet-de-serre-du-secteur-du-tourisme-en-france-en-2022.html',
+        label: "ADEME",
+        href: "https://librairie.ademe.fr/changement-climatique/7637-bilan-des-emissions-de-gaz-a-effet-de-serre-du-secteur-du-tourisme-en-france-en-2022.html",
       },
     ],
   },
   {
-    slug: 'residencesecondaire',
+    slug: "residencesecondaire",
     category: 13,
     ecv: [
       {
@@ -171,224 +171,224 @@ export const casPratiques = [
     ],
     sources: [
       {
-        label: 'ADEME',
-        href: 'https://librairie.ademe.fr/changement-climatique/7637-bilan-des-emissions-de-gaz-a-effet-de-serre-du-secteur-du-tourisme-en-france-en-2022.html',
+        label: "ADEME",
+        href: "https://librairie.ademe.fr/changement-climatique/7637-bilan-des-emissions-de-gaz-a-effet-de-serre-du-secteur-du-tourisme-en-france-en-2022.html",
       },
     ],
   },
   {
-    unit: 'an',
-    slug: '2050',
+    unit: "an",
+    slug: "2050",
     category: 13,
     percentage: true,
     total: 2000,
     sources: [
       {
-        label: 'ADEME',
-        href: 'https://agirpourlatransition.ademe.fr/particuliers/conso/conso-responsable/connaissez-vous-votre-empreinte-climat',
+        label: "ADEME",
+        href: "https://agirpourlatransition.ademe.fr/particuliers/conso/conso-responsable/connaissez-vous-votre-empreinte-climat",
       },
     ],
   },
   {
-    slug: 'voiturefrancaisejour',
+    slug: "voiturefrancaisejour",
     category: 13,
     total: 193699000,
     sources: [
       {
-        label: 'Citepa - Secten',
-        href: 'https://www.citepa.org/explorateur-de-donnees/',
+        label: "Citepa - Secten",
+        href: "https://www.citepa.org/explorateur-de-donnees/",
       },
     ],
   },
   {
-    slug: 'voiturefrancaisean',
+    slug: "voiturefrancaisean",
     category: 13,
     total: 70700135000,
     sources: [
       {
-        label: 'Citepa - Secten',
-        href: 'https://www.citepa.org/explorateur-de-donnees/',
+        label: "Citepa - Secten",
+        href: "https://www.citepa.org/explorateur-de-donnees/",
       },
     ],
   },
   {
-    slug: 'populationfrancaise',
+    slug: "populationfrancaise",
     category: 13,
     total: 624000000000,
     sources: [
       {
-        label: 'Nos Gestes Climat',
-        href: 'https://nosgestesclimat.fr/blog/environnement/definition-empreinte-carbone#empreinte-carbone-individuelle-nationale-ou-dentreprise-quelles-differences/',
+        label: "Nos Gestes Climat",
+        href: "https://nosgestesclimat.fr/blog/environnement/definition-empreinte-carbone#empreinte-carbone-individuelle-nationale-ou-dentreprise-quelles-differences/",
       },
     ],
   },
   {
-    slug: 'parcbovin',
+    slug: "parcbovin",
     category: 13,
     total: 38032000000,
     sources: [
       {
-        label: 'Citepa - Secten',
-        href: 'https://www.citepa.org/explorateur-de-donnees/',
+        label: "Citepa - Secten",
+        href: "https://www.citepa.org/explorateur-de-donnees/",
       },
     ],
   },
   {
-    slug: 'chauffageenfrance',
+    slug: "chauffageenfrance",
     category: 13,
     total: 43320025000,
     sources: [
       {
-        label: 'Batizoom',
-        href: 'https://batizoom.ademe.fr/indicateurs/emissions-de-ges-liees-a-lexploitation-des-batiments-residentiels-par-usage/',
+        label: "Batizoom",
+        href: "https://batizoom.ademe.fr/indicateurs/emissions-de-ges-liees-a-lexploitation-des-batiments-residentiels-par-usage/",
       },
     ],
   },
   {
-    slug: 'numeriqueenfrance',
+    slug: "numeriqueenfrance",
     category: 13,
     total: 29500000000,
     sources: [
       {
-        label: 'ADEME',
-        href: 'https://librairie.ademe.fr/societe-et-politiques-publiques/7880-evaluation-de-l-impact-environnemental-du-numerique-en-france.html',
+        label: "ADEME",
+        href: "https://librairie.ademe.fr/societe-et-politiques-publiques/7880-evaluation-de-l-impact-environnemental-du-numerique-en-france.html",
       },
     ],
   },
   {
-    slug: 'aviationcivileenfrance',
+    slug: "aviationcivileenfrance",
     category: 13,
     total: 4380000000,
     sources: [
       {
-        label: 'Citepa - Secten',
-        href: 'https://www.citepa.org/explorateur-de-donnees/',
+        label: "Citepa - Secten",
+        href: "https://www.citepa.org/explorateur-de-donnees/",
       },
     ],
   },
   {
-    slug: 'agricoleenfrancejour',
+    slug: "agricoleenfrancejour",
     category: 13,
     total: 216439000,
     sources: [
       {
-        label: 'Citepa - Secten',
-        href: 'https://www.citepa.org/explorateur-de-donnees/',
+        label: "Citepa - Secten",
+        href: "https://www.citepa.org/explorateur-de-donnees/",
       },
     ],
   },
   {
-    slug: 'chauffageenfrancejour',
+    slug: "chauffageenfrancejour",
     category: 13,
     total: 118685000,
     sources: [
       {
-        label: 'Batizoom',
-        href: 'https://batizoom.ademe.fr/indicateurs/emissions-de-ges-liees-a-lexploitation-des-batiments-residentiels-par-usage/',
+        label: "Batizoom",
+        href: "https://batizoom.ademe.fr/indicateurs/emissions-de-ges-liees-a-lexploitation-des-batiments-residentiels-par-usage/",
       },
     ],
   },
   {
-    slug: 'foretenfrancejour',
+    slug: "foretenfrancejour",
     category: 13,
     total: 151636000,
     sources: [
       {
-        label: 'Citepa - Secten',
-        href: 'https://www.citepa.org/explorateur-de-donnees/',
+        label: "Citepa - Secten",
+        href: "https://www.citepa.org/explorateur-de-donnees/",
       },
     ],
   },
   {
-    slug: 'climatisationenfrancejour',
+    slug: "climatisationenfrancejour",
     category: 13,
     total: 3277000,
     sources: [
       {
-        label: 'Citepa - Secten',
-        href: 'https://www.citepa.org/explorateur-de-donnees/',
+        label: "Citepa - Secten",
+        href: "https://www.citepa.org/explorateur-de-donnees/",
       },
     ],
   },
   {
-    slug: 'voiturefrancaiseheure',
+    slug: "voiturefrancaiseheure",
     category: 13,
     total: 8071000,
     sources: [
       {
-        label: 'Citepa - Secten',
-        href: 'https://www.citepa.org/explorateur-de-donnees/',
+        label: "Citepa - Secten",
+        href: "https://www.citepa.org/explorateur-de-donnees/",
       },
     ],
   },
   {
-    slug: 'numeriqueenfrancejour',
+    slug: "numeriqueenfrancejour",
     category: 13,
     total: 80822000,
     sources: [
       {
-        label: 'ADEME',
-        href: 'https://librairie.ademe.fr/changement-climatique/7880-evaluation-de-l-impact-environnemental-du-numerique-en-france.html',
+        label: "ADEME",
+        href: "https://librairie.ademe.fr/changement-climatique/7880-evaluation-de-l-impact-environnemental-du-numerique-en-france.html",
       },
     ],
   },
   {
-    slug: 'traitementdechetsjour',
+    slug: "traitementdechetsjour",
     category: 13,
     total: 5178000,
     sources: [
       {
-        label: 'Citepa - Secten',
-        href: 'https://www.citepa.org/explorateur-de-donnees/',
+        label: "Citepa - Secten",
+        href: "https://www.citepa.org/explorateur-de-donnees/",
       },
     ],
   },
   {
-    slug: 'trainenfrancejour',
+    slug: "trainenfrancejour",
     category: 13,
     total: 1178000,
     sources: [
       {
-        label: 'Citepa - Secten',
-        href: 'https://www.citepa.org/explorateur-de-donnees/',
+        label: "Citepa - Secten",
+        href: "https://www.citepa.org/explorateur-de-donnees/",
       },
     ],
   },
   {
-    slug: 'datacenterjour',
+    slug: "datacenterjour",
     category: 13,
     total: 185000,
     sources: [
       {
-        label: 'ADEME',
-        href: 'https://operat.ademe.fr/public/home/',
+        label: "ADEME",
+        href: "https://operat.ademe.fr/public/home/",
       },
       {
-        label: 'The Conversation',
-        href: 'https://theconversation.page.link/V6Nj/',
+        label: "The Conversation",
+        href: "https://theconversation.page.link/V6Nj/",
       },
     ],
   },
   {
-    slug: 'avion-johannesburg-paris-rugby',
+    slug: "avion-johannesburg-paris-rugby",
     category: 13,
     total: 140000,
     sources: [
       {
-        label: 'Base Empreinte ADEME',
-        href: 'https://base-empreinte.ademe.fr/donnees/jeu-donnees',
+        label: "Base Empreinte ADEME",
+        href: "https://base-empreinte.ademe.fr/donnees/jeu-donnees",
       },
     ],
   },
   {
-    slug: 'maisonneuve',
+    slug: "maisonneuve",
     category: 13,
     total: 50000,
     sources: [
       {
-        label: 'ADEME',
-        href: 'https://librairie.ademe.fr/changement-climatique/7472-9086-bilan-carbone-de-logements-a-saint-pierre-et-miquelon.html/',
+        label: "ADEME",
+        href: "https://librairie.ademe.fr/changement-climatique/7472-9086-bilan-carbone-de-logements-a-saint-pierre-et-miquelon.html/",
       },
     ],
   },
-]
+];

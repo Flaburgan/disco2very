@@ -32,7 +32,7 @@ export default function Board(props: Props) {
     } else {
       setState(initialState);
     }
-  }
+  };
 
   function onDrop(index: number) {
     if (state.next === null) {
@@ -48,7 +48,7 @@ export default function Board(props: Props) {
       played: { correct },
     });
     const randomIndex = Math.floor(Math.random() * newDeck.length);
-    const newNext = newDeck[randomIndex]
+    const newNext = newDeck[randomIndex];
     newDeck.splice(randomIndex, 1);
 
     setState({
@@ -67,7 +67,8 @@ export default function Board(props: Props) {
   }
 
   const { isDragging, dropIndex, handleCardPointerDown } = useCardDrag({
-    disabled: state.badlyPlaced !== null || state.next === null || state.lives <= 0,
+    disabled:
+      state.badlyPlaced !== null || state.next === null || state.lives <= 0,
     scrollContainerRef,
     playedListRef,
     onDrop,
@@ -88,7 +89,7 @@ export default function Board(props: Props) {
       scrollContainerRef.current,
       playedListRef.current,
       index,
-      delta
+      delta,
     );
 
     animation.finished.then((completed) => {
@@ -125,11 +126,21 @@ export default function Board(props: Props) {
   }, [score, highscore, updateHighscore]);
 
   return (
-    <div className={styles.wrapper + " " + (isDragging || state.badlyPlaced !== null ? "dragging" : "notDragging")}>
+    <div
+      className={
+        styles.wrapper +
+        " " +
+        (isDragging || state.badlyPlaced !== null ? "dragging" : "notDragging")
+      }
+    >
       <div className={styles.gameHeader}>
         <div className={styles.actionsContainer}>
-          <Button onClick={() => restart(false)} small><Trans>Back</Trans></Button>
-          <Button onClick={() => playAgain(false)} small minimal><Trans>Restart</Trans></Button>
+          <Button onClick={() => restart(false)} small>
+            <Trans>Back</Trans>
+          </Button>
+          <Button onClick={() => playAgain(false)} small minimal>
+            <Trans>Restart</Trans>
+          </Button>
         </div>
         <Hearts lives={state.lives} />
       </div>
@@ -146,9 +157,9 @@ export default function Board(props: Props) {
           <>
             {/* We keep the container outside of the if so the space is still used when the arrow disappears and the bottom part doesn't move */}
             <div className={styles.arrowContainer}>
-              {state.played.length === 1 &&
+              {state.played.length === 1 && (
                 <img className={styles.arrow} src="images/arrow.svg" />
-              }
+              )}
             </div>
             <NextItemList
               next={state.next}

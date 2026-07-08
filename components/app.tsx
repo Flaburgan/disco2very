@@ -30,13 +30,26 @@ export default function App() {
 
   const Game = dynamic(() => import("./game"));
 
-  return <I18nProvider i18n={i18n}>
-    <Head>
-      <title>disCO2very - {t`Order items to discover their CO2 footprint!`}</title>
-      <meta name="description" content={t`disCO2very is a free game to discover the orders of magnitude of the CO2 footprint`} />
-      <meta property="og:description" content={t`disCO2very is a free game to discover the orders of magnitude of the CO2 footprint`} />
-      <meta property="og:image:alt" content={t`The disCO2very logo, featuring a molecule of CO2.`} />
-    </Head>
-    <Game />
-  </I18nProvider>
+  return (
+    <I18nProvider i18n={i18n}>
+      <Head>
+        <title>
+          disCO2very - {t`Order items to discover their CO2 footprint!`}
+        </title>
+        <meta
+          name="description"
+          content={t`disCO2very is a free game to discover the orders of magnitude of the CO2 footprint`}
+        />
+        <meta
+          property="og:description"
+          content={t`disCO2very is a free game to discover the orders of magnitude of the CO2 footprint`}
+        />
+        <meta
+          property="og:image:alt"
+          content={t`The disCO2very logo, featuring a molecule of CO2.`}
+        />
+      </Head>
+      <Game />
+    </I18nProvider>
+  );
 }

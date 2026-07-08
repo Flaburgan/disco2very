@@ -1,7 +1,7 @@
 export const alimentation = [
   {
-    synonyms: ['viande'],
-    slug: 'boeuf',
+    synonyms: ["viande"],
+    slug: "boeuf",
     category: 2,
     ecv: [
       {
@@ -31,8 +31,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['viande'],
-    slug: 'veau',
+    synonyms: ["viande"],
+    slug: "veau",
     category: 2,
     ecv: [
       {
@@ -62,8 +62,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['viande'],
-    slug: 'porc',
+    synonyms: ["viande"],
+    slug: "porc",
     category: 2,
     ecv: [
       {
@@ -93,8 +93,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['viande'],
-    slug: 'canard',
+    synonyms: ["viande"],
+    slug: "canard",
     category: 2,
     ecv: [
       {
@@ -124,8 +124,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['viande'],
-    slug: 'lapin',
+    synonyms: ["viande"],
+    slug: "lapin",
     category: 2,
     ecv: [
       {
@@ -155,8 +155,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['viande'],
-    slug: 'poulet',
+    synonyms: ["viande"],
+    slug: "poulet",
     category: 2,
     ecv: [
       {
@@ -186,8 +186,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['fruit de mer'],
-    slug: 'crevettes',
+    synonyms: ["fruit de mer"],
+    slug: "crevettes",
     category: 2,
     ecv: [
       {
@@ -217,8 +217,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['fruit de mer'],
-    slug: 'moules',
+    synonyms: ["fruit de mer"],
+    slug: "moules",
     category: 2,
     ecv: [
       {
@@ -248,8 +248,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['fruit de mer'],
-    slug: 'huitres',
+    synonyms: ["fruit de mer"],
+    slug: "huitres",
     category: 2,
     ecv: [
       {
@@ -279,8 +279,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['poisson'],
-    slug: 'cabillaud',
+    synonyms: ["poisson"],
+    slug: "cabillaud",
     category: 2,
     ecv: [
       {
@@ -310,8 +310,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['poisson'],
-    slug: 'lieu',
+    synonyms: ["poisson"],
+    slug: "lieu",
     category: 2,
     ecv: [
       {
@@ -341,8 +341,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['poisson'],
-    slug: 'dorade',
+    synonyms: ["poisson"],
+    slug: "dorade",
     category: 2,
     ecv: [
       {
@@ -372,8 +372,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['poisson'],
-    slug: 'saumon',
+    synonyms: ["poisson"],
+    slug: "saumon",
     category: 2,
     ecv: [
       {
@@ -403,8 +403,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['poisson'],
-    slug: 'thon',
+    synonyms: ["poisson"],
+    slug: "thon",
     category: 2,
     ecv: [
       {
@@ -430,8 +430,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['poisson'],
-    slug: 'sardines',
+    synonyms: ["poisson"],
+    slug: "sardines",
     category: 2,
     ecv: [
       {
@@ -461,8 +461,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['produit laitier'],
-    slug: 'beurre',
+    synonyms: ["produit laitier"],
+    slug: "beurre",
     category: 2,
     ecv: [
       {
@@ -492,8 +492,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['produit laitier'],
-    slug: 'fromagedure',
+    synonyms: ["produit laitier"],
+    slug: "fromagedure",
     category: 2,
     ecv: [
       {
@@ -523,8 +523,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['produit laitier', 'fromage'],
-    slug: 'feta',
+    synonyms: ["produit laitier", "fromage"],
+    slug: "feta",
     category: 2,
     ecv: [
       {
@@ -554,8 +554,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['produit laitier'],
-    slug: 'fromagemolle',
+    synonyms: ["produit laitier"],
+    slug: "fromagemolle",
     category: 2,
     ecv: [
       {
@@ -585,8 +585,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['produit laitier', 'fromage'],
-    slug: 'mozarella',
+    synonyms: ["produit laitier", "fromage"],
+    slug: "mozarella",
     category: 2,
     ecv: [
       {
@@ -616,8 +616,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['produit laitier'],
-    slug: 'fromagebleu',
+    synonyms: ["produit laitier"],
+    slug: "fromagebleu",
     category: 2,
     ecv: [
       {
@@ -647,7 +647,7 @@ export const alimentation = [
     ],
   },
   {
-    slug: 'oeuf',
+    slug: "oeuf",
     category: 2,
     ecv: [
       {
@@ -677,8 +677,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['margarine'],
-    slug: 'matieregrasse',
+    synonyms: ["margarine"],
+    slug: "matieregrasse",
     category: 2,
     ecv: [
       {
@@ -708,8 +708,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['produit laitier'],
-    slug: 'yaourt',
+    synonyms: ["produit laitier"],
+    slug: "yaourt",
     category: 2,
     ecv: [
       {
@@ -739,8 +739,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['produit laitier'],
-    slug: 'fromageblanc',
+    synonyms: ["produit laitier"],
+    slug: "fromageblanc",
     category: 2,
     ecv: [
       {
@@ -770,8 +770,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['céréales'],
-    slug: 'riz',
+    synonyms: ["céréales"],
+    slug: "riz",
     category: 2,
     ecv: [
       {
@@ -797,8 +797,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['céréales'],
-    slug: 'pates',
+    synonyms: ["céréales"],
+    slug: "pates",
     category: 2,
     ecv: [
       {
@@ -824,8 +824,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['céréales'],
-    slug: 'ble',
+    synonyms: ["céréales"],
+    slug: "ble",
     category: 2,
     ecv: [
       {
@@ -851,8 +851,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['céréales'],
-    slug: 'boulgour',
+    synonyms: ["céréales"],
+    slug: "boulgour",
     category: 2,
     ecv: [
       {
@@ -874,7 +874,7 @@ export const alimentation = [
     ],
   },
   {
-    slug: 'poischiches',
+    slug: "poischiches",
     category: 2,
     ecv: [
       {
@@ -900,7 +900,7 @@ export const alimentation = [
     ],
   },
   {
-    slug: 'haricotsrouges',
+    slug: "haricotsrouges",
     category: 2,
     ecv: [
       {
@@ -926,7 +926,7 @@ export const alimentation = [
     ],
   },
   {
-    slug: 'lentilles',
+    slug: "lentilles",
     category: 2,
     ecv: [
       {
@@ -952,7 +952,7 @@ export const alimentation = [
     ],
   },
   {
-    slug: 'cheeseburger',
+    slug: "cheeseburger",
     category: 2,
     ecv: [
       {
@@ -982,7 +982,7 @@ export const alimentation = [
     ],
   },
   {
-    slug: 'kebab',
+    slug: "kebab",
     category: 2,
     ecv: [
       {
@@ -1012,7 +1012,7 @@ export const alimentation = [
     ],
   },
   {
-    slug: 'burgerpoulet',
+    slug: "burgerpoulet",
     category: 2,
     ecv: [
       {
@@ -1042,7 +1042,7 @@ export const alimentation = [
     ],
   },
   {
-    slug: 'pizza',
+    slug: "pizza",
     category: 2,
     ecv: [
       {
@@ -1072,7 +1072,7 @@ export const alimentation = [
     ],
   },
   {
-    slug: 'sushis',
+    slug: "sushis",
     category: 2,
     ecv: [
       {
@@ -1102,7 +1102,7 @@ export const alimentation = [
     ],
   },
   {
-    slug: 'burgervegetarien',
+    slug: "burgervegetarien",
     category: 2,
     ecv: [
       {
@@ -1132,7 +1132,7 @@ export const alimentation = [
     ],
   },
   {
-    slug: 'frites',
+    slug: "frites",
     category: 2,
     ecv: [
       {
@@ -1162,7 +1162,7 @@ export const alimentation = [
     ],
   },
   {
-    slug: 'tofu',
+    slug: "tofu",
     category: 2,
     ecv: [
       {
@@ -1192,7 +1192,7 @@ export const alimentation = [
     ],
   },
   {
-    slug: 'boucheechocolat',
+    slug: "boucheechocolat",
     category: 2,
     ecv: [
       {
@@ -1218,7 +1218,7 @@ export const alimentation = [
     ],
   },
   {
-    slug: 'pateatartiner',
+    slug: "pateatartiner",
     category: 2,
     ecv: [
       {
@@ -1244,7 +1244,7 @@ export const alimentation = [
     ],
   },
   {
-    slug: 'brownie',
+    slug: "brownie",
     category: 2,
     ecv: [
       {
@@ -1270,8 +1270,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['patisserie', 'chocolatine'],
-    slug: 'painauchocolat',
+    synonyms: ["patisserie", "chocolatine"],
+    slug: "painauchocolat",
     category: 2,
     ecv: [
       {
@@ -1297,7 +1297,7 @@ export const alimentation = [
     ],
   },
   {
-    slug: 'cookie',
+    slug: "cookie",
     category: 2,
     ecv: [
       {
@@ -1323,7 +1323,7 @@ export const alimentation = [
     ],
   },
   {
-    slug: 'madeleine',
+    slug: "madeleine",
     category: 2,
     ecv: [
       {
@@ -1349,8 +1349,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['patisserie'],
-    slug: 'painauxraisins',
+    synonyms: ["patisserie"],
+    slug: "painauxraisins",
     category: 2,
     ecv: [
       {
@@ -1376,8 +1376,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['patisserie'],
-    slug: 'chaussonauxpommes',
+    synonyms: ["patisserie"],
+    slug: "chaussonauxpommes",
     category: 2,
     ecv: [
       {
@@ -1403,8 +1403,8 @@ export const alimentation = [
     ],
   },
   {
-    synonyms: ['patisserie'],
-    slug: 'croissant',
+    synonyms: ["patisserie"],
+    slug: "croissant",
     category: 2,
     ecv: [
       {
@@ -1430,7 +1430,7 @@ export const alimentation = [
     ],
   },
   {
-    slug: 'paindemie',
+    slug: "paindemie",
     category: 2,
     ecv: [
       {
@@ -1456,7 +1456,7 @@ export const alimentation = [
     ],
   },
   {
-    slug: 'bonbons',
+    slug: "bonbons",
     category: 2,
     ecv: [
       {
@@ -1482,7 +1482,7 @@ export const alimentation = [
     ],
   },
   {
-    slug: 'baguette',
+    slug: "baguette",
     category: 2,
     ecv: [
       {
@@ -1508,7 +1508,7 @@ export const alimentation = [
     ],
   },
   {
-    slug: 'pommedeterre',
+    slug: "pommedeterre",
     category: 2,
     ecv: [
       {
@@ -1534,7 +1534,7 @@ export const alimentation = [
     ],
   },
   {
-    slug: 'boulettesvegetales',
+    slug: "boulettesvegetales",
     category: 2,
     ecv: [
       {
@@ -1564,7 +1564,7 @@ export const alimentation = [
     ],
   },
   {
-    slug: 'galettefromage',
+    slug: "galettefromage",
     category: 2,
     ecv: [
       {
@@ -1594,7 +1594,7 @@ export const alimentation = [
     ],
   },
   {
-    slug: 'galettevegetale',
+    slug: "galettevegetale",
     category: 2,
     ecv: [
       {
@@ -1624,7 +1624,7 @@ export const alimentation = [
     ],
   },
   {
-    slug: 'hachevegetal',
+    slug: "hachevegetal",
     category: 2,
     ecv: [
       {
@@ -1654,7 +1654,7 @@ export const alimentation = [
     ],
   },
   {
-    slug: 'nuggetsvegetaux',
+    slug: "nuggetsvegetaux",
     category: 2,
     ecv: [
       {
@@ -1684,7 +1684,7 @@ export const alimentation = [
     ],
   },
   {
-    slug: 'saucissevegetale',
+    slug: "saucissevegetale",
     category: 2,
     ecv: [
       {
@@ -1713,4 +1713,4 @@ export const alimentation = [
       },
     ],
   },
-]
+];

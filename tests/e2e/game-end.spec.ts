@@ -9,7 +9,9 @@ import {
   startDefaultGame,
 } from "./helpers/game";
 
-test("losing five lives ends the game, play again restarts it", async ({ page }) => {
+test("losing five lives ends the game, play again restarts it", async ({
+  page,
+}) => {
   await startDefaultGame(page);
   await loseGame(page);
 
@@ -51,18 +53,25 @@ test("placing all the cards of a category wins the game", async ({ page }) => {
   await expect(playedCards(page)).toHaveCount(1);
 
   for (let guard = 0; (await nextCard(page).count()) > 0; guard++) {
-    expect(guard, "the deck should be exhausted after a few placements").toBeLessThan(40);
+    expect(
+      guard,
+      "the deck should be exhausted after a few placements",
+    ).toBeLessThan(40);
     await placeNextCard(page, await correctIndex(page));
   }
 
-  await expect(page.getByRole("heading", { name: "Congratulations!" })).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: "Congratulations!" }),
+  ).toBeVisible();
   await expect(page.getByText("You ordered all the cards!")).toBeVisible();
   // No mistake was made.
   await expect(hearts(page)).toHaveText("5");
   await expect(page.locator('[class*="item-card_incorrect__"]')).toHaveCount(0);
 });
 
-test("the highscore is shown on the home screen and survives a reload", async ({ page }) => {
+test("the highscore is shown on the home screen and survives a reload", async ({
+  page,
+}) => {
   await startDefaultGame(page);
   await placeNextCard(page, await correctIndex(page));
 

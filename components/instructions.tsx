@@ -22,55 +22,137 @@ interface Props {
 export default function Instructions(props: Props) {
   const { _, i18n } = useLingui();
   const locale = i18n.locale as Locale;
-  const { highscore, setSelectedItems, categoriesMode, setCategoriesMode } = props;
+  const { highscore, setSelectedItems, categoriesMode, setCategoriesMode } =
+    props;
 
   return (
     <div className={styles.instructions}>
       <div className={styles.wrapper}>
         <header className={styles.mainHeader}>
           <h1>
-            <img src="./images/logo.png" title="disCO2very" alt="disCO2very" className={styles.logo} />
+            <img
+              src="./images/logo.png"
+              title="disCO2very"
+              alt="disCO2very"
+              className={styles.logo}
+            />
           </h1>
-          <h2><Trans>Place the cards in the correct order guessing their CO<sub>2</sub> footprint.</Trans></h2>
+          <h2>
+            <Trans>
+              Place the cards in the correct order guessing their CO<sub>2</sub>{" "}
+              footprint.
+            </Trans>
+          </h2>
         </header>
-        {
-          categoriesMode ?
-            <CategoriesSelector setSelectedItems={setSelectedItems} setCategoriesMode={setCategoriesMode} />
-            : 
+        {categoriesMode ? (
+          <CategoriesSelector
+            setSelectedItems={setSelectedItems}
+            setCategoriesMode={setCategoriesMode}
+          />
+        ) : (
           <>
-            <div onClick={() => {setSelectedItems(getDefaultItems(locale));}}>
+            <div
+              onClick={() => {
+                setSelectedItems(getDefaultItems(locale));
+              }}
+            >
               <ExampleCards />
             </div>
             <div className={styles.startGameContainer}>
-              <Button onClick={() => {setSelectedItems(getDefaultItems(locale));}} animated><Trans>Start game</Trans></Button>
-              <Button onClick={() => setCategoriesMode(true)} minimal={true}><Trans>Pick categories</Trans></Button>
+              <Button
+                onClick={() => {
+                  setSelectedItems(getDefaultItems(locale));
+                }}
+                animated
+              >
+                <Trans>Start game</Trans>
+              </Button>
+              <Button onClick={() => setCategoriesMode(true)} minimal={true}>
+                <Trans>Pick categories</Trans>
+              </Button>
             </div>
           </>
-        }
+        )}
       </div>
       {highscore !== 0 && (
-        <Score score={highscore}><Trans>Best streak</Trans></Score>
+        <Score score={highscore}>
+          <Trans>Best streak</Trans>
+        </Score>
       )}
 
       <RealCardsGame />
 
       <div className={styles.about}>
-        <p><Trans>Made with <img src="./images/heart.svg" title={_(msg`love`)} alt={_(msg`love`)} className={styles.heartImg} /> by <a href="https://antoine.duparay.fr" rel="noreferrer" target="_blank">Fla</a> &amp; Sara.</Trans></p>
-        <p><Trans>License AGPL - Source code available <a href="https://github.com/flaburgan/disco2very" rel="noreferrer" target="_blank">on github</a>.</Trans></p>
         <p>
           <Trans>
-            Code based on from the <a href="https://wikitrivia.tomjwatson.com/" rel="noreferrer" target="_blank">wikitrivia</a> game by <a href="https://tomjwatson.com/" rel="noreferrer" target="_blank">Tom James Watson</a>. Thank you!
+            Made with{" "}
+            <img
+              src="./images/heart.svg"
+              title={_(msg`love`)}
+              alt={_(msg`love`)}
+              className={styles.heartImg}
+            />{" "}
+            by{" "}
+            <a
+              href="https://antoine.duparay.fr"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Fla
+            </a>{" "}
+            &amp; Sara.
           </Trans>
         </p>
         <p>
           <Trans>
-            The numbers are coming from the <a href="https://www.ademe.fr/" rel="noreferrer" target="_blank">Ademe</a> platform <a href="https://impactco2.fr/" rel="noreferrer" target="_blank">Impact CO<sub>2</sub></a>.
-            Thanks to them for their amazing work!
+            License AGPL - Source code available{" "}
+            <a
+              href="https://github.com/flaburgan/disco2very"
+              rel="noreferrer"
+              target="_blank"
+            >
+              on github
+            </a>
+            .
+          </Trans>
+        </p>
+        <p>
+          <Trans>
+            Code based on from the{" "}
+            <a
+              href="https://wikitrivia.tomjwatson.com/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              wikitrivia
+            </a>{" "}
+            game by{" "}
+            <a href="https://tomjwatson.com/" rel="noreferrer" target="_blank">
+              Tom James Watson
+            </a>
+            . Thank you!
+          </Trans>
+        </p>
+        <p>
+          <Trans>
+            The numbers are coming from the{" "}
+            <a href="https://www.ademe.fr/" rel="noreferrer" target="_blank">
+              Ademe
+            </a>{" "}
+            platform{" "}
+            <a href="https://impactco2.fr/" rel="noreferrer" target="_blank">
+              Impact CO<sub>2</sub>
+            </a>
+            . Thanks to them for their amazing work!
           </Trans>
         </p>
         <p>
           <a href="https://impactco2.fr/" rel="noreferrer" target="_blank">
-            <img src="images/ICO2_white.svg" alt="Impact CO2 Logo" className={styles.ico2logo} />
+            <img
+              src="images/ICO2_white.svg"
+              alt="Impact CO2 Logo"
+              className={styles.ico2logo}
+            />
           </a>
         </p>
       </div>

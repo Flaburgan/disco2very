@@ -1,7 +1,7 @@
 export const electromenager = [
   {
     id: 28306,
-    slug: 'bouilloire',
+    slug: "bouilloire",
     category: 6,
     ecv: [
       {
@@ -29,9 +29,9 @@ export const electromenager = [
   },
   {
     id: 28304,
-    subtitle: 'pods',
-    synonyms: ['nespresso'],
-    slug: 'cafetieredosette',
+    subtitle: "pods",
+    synonyms: ["nespresso"],
+    slug: "cafetieredosette",
     category: 6,
     ecv: [
       {
@@ -59,8 +59,8 @@ export const electromenager = [
   },
   {
     id: 28303,
-    subtitle: 'Filtre',
-    slug: 'cafetierefiltre',
+    subtitle: "Filtre",
+    slug: "cafetierefiltre",
     category: 6,
     ecv: [
       {
@@ -88,9 +88,9 @@ export const electromenager = [
   },
   {
     id: 28305,
-    subtitle: 'Expresso',
-    synonyms: ['espresso'],
-    slug: 'cafetiereexpresso',
+    subtitle: "Expresso",
+    synonyms: ["espresso"],
+    slug: "cafetiereexpresso",
     category: 6,
     ecv: [
       {
@@ -118,8 +118,8 @@ export const electromenager = [
   },
   {
     id: 26986,
-    subtitle: 'Électrique',
-    slug: 'fourelectrique',
+    subtitle: "Électrique",
+    slug: "fourelectrique",
     category: 6,
     ecv: [
       {
@@ -147,7 +147,7 @@ export const electromenager = [
   },
   {
     id: 26984,
-    slug: 'lavevaisselle',
+    slug: "lavevaisselle",
     category: 6,
     ecv: [
       {
@@ -175,7 +175,7 @@ export const electromenager = [
   },
   {
     id: 26983,
-    slug: 'lavelinge',
+    slug: "lavelinge",
     category: 6,
     ecv: [
       {
@@ -203,7 +203,7 @@ export const electromenager = [
   },
   {
     id: 26976,
-    slug: 'refrigirateur',
+    slug: "refrigirateur",
     category: 6,
     ecv: [
       {
@@ -231,7 +231,7 @@ export const electromenager = [
   },
   {
     id: 26990,
-    slug: 'aspirateur',
+    slug: "aspirateur",
     category: 6,
     ecv: [
       {
@@ -259,8 +259,8 @@ export const electromenager = [
   },
   {
     id: 28325,
-    synonyms: ['climatisation'],
-    slug: 'climatiseur',
+    synonyms: ["climatisation"],
+    slug: "climatiseur",
     category: 6,
     ecv: [
       {
@@ -288,7 +288,7 @@ export const electromenager = [
   },
   {
     id: 26989,
-    slug: 'microondes',
+    slug: "microondes",
     category: 6,
     ecv: [
       {
@@ -314,4 +314,4 @@ export const electromenager = [
     },
     end: -6.39,
   },
-]
+];

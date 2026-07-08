@@ -11,7 +11,9 @@ export function playedCards(page: Page): Locator {
 }
 
 export function nextCard(page: Page): Locator {
-  return page.locator('[class*="next-item-list_wrapper__"] [class*="draggable-item-card_itemCard__"]');
+  return page.locator(
+    '[class*="next-item-list_wrapper__"] [class*="draggable-item-card_itemCard__"]',
+  );
 }
 
 export function hearts(page: Page): Locator {
@@ -21,7 +23,9 @@ export function hearts(page: Page): Locator {
 function slugFromSrc(src: string): string {
   const match = src.match(/images\/ademe\/([^/]+)\.svg$/);
   if (match === null) {
-    throw new Error(`Cannot extract an item slug from the illustration "${src}"`);
+    throw new Error(
+      `Cannot extract an item slug from the illustration "${src}"`,
+    );
   }
   return match[1];
 }
@@ -49,17 +53,28 @@ export async function correctIndex(page: Page): Promise<number> {
 
 // Viewport coordinates the dragged card's center must reach so that it gets
 // inserted at `index` on the timeline.
-async function slotCoordinates(page: Page, index: number): Promise<{ x: number; y: number }> {
+async function slotCoordinates(
+  page: Page,
+  index: number,
+): Promise<{ x: number; y: number }> {
   const cards = playedCards(page);
   const count = await cards.count();
   // Bring the cards around the target slot on screen: the timeline scrolls
   // horizontally once it grows beyond the viewport.
   await cards
     .nth(Math.min(index, count - 1))
-    .evaluate((el) => el.scrollIntoView({ behavior: "instant", block: "nearest", inline: "center" }));
+    .evaluate((el) =>
+      el.scrollIntoView({
+        behavior: "instant",
+        block: "nearest",
+        inline: "center",
+      }),
+    );
   const anchor = await cards.nth(Math.min(index, count - 1)).boundingBox();
   if (anchor === null) {
-    throw new Error(`Timeline card ${Math.min(index, count - 1)} has no bounding box`);
+    throw new Error(
+      `Timeline card ${Math.min(index, count - 1)} has no bounding box`,
+    );
   }
   const y = anchor.y + anchor.height / 2;
   if (index === 0) {

@@ -17,14 +17,20 @@ import esLocale from "../data/ademe/locales/es.json";
 import frLocale from "../data/ademe/locales/fr.json";
 import itemNames from "../data/ademe/names.json";
 import transportDistances from "../data/transport-distances.json";
-import { AdemeCategory, AdemeECV, FootprintDetails, RawEquivalent } from "../types/AdemeECV";
+import {
+  AdemeCategory,
+  AdemeECV,
+  FootprintDetails,
+  RawEquivalent,
+} from "../types/AdemeECV";
 import { Locale } from "../types/i18n";
 import { Item } from "../types/item";
 
 // The names extracted from impactco2 are "quantified" ("kg de ;fraise",
 // "smartphone[s]"): the part before ";" is a unit prefix and "[s]"/"[es]"/"[x]"
 // are plural markers, both of which we drop.
-const names: { [slug: string]: { [L in Exclude<Locale, "de">]: string } } = itemNames;
+const names: { [slug: string]: { [L in Exclude<Locale, "de">]: string } } =
+  itemNames;
 
 interface AdemeLocale {
   hypothesis: {
@@ -48,17 +54,21 @@ const germanNames: { [slug: string]: string } = deLocale.names;
 // Transports are declined in many variants upstream (city car, sedan...):
 // only the ones with a defined journey length enter the game.
 function flattenTransports(equivalents: RawEquivalent[]): RawEquivalent[] {
-  const flattened = equivalents.flatMap(equivalent =>
+  const flattened = equivalents.flatMap((equivalent) =>
     equivalent.ecvs
-      ? equivalent.ecvs.map(sub => ({
+      ? equivalent.ecvs.map((sub) => ({
           ...equivalent,
           ecvs: undefined,
           ecv: sub.ecv,
-          slug: `${equivalent.slug}-${sub.subtitle}`.replace(/ /g, "").toLowerCase(),
+          slug: `${equivalent.slug}-${sub.subtitle}`
+            .replace(/ /g, "")
+            .toLowerCase(),
         }))
-      : [equivalent]
+      : [equivalent],
   );
-  const bySlug = new Map(flattened.map(equivalent => [equivalent.slug, equivalent]));
+  const bySlug = new Map(
+    flattened.map((equivalent) => [equivalent.slug, equivalent]),
+  );
   const transports: RawEquivalent[] = [];
   for (const slug of Object.keys(transportDistances)) {
     const transport = bySlug.get(slug);
@@ -85,7 +95,9 @@ const rawDataByCategory: { [categoryId: number]: RawEquivalent[] } = {
 };
 
 const categories: Map<number, AdemeCategory> = new Map();
-ademeCategories.data.forEach(category => categories.set(category.id, category));
+ademeCategories.data.forEach((category) =>
+  categories.set(category.id, category),
+);
 
 const footprintDetails: FootprintDetails = {};
 for (const id of Object.keys(frLocale.ecv)) {
@@ -147,14 +159,19 @@ const defaultItemSlugs = new Set([
   "avion-moyencourrier",
   "tgv",
   "voiturethermique",
-  "voitureelectrique"
+  "voitureelectrique",
 ]);
 
 export function getDefaultItems(locale: Locale): Item[] {
-  return getAllItems(locale).filter(item => defaultItemSlugs.has(item.source.slug));
+  return getAllItems(locale).filter((item) =>
+    defaultItemSlugs.has(item.source.slug),
+  );
 }
 
-export function getItemFromSlug(slug: string, locale: Locale): Item | undefined {
+export function getItemFromSlug(
+  slug: string,
+  locale: Locale,
+): Item | undefined {
   getAllItems(locale);
   return itemsBySlugByLocale.get(locale)?.get(slug);
 }
@@ -167,16 +184,27 @@ export function getFootprintDetails(): FootprintDetails {
   return footprintDetails;
 }
 
-export function getItemsFromCategoryId(categoryId: number, locale: Locale): Item[] {
-  return getAllItems(locale).filter(item => item.categoryId === categoryId);
+export function getItemsFromCategoryId(
+  categoryId: number,
+  locale: Locale,
+): Item[] {
+  return getAllItems(locale).filter((item) => item.categoryId === categoryId);
 }
 
 // We have to make some computation on the data to make it better for users
 // Functions below are only doing that
 
-type ComputeItemFunc = (element: AdemeECV, coeff: number, locale: Locale) => { label: string, description: string, explanation: string };
+type ComputeItemFunc = (
+  element: AdemeECV,
+  coeff: number,
+  locale: Locale,
+) => { label: string; description: string; explanation: string };
 
-function computeItemsForCategory(categoryId: number, data: RawEquivalent[], locale: Locale): Item[] {
+function computeItemsForCategory(
+  categoryId: number,
+  data: RawEquivalent[],
+  locale: Locale,
+): Item[] {
   const computeItemFunc: ComputeItemFunc = getComputeFunction(categoryId);
   const items: Item[] = [];
   for (const raw of data) {
@@ -190,7 +218,7 @@ function computeItemsForCategory(categoryId: number, data: RawEquivalent[], loca
       id: source.slug,
       categoryId: categoryId,
       source,
-      ...computeItemFunc(source, coeff, locale)
+      ...computeItemFunc(source, coeff, locale),
     });
   }
   return items;
@@ -206,11 +234,15 @@ function toAdemeECV(raw: RawEquivalent, locale: Locale): AdemeECV | undefined {
     return undefined;
   }
 
-  const footprint = raw.ecv ? raw.ecv.reduce((sum, { value }) => sum + value, 0) : (raw.total ?? 0);
+  const footprint = raw.ecv
+    ? raw.ecv.reduce((sum, { value }) => sum + value, 0)
+    : (raw.total ?? 0);
   const usage = raw.usage ? raw.usage.peryear * raw.usage.defaultyears : 0;
 
   const { hypothesis } = localesData[locale];
-  const hypothesisText = [hypothesis.pre[raw.slug], hypothesis.post[raw.slug]].filter(Boolean).join(" ");
+  const hypothesisText = [hypothesis.pre[raw.slug], hypothesis.post[raw.slug]]
+    .filter(Boolean)
+    .join(" ");
 
   return {
     name,
@@ -231,7 +263,11 @@ function getItemName(slug: string, locale: Locale): string | undefined {
   if (name === undefined) {
     return undefined;
   }
-  const cleaned = name.split(";").pop()!.replace(/\[(s|es|x)\]/g, "").trim();
+  const cleaned = name
+    .split(";")
+    .pop()!
+    .replace(/\[(s|es|x)\]/g, "")
+    .trim();
   return cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
 }
 
@@ -252,7 +288,10 @@ function withCoefficient(element: AdemeECV, coeff: number): AdemeECV {
   const copy: AdemeECV = {
     ...element,
     ecv: element.ecv * coeff,
-    footprintDetail: element.footprintDetail?.map(detail => ({ ...detail, value: detail.value * coeff })),
+    footprintDetail: element.footprintDetail?.map((detail) => ({
+      ...detail,
+      value: detail.value * coeff,
+    })),
     usage: element.usage ? { ...element.usage } : undefined,
   };
   if (copy.footprint !== undefined) {
@@ -268,32 +307,33 @@ function getComputeFunction(categoryId: number): ComputeItemFunc {
         return {
           label: element.name,
           description: getDescriptionForDefaultYear(element),
-          explanation: ""
-        }
+          explanation: "",
+        };
       };
     case 2: // Food
       return (element: AdemeECV) => {
         return {
-          label: element.name + (element.slug.startsWith("repas") ? "" : " (1kg)"),
+          label:
+            element.name + (element.slug.startsWith("repas") ? "" : " (1kg)"),
           description: "",
-          explanation: ""
-        }
+          explanation: "",
+        };
       };
     case 3: // Drinks
       return (element: AdemeECV) => {
         return {
           label: element.name + " (1L)",
           description: "",
-          explanation: ""
-        }
+          explanation: "",
+        };
       };
     case 4: // Transport
       return (element: AdemeECV, coeff: number) => {
         return {
           label: element.name + ` (${coeff}km)`,
           description: "",
-          explanation: ""
-        }
+          explanation: "",
+        };
       };
     case 6: // Household appliance
     case 7: // Furnitures
@@ -301,8 +341,8 @@ function getComputeFunction(categoryId: number): ComputeItemFunc {
         return {
           label: element.name,
           description: getDescriptionForDefaultYear(element),
-          explanation: ""
-        }
+          explanation: "",
+        };
       };
     case 8: // Heating
       return (element: AdemeECV) => {
@@ -310,15 +350,15 @@ function getComputeFunction(categoryId: number): ComputeItemFunc {
           label: element.name,
           description: t`<strong>per month</strong> for 60m²`,
           explanation: t`Impact of one month of heating a house of 60m², spreading the consumption over the year.`,
-        }
+        };
       };
     case 9: // Vegetables and fruits
       return (element: AdemeECV, _coeff: number, locale: Locale) => {
         return {
           label: element.name + " (1kg)",
           description: getSeasonDescription(element.months, locale),
-          explanation: ""
-        }
+          explanation: "",
+        };
       };
     // case 10: // TODO Usage numérique needs more work
     default: // Clothing, practical cases
@@ -326,8 +366,8 @@ function getComputeFunction(categoryId: number): ComputeItemFunc {
         return {
           label: element.name,
           description: "",
-          explanation: ""
-        }
+          explanation: "",
+        };
       };
   }
 }
@@ -341,7 +381,10 @@ function getDescriptionForDefaultYear(element: AdemeECV) {
   return description;
 }
 
-function getSeasonDescription(months: number[] | undefined, locale: Locale): string {
+function getSeasonDescription(
+  months: number[] | undefined,
+  locale: Locale,
+): string {
   if (!months || months.length === 0) {
     return "";
   }
@@ -368,9 +411,14 @@ function getSeasonDescription(months: number[] | undefined, locale: Locale): str
   }
 
   const monthFormat = new Intl.DateTimeFormat(locale, { month: "long" });
-  const monthName = (month: number) => monthFormat.format(new Date(2000, month, 1));
+  const monthName = (month: number) =>
+    monthFormat.format(new Date(2000, month, 1));
   const season = ranges
-    .map(range => range.length === 1 ? monthName(range[0]) : `${monthName(range[0])} – ${monthName(range[range.length - 1])}`)
+    .map((range) =>
+      range.length === 1
+        ? monthName(range[0])
+        : `${monthName(range[0])} – ${monthName(range[range.length - 1])}`,
+    )
     .join(", ");
   return t`In season: ${season}`;
 }

@@ -8,7 +8,7 @@ export function cx(...args: ClassValue[]): string {
     .flatMap((arg) =>
       arg && typeof arg === "object"
         ? Object.keys(arg).filter((key) => arg[key])
-        : arg || []
+        : arg || [],
     )
     .join(" ");
 }

@@ -3,7 +3,7 @@ import { Item, PlayedItem } from "../types/item";
 export function checkCorrect(
   played: PlayedItem[],
   item: Item,
-  index: number
+  index: number,
 ): { correct: boolean; delta: number } {
   const sorted = [...played, item].sort((a, b) => a.source.ecv - b.source.ecv);
   const correctIndex = sorted.findIndex((i) => {
@@ -17,7 +17,7 @@ export function checkCorrect(
   return { correct: true, delta: 0 };
 }
 
-export function round2(value: number):number {
+export function round2(value: number): number {
   return Math.round(value * 100) / 100;
 }
 

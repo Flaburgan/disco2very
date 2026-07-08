@@ -5,7 +5,9 @@ test("home page shows the game introduction", async ({ page }) => {
 
   await expect(page.locator("h1 img[title='disCO2very']")).toBeVisible();
   await expect(page.getByRole("button", { name: "Start game" })).toBeVisible();
-  await expect(page.getByRole("button", { name: "Pick categories" })).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: "Pick categories" }),
+  ).toBeVisible();
   // The two example cards teasing the game.
   await expect(page.locator('[class*="item-card_front__"]')).toHaveCount(2);
   // The about section.
@@ -19,7 +21,9 @@ test.describe("with a French browser locale", () => {
 
   test("the UI renders in French", async ({ page }) => {
     await page.goto("/");
-    await expect(page.getByRole("button", { name: "Démarrer la partie" })).toBeVisible();
+    await expect(
+      page.getByRole("button", { name: "Démarrer la partie" }),
+    ).toBeVisible();
   });
 });
 
@@ -28,7 +32,9 @@ test.describe("with an unsupported browser locale", () => {
 
   test("the UI defaults to English", async ({ page }) => {
     await page.goto("/");
-    await expect(page.getByRole("button", { name: "Start game" })).toBeVisible();
+    await expect(
+      page.getByRole("button", { name: "Start game" }),
+    ).toBeVisible();
   });
 });
 
@@ -48,6 +54,8 @@ test("newsletter registration shows a success message", async ({ page }) => {
   await page.locator('input[name="email"]').fill("test@example.org");
   await page.getByRole("button", { name: "Register" }).click();
 
-  await expect(page.getByText("test@example.org has been successfully registered.")).toBeVisible();
+  await expect(
+    page.getByText("test@example.org has been successfully registered."),
+  ).toBeVisible();
   expect(submitted).toBe(true);
 });

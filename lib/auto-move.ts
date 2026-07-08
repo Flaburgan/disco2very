@@ -9,7 +9,7 @@ function easeOutCirc(
   elapsed: number,
   from: number,
   to: number,
-  duration: number
+  duration: number,
 ): number {
   const progress = elapsed / duration - 1;
   return (to - from) * Math.sqrt(1 - progress * progress) + from;
@@ -25,7 +25,7 @@ export function animateBadlyPlacedItem(
   scrollContainer: HTMLElement,
   list: HTMLElement,
   index: number,
-  delta: number
+  delta: number,
 ): AutoMoveAnimation {
   const cards = list.querySelectorAll<HTMLElement>("[data-timeline-card]");
   const itemEl = cards[index];
@@ -54,7 +54,7 @@ export function animateBadlyPlacedItem(
     const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
     scrollDistance = Math.max(
       -scrollContainer.scrollLeft,
-      Math.min(maxScroll - scrollContainer.scrollLeft, scrollDistance)
+      Math.min(maxScroll - scrollContainer.scrollLeft, scrollDistance),
     );
   }
 
@@ -77,8 +77,8 @@ export function animateBadlyPlacedItem(
           { transform: "translateX(0)" },
           { transform: `translateX(${distance}px)` },
         ],
-        { duration, easing: EASE_OUT_CIRC_CSS, fill: "forwards" }
-      )
+        { duration, easing: EASE_OUT_CIRC_CSS, fill: "forwards" },
+      ),
     );
   };
   animate(itemEl, slide);
@@ -108,7 +108,7 @@ export function animateBadlyPlacedItem(
         elapsed,
         scrollFrom,
         scrollFrom + scrollDistance,
-        duration
+        duration,
       );
       if (elapsed < duration) {
         raf = requestAnimationFrame(tick);

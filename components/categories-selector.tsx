@@ -12,19 +12,24 @@ interface CategoriesSelectorProps {
   setCategoriesMode: (categoriesMode: boolean) => void;
 }
 
-export default function CategoriesSelector({ setSelectedItems, setCategoriesMode }: CategoriesSelectorProps) {
+export default function CategoriesSelector({
+  setSelectedItems,
+  setCategoriesMode,
+}: CategoriesSelectorProps) {
   const { i18n } = useLingui();
   const locale = i18n.locale as Locale;
   const categories = getCategories();
 
-  const [selectedCategories, setSelectedCategories] = useState(new Set<number>());
+  const [selectedCategories, setSelectedCategories] = useState(
+    new Set<number>(),
+  );
 
   const updateCategories = (id: number) => {
     // Some categories are not available yet
     if (id === 10) {
       alert(t`This category is not yet available.`);
     } else {
-      setSelectedCategories(prevSet => {
+      setSelectedCategories((prevSet) => {
         const newSet = new Set(prevSet); // We create a new Set to force a React rerender
         if (newSet.has(id)) {
           newSet.delete(id);
@@ -39,12 +44,18 @@ export default function CategoriesSelector({ setSelectedItems, setCategoriesMode
   return (
     <>
       <div>
-        <h3><Trans>Select the categories you want to play with:</Trans></h3>
+        <h3>
+          <Trans>Select the categories you want to play with:</Trans>
+        </h3>
         <div className={styles.categoriesSelection}>
           {[...categories.values()].map((category) => {
             const id = category.id;
             return (
-              <div key={id} className={selectedCategories.has(id) ? styles.selected : ""} onClick={() => updateCategories(id)}>
+              <div
+                key={id}
+                className={selectedCategories.has(id) ? styles.selected : ""}
+                onClick={() => updateCategories(id)}
+              >
                 <div>
                   <h3>{category.name[locale]}</h3>
                   <img src={`./images/ademe/${category.slug}.svg`} />
@@ -55,18 +66,32 @@ export default function CategoriesSelector({ setSelectedItems, setCategoriesMode
         </div>
       </div>
       <div className={styles.startGameContainer}>
-        <Button onClick={() => { setSelectedItems(getItemsFromCategories(selectedCategories, locale)); }} disabled={selectedCategories.size === 0}><Trans>Start game</Trans></Button>
-        <Button onClick={() => setCategoriesMode(false)} minimal={true}><Trans>Back</Trans></Button>
+        <Button
+          onClick={() => {
+            setSelectedItems(
+              getItemsFromCategories(selectedCategories, locale),
+            );
+          }}
+          disabled={selectedCategories.size === 0}
+        >
+          <Trans>Start game</Trans>
+        </Button>
+        <Button onClick={() => setCategoriesMode(false)} minimal={true}>
+          <Trans>Back</Trans>
+        </Button>
       </div>
     </>
   );
 }
 
-function getItemsFromCategories(selectedCategories: Set<number>, locale: Locale) {
+function getItemsFromCategories(
+  selectedCategories: Set<number>,
+  locale: Locale,
+) {
   const items: Item[] = [];
   for (const id of selectedCategories) {
     const categoryItems = getItemsFromCategoryId(id, locale);
     items.push(...categoryItems);
   }
   return items;
-} 
+}

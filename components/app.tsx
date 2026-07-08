@@ -1,12 +1,12 @@
 import React from "react";
 import { i18n } from "@lingui/core";
 import { I18nProvider } from "@lingui/react";
-import { messages as enMessages } from "../locales/en/messages";
-import { messages as frMessages } from "../locales/fr/messages";
-import { messages as esMessages } from "../locales/es/messages";
-import { messages as deMessages } from "../locales/de/messages";
+import { messages as enMessages } from "../locales/en/messages.po";
+import { messages as frMessages } from "../locales/fr/messages.po";
+import { messages as esMessages } from "../locales/es/messages.po";
+import { messages as deMessages } from "../locales/de/messages.po";
 import { t } from "@lingui/core/macro";
-import { locales, sourceLocale } from "../lingui.config";
+import { locales, sourceLocale } from "../lib/locales";
 
 const Game = React.lazy(() => import("./game"));
 

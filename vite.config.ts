@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { lingui } from "@lingui/vite-plugin";
 
 export default defineConfig({
   plugins: [
@@ -11,6 +12,8 @@ export default defineConfig({
         plugins: ["@lingui/babel-plugin-lingui-macro"],
       },
     }),
+    // Compiles the imported locales/*/messages.po catalogs on the fly.
+    lingui(),
   ],
   // Relative asset URLs: the Ubuntu Touch click package loads the app from
   // the local filesystem, not from a server root.

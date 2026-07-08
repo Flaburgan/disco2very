@@ -2,7 +2,6 @@ import { t } from "@lingui/core/macro";
 import { Trans } from "@lingui/react/macro";
 import React, { JSX } from "react";
 import { useLingui } from "@lingui/react";
-import classNames from "classnames";
 import { getCategories, getFootprintDetails } from "../lib/ademe-api";
 import { displayCO2, round2 } from "../lib/items";
 import styles from "../styles/explanation-dialog.module.scss";
@@ -29,8 +28,8 @@ export default function ExplanationDialog(props: ExplanationDialogProps) {
   const sources = (itemSources && itemSources.length > 0 ? itemSources : getCategories().get(item.categoryId)?.sources) ?? [];
 
   return (
-    <div className={classNames(styles.explanationDialogContainer)} onClick={onExit}>
-      <div className={classNames(styles.explanationDialog)} onClick={(ev) => ev.stopPropagation()}>
+    <div className={styles.explanationDialogContainer} onClick={onExit}>
+      <div className={styles.explanationDialog} onClick={(ev) => ev.stopPropagation()}>
         <header className={styles.top}>
           <h2 className={styles.label}>{item.label}</h2>
           <img className={styles.cross} src="images/cross.svg" onClick={onExit} />

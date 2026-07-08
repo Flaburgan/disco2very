@@ -1,6 +1,5 @@
 import { t } from "@lingui/core/macro";
 import { Trans, useLingui } from "@lingui/react/macro";
-import classNames from "classnames";
 import { useState } from "react";
 import { getCategories, getItemsFromCategoryId } from "../lib/ademe-api";
 import styles from "../styles/categories-selector.module.scss";
@@ -41,11 +40,11 @@ export default function CategoriesSelector({ setSelectedItems, setCategoriesMode
     <>
       <div>
         <h3><Trans>Select the categories you want to play with:</Trans></h3>
-        <div className={classNames(styles.categoriesSelection)}>
+        <div className={styles.categoriesSelection}>
           {[...categories.values()].map((category) => {
             const id = category.id;
             return (
-              <div key={id} className={selectedCategories.has(id) ? classNames(styles.selected) : ""} onClick={() => updateCategories(id)}>
+              <div key={id} className={selectedCategories.has(id) ? styles.selected : ""} onClick={() => updateCategories(id)}>
                 <div>
                   <h3>{category.name[locale]}</h3>
                   <img src={`./images/ademe/${category.slug}.svg`} />

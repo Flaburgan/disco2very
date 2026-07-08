@@ -1,5 +1,5 @@
 import React from "react";
-import classNames from "classnames";
+import { cx } from "../lib/cx";
 import { Item } from "../types/item";
 import DraggableItemCard from "./draggable-item-card";
 import styles from "../styles/played-item-list.module.scss";
@@ -21,18 +21,18 @@ export default function PlayedItemList(props: PlayedItemListProps) {
     <div className={styles.listContainer}>
       <div
         ref={listRef}
-        className={classNames(styles.items, { [styles.dragging]: dragging })}
+        className={cx(styles.items, { [styles.dragging]: dragging })}
       >
         <div className={styles.emptyItem + " bordered-area"}>-</div>
         {items.map((item, index) => (
           <DraggableItemCard
-            className={classNames({ [styles.gapBefore]: dropIndex === index })}
+            className={cx({ [styles.gapBefore]: dropIndex === index })}
             item={item}
             key={item.id}
           />
         ))}
         <div
-          className={classNames(styles.emptyItem, "bordered-area", {
+          className={cx(styles.emptyItem, "bordered-area", {
             [styles.gapBefore]: dropIndex === items.length,
           })}
         >

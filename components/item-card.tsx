@@ -1,5 +1,5 @@
 import React from "react";
-import classNames from "classnames";
+import { cx } from "../lib/cx";
 import { Item, PlayedItem } from "../types/item";
 import { round2 } from "../lib/items";
 import { getCategories } from "../lib/ademe-api";
@@ -32,7 +32,7 @@ export default function ItemCard(props: Props) {
         </div>
       </main>
       <div
-        className={classNames(styles.bottom, {
+        className={cx(styles.bottom, {
           [styles.correct]: "played" in item && item.played.correct,
           [styles.incorrect]: "played" in item && !item.played.correct,
         })}

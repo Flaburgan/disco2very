@@ -1,5 +1,5 @@
 import React from "react";
-import classNames from "classnames";
+import { cx } from "../lib/cx";
 import { Item, PlayedItem } from "../types/item";
 import ExplanationDialog from "./explanation-dialog";
 import styles from "../styles/draggable-item-card.module.scss";
@@ -19,7 +19,7 @@ export default function DraggableItemCard(props: Props) {
 
   return (<>
     <div
-      className={classNames(styles.itemCard, className, {
+      className={cx(styles.itemCard, className, {
         [styles.draggable]: draggable,
         played,
       })}

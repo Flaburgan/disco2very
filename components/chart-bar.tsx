@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../styles/chart-bar.module.scss";
 import { displayCO2 } from "../lib/items";
-import classNames from "classnames";
+import { cx } from "../lib/cx";
 
 interface ChartBarProps {
   value: number,
@@ -18,7 +18,7 @@ export default function ChartBar(props: ChartBarProps) {
   }
 
   return (<div className={styles.chartBar}>
-    <span className={classNames(styles.bar, styles[cssClass])} style={{width: percent + "%"}}></span>
+    <span className={cx(styles.bar, styles[cssClass])} style={{width: percent + "%"}}></span>
     <span className={styles.co2}>{displayCO2(value)}</span>
   </div>);
 }

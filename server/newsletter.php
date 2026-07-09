@@ -25,8 +25,8 @@ if (!isset($email)) {
       $pdo->lastInsertId();
     }
   } catch (Exception $e) {
+    error_log("[disCO2very] newsletter.php: ".$e->getMessage());
     http_response_code(500);
-    exit($e->getMessage());
   }
 }
 ?>

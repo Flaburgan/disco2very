@@ -89,8 +89,10 @@
         echo 'const uniqueResolutions = '.json_encode($uniqueResolutions->fetchAll()).';';
 
       } catch (Exception $e) {
+        error_log("[disCO2very] stats.php: ".$e->getMessage());
         http_response_code(500);
-        exit($e->getMessage());
+        /* Stop rendering: the JS below needs the consts echoed by the try block */
+        exit("Something went wrong, see the server error log.");
       } ?>
 
       /* We have the data available now, so we process it in JS */

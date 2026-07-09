@@ -1,4 +1,8 @@
 <?php
+  // Errors from all the endpoints including this file end up here.
+  // The file is not publicly reachable, see .htaccess.
+  ini_set('error_log', __DIR__.'/errors.log');
+
   function getDatabaseConnection(): PDO {
     $configPath = __DIR__.'/db.ini';
 

@@ -28,5 +28,7 @@ npm-debug.log*
 
 #server
 /server/db.ini
+/server/errors.log
+/server/.htpasswd
 
 /impactco2

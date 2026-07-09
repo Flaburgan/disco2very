@@ -1,0 +1,10 @@
+<FilesMatch "\.(ini|log)$">
+  Require all denied
+</FilesMatch>
+
+<Files "stats.php">
+  AuthType Basic
+  AuthName "disCO2very statistics"
+  AuthUserFile /home/burgante/www/autres/co2/server/.htpasswd
+  Require valid-user
+</Files>

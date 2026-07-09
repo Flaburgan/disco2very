@@ -18,7 +18,7 @@ try {
   $pdo->lastInsertId();
 
 } catch (Exception $e) {
+  error_log("[disCO2very] telemetry.php: ".$e->getMessage());
   http_response_code(500);
-  exit($e->getMessage());
 }
 ?>

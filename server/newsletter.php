@@ -1,8 +1,11 @@
 <?php
 include('allowed-origins.php');
 
-$email = $_POST["email"];
-if (!isset($email)) {
+$email = $_POST["email"] ?? null;
+// A "language" longer than 5 characters ("fr-FR") is junk, keep the DB clean
+$language = is_string($_POST["language"] ?? null) ? substr($_POST["language"], 0, 5) : "";
+
+if (!is_string($email)) {
   http_response_code(400);
 } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
   http_response_code(422);
@@ -21,7 +24,7 @@ if (!isset($email)) {
       http_response_code(409);
     } else {
       $query = $pdo->prepare("INSERT INTO email(address, language) VALUES (:email, :language)");
-      $query->execute(array(":email" => $email, ":language" => $_POST["language"]));
+      $query->execute(array(":email" => $email, ":language" => $language));
       $pdo->lastInsertId();
     }
   } catch (Exception $e) {

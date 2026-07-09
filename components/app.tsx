@@ -38,7 +38,8 @@ function setMetaContent(selector: string, content: string) {
 export default function App() {
   React.use(localeDataReady);
 
-  const title = "disCO2very - " + t`Order items to discover their CO2 footprint!`;
+  const title =
+    "disCO2very - " + t`Order items to discover their CO2 footprint!`;
   const description = t`disCO2very is a free game to discover the orders of magnitude of the CO2 footprint`;
   const imageAlt = t`The disCO2very logo, featuring a molecule of CO2.`;
 

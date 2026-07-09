@@ -58,7 +58,10 @@ export default function CategoriesSelector({
               >
                 <div>
                   <h3>{category.name[locale]}</h3>
-                  <img src={`./images/ademe/${category.slug}.svg`} alt={category.name[locale]} />
+                  <img
+                    src={`./images/ademe/${category.slug}.svg`}
+                    alt={category.name[locale]}
+                  />
                 </div>
               </div>
             );

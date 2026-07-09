@@ -39,7 +39,10 @@ export default function ItemCard(props: Props) {
           dangerouslySetInnerHTML={{ __html: item.description }}
         ></div>
         <div className={styles.imageContainer}>
-          <img src={`./images/ademe/${item.id}.svg`} alt={`${item.label} logo`} />
+          <img
+            src={`./images/ademe/${item.id}.svg`}
+            alt={`${item.label} logo`}
+          />
         </div>
       </main>
       <div

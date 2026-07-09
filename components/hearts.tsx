@@ -11,7 +11,11 @@ export default function Hearts(props: Props) {
   return (
     <div className={styles.hearts}>
       {lives}
-      <img className={styles.heart} src="./images/heart.svg" alt="A heart icon" />
+      <img
+        className={styles.heart}
+        src="./images/heart.svg"
+        alt="A heart icon"
+      />
     </div>
   );
 }

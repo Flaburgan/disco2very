@@ -60,15 +60,13 @@ async function slotCoordinates(
   const count = await cards.count();
   // Bring the cards around the target slot on screen: the timeline scrolls
   // horizontally once it grows beyond the viewport.
-  await cards
-    .nth(Math.min(index, count - 1))
-    .evaluate((el) =>
-      el.scrollIntoView({
-        behavior: "instant",
-        block: "nearest",
-        inline: "center",
-      }),
-    );
+  await cards.nth(Math.min(index, count - 1)).evaluate((el) =>
+    el.scrollIntoView({
+      behavior: "instant",
+      block: "nearest",
+      inline: "center",
+    }),
+  );
   const anchor = await cards.nth(Math.min(index, count - 1)).boundingBox();
   if (anchor === null) {
     throw new Error(

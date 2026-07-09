@@ -53,9 +53,7 @@ test("clicking a played card opens the explanation dialog", async ({
 
   await playedCards(page).first().click();
 
-  const dialog = page.locator(
-    '[class*="_explanationDialog_"]',
-  );
+  const dialog = page.locator('[class*="_explanationDialog_"]');
   await expect(dialog).toBeVisible();
   await expect(dialog.getByRole("heading", { name: "Total:" })).toBeVisible();
   await expect(dialog.locator("footer strong")).toContainText(

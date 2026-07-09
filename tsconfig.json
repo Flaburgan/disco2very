@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2021",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "ES2021"
-    ],
+    "lib": ["dom", "dom.iterable", "ES2021"],
     "skipLibCheck": true,
     "noEmit": true,
     "moduleResolution": "bundler",
@@ -15,12 +11,6 @@
     "incremental": true,
     "types": ["vite/client"]
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules",
-    "impactco2"
-  ]
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "impactco2"]
 }

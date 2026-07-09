@@ -21,7 +21,7 @@ export default function CategoriesSelector({
   const categories = getCategories();
 
   const [selectedCategories, setSelectedCategories] = useState(
-    new Set<number>(),
+    () => new Set<number>(),
   );
 
   const updateCategories = (id: number) => {

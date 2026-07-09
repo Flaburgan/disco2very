@@ -35,6 +35,19 @@ interface Args {
   onDrop: (index: number) => void;
 }
 
+function resetCardStyle(el: HTMLElement) {
+  const style = el.style;
+  style.position = "";
+  style.top = "";
+  style.left = "";
+  style.width = "";
+  style.height = "";
+  style.margin = "";
+  style.zIndex = "";
+  style.transform = "";
+  document.body.style.cursor = "";
+}
+
 /**
  * Drag and drop of the next card onto the timeline, implemented with Pointer
  * Events so that it works with mouse, touch and pen on all browsers.
@@ -49,7 +62,11 @@ export default function useCardDrag(args: Args) {
   const [dropIndex, setDropIndex] = React.useState<number | null>(null);
   const sessionRef = React.useRef<DragSession | null>(null);
   const argsRef = React.useRef(args);
-  argsRef.current = args;
+  // Keep the latest args available to the event handlers without re-attaching
+  // them; pointer events always fire after the commit, so the ref is current.
+  React.useEffect(() => {
+    argsRef.current = args;
+  });
 
   // Abort an ongoing drag if the component unmounts.
   React.useEffect(() => {
@@ -208,19 +225,6 @@ export default function useCardDrag(args: Args) {
       session.lastX - session.startX
     }px, ${session.lastY - session.startY}px)`;
     updateDropIndex(session);
-  }
-
-  function resetCardStyle(el: HTMLElement) {
-    const style = el.style;
-    style.position = "";
-    style.top = "";
-    style.left = "";
-    style.width = "";
-    style.height = "";
-    style.margin = "";
-    style.zIndex = "";
-    style.transform = "";
-    document.body.style.cursor = "";
   }
 
   // Animate the card into the gap (index !== null) or back to its origin,

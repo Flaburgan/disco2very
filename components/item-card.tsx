@@ -29,6 +29,9 @@ export default function ItemCard(props: Props) {
       <main>
         <div
           className={styles.description}
+          // The descriptions come from the bundled ADEME data and contain
+          // markup (e.g. <sub>), they are not user input.
+          // eslint-disable-next-line @eslint-react/dom-no-dangerously-set-innerhtml
           dangerouslySetInnerHTML={{ __html: item.description }}
         ></div>
         <div className={styles.imageContainer}>

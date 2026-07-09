@@ -3,7 +3,7 @@ import React from "react";
 import EmailRegistration from "./email-registration";
 import styles from "../styles/real-cards-game.module.scss";
 
-export default function realCardsGame() {
+export default function RealCardsGame() {
   return (
     <div className={styles.realCardsGame}>
       <h2>

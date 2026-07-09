@@ -97,6 +97,7 @@ export default function Board(props: Props) {
       }
       // Commit the new order and only then drop the animated transforms, in
       // the same task, so the browser never paints an intermediate frame.
+      // eslint-disable-next-line @eslint-react/dom-no-flush-sync
       flushSync(() => {
         setState((prev) => {
           if (prev.badlyPlaced === null) {

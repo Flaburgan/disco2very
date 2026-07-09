@@ -10,7 +10,7 @@ export default function Game() {
   const [initialState, setInitialState] = useState<GameState | null>(null);
   const [categoriesMode, setCategoriesMode] = useState(false);
 
-  const [highscore, setHighscore] = React.useState<number>(
+  const [highscore, setHighscore] = React.useState<number>(() =>
     Number(localStorage.getItem("highscore") ?? "0"),
   );
 

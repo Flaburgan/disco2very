@@ -7,10 +7,6 @@ import createState from "../lib/create-state";
 import { recordNewGame } from "../lib/server";
 
 export default function Game() {
-  if (!localStorage.getItem("app-id") && self.crypto.randomUUID) {
-    localStorage.setItem("app-id", self.crypto.randomUUID());
-  }
-
   const [initialState, setInitialState] = useState<GameState | null>(null);
   const [categoriesMode, setCategoriesMode] = useState(false);
 

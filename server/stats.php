@@ -80,12 +80,9 @@
         $appIds->execute();
         echo 'const resolutions = '.json_encode($appIds->fetchAll()).';';
 
-        $dailyStatsUniqueApps = $pdo->prepare("SELECT DATE(date) as day, COUNT(DISTINCT appId, userAgent, availableResolution) as devices FROM launchedGame GROUP BY day");
-        $dailyStatsUniqueApps->execute();
-        echo 'const dailyUniqueDevices = '.json_encode($dailyStatsUniqueApps->fetchAll()).';';
-        $dailyStatsGames = $pdo->prepare("SELECT DATE(date) as day, COUNT(*) as dailyGames FROM launchedGame GROUP BY day");
-        $dailyStatsGames->execute();
-        echo 'const dailyGames = '.json_encode($dailyStatsGames->fetchAll()).';';
+        $dailyStats = $pdo->prepare("SELECT DATE(date) as day, COUNT(DISTINCT appId, userAgent, availableResolution) as devices, COUNT(*) as dailyGames FROM launchedGame GROUP BY day ORDER BY day");
+        $dailyStats->execute();
+        echo 'const dailyStats = '.json_encode($dailyStats->fetchAll()).';';
 
         $uniqueResolutions = $pdo->prepare("SELECT availableResolution as resolution, COUNT(availableResolution) as count FROM launchedGame GROUP BY availableResolution ORDER BY COUNT(availableResolution) DESC");
         $uniqueResolutions->execute();
@@ -140,11 +137,11 @@
 
       /* Compute the daily stats table */
       const dailyStatsTable = document.getElementById("daily-stats");
-      for (let i = 0; i < dailyGames.length; i++) {
+      for (let dailyStat of dailyStats) {
         const tr = document.createElement("tr");
-        tr.appendChild(insertProperty(dailyGames[i], "day"));
-        tr.appendChild(insertProperty(dailyUniqueDevices[i], "devices"));
-        tr.appendChild(insertProperty(dailyGames[i], "dailyGames"));
+        tr.appendChild(insertProperty(dailyStat, "day"));
+        tr.appendChild(insertProperty(dailyStat, "devices"));
+        tr.appendChild(insertProperty(dailyStat, "dailyGames"));
         dailyStatsTable.appendChild(tr);
       }
 

@@ -4,6 +4,7 @@
 // Usage: npm run update-ademe [-- /path/to/impactco2]
 //
 // It copies the raw equivalents (.ts data files, they contain no imports),
+// copies the icon of every item and category to public/images/ademe/,
 // and builds one data/ademe/locales/{locale}.json per locale holding the
 // item names and the few translated sections we use (hypothesis texts and
 // footprint detail labels), so the rest of the impactco2 translations never
@@ -63,10 +64,62 @@ for (const file of dataFiles) {
   if (file === "deplacement.ts") {
     continue;
   }
+  // Upstream uses single quotes, our committed copies are reformatted to
+  // double quotes by prettier: accept both so the extraction also works on
+  // an already-formatted checkout.
   const content = fs.readFileSync(path.join(target, "categories", file), "utf8");
-  for (const [, slug] of content.matchAll(/slug: '([^']+)'/g)) {
+  for (const [, slug] of content.matchAll(/slug: ['"]([^'"]+)['"]/g)) {
     slugs.add(slug);
   }
+}
+
+// The illustrations: the game shows images/ademe/<slug>.svg on every item
+// card and images/ademe/<category slug>.svg in the category selector.
+// Transport variants (e.g. avion-courtcourrier) have no icon of their own
+// upstream, they use the icon of their base equivalent, so a slug without
+// an exact icon falls back to its longest dash-separated prefix that has one.
+const iconsDir = path.join(impactco2, "public", "icons");
+const imagesDir = path.join(root, "public", "images", "ademe");
+const icons = new Set(
+  fs
+    .readdirSync(iconsDir)
+    .filter((file) => file.endsWith(".svg"))
+    .map((file) => file.slice(0, -".svg".length))
+);
+const categorySlugs = JSON.parse(
+  fs.readFileSync(path.join(target, "0-categories.json"), "utf8")
+).data.map((category) => category.slug);
+const imageSlugs = new Set([...slugs, ...categorySlugs]);
+let added = 0;
+let updated = 0;
+for (const slug of [...imageSlugs].sort()) {
+  let icon = slug;
+  while (!icons.has(icon) && icon.includes("-")) {
+    icon = icon.slice(0, icon.lastIndexOf("-"));
+  }
+  if (!icons.has(icon)) {
+    console.warn(`No icon for "${slug}" in ${iconsDir}`);
+    continue;
+  }
+  const image = path.join(imagesDir, `${slug}.svg`);
+  const content = fs.readFileSync(path.join(iconsDir, `${icon}.svg`));
+  if (!fs.existsSync(image)) {
+    fs.writeFileSync(image, content);
+    added++;
+  } else if (!content.equals(fs.readFileSync(image))) {
+    fs.writeFileSync(image, content);
+    updated++;
+  }
+}
+console.log(`Copied icons to public/images/ademe/ (${added} added, ${updated} updated)`);
+const unusedImages = fs
+  .readdirSync(imagesDir)
+  .filter((file) => file.endsWith(".svg") && !imageSlugs.has(file.slice(0, -".svg".length)));
+if (unusedImages.length > 0) {
+  console.warn(
+    `public/images/ademe/ contains ${unusedImages.length} images no slug uses, ` +
+      `they can be deleted: ${unusedImages.map((file) => file.slice(0, -".svg".length)).join(", ")}`
+  );
 }
 
 // Item names, translated in fr/en/es (the "value" field is a precomputed

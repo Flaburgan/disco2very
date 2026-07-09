@@ -7,13 +7,17 @@
     $configPath = __DIR__.'/db.ini';
 
     if (!file_exists($configPath)) {
-        die("Configuration file not found.");
+        error_log("[disCO2very] db.php: configuration file not found: ".$configPath);
+        http_response_code(500);
+        exit;
     }
 
     $dbSettings = parse_ini_file($configPath, true);
 
     if (!$dbSettings) {
-        die("Failed to parse configuration file.".$configPath);
+        error_log("[disCO2very] db.php: failed to parse configuration file: ".$configPath);
+        http_response_code(500);
+        exit;
     }
 
     $db = $dbSettings['database'];

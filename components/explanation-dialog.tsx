@@ -42,6 +42,14 @@ export default function ExplanationDialog(props: ExplanationDialogProps) {
           />
         </header>
         <main>
+          {item.source.hypothesis && (
+            <p className={styles.hypothesis}>
+              <strong>
+                <Trans>Hypotheses:</Trans>
+              </strong>{" "}
+              {item.source.hypothesis}
+            </p>
+          )}
           {item.explanation ? (
             <p>{item.explanation}</p>
           ) : (
@@ -72,14 +80,6 @@ export default function ExplanationDialog(props: ExplanationDialogProps) {
                 />
               )}
             </ul>
-          )}
-          {item.source.hypothesis && (
-            <p className={styles.hypothesis}>
-              <strong>
-                <Trans>Hypotheses:</Trans>
-              </strong>{" "}
-              {item.source.hypothesis}
-            </p>
           )}
         </main>
         <footer>

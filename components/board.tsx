@@ -4,7 +4,7 @@ import { flushSync } from "react-dom";
 import { GameState } from "../types/game";
 import useCardDrag from "../lib/use-card-drag";
 import { animateBadlyPlacedItem } from "../lib/auto-move";
-import { checkCorrect } from "../lib/items";
+import { checkCorrect, drawRandomItem } from "../lib/items";
 import { cx } from "../lib/cx";
 import NextItemList from "./next-item-list";
 import PlayedItemList from "./played-item-list";
@@ -48,9 +48,7 @@ export default function Board(props: Props) {
       ...state.next,
       played: { correct },
     });
-    const randomIndex = Math.floor(Math.random() * newDeck.length);
-    const newNext = newDeck[randomIndex];
-    newDeck.splice(randomIndex, 1);
+    const newNext = drawRandomItem(newDeck);
 
     setState({
       ...state,

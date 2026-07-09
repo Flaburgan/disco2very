@@ -8,6 +8,5 @@ export interface GameState {
   deck: Item[];
   lives: number;
   next: Item | null;
-  nextButOne: Item | null;
   played: PlayedItem[];
 }

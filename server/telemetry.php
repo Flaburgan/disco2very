@@ -27,7 +27,6 @@ try {
   $pdo = getDatabaseConnection();
   $query = $pdo->prepare("INSERT INTO launchedGame(appId, userAgent, categoriesMode, resolution, pixelRatio, availableResolution) VALUES (:appId, :userAgent, :categoriesMode, :resolution, :pixelRatio, :availableResolution)");
   $query->execute($values);
-  $pdo->lastInsertId();
 
 } catch (Exception $e) {
   error_log("[disCO2very] telemetry.php: ".$e->getMessage());

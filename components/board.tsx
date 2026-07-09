@@ -5,6 +5,7 @@ import { GameState } from "../types/game";
 import useCardDrag from "../lib/use-card-drag";
 import { animateBadlyPlacedItem } from "../lib/auto-move";
 import { checkCorrect } from "../lib/items";
+import { cx } from "../lib/cx";
 import NextItemList from "./next-item-list";
 import PlayedItemList from "./played-item-list";
 import styles from "../styles/board.module.scss";
@@ -127,11 +128,10 @@ export default function Board(props: Props) {
 
   return (
     <div
-      className={
-        styles.wrapper +
-        " " +
-        (isDragging || state.badlyPlaced !== null ? "dragging" : "notDragging")
-      }
+      className={cx(
+        styles.wrapper,
+        isDragging || state.badlyPlaced !== null ? "dragging" : "notDragging",
+      )}
     >
       <div className={styles.gameHeader}>
         <div className={styles.actionsContainer}>

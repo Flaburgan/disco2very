@@ -1,4 +1,5 @@
 import React, { JSX } from "react";
+import { cx } from "../lib/cx";
 
 interface Props {
   minimal?: boolean;
@@ -24,13 +25,7 @@ export default function Button(props: Props) {
   return (
     <button
       onClick={onClick}
-      className={
-        "button" +
-        (minimal ? " minimal" : "") +
-        (big ? " big" : "") +
-        (small ? " small" : "") +
-        (animated ? " animated" : "")
-      }
+      className={cx("button", { minimal, big, small, animated })}
       disabled={disabled}
     >
       {children}

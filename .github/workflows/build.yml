@@ -60,11 +60,16 @@ jobs:
     needs: build-webapp
     steps:
       - uses: actions/checkout@v4
-      - name: Download disco2very-web-app from previous job
-        uses: actions/download-artifact@v4
+      # The clickable container image has no node, install it to build the app
+      - name: Use Node.js
+        uses: actions/setup-node@v4
         with:
-          name: disco2very-web-app
-          path: ./out
+          node-version: "24.x"
+          cache: "npm"
+      - run: npm ci
+      # The Ubuntu Touch build inlines everything in a single index.html in
+      # packaging/ubuntu-touch/www/ so it works over file:// (see vite.config.ts)
+      - run: npm run build:ut
       - name: Build with Clickable
         run: cd packaging/ubuntu-touch && clickable build
 

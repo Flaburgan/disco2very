@@ -5,7 +5,7 @@ import { useLingui } from "@lingui/react";
 import { getCategories, getFootprintDetails } from "../lib/ademe-api";
 import { displayCO2, round2 } from "../lib/items";
 import styles from "../styles/explanation-dialog.module.scss";
-import { AdemeSource, FootprintDetails } from "../types/AdemeECV";
+import { AdemeSource } from "../types/AdemeECV";
 import { Locale } from "../types/i18n";
 import { Item } from "../types/item";
 import ChartBar from "./chart-bar";
@@ -50,16 +50,30 @@ export default function ExplanationDialog(props: ExplanationDialogProps) {
           ) : (
             <ul>
               {details &&
-                details.map((detail) =>
-                  displayDetail(
-                    detail,
-                    footprintDetails,
-                    total,
-                    i18n.locale as Locale,
-                  ),
-                )}
-              {usage && displayUsage(usage, total)}
-              {endOfLife && displayEndOfLife(endOfLife, total)}
+                details.map((detail) => (
+                  <FootprintRow
+                    key={"explanation-" + detail.id}
+                    label={footprintDetails[detail.id][i18n.locale as Locale]}
+                    value={detail.value}
+                    total={total}
+                  />
+                ))}
+              {usage && (
+                <FootprintRow
+                  label={<Trans>Usage:</Trans>}
+                  value={usage.peryear * usage.defaultyears}
+                  total={total}
+                >
+                  {usageNote(usage)}
+                </FootprintRow>
+              )}
+              {endOfLife && (
+                <FootprintRow
+                  label={<Trans>End of life:</Trans>}
+                  value={endOfLife}
+                  total={total}
+                />
+              )}
             </ul>
           )}
           {item.source.hypothesis && (
@@ -118,45 +132,31 @@ function displaySource(source: AdemeSource, index: number): JSX.Element {
   );
 }
 
-function displayDetail(
-  detail: { id: number; value: number },
-  footprintDetails: FootprintDetails,
-  total: number,
-  locale: Locale,
-): JSX.Element {
+// One entry of the footprint breakdown: a label, a bar sized against the
+// total, and optionally an extra note.
+function FootprintRow(props: {
+  label: React.ReactNode;
+  value: number;
+  total: number;
+  children?: React.ReactNode;
+}) {
+  const { label, value, total, children } = props;
   return (
-    <li key={"explanation-" + detail.id}>
-      <h3>{footprintDetails[detail.id][locale]}</h3>
-      <ChartBar value={detail.value} total={total} />
+    <li>
+      <h3>{label}</h3>
+      <ChartBar value={value} total={total} />
+      {children}
     </li>
   );
 }
 
-function displayUsage(
-  usage: { peryear: number; defaultyears: number },
-  total: number,
-): JSX.Element {
+function usageNote(usage: {
+  peryear: number;
+  defaultyears: number;
+}): JSX.Element {
   const perYearDisplay = displayCO2(usage.peryear);
   const defaultYearDisplay = usage.defaultyears;
-  const value = usage.peryear * usage.defaultyears;
   return (
-    <li>
-      <h3>
-        <Trans>Usage:</Trans>
-      </h3>
-      <ChartBar value={value} total={total} />
-      <em>{t`${perYearDisplay} per year, estimated lifespan: ${defaultYearDisplay} years.`}</em>
-    </li>
-  );
-}
-
-function displayEndOfLife(endOfLife: number, total: number): JSX.Element {
-  return (
-    <li>
-      <h3>
-        <Trans>End of life:</Trans>
-      </h3>
-      <ChartBar value={endOfLife} total={total} />
-    </li>
+    <em>{t`${perYearDisplay} per year, estimated lifespan: ${defaultYearDisplay} years.`}</em>
   );
 }

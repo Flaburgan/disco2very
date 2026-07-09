@@ -25,7 +25,7 @@ msgstr "{email} ist bereits registriert."
 msgid "{email} is not a valid email address."
 msgstr "{email} ist keine gültige E-Mail-Adresse."
 
-#: components/explanation-dialog.tsx:148
+#: components/explanation-dialog.tsx:160
 msgid "{perYearDisplay} per year, estimated lifespan: {defaultYearDisplay} years."
 msgstr "{perYearDisplay} pro Jahr, angenommene Lebensdauer: {defaultYearDisplay} Jahre."
 
@@ -37,7 +37,7 @@ msgstr "<strong>pro Monat</strong> für 60m²"
 msgid "A real deck of cards?"
 msgstr "Ein echtes Kartendeck?"
 
-#: components/board.tsx:139
+#: components/board.tsx:137
 #: components/categories-selector.tsx:80
 msgid "Back"
 msgstr "Zurück"
@@ -64,11 +64,11 @@ msgstr "Gratulation!"
 msgid "Copied!"
 msgstr "Kopiert!"
 
-#: components/app.tsx:36
+#: components/app.tsx:34
 msgid "disCO2very is a free game to discover the orders of magnitude of the CO2 footprint"
 msgstr "disCO2very ist ein freies Spiel, um die Größenunterschiede beim CO₂-Fußabdruck zu entdecken."
 
-#: components/explanation-dialog.tsx:157
+#: components/explanation-dialog.tsx:72
 msgid "End of life:"
 msgstr "End of Life (Produktzyklusende)::"
 
@@ -84,7 +84,7 @@ msgstr "Game over"
 msgid "Guess the CO2 footprint!"
 msgstr "Errate den CO₂-Fußabdruck!"
 
-#: components/explanation-dialog.tsx:68
+#: components/explanation-dialog.tsx:82
 msgid "Hypotheses:"
 msgstr "Annahmen:"
 
@@ -125,7 +125,7 @@ msgstr "myemail@myprovider.org"
 msgid "or"
 msgstr "oder"
 
-#: components/app.tsx:35
+#: components/app.tsx:33
 msgid "Order items to discover their CO2 footprint!"
 msgstr "Sortieren die Karten in die richte Reihenfolge ein, um ihren CO₂-Fußabdruck zu erfahren!"
 
@@ -153,7 +153,7 @@ msgstr "Anschaffung und Benutzung für {defaultYears} Jahre."
 msgid "Register"
 msgstr "Anmelden"
 
-#: components/board.tsx:142
+#: components/board.tsx:140
 msgid "Restart"
 msgstr "Neustart"
 
@@ -165,11 +165,11 @@ msgstr "Markiere Kategorien"
 msgid "Select the categories you want to play with:"
 msgstr "Markiere die Kategorien, mit denen du spielen willst."
 
-#: components/game-over.tsx:15
+#: components/game-over.tsx:16
 msgid "Share your score"
 msgstr "Teile dein Ergebnis"
 
-#: components/explanation-dialog.tsx:89
+#: components/explanation-dialog.tsx:103
 msgid "Source:"
 msgstr "Quelle:"
 
@@ -182,7 +182,7 @@ msgstr "Quelle:"
 msgid "Start game"
 msgstr "Spiel beginnen"
 
-#: components/app.tsx:37
+#: components/app.tsx:35
 msgid "The disCO2very logo, featuring a molecule of CO2."
 msgstr "Das disCO2very-Logo stellt ein CO₂-Molekül dar."
 
@@ -190,7 +190,7 @@ msgstr "Das disCO2very-Logo stellt ein CO₂-Molekül dar."
 msgid "The numbers are coming from the <0>Ademe</0> platform <1>Impact CO<2>2</2></1>. Thanks to them for their amazing work!"
 msgstr "Diese Zahlen stammen von der <0>Ademe</0> Plattform <1>Impact CO<2>2</2></1>. Vielen Dank für diese fantastische Arbeit!"
 
-#: components/explanation-dialog.tsx:94
+#: components/explanation-dialog.tsx:108
 msgid "These values are computed by the french goverment agency <0>ADEME</0> and are based on France characteristics. Other countries may have different values, especially those resulting from electricity consumption."
 msgstr "Diese Werte wurden berechnet von der französischen Agentur <0>ADEME</0> und basieren auf Daten für Frankreich. Die Werte anderer Länder, insbesondere beim Stromverbrauch, könnten hiervon abweichen."
 
@@ -207,7 +207,7 @@ msgstr "Dieses Spiel ist zurzeit ausschließlich digital, aber das Ziel ist, ein
 msgid "This streak"
 msgstr "Diese Serie"
 
-#: components/explanation-dialog.tsx:76
+#: components/explanation-dialog.tsx:90
 msgid "Total:"
 msgstr "Insgesamt:"
 
@@ -215,7 +215,7 @@ msgstr "Insgesamt:"
 msgid "Try again!"
 msgstr "Versuche es erneut!"
 
-#: components/explanation-dialog.tsx:145
+#: components/explanation-dialog.tsx:63
 msgid "Usage:"
 msgstr "Anwendung:"
 

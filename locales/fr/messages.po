@@ -114,8 +114,8 @@ msgid "love"
 msgstr "amour"
 
 #: components/instructions.tsx:87
-msgid "Made with <0/> by <1>Fla</1> & Sara."
-msgstr "Fait avec <0/> par <1>Fla</1> & Sara."
+msgid "Made with <0/> by <1>Fla</1>"
+msgstr "Fait avec <0/> par <1>Fla</1>"
 
 #: components/email-registration.tsx:50
 msgid "myemail@myprovider.org"

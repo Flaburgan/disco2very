@@ -99,8 +99,7 @@ export default function Instructions(props: Props) {
               target="_blank"
             >
               Fla
-            </a>{" "}
-            &amp; Sara.
+            </a>
           </Trans>
         </p>
         <p>

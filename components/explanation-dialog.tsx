@@ -1,12 +1,10 @@
 import { t } from "@lingui/core/macro";
 import { Trans } from "@lingui/react/macro";
 import React, { JSX } from "react";
-import { useLingui } from "@lingui/react";
 import { getCategories, getFootprintDetails } from "../lib/ademe-api";
 import { displayCO2, round2 } from "../lib/items";
 import styles from "../styles/explanation-dialog.module.scss";
 import { AdemeSource } from "../types/AdemeECV";
-import { Locale } from "../types/i18n";
 import { Item } from "../types/item";
 import ChartBar from "./chart-bar";
 
@@ -16,7 +14,6 @@ interface ExplanationDialogProps {
 }
 
 export default function ExplanationDialog(props: ExplanationDialogProps) {
-  const { i18n } = useLingui();
   const footprintDetails = getFootprintDetails();
   const { item, onExit } = props;
   const details = item.source.footprintDetail;
@@ -53,7 +50,7 @@ export default function ExplanationDialog(props: ExplanationDialogProps) {
                 details.map((detail) => (
                   <FootprintRow
                     key={"explanation-" + detail.id}
-                    label={footprintDetails[detail.id][i18n.locale as Locale]}
+                    label={footprintDetails[detail.id]}
                     value={detail.value}
                     total={total}
                   />

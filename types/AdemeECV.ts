@@ -60,6 +60,7 @@ export interface AdemeCategory {
   sources: AdemeSource[];
 }
 
+// Labels of the footprint detail categories, in the loaded locale.
 export interface FootprintDetails {
-  [key: number]: I18nString;
+  [key: number]: string;
 }

@@ -70,7 +70,7 @@ msgstr "disCO2very ist ein freies Spiel, um die Größenunterschiede beim CO₂-
 
 #: components/explanation-dialog.tsx:72
 msgid "End of life:"
-msgstr "End of Life (Produktzyklusende)::"
+msgstr "End of Life (Produktzyklusende):"
 
 #: components/email-registration.tsx:32
 msgid "Error: {status}"

@@ -19,7 +19,7 @@ disCO2very: a free software (AGPL) card game about CO2 footprint orders of magni
 - `index.html` (static meta tags, English) + `main.tsx` (entry, renders `components/app.tsx`).
 - `components/` - all UI. Key flow: `app.tsx` (locale detection, localizes the meta tags) -> `game.tsx` (state, restart, records game via `lib/server.ts`) -> `board.tsx` (drag handling via `lib/use-card-drag.ts`, placement checked by `checkCorrect`) -> `next-item-list` / `played-item-list` / `item-card` / `draggable-item-card`. Other: `categories-selector`, `explanation-dialog`, `game-over`, `hearts`, `score`, `chart-bar`, `instructions`, `email-registration`, `real-cards-game`.
 - `lib/` - core logic:
-  - `ademe-api.ts`: imports all JSON data per locale, builds item lists, `getCategories`, `getItemsFromCategories`, coefficients. Central data hub.
+  - `ademe-api.ts`: central data hub — builds item lists, `getCategories`, `getItemsFromCategories`, coefficients. The per-locale texts (`data/ademe/locales/{locale}.json`: names, hypothesis, footprint labels) are dynamic-imported by `loadLocaleData(locale)`, started at boot in `app.tsx` (which suspends until loaded): only the active locale ships. The locale-independent footprint numbers (`data/ademe/categories/*.ts`) are static imports.
   - `items.ts`: gameplay helpers (`checkCorrect`, `displayCO2`, `round2`, `getDefaultItems`).
   - `create-state.ts`: initial `GameState`.
   - `server.ts`: telemetry POST (`SERVER_URL`).

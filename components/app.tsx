@@ -7,6 +7,7 @@ import { messages as esMessages } from "../locales/es/messages.po";
 import { messages as deMessages } from "../locales/de/messages.po";
 import { t } from "@lingui/core/macro";
 import { locales, sourceLocale } from "../lib/locales";
+import { loadLocaleData } from "../lib/ademe-api";
 import { Locale } from "../types/i18n";
 
 const Game = React.lazy(() => import("./game"));
@@ -25,11 +26,18 @@ const locale = (locales.includes(lang) ? lang : sourceLocale) as Locale;
 i18n.load(locale, messagesByLocale[locale]);
 i18n.activate(locale);
 
+// The ADEME data of the active locale downloads in parallel with React's own
+// startup; App suspends until it is there. The UI catalogs above are bundled
+// statically, so even the Suspense fallback renders in the right language.
+const localeDataReady = loadLocaleData(locale);
+
 function setMetaContent(selector: string, content: string) {
   document.querySelector(selector)?.setAttribute("content", content);
 }
 
 export default function App() {
+  React.use(localeDataReady);
+
   const title = "disCO2very - " + t`Order items to discover their CO2 footprint!`;
   const description = t`disCO2very is a free game to discover the orders of magnitude of the CO2 footprint`;
   const imageAlt = t`The disCO2very logo, featuring a molecule of CO2.`;

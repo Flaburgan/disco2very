@@ -5,6 +5,9 @@ import "./styles/globals.scss";
 
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App />
+    {/* App suspends until the ADEME data of the locale is loaded. */}
+    <React.Suspense fallback={null}>
+      <App />
+    </React.Suspense>
   </React.StrictMode>,
 );

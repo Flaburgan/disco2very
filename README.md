@@ -45,6 +45,23 @@ Then open the other languages files like `locales/fr/messages.po` and look for e
 
 The `.po` catalogs are compiled automatically when the app is built or served, there is no separate compilation step.
 
+### Adding a new language
+
+Say you want to add Portuguese (`pt`). Two kinds of text need translating: the UI strings (buttons, instructions... managed by Lingui) and the game data (item names, explanations... coming from ADEME).
+
+1. Declare the locale: Add `"pt"` to the `Locale` union in `types/i18n.ts`, to the `I18nString` interface below it, and to the `locales` list in `lib/locales.ts`. From here, `npm run build` fails with type errors on every place that must be completed.
+2. UI strings: Run `npm run i18n-extract`: it creates `locales/pt/messages.po`. Fill every empty `msgstr ""` with the Portuguese translation, then register the catalog in `components/app.tsx` (add the `messages.po` import and a `pt` entry to `messagesByLocale`).
+3. Game data: ADEME translates its data in French, English and Spanish only, so like German, Portuguese is maintained by hand in this repository:
+   - Copy `data/ademe/locales/de.json` to `pt.json` and translate its three sections: `names` (the item names), `hypothesis` (the explanation texts) and `ecv` (the footprint detail labels).
+   - Add `"pt"` to the `handMaintainedLocales` list in `scripts/update-ademe-data.mjs`: every future data update will then report the entries missing in `pt.json`. Running `npm run update-ademe` while you translate gives you a live todo-list.
+   - Register the file in `lib/ademe-api.ts` (a `pt` entry in `localeImports`).
+   - Translate the category names in `data/ademe/0-categories.json` (a `pt` field next to `en`/`fr`/`es`/`de`).
+
+   If a future locale *is* translated upstream by ADEME, skip the hand-maintained file and add it to the extraction list in `scripts/update-ademe-data.mjs` instead.
+4. Verify: `npm run build` must pass without type errors, then `npm run test-e2e`.
+
+The app picks the language from the browser (`navigator.language`), so testing locally is easiest by changing the preferred language in the browser settings.
+
 ### Static build
 
 To build a static version of the website to the `out` folder, that you can then deploy anywhere (it's plain HTML + JS, no server needed) run:
@@ -56,11 +73,17 @@ npm run build
 ### Update data
 
 The data used is hardcoded in the code to allow to play offline. That's why it's important to regularly pull the latest data from the ImpactCO2 github repository.
-1. For the data, use the ADEME [API documentation page](https://impactco2.fr/doc/api) to execute queries.
-   - Start with the `/thematiques` route, click on `Try it out` and then compare the categories with `data/ademe/0-categories.json` and complete the file if needed
-   - Then use the `/thematiques/ecv/{id}` route, execute it with the `detail` parameter set to `1` for each category number and each language, and copy paste the response to the corresponding file in `data/ademe/{language}/{thegoodfile}.json`
-   - `git diff` your changes to check the `id`s used in `footprintDetail`, it has to have a matching ID in `data/ademe/footprintDetailCategories.json`. If you are missing it here, you have to investigate in the ImpactCO2 website to find what the new category is, as they are not providing them in the API
+1. For the data, run the extraction script against a local checkout of the [impactco2 repository](https://github.com/incubateur-ademe/impactco2):
+   ```bash
+   git -C impactco2 pull   # or clone it first
+   npm run update-ademe    # accepts a path: npm run update-ademe -- /path/to/impactco2
+   npm run format          # the upstream files use another code style
+   ```
+   The script refreshes `data/ademe/categories/*.ts` (the footprint numbers) and `data/ademe/locales/{fr,en,es}.json` (names, hypothesis texts, footprint detail labels). Watch its output: it warns about entries missing in the upstream translations (marked `MISSING_TRANSLATIONS` in the files) and lists what needs translating in the hand-maintained locales like `de.json`.
+   - `git diff` the result: if a new category appeared, complete `data/ademe/0-categories.json` (id, translated names, sources — compare with impactco2's `src/data/categories.tsx`) and the category list in `scripts/update-ademe-data.mjs`.
+   - New transport variants only enter the game once they have a journey length in `data/transport-distances.json`.
 2. For the icons,
    - Download all the SVG icons from [the github repository](https://github.com/incubateur-ademe/impactco2/tree/develop/public/icons) `public/icons` folder and save them in `public/images/ademe`
    - Execute the `./clean-ademe-image.sh` script, as not all the ADEME images are used in disCO2very, so no need to bundle them
-3. Finish by updating the date above in this file, to inform people of the last time the data has been updated
+3. Run `npm run build && npm run test-e2e`, and play a quick game to check the values look sane.
+4. Finish by updating the date above in this file, to inform people of the last time the data has been updated

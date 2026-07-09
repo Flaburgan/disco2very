@@ -80,7 +80,7 @@
       try {
         $pdo = getDatabaseConnection();
 
-        $all = $pdo->prepare("SELECT * FROM launchedGame ORDER BY date");
+        $all = $pdo->prepare("SELECT * FROM launchedGame ORDER BY date DESC");
         $all->execute();
         echo 'const data = '.json_encode($all->fetchAll()).';';
 
@@ -89,7 +89,7 @@
         $appIds->execute();
         echo 'const resolutions = '.json_encode($appIds->fetchAll()).';';
 
-        $dailyStats = $pdo->prepare("SELECT DATE(date) as day, COUNT(DISTINCT appId, userAgent, availableResolution) as devices, COUNT(*) as dailyGames FROM launchedGame GROUP BY day ORDER BY day");
+        $dailyStats = $pdo->prepare("SELECT DATE(date) as day, COUNT(DISTINCT appId, userAgent, availableResolution) as devices, COUNT(*) as dailyGames FROM launchedGame GROUP BY day ORDER BY day DESC");
         $dailyStats->execute();
         echo 'const dailyStats = '.json_encode($dailyStats->fetchAll()).';';
 

@@ -10,7 +10,7 @@ if (!isset($email)) {
   include('db.php');
 
   try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+    $pdo = getDatabaseConnection();
 
     // We first check if the address is already in the DB
     $query = $pdo->prepare("SELECT address FROM email WHERE address = :email");

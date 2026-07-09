@@ -1,18 +1,26 @@
 <?php
-  $configPath = __DIR__.'/db.ini';
+  function getDatabaseConnection(): PDO {
+    $configPath = __DIR__.'/db.ini';
 
-  if (!file_exists($configPath)) {
-      die("Configuration file not found.");
+    if (!file_exists($configPath)) {
+        die("Configuration file not found.");
+    }
+
+    $dbSettings = parse_ini_file($configPath, true);
+
+    if (!$dbSettings) {
+        die("Failed to parse configuration file.".$configPath);
+    }
+
+    $db = $dbSettings['database'];
+
+    return new PDO(
+      "mysql:host={$db['host']};dbname={$db['dbname']};charset=utf8",
+      $db['username'],
+      $db['password'],
+      // Explicit: the callers' try/catch blocks rely on exceptions
+      // (only the default since PHP 8)
+      [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
+    );
   }
-
-  $dbSettings = parse_ini_file($configPath, true);
-
-  if (!$dbSettings) {
-      die("Failed to parse configuration file.".$configPath);
-  }
-
-  $host = $dbSettings['database']['host'];
-  $dbname = $dbSettings['database']['dbname'];
-  $username = $dbSettings['database']['username'];
-  $password = $dbSettings['database']['password'];
 ?>

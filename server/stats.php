@@ -69,7 +69,7 @@
       /* We get the data with PHP and echo some JSON in JS variables in the page */
       include('db.php'); 
       try {
-        $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+        $pdo = getDatabaseConnection();
 
         $all = $pdo->prepare("SELECT * FROM launchedGame ORDER BY date");
         $all->execute();

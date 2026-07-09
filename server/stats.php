@@ -24,7 +24,7 @@
         padding: 4px 6px;
       }
     </style>
-    <h1>disCO2very statistics</h1>
+    <h1>disCO<sub>2</sub>very statistics</h1>
     <h2><a href="https://disco2very.org">Access website</a></h2>
     <p><strong id="nbGames"></strong> games have been launched from <strong id="nbDevices"></strong> devices since 2026-02-10.</p>
     <p>Smallest width is <strong id="smallestWidth"></strong>px with <strong id="smallestWidthDevices"></strong> devices and smallest height is <strong id="smallestHeight"></strong>px with <strong id="smallestHeightDevices"></strong> device.</p>
@@ -49,9 +49,18 @@
           </tr>
         </table>
       </div>
+      <div>
+        <h3>Newsletter registered e-mail (<span id="nbEmails"></span>)</h3>
+        <table id="registered-email">
+          <tr>
+            <th>E-mail address</th>
+            <th>Date</th>
+          </tr>
+        </table>
+      </div>
     </div>
 
-    <h3>Row data</h3>
+    <h3>Raw data</h3>
     <table id="raw-data">
       <tr>
         <th>Date</th>
@@ -65,9 +74,9 @@
     </table>
 
     <script>
-      <?php 
+      <?php
       /* We get the data with PHP and echo some JSON in JS variables in the page */
-      include('db.php'); 
+      include('db.php');
       try {
         $pdo = getDatabaseConnection();
 
@@ -88,6 +97,10 @@
         $uniqueResolutions->execute();
         echo 'const uniqueResolutions = '.json_encode($uniqueResolutions->fetchAll()).';';
 
+        $emails = $pdo->prepare("SELECT address, date FROM email ORDER BY date DESC");
+        $emails->execute();
+        echo 'const registeredEmails = '.json_encode($emails->fetchAll()).';';
+
       } catch (Exception $e) {
         error_log("[disCO2very] stats.php: ".$e->getMessage());
         http_response_code(500);
@@ -107,7 +120,7 @@
       /* Compute the summary at the top */
       document.getElementById("nbGames").textContent = data.length;
       document.getElementById("nbDevices").textContent = resolutions.length;
-      
+
       let smallestWidth = 9999, smallestHeight = 9999;
       let smallestWidthDevices = 0, smallestHeightDevices = 0;
       for (let resolutionRow of resolutions) {
@@ -154,6 +167,16 @@
         tr.appendChild(insertProperty(resolution, "resolution"));
         tr.appendChild(insertProperty(resolution, "count"));
         uniqueResolutionsTable.appendChild(tr);
+      }
+
+      /* Compute the registered e-mail table */
+      document.getElementById("nbEmails").textContent = registeredEmails.length;
+      const registeredEmailTable = document.getElementById("registered-email");
+      for (let email of registeredEmails) {
+        const tr = document.createElement("tr");
+        tr.appendChild(insertProperty(email, "address"));
+        tr.appendChild(insertProperty(email, "date"));
+        registeredEmailTable.appendChild(tr);
       }
 
       /* Compute the raw data table */

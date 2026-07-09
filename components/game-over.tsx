@@ -4,6 +4,7 @@ import React from "react";
 import styles from "../styles/game-over.module.scss";
 import Button from "./button";
 import Score from "./score";
+import { ScoreTier, scoreTier } from "../lib/items";
 
 interface Props {
   highscore: number;
@@ -14,15 +15,14 @@ interface Props {
 
 const defaultShareText = <Trans>Share your score</Trans>;
 
+const medals: Record<ScoreTier, string> = {
+  gold: "🥇 ",
+  silver: "🥈 ",
+  bronze: "🥉 ",
+};
+
 function getMedal(score: number): string {
-  if (score >= 20) {
-    return "🥇 ";
-  } else if (score >= 10) {
-    return "🥈 ";
-  } else if (score >= 1) {
-    return "🥉 ";
-  }
-  return "";
+  return medals[scoreTier(score)];
 }
 
 export default function GameOver(props: Props) {

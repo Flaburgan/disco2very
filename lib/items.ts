@@ -17,6 +17,19 @@ export function checkCorrect(
   return { correct: true, delta: 0 };
 }
 
+export type ScoreTier = "gold" | "silver" | "bronze";
+
+// Compute score tiers, used for the medals on the game-over screen and the score background colors.
+export function scoreTier(score: number): ScoreTier {
+  if (score >= 20) {
+    return "gold";
+  }
+  if (score >= 10) {
+    return "silver";
+  }
+  return "bronze";
+}
+
 // Remove a random card from the deck (mutating it) and return it,
 // or null when the deck is empty.
 export function drawRandomItem(deck: Item[]): Item | null {

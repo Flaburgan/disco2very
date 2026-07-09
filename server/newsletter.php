@@ -15,17 +15,16 @@ if (!is_string($email)) {
   try {
     $pdo = getDatabaseConnection();
 
-    // We first check if the address is already in the DB
-    $query = $pdo->prepare("SELECT address FROM email WHERE address = :email");
-    $query->execute([":email" => $email]);
-    $found = $query->fetchAll();
-    
-    if (count($found) > 0) {
+    $query = $pdo->prepare("INSERT INTO email(address, language) VALUES (:email, :language)");
+    $query->execute(array(":email" => $email, ":language" => $language));
+  } catch (PDOException $e) {
+    // The UNIQUE index on email.address fails duplicate INSERTs with an
+    // integrity violation (SQLSTATE 23000): the address is already registered
+    if ($e->getCode() == 23000) {
       http_response_code(409);
     } else {
-      $query = $pdo->prepare("INSERT INTO email(address, language) VALUES (:email, :language)");
-      $query->execute(array(":email" => $email, ":language" => $language));
-      $pdo->lastInsertId();
+      error_log("[disCO2very] newsletter.php: ".$e->getMessage());
+      http_response_code(500);
     }
   } catch (Exception $e) {
     error_log("[disCO2very] newsletter.php: ".$e->getMessage());

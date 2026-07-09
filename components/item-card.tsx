@@ -1,9 +1,10 @@
-import React from "react";
-import { cx } from "../lib/cx";
-import { Item, PlayedItem } from "../types/item";
-import { round2 } from "../lib/items";
 import { getCategories } from "../lib/ademe-api";
+import { cx } from "../lib/cx";
+import { round2 } from "../lib/items";
 import styles from "../styles/item-card.module.scss";
+import { Locale } from "../types/i18n";
+import { useLingui } from "@lingui/react/macro";
+import { Item, PlayedItem } from "../types/item";
 
 type Props = {
   item: Item | PlayedItem;
@@ -14,6 +15,8 @@ function capitalize(str: string): string {
 }
 
 export default function ItemCard(props: Props) {
+  const { i18n } = useLingui();
+  const locale = i18n.locale as Locale;
   const { item } = props;
   const categories = getCategories();
 
@@ -24,6 +27,7 @@ export default function ItemCard(props: Props) {
         <img
           className={styles.categoryLogo}
           src={`./images/ademe/${categories.get(item.categoryId)!.slug}.svg`}
+          alt={`${categories.get(item.categoryId)!.name[locale]} logo`}
         />
       </header>
       <main>
@@ -35,7 +39,7 @@ export default function ItemCard(props: Props) {
           dangerouslySetInnerHTML={{ __html: item.description }}
         ></div>
         <div className={styles.imageContainer}>
-          <img src={`./images/ademe/${item.id}.svg`} />
+          <img src={`./images/ademe/${item.id}.svg`} alt={`${item.label} logo`} />
         </div>
       </main>
       <div

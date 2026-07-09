@@ -157,7 +157,7 @@ export default function Board(props: Props) {
             {/* We keep the container outside of the if so the space is still used when the arrow disappears and the bottom part doesn't move */}
             <div className={styles.arrowContainer}>
               {state.played.length === 1 && (
-                <img className={styles.arrow} src="images/arrow.svg" />
+                <img className={styles.arrow} src="images/arrow.svg" alt="" />
               )}
             </div>
             <NextItemList

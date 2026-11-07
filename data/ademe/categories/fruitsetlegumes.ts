@@ -1,6 +1,8 @@
+import { Equivalent } from 'types/equivalent'
+
 export const fruitsEtLegumes = [
   {
-    slug: "fraise",
+    slug: 'fraise',
     category: 9,
     ecv: [
       {
@@ -23,7 +25,7 @@ export const fruitsEtLegumes = [
     months: [4, 5, 6],
   },
   {
-    slug: "pomme",
+    slug: 'pomme',
     category: 9,
     ecv: [
       {
@@ -50,7 +52,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 2, 3, 7, 8, 9, 10, 11],
   },
   {
-    slug: "orange",
+    slug: 'orange',
     category: 9,
     ecv: [
       {
@@ -77,7 +79,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 2],
   },
   {
-    slug: "citron",
+    slug: 'citron',
     category: 9,
     ecv: [
       {
@@ -104,7 +106,7 @@ export const fruitsEtLegumes = [
     months: [0, 1],
   },
   {
-    slug: "ail",
+    slug: 'ail',
     category: 9,
     ecv: [
       {
@@ -131,7 +133,7 @@ export const fruitsEtLegumes = [
     months: [6, 7, 8, 9, 10, 11],
   },
   {
-    slug: "artichaut",
+    slug: 'artichaut',
     category: 9,
     ecv: [
       {
@@ -158,7 +160,7 @@ export const fruitsEtLegumes = [
     months: [4, 5, 6, 7, 8],
   },
   {
-    slug: "asperge",
+    slug: 'asperge',
     category: 9,
     ecv: [
       {
@@ -185,7 +187,7 @@ export const fruitsEtLegumes = [
     months: [3, 4, 5],
   },
   {
-    slug: "betterave",
+    slug: 'betterave',
     category: 9,
     ecv: [
       {
@@ -212,7 +214,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 2, 9, 10, 11],
   },
   {
-    slug: "blette",
+    slug: 'blette',
     category: 9,
     ecv: [
       {
@@ -235,7 +237,7 @@ export const fruitsEtLegumes = [
     months: [5, 6, 7, 8, 9, 10],
   },
   {
-    slug: "carotte",
+    slug: 'carotte',
     category: 9,
     ecv: [
       {
@@ -262,7 +264,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 2, 8, 9, 10, 11],
   },
   {
-    slug: "celeri",
+    slug: 'celeri',
     category: 9,
     ecv: [
       {
@@ -289,7 +291,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 2, 9, 10, 11],
   },
   {
-    slug: "champignonmorille",
+    slug: 'champignonmorille',
     category: 9,
     ecv: [
       {
@@ -316,7 +318,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
   },
   {
-    slug: "chou",
+    slug: 'chou',
     category: 9,
     ecv: [
       {
@@ -343,7 +345,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 2, 9, 10, 11],
   },
   {
-    slug: "choudebruxelles",
+    slug: 'choudebruxelles',
     category: 9,
     ecv: [
       {
@@ -370,7 +372,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 2, 9, 10, 11],
   },
   {
-    slug: "choufleur",
+    slug: 'choufleur',
     category: 9,
     ecv: [
       {
@@ -397,7 +399,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 2, 8, 9, 10, 11],
   },
   {
-    slug: "concombre",
+    slug: 'concombre',
     category: 9,
     ecv: [
       {
@@ -424,7 +426,7 @@ export const fruitsEtLegumes = [
     months: [4, 5, 6, 7, 8, 9],
   },
   {
-    slug: "courge",
+    slug: 'courge',
     category: 9,
     ecv: [
       {
@@ -447,7 +449,7 @@ export const fruitsEtLegumes = [
     months: [0, 8, 9, 10, 11],
   },
   {
-    slug: "courgette",
+    slug: 'courgette',
     category: 9,
     ecv: [
       {
@@ -474,7 +476,7 @@ export const fruitsEtLegumes = [
     months: [4, 5, 6, 7, 8, 9],
   },
   {
-    slug: "cresson",
+    slug: 'cresson',
     category: 9,
     ecv: [
       {
@@ -501,7 +503,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
   },
   {
-    slug: "echalote",
+    slug: 'echalote',
     category: 9,
     ecv: [
       {
@@ -528,7 +530,7 @@ export const fruitsEtLegumes = [
     months: [9, 10, 11],
   },
   {
-    slug: "endive",
+    slug: 'endive',
     category: 9,
     ecv: [
       {
@@ -555,7 +557,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 2, 3, 4, 9],
   },
   {
-    slug: "epinard",
+    slug: 'epinard',
     category: 9,
     ecv: [
       {
@@ -578,7 +580,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 2, 3, 4, 8, 9, 10, 11],
   },
   {
-    slug: "mangue",
+    slug: 'mangue',
     category: 9,
     ecv: [
       {
@@ -605,7 +607,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
   },
   {
-    slug: "manguebateau",
+    slug: 'manguebateau',
     category: 9,
     ecv: [
       {
@@ -632,7 +634,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
   },
   {
-    slug: "fenouil",
+    slug: 'fenouil',
     category: 9,
     ecv: [
       {
@@ -659,7 +661,7 @@ export const fruitsEtLegumes = [
     months: [3, 5, 6, 7, 8, 9, 10],
   },
   {
-    slug: "haricotvert",
+    slug: 'haricotvert',
     category: 9,
     ecv: [
       {
@@ -686,7 +688,7 @@ export const fruitsEtLegumes = [
     months: [5, 6, 7, 8, 9],
   },
   {
-    slug: "laitue",
+    slug: 'laitue',
     category: 9,
     ecv: [
       {
@@ -713,7 +715,7 @@ export const fruitsEtLegumes = [
     months: [4, 5, 6, 7, 8],
   },
   {
-    slug: "mache",
+    slug: 'mache',
     category: 9,
     ecv: [
       {
@@ -740,7 +742,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 9, 10, 11],
   },
   {
-    slug: "navet",
+    slug: 'navet',
     category: 9,
     ecv: [
       {
@@ -763,7 +765,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 2, 3, 4, 9, 10, 11],
   },
   {
-    slug: "mais",
+    slug: 'mais',
     category: 9,
     ecv: [
       {
@@ -790,7 +792,7 @@ export const fruitsEtLegumes = [
     months: [6, 7, 8],
   },
   {
-    slug: "oignon",
+    slug: 'oignon',
     category: 9,
     ecv: [
       {
@@ -817,7 +819,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 2, 3, 8, 9, 10, 11],
   },
   {
-    slug: "panais",
+    slug: 'panais',
     category: 9,
     ecv: [
       {
@@ -844,7 +846,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 2, 9, 10, 11],
   },
   {
-    slug: "petitpois",
+    slug: 'petitpois',
     category: 9,
     ecv: [
       {
@@ -867,7 +869,7 @@ export const fruitsEtLegumes = [
     months: [4, 5, 6],
   },
   {
-    slug: "poireau",
+    slug: 'poireau',
     category: 9,
     ecv: [
       {
@@ -894,7 +896,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 2, 3, 8, 9, 10, 11],
   },
   {
-    slug: "poivron",
+    slug: 'poivron',
     category: 9,
     ecv: [
       {
@@ -917,7 +919,7 @@ export const fruitsEtLegumes = [
     months: [5, 6, 7, 8],
   },
   {
-    slug: "potiron",
+    slug: 'potiron',
     category: 9,
     ecv: [
       {
@@ -944,7 +946,7 @@ export const fruitsEtLegumes = [
     months: [0, 8, 9, 10, 11],
   },
   {
-    slug: "radis",
+    slug: 'radis',
     category: 9,
     ecv: [
       {
@@ -971,7 +973,7 @@ export const fruitsEtLegumes = [
     months: [2, 3, 4, 5],
   },
   {
-    slug: "salsifis",
+    slug: 'salsifis',
     category: 9,
     ecv: [
       {
@@ -998,7 +1000,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 2, 10, 11],
   },
   {
-    slug: "topinambour",
+    slug: 'topinambour',
     category: 9,
     ecv: [
       {
@@ -1025,7 +1027,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 10, 11],
   },
   {
-    slug: "cassis",
+    slug: 'cassis',
     category: 9,
     ecv: [
       {
@@ -1052,7 +1054,7 @@ export const fruitsEtLegumes = [
     months: [5, 6, 7],
   },
   {
-    slug: "chataigne",
+    slug: 'chataigne',
     category: 9,
     ecv: [
       {
@@ -1079,7 +1081,7 @@ export const fruitsEtLegumes = [
     months: [9, 10],
   },
   {
-    slug: "clementine",
+    slug: 'clementine',
     category: 9,
     ecv: [
       {
@@ -1106,7 +1108,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 10, 11],
   },
   {
-    slug: "pamplemousse",
+    slug: 'pamplemousse',
     category: 9,
     ecv: [
       {
@@ -1133,7 +1135,7 @@ export const fruitsEtLegumes = [
     months: [1, 2, 3, 4, 5],
   },
   {
-    slug: "coing",
+    slug: 'coing',
     category: 9,
     ecv: [
       {
@@ -1160,7 +1162,7 @@ export const fruitsEtLegumes = [
     months: [9],
   },
   {
-    slug: "figue",
+    slug: 'figue',
     category: 9,
     ecv: [
       {
@@ -1187,7 +1189,7 @@ export const fruitsEtLegumes = [
     months: [6, 7, 8, 9],
   },
   {
-    slug: "groseille",
+    slug: 'groseille',
     category: 9,
     ecv: [
       {
@@ -1214,7 +1216,7 @@ export const fruitsEtLegumes = [
     months: [5, 6, 7],
   },
   {
-    slug: "kiwi",
+    slug: 'kiwi',
     category: 9,
     ecv: [
       {
@@ -1241,7 +1243,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 2, 10, 11],
   },
   {
-    slug: "mandarine",
+    slug: 'mandarine',
     category: 9,
     ecv: [
       {
@@ -1268,7 +1270,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 10, 11],
   },
   {
-    slug: "melon",
+    slug: 'melon',
     category: 9,
     ecv: [
       {
@@ -1295,7 +1297,7 @@ export const fruitsEtLegumes = [
     months: [5, 6, 7, 8],
   },
   {
-    slug: "mure",
+    slug: 'mure',
     category: 9,
     ecv: [
       {
@@ -1322,7 +1324,7 @@ export const fruitsEtLegumes = [
     months: [7, 8],
   },
   {
-    slug: "nectarine",
+    slug: 'nectarine',
     category: 9,
     ecv: [
       {
@@ -1349,7 +1351,7 @@ export const fruitsEtLegumes = [
     months: [7, 8],
   },
   {
-    slug: "myrtille",
+    slug: 'myrtille',
     category: 9,
     ecv: [
       {
@@ -1376,7 +1378,7 @@ export const fruitsEtLegumes = [
     months: [6, 7, 8],
   },
   {
-    slug: "noisette",
+    slug: 'noisette',
     category: 9,
     ecv: [
       {
@@ -1399,7 +1401,7 @@ export const fruitsEtLegumes = [
     months: [8, 9, 10],
   },
   {
-    slug: "noix",
+    slug: 'noix',
     category: 9,
     ecv: [
       {
@@ -1426,7 +1428,7 @@ export const fruitsEtLegumes = [
     months: [8, 9],
   },
   {
-    slug: "prune",
+    slug: 'prune',
     category: 9,
     ecv: [
       {
@@ -1453,7 +1455,7 @@ export const fruitsEtLegumes = [
     months: [6, 7, 8],
   },
   {
-    slug: "reineclaude",
+    slug: 'reineclaude',
     category: 9,
     ecv: [
       {
@@ -1480,7 +1482,7 @@ export const fruitsEtLegumes = [
     months: [8],
   },
   {
-    slug: "rhubarbe",
+    slug: 'rhubarbe',
     category: 9,
     ecv: [
       {
@@ -1507,7 +1509,7 @@ export const fruitsEtLegumes = [
     months: [3, 4, 5],
   },
   {
-    slug: "peche",
+    slug: 'peche',
     category: 9,
     ecv: [
       {
@@ -1534,7 +1536,7 @@ export const fruitsEtLegumes = [
     months: [5, 6, 7, 8],
   },
   {
-    slug: "cerise",
+    slug: 'cerise',
     category: 9,
     ecv: [
       {
@@ -1565,7 +1567,7 @@ export const fruitsEtLegumes = [
     months: [5, 6],
   },
   {
-    slug: "abricot",
+    slug: 'abricot',
     category: 9,
     ecv: [
       {
@@ -1596,7 +1598,7 @@ export const fruitsEtLegumes = [
     months: [5, 6, 7],
   },
   {
-    slug: "framboise",
+    slug: 'framboise',
     category: 9,
     ecv: [
       {
@@ -1623,7 +1625,7 @@ export const fruitsEtLegumes = [
     months: [5, 6, 7],
   },
   {
-    slug: "poire",
+    slug: 'poire',
     category: 9,
     ecv: [
       {
@@ -1650,7 +1652,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 2, 7, 8, 9, 10, 11],
   },
   {
-    slug: "raisin",
+    slug: 'raisin',
     category: 9,
     ecv: [
       {
@@ -1677,7 +1679,7 @@ export const fruitsEtLegumes = [
     months: [8, 9],
   },
   {
-    slug: "aubergine",
+    slug: 'aubergine',
     category: 9,
     ecv: [
       {
@@ -1704,7 +1706,7 @@ export const fruitsEtLegumes = [
     months: [5, 6, 7, 8],
   },
   {
-    slug: "brocoli",
+    slug: 'brocoli',
     category: 9,
     ecv: [
       {
@@ -1731,7 +1733,7 @@ export const fruitsEtLegumes = [
     months: [8, 9, 10],
   },
   {
-    slug: "tomate",
+    slug: 'tomate',
     category: 9,
     ecv: [
       {
@@ -1754,7 +1756,7 @@ export const fruitsEtLegumes = [
     months: [5, 6, 7, 8],
   },
   {
-    slug: "ananas",
+    slug: 'ananas',
     category: 9,
     ecv: [
       {
@@ -1781,7 +1783,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
   },
   {
-    slug: "banane",
+    slug: 'banane',
     category: 9,
     ecv: [
       {
@@ -1808,7 +1810,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
   },
   {
-    slug: "avocat",
+    slug: 'avocat',
     category: 9,
     ecv: [
       {
@@ -1835,7 +1837,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
   },
   {
-    slug: "carambole",
+    slug: 'carambole',
     category: 9,
     ecv: [
       {
@@ -1862,7 +1864,7 @@ export const fruitsEtLegumes = [
     months: [0, 10, 11],
   },
   {
-    slug: "datte",
+    slug: 'datte',
     category: 9,
     ecv: [
       {
@@ -1889,7 +1891,7 @@ export const fruitsEtLegumes = [
     months: [0, 9, 10, 11],
   },
   {
-    slug: "fruitdelapassion",
+    slug: 'fruitdelapassion',
     category: 9,
     ecv: [
       {
@@ -1916,7 +1918,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
   },
   {
-    slug: "grenade",
+    slug: 'grenade',
     category: 9,
     ecv: [
       {
@@ -1943,7 +1945,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 10, 11],
   },
   {
-    slug: "kaki",
+    slug: 'kaki',
     category: 9,
     ecv: [
       {
@@ -1970,7 +1972,7 @@ export const fruitsEtLegumes = [
     months: [0, 9, 10, 11],
   },
   {
-    slug: "noixdecoco",
+    slug: 'noixdecoco',
     category: 9,
     ecv: [
       {
@@ -2001,7 +2003,7 @@ export const fruitsEtLegumes = [
     months: [0, 1, 10, 11],
   },
   {
-    slug: "pasteque",
+    slug: 'pasteque',
     category: 9,
     ecv: [
       {
@@ -2023,4 +2025,4 @@ export const fruitsEtLegumes = [
     ],
     months: [5, 6, 7, 8],
   },
-];
+] satisfies Equivalent[]

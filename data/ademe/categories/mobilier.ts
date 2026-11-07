@@ -1,8 +1,9 @@
+import { Equivalent } from 'types/equivalent'
+
 export const mobiliers = [
   {
     id: 26966,
-    subtitle: "convertible",
-    slug: "canapeconvertible",
+    slug: 'canapeconvertible',
     category: 7,
     ecv: [
       {
@@ -26,8 +27,7 @@ export const mobiliers = [
   },
   {
     id: 26958,
-    subtitle: "En bois",
-    slug: "chaiseenbois",
+    slug: 'chaiseenbois',
     category: 7,
     ecv: [
       {
@@ -51,8 +51,7 @@ export const mobiliers = [
   },
   {
     id: 26961,
-    subtitle: "En bois",
-    slug: "tableenbois",
+    slug: 'tableenbois',
     category: 7,
     ecv: [
       {
@@ -76,8 +75,7 @@ export const mobiliers = [
   },
   {
     id: 26964,
-    subtitle: "Textile",
-    slug: "canapetextile",
+    slug: 'canapetextile',
     category: 7,
     ecv: [
       {
@@ -101,7 +99,7 @@ export const mobiliers = [
   },
   {
     id: 26963,
-    slug: "armoire",
+    slug: 'armoire',
     category: 7,
     ecv: [
       {
@@ -125,7 +123,7 @@ export const mobiliers = [
   },
   {
     ids: [26970, 26968, 26969],
-    slug: "lit",
+    slug: 'lit',
     category: 7,
     ecv: [
       {
@@ -146,4 +144,4 @@ export const mobiliers = [
       },
     ],
   },
-];
+] satisfies Equivalent[]
